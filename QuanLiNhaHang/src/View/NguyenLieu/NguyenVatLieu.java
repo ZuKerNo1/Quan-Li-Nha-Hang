@@ -44,7 +44,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         titlePanel_360 = new javax.swing.JPanel();
         titleLabel_360 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        mainPanel_360 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ngLieuTableList_360 = new javax.swing.JTable();
         backBtn_360 = new javax.swing.JButton();
@@ -79,7 +79,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        mainPanel_360.setBackground(new java.awt.Color(153, 153, 153));
 
         ngLieuTableList_360.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -94,7 +94,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(ngLieuTableList_360);
 
-        backBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        backBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         backBtn_360.setText("BACK");
@@ -104,17 +104,17 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             }
         });
 
-        refreshBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        refreshBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         refreshBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         refreshBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         refreshBtn_360.setText("REFRESH");
 
-        deleteBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        deleteBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         deleteBtn_360.setText("DELETE");
 
-        addBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        addBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         addBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         addBtn_360.setText("ADD");
@@ -124,15 +124,15 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
+        mainPanel_360.setLayout(mainPanel_360Layout);
+        mainPanel_360Layout.setHorizontalGroup(
+            mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(backBtn_360)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(addBtn_360)
@@ -142,13 +142,13 @@ public class NguyenVatLieu extends javax.swing.JFrame {
                         .addComponent(refreshBtn_360)))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        mainPanel_360Layout.setVerticalGroup(
+            mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backBtn_360)
                     .addComponent(refreshBtn_360)
                     .addComponent(addBtn_360)
@@ -160,7 +160,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(titlePanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -168,7 +168,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(titlePanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(mainPanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -191,6 +191,8 @@ public class NguyenVatLieu extends javax.swing.JFrame {
 
     private void addBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtn_360ActionPerformed
         // TODO add your handling code here:
+        new AddNguyenLieu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_addBtn_360ActionPerformed
 
     /**
@@ -233,8 +235,8 @@ public class NguyenVatLieu extends javax.swing.JFrame {
     private javax.swing.JButton backBtn_360;
     private javax.swing.JButton deleteBtn_360;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel mainPanel_360;
     private javax.swing.JTable ngLieuTableList_360;
     private javax.swing.JButton refreshBtn_360;
     private javax.swing.JLabel titleLabel_360;
