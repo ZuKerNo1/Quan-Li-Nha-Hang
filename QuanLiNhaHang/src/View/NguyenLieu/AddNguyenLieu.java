@@ -94,12 +94,12 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         idKM_363.setForeground(new java.awt.Color(255, 255, 255));
         idKM_363.setText("Đơn vị");
 
-        submitBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        submitBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         submitBtn_360.setText("SUBMIT");
 
-        backBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        backBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         backBtn_360.setText("BACK");
@@ -113,7 +113,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilogram", "Thùng", "Két" }));
 
-        clearBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        clearBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_360.setText("CLEAR ALL");

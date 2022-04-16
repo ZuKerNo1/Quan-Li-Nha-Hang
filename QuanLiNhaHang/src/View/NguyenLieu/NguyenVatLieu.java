@@ -94,7 +94,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(ngLieuTableList_360);
 
-        backBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        backBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         backBtn_360.setText("BACK");
@@ -104,17 +104,17 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             }
         });
 
-        refreshBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        refreshBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         refreshBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         refreshBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         refreshBtn_360.setText("REFRESH");
 
-        deleteBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        deleteBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         deleteBtn_360.setText("DELETE");
 
-        addBtn_360.setBackground(new java.awt.Color(102, 255, 102));
+        addBtn_360.setBackground(new java.awt.Color(0, 183, 45));
         addBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         addBtn_360.setText("ADD");
