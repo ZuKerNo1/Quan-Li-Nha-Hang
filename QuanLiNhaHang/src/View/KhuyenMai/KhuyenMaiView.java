@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View.NguyenLieu;
+package View.KhuyenMai;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -11,12 +11,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author FSC
  */
-public class NguyenVatLieu extends javax.swing.JFrame {
+public class KhuyenMaiView extends javax.swing.JFrame {
 
     /**
-     * Creates new form NguyenVatLieu
+     * Creates new form KhuyenMaiView
      */
-    public NguyenVatLieu() {
+    public KhuyenMaiView() {
         initComponents();
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
@@ -24,12 +24,15 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             public boolean isCellEditable(int row, int column) {
                 return false; //To change body of generated methods, choose Tools | Templates.
             }
+
         };
-        ngLieuTableList_360.setModel(defaultTableModel);
-        defaultTableModel.addColumn("Mã nguyên liệu");
-        defaultTableModel.addColumn("Tên nguyên liệu");
-        defaultTableModel.addColumn("Số lượng còn");
-        defaultTableModel.addColumn("Đơn vị");
+        kmTableList_360.setModel(defaultTableModel);
+        defaultTableModel.addColumn("Mã khuyến mãi");
+        defaultTableModel.addColumn("Ngày bắt đầu");
+        defaultTableModel.addColumn("Ngày kết thúc");
+        defaultTableModel.addColumn("Số lượng");
+        defaultTableModel.addColumn("Sản phẩm áp dụng");
+        defaultTableModel.addColumn("Ghi chú");
     }
 
     /**
@@ -46,42 +49,42 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         titleLabel_360 = new javax.swing.JLabel();
         mainPanel_360 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ngLieuTableList_360 = new javax.swing.JTable();
+        kmTableList_360 = new javax.swing.JTable();
         backBtn_360 = new javax.swing.JButton();
         refreshBtn_360 = new javax.swing.JButton();
-        deleteBtn_360 = new javax.swing.JButton();
         addBtn_360 = new javax.swing.JButton();
+        deleteBtn_360 = new javax.swing.JButton();
+        updateBtn_360 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        titlePanel_360.setBackground(new java.awt.Color(243, 161, 37));
+        titlePanel_360.setBackground(new java.awt.Color(255, 255, 51));
 
         titleLabel_360.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel_360.setForeground(new java.awt.Color(0, 183, 45));
-        titleLabel_360.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ingredients.png"))); // NOI18N
-        titleLabel_360.setText("NGUYÊN VẬT LIỆU");
+        titleLabel_360.setForeground(new java.awt.Color(255, 61, 61));
+        titleLabel_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/tag.png"))); // NOI18N
+        titleLabel_360.setText("DANH SÁCH KHUYẾN MÃI");
 
         javax.swing.GroupLayout titlePanel_360Layout = new javax.swing.GroupLayout(titlePanel_360);
         titlePanel_360.setLayout(titlePanel_360Layout);
         titlePanel_360Layout.setHorizontalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
+                .addContainerGap(242, Short.MAX_VALUE)
                 .addComponent(titleLabel_360)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(165, 165, 165))
         );
         titlePanel_360Layout.setVerticalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(titleLabel_360)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
 
         mainPanel_360.setBackground(new java.awt.Color(153, 153, 153));
 
-        ngLieuTableList_360.setModel(new javax.swing.table.DefaultTableModel(
+        kmTableList_360.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -92,9 +95,9 @@ public class NguyenVatLieu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(ngLieuTableList_360);
+        jScrollPane1.setViewportView(kmTableList_360);
 
-        backBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        backBtn_360.setBackground(new java.awt.Color(255, 153, 51));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         backBtn_360.setText("BACK");
@@ -104,23 +107,33 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             }
         });
 
-        refreshBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        refreshBtn_360.setBackground(new java.awt.Color(255, 153, 51));
         refreshBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         refreshBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         refreshBtn_360.setText("REFRESH");
 
-        deleteBtn_360.setBackground(new java.awt.Color(0, 183, 45));
-        deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        deleteBtn_360.setText("DELETE");
-
-        addBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        addBtn_360.setBackground(new java.awt.Color(255, 153, 51));
         addBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         addBtn_360.setText("ADD");
         addBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtn_360ActionPerformed(evt);
+            }
+        });
+
+        deleteBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        deleteBtn_360.setText("DELETE");
+
+        updateBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        updateBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        updateBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        updateBtn_360.setText("UPDATE");
+        updateBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtn_360ActionPerformed(evt);
             }
         });
 
@@ -131,10 +144,12 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(backBtn_360)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(updateBtn_360)
+                        .addGap(18, 18, 18)
                         .addComponent(addBtn_360)
                         .addGap(18, 18, 18)
                         .addComponent(deleteBtn_360)
@@ -146,29 +161,31 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
-                .addGap(27, 27, 27)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backBtn_360)
-                    .addComponent(refreshBtn_360)
-                    .addComponent(addBtn_360)
-                    .addComponent(deleteBtn_360))
-                .addGap(38, 38, 38))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(addBtn_360)
+                        .addComponent(deleteBtn_360)
+                        .addComponent(refreshBtn_360)
+                        .addComponent(updateBtn_360))
+                    .addComponent(backBtn_360))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(titlePanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(titlePanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(mainPanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,7 +196,9 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -191,9 +210,15 @@ public class NguyenVatLieu extends javax.swing.JFrame {
 
     private void addBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtn_360ActionPerformed
         // TODO add your handling code here:
-        new AddNguyenLieu().setVisible(true);
+        new AddKhuyenMai().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_addBtn_360ActionPerformed
+
+    private void updateBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_360ActionPerformed
+        // TODO add your handling code here:
+        new UpdateKhuyenMai().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_updateBtn_360ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,20 +237,20 @@ public class NguyenVatLieu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhuyenMaiView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhuyenMaiView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhuyenMaiView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(KhuyenMaiView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NguyenVatLieu().setVisible(true);
+                new KhuyenMaiView().setVisible(true);
             }
         });
     }
@@ -236,10 +261,11 @@ public class NguyenVatLieu extends javax.swing.JFrame {
     private javax.swing.JButton deleteBtn_360;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable kmTableList_360;
     private javax.swing.JPanel mainPanel_360;
-    private javax.swing.JTable ngLieuTableList_360;
     private javax.swing.JButton refreshBtn_360;
     private javax.swing.JLabel titleLabel_360;
     private javax.swing.JPanel titlePanel_360;
+    private javax.swing.JButton updateBtn_360;
     // End of variables declaration//GEN-END:variables
 }
