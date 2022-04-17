@@ -11,12 +11,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author FSC
  */
-public class NguyenVatLieu extends javax.swing.JFrame {
+public class NguyenLieuView extends javax.swing.JFrame {
 
     /**
-     * Creates new form NguyenVatLieu
+     * Creates new form NguyenLieuView
      */
-    public NguyenVatLieu() {
+    public NguyenLieuView() {
         initComponents();
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
@@ -51,6 +51,7 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         refreshBtn_360 = new javax.swing.JButton();
         deleteBtn_360 = new javax.swing.JButton();
         addBtn_360 = new javax.swing.JButton();
+        updateBtn_360 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,6 +125,16 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             }
         });
 
+        updateBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        updateBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        updateBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        updateBtn_360.setText("UPDATE");
+        updateBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtn_360ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
         mainPanel_360.setLayout(mainPanel_360Layout);
         mainPanel_360Layout.setHorizontalGroup(
@@ -131,10 +142,12 @@ public class NguyenVatLieu extends javax.swing.JFrame {
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 594, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(backBtn_360)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(updateBtn_360)
+                        .addGap(18, 18, 18)
                         .addComponent(addBtn_360)
                         .addGap(18, 18, 18)
                         .addComponent(deleteBtn_360)
@@ -152,7 +165,8 @@ public class NguyenVatLieu extends javax.swing.JFrame {
                     .addComponent(backBtn_360)
                     .addComponent(refreshBtn_360)
                     .addComponent(addBtn_360)
-                    .addComponent(deleteBtn_360))
+                    .addComponent(deleteBtn_360)
+                    .addComponent(updateBtn_360))
                 .addGap(38, 38, 38))
         );
 
@@ -195,6 +209,12 @@ public class NguyenVatLieu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_addBtn_360ActionPerformed
 
+    private void updateBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_360ActionPerformed
+        // TODO add your handling code here:
+        new UpdateNguyenLieu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_updateBtn_360ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -212,20 +232,20 @@ public class NguyenVatLieu extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NguyenVatLieu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NguyenVatLieu().setVisible(true);
+                new NguyenLieuView().setVisible(true);
             }
         });
     }
@@ -241,5 +261,6 @@ public class NguyenVatLieu extends javax.swing.JFrame {
     private javax.swing.JButton refreshBtn_360;
     private javax.swing.JLabel titleLabel_360;
     private javax.swing.JPanel titlePanel_360;
+    private javax.swing.JButton updateBtn_360;
     // End of variables declaration//GEN-END:variables
 }
