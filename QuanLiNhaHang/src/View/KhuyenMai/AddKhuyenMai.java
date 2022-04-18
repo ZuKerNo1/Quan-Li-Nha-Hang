@@ -28,9 +28,9 @@ public class AddKhuyenMai extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        titlePanel_360 = new javax.swing.JPanel();
         titleLabel_360 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        mainPanel_360 = new javax.swing.JPanel();
         idKM_360 = new javax.swing.JLabel();
         idKMText_360 = new javax.swing.JTextField();
         startDay_360 = new javax.swing.JLabel();
@@ -50,31 +50,33 @@ public class AddKhuyenMai extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 51));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+
+        titlePanel_360.setBackground(new java.awt.Color(255, 255, 51));
 
         titleLabel_360.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         titleLabel_360.setForeground(new java.awt.Color(255, 61, 61));
         titleLabel_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/tag.png"))); // NOI18N
         titleLabel_360.setText("THÊM MÃ KHUYẾN MÃI");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
+        javax.swing.GroupLayout titlePanel_360Layout = new javax.swing.GroupLayout(titlePanel_360);
+        titlePanel_360.setLayout(titlePanel_360Layout);
+        titlePanel_360Layout.setHorizontalGroup(
+            titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titleLabel_360)
-                .addGap(112, 112, 112))
+                .addGap(116, 116, 116))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+        titlePanel_360Layout.setVerticalGroup(
+            titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanel_360Layout.createSequentialGroup()
+                .addGap(38, 38, 38)
                 .addComponent(titleLabel_360)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
-        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        mainPanel_360.setBackground(new java.awt.Color(153, 153, 153));
 
         idKM_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         idKM_360.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,7 +111,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
         noteText_360.setRows(5);
         jScrollPane1.setViewportView(noteText_360);
 
-        backBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        backBtn_360.setBackground(new java.awt.Color(255, 61, 61));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         backBtn_360.setText("BACK");
@@ -119,7 +121,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
             }
         });
 
-        submitBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        submitBtn_360.setBackground(new java.awt.Color(255, 61, 61));
         submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         submitBtn_360.setText("SUBMIT");
@@ -135,7 +137,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
 
         quantityText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        clearBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        clearBtn_360.setBackground(new java.awt.Color(255, 61, 61));
         clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_360.setText("CLEAR ALL");
@@ -145,21 +147,21 @@ public class AddKhuyenMai extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
+        mainPanel_360.setLayout(mainPanel_360Layout);
+        mainPanel_360Layout.setHorizontalGroup(
+            mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(backBtn_360)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(clearBtn_360)
                         .addGap(18, 18, 18)
                         .addComponent(submitBtn_360))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(mainPanel_360Layout.createSequentialGroup()
+                        .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(idKM_360)
                             .addComponent(startDay_360)
                             .addComponent(endDate_360)
@@ -167,7 +169,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
                             .addComponent(note_360)
                             .addComponent(quantity_360))
                         .addGap(39, 39, 39)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(idKMText_360)
                             .addComponent(startDayText_360, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
                             .addComponent(endDateText_360, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
@@ -176,35 +178,35 @@ public class AddKhuyenMai extends javax.swing.JFrame {
                             .addComponent(quantityText_360, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE))))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        mainPanel_360Layout.setVerticalGroup(
+            mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(idKM_360)
                     .addComponent(idKMText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(startDay_360)
                     .addComponent(startDayText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(endDate_360)
                     .addComponent(endDateText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(quantity_360)
                     .addComponent(quantityText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(appliProduct_360)
                     .addComponent(appliProductText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(note_360)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(backBtn_360)
                     .addComponent(submitBtn_360)
                     .addComponent(clearBtn_360))
@@ -215,15 +217,15 @@ public class AddKhuyenMai extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(titlePanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titlePanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -244,7 +246,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         // TODO add your handling code here:
-        new KhuyenMai().setVisible(true);
+        new KhuyenMaiView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 
@@ -301,9 +303,8 @@ public class AddKhuyenMai extends javax.swing.JFrame {
     private javax.swing.JTextField idKMText_360;
     private javax.swing.JLabel idKM_360;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JPanel mainPanel_360;
     private javax.swing.JTextArea noteText_360;
     private javax.swing.JLabel note_360;
     private javax.swing.JTextField quantityText_360;
@@ -312,5 +313,6 @@ public class AddKhuyenMai extends javax.swing.JFrame {
     private javax.swing.JLabel startDay_360;
     private javax.swing.JButton submitBtn_360;
     private javax.swing.JLabel titleLabel_360;
+    private javax.swing.JPanel titlePanel_360;
     // End of variables declaration//GEN-END:variables
 }

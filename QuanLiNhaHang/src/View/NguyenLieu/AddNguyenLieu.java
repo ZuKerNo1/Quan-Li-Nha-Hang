@@ -45,10 +45,12 @@ public class AddNguyenLieu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+
         titlePanel_360.setBackground(new java.awt.Color(243, 161, 37));
 
         titleLabel_373.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel_373.setForeground(new java.awt.Color(0, 183, 45));
+        titleLabel_373.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel_373.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLabel_373.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ingredients.png"))); // NOI18N
         titleLabel_373.setText("NHẬP NGUYÊN LIỆU");
@@ -204,7 +206,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         // TODO add your handling code here:
-        new NguyenVatLieu().setVisible(true);
+        new NguyenLieuView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 
