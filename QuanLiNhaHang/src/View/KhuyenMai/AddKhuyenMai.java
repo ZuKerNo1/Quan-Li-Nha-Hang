@@ -50,6 +50,8 @@ public class AddKhuyenMai extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+
         titlePanel_360.setBackground(new java.awt.Color(255, 255, 51));
 
         titleLabel_360.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -62,16 +64,16 @@ public class AddKhuyenMai extends javax.swing.JFrame {
         titlePanel_360Layout.setHorizontalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
-                .addContainerGap(127, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titleLabel_360)
-                .addGap(112, 112, 112))
+                .addGap(116, 116, 116))
         );
         titlePanel_360Layout.setVerticalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(38, 38, 38)
                 .addComponent(titleLabel_360)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
 
         mainPanel_360.setBackground(new java.awt.Color(153, 153, 153));
@@ -109,7 +111,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
         noteText_360.setRows(5);
         jScrollPane1.setViewportView(noteText_360);
 
-        backBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        backBtn_360.setBackground(new java.awt.Color(255, 61, 61));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         backBtn_360.setText("BACK");
@@ -119,7 +121,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
             }
         });
 
-        submitBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        submitBtn_360.setBackground(new java.awt.Color(255, 61, 61));
         submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         submitBtn_360.setText("SUBMIT");
@@ -135,7 +137,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
 
         quantityText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        clearBtn_360.setBackground(new java.awt.Color(255, 153, 51));
+        clearBtn_360.setBackground(new java.awt.Color(255, 61, 61));
         clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_360.setText("CLEAR ALL");
@@ -244,7 +246,7 @@ public class AddKhuyenMai extends javax.swing.JFrame {
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         // TODO add your handling code here:
-        new KhuyenMai().setVisible(true);
+        new KhuyenMaiView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 
