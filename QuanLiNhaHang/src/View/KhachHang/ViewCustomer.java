@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package View;
+package View.KhachHang;
 
+import View.KhachHang.AddCustomer;
+import View.KhachHang.UpdateCustomer;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.table.DefaultTableModel;
@@ -13,33 +15,33 @@ import javax.swing.table.DefaultTableModel;
  * @author AD
  */
 public class ViewCustomer extends javax.swing.JFrame {
-    DefaultTableModel defaulttableModel;
+    DefaultTableModel defaulttableModel_354;
     /**
      * Creates new form ViewCustomer
      */
     public ViewCustomer() {
         initComponents();
-        defaulttableModel = new DefaultTableModel(){
+        defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
                 return super.isCellEditable(row, column); //To change body of generated methods, choose Tools | Templates.
             }
         };
-        table.setModel(defaulttableModel);
-        defaulttableModel.addColumn("ID");
-        defaulttableModel.addColumn("TÊM");
-        defaulttableModel.addColumn("NGÀY SINH");
-        defaulttableModel.addColumn("GIỚI TÍNH");
-        defaulttableModel.addColumn("SỐ ĐIỆN THOẠI");
-        defaulttableModel.addColumn("ĐỊA CHỈ");
-        table.getColumnModel().getColumn(0).setMaxWidth(50);
-        table.getColumnModel().getColumn(1).setMinWidth(100);
-        table.getColumnModel().getColumn(3).setMaxWidth(80);
-        table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
-        table.getTableHeader().setPreferredSize(new Dimension(100, 50));
-        table.setRowHeight(50);
-        table.validate();
-        table.repaint();
+        table354.setModel(defaulttableModel_354);
+        defaulttableModel_354.addColumn("ID");
+        defaulttableModel_354.addColumn("TÊM");
+        defaulttableModel_354.addColumn("NGÀY SINH");
+        defaulttableModel_354.addColumn("GIỚI TÍNH");
+        defaulttableModel_354.addColumn("SỐ ĐIỆN THOẠI");
+        defaulttableModel_354.addColumn("ĐỊA CHỈ");
+        table354.getColumnModel().getColumn(0).setMaxWidth(50);
+        table354.getColumnModel().getColumn(1).setMinWidth(100);
+        table354.getColumnModel().getColumn(3).setMaxWidth(80);
+        table354.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
+        table354.getTableHeader().setPreferredSize(new Dimension(100, 50));
+        table354.setRowHeight(50);
+        table354.validate();
+        table354.repaint();
     }
 
     /**
@@ -56,15 +58,15 @@ public class ViewCustomer extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        addBtn354 = new javax.swing.JButton();
+        backBtn354 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        table354 = new javax.swing.JTable();
+        updateBtn354 = new javax.swing.JButton();
+        deleteBtn354 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(20, 20));
+        setLocation(new java.awt.Point(50, 20));
         setPreferredSize(new java.awt.Dimension(880, 720));
         setResizable(false);
 
@@ -108,24 +110,32 @@ public class ViewCustomer extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jTextField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(76, 175, 80));
-        jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD");
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
+        addBtn354.setBackground(new java.awt.Color(204, 153, 255));
+        addBtn354.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        addBtn354.setForeground(new java.awt.Color(255, 255, 255));
+        addBtn354.setText("ADD");
+        addBtn354.setBorder(null);
+        addBtn354.setBorderPainted(false);
+        addBtn354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addBtn354ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(76, 175, 80));
-        jButton2.setText("BACK");
-        jButton2.setBorder(null);
+        backBtn354.setBackground(new java.awt.Color(204, 153, 255));
+        backBtn354.setForeground(new java.awt.Color(255, 255, 255));
+        backBtn354.setText("BACK");
+        backBtn354.setBorder(null);
 
-        table.setModel(new javax.swing.table.DefaultTableModel(
+        table354.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -136,11 +146,20 @@ public class ViewCustomer extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(table);
+        jScrollPane1.setViewportView(table354);
 
-        jButton3.setText("UPDATE");
+        updateBtn354.setBackground(new java.awt.Color(204, 153, 255));
+        updateBtn354.setForeground(new java.awt.Color(255, 255, 255));
+        updateBtn354.setText("UPDATE");
+        updateBtn354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtn354ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setText("DELETE");
+        deleteBtn354.setBackground(new java.awt.Color(204, 153, 255));
+        deleteBtn354.setForeground(new java.awt.Color(255, 255, 255));
+        deleteBtn354.setText("DELETE");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -151,15 +170,15 @@ public class ViewCustomer extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 875, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(64, 64, 64)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(updateBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34)
+                        .addComponent(deleteBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(backBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(addBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -168,16 +187,16 @@ public class ViewCustomer extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(backBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(updateBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(deleteBtn354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -191,13 +210,24 @@ public class ViewCustomer extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void addBtn354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtn354ActionPerformed
+        // TODO add your handling code here:
+        new AddCustomer().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addBtn354ActionPerformed
+
+    private void updateBtn354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn354ActionPerformed
+        // TODO add your handling code here:
+        new UpdateCustomer().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_updateBtn354ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -235,16 +265,16 @@ public class ViewCustomer extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton addBtn354;
+    private javax.swing.JButton backBtn354;
+    private javax.swing.JButton deleteBtn354;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTable table;
+    private javax.swing.JTable table354;
+    private javax.swing.JButton updateBtn354;
     // End of variables declaration//GEN-END:variables
 }

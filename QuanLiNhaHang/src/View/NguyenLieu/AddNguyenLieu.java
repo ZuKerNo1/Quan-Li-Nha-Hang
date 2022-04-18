@@ -204,7 +204,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         // TODO add your handling code here:
-        new NguyenVatLieu().setVisible(true);
+        new NguyenLieuView().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 
