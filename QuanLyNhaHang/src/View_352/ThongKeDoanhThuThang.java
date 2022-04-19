@@ -120,7 +120,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(215, 44, 22));
         jButton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Go Back_50px.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_back.png"))); // NOI18N
         jButton5.setText("Quay Lại");
         jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.setSelected(true);
