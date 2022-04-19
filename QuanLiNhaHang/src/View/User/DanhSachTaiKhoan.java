@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View_352;
+package View;
 
 /**
  *
@@ -43,7 +43,7 @@ public class DanhSachTaiKhoan extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_signup.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_signup.png"))); // NOI18N
         jLabel1.setText("Danh sách tài khoản");
 
         jPanel3.setBackground(new java.awt.Color(254, 243, 226));
@@ -51,7 +51,7 @@ public class DanhSachTaiKhoan extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(255, 0, 0));
         jButton4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_tick.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_tick.png"))); // NOI18N
         jButton4.setText("Thêm");
         jButton4.setAutoscrolls(true);
         jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -65,7 +65,7 @@ public class DanhSachTaiKhoan extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(255, 0, 0));
         jButton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_back.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_back.png"))); // NOI18N
         jButton5.setText("Quay Lại");
         jButton5.setAutoscrolls(true);
         jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -74,7 +74,7 @@ public class DanhSachTaiKhoan extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(255, 0, 0));
         jButton6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_updated.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_updated.png"))); // NOI18N
         jButton6.setText(" Sửa");
         jButton6.setAutoscrolls(true);
         jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -88,7 +88,7 @@ public class DanhSachTaiKhoan extends javax.swing.JFrame {
         jButton7.setBackground(new java.awt.Color(255, 0, 0));
         jButton7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_trash.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_trash.png"))); // NOI18N
         jButton7.setText(" Xoá");
         jButton7.setAutoscrolls(true);
         jButton7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));

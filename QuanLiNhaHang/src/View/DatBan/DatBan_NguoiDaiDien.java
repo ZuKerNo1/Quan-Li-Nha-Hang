@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View_352;
+package View;
 
 /**
  *
@@ -62,7 +62,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(223, 225, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_table.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_table.png"))); // NOI18N
         jLabel1.setText("ĐẶT BÀN");
 
         jPanel3.setBackground(new java.awt.Color(102, 165, 173));
@@ -115,7 +115,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(196, 223, 230));
         jButton4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_tick.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_tick.png"))); // NOI18N
         jButton4.setText(" Đặt bàn");
         jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton4.setSelected(true);
@@ -150,7 +150,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(196, 223, 230));
         jButton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_back.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_back.png"))); // NOI18N
         jButton5.setText(" Quay Lại");
         jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton5.setSelected(true);

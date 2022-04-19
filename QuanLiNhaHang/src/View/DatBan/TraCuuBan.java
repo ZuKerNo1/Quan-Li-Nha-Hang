@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View_352;
+package View;
 
 /**
  *
@@ -45,7 +45,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 102, 102));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/icon_find.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_find.png"))); // NOI18N
         jLabel1.setText("TRA CỨU BÀN");
 
         jButton_thang_lapbc.setBackground(new java.awt.Color(255, 204, 51));
@@ -98,7 +98,7 @@ public class TraCuuBan extends javax.swing.JFrame {
 
         jButton5.setBackground(new java.awt.Color(255, 153, 51));
         jButton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/shutdown.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/shutdown.png"))); // NOI18N
         jButton5.setText("Thoát");
         jButton5.setSelected(true);
 
