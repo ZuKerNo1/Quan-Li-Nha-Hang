@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package banan;
+package bananView;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -11,12 +11,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author DELL
  */
-public class BanAn extends javax.swing.JFrame {
+public class BanAnView extends javax.swing.JFrame {
 
     /**
      * Creates new form BanAn
      */
-    public BanAn() {
+    public BanAnView() {
         initComponents();
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
@@ -25,7 +25,7 @@ public class BanAn extends javax.swing.JFrame {
                 return false; //To change body of generated methods, choose Tools | Templates.
             }
         };
-        ngLieuTableList_360.setModel(defaultTableModel);
+        ngLieuTableList.setModel(defaultTableModel);
         defaultTableModel.addColumn("Mã bàn ăn");
         defaultTableModel.addColumn("Số lượng người");
         defaultTableModel.addColumn("Món");
@@ -41,45 +41,46 @@ public class BanAn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titlePanel_360 = new javax.swing.JPanel();
-        titleLabel_360 = new javax.swing.JLabel();
+        titlePanel = new javax.swing.JPanel();
+        titleLabel = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ngLieuTableList_360 = new javax.swing.JTable();
-        backBtn_360 = new javax.swing.JButton();
-        refreshBtn_360 = new javax.swing.JButton();
-        deleteBtn_360 = new javax.swing.JButton();
-        addBtn_360 = new javax.swing.JButton();
+        ngLieuTableList = new javax.swing.JTable();
+        backBtn = new javax.swing.JButton();
+        refreshBtn = new javax.swing.JButton();
+        deleteBtn = new javax.swing.JButton();
+        addBtn = new javax.swing.JButton();
+        editBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        titlePanel_360.setBackground(new java.awt.Color(243, 161, 37));
+        titlePanel.setBackground(new java.awt.Color(243, 161, 37));
 
-        titleLabel_360.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel_360.setForeground(new java.awt.Color(0, 183, 45));
-        titleLabel_360.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel_360.setText("BÀN ĂN");
+        titleLabel.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(0, 183, 45));
+        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLabel.setText("BÀN ĂN");
 
-        javax.swing.GroupLayout titlePanel_360Layout = new javax.swing.GroupLayout(titlePanel_360);
-        titlePanel_360.setLayout(titlePanel_360Layout);
-        titlePanel_360Layout.setHorizontalGroup(
-            titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanel_360Layout.createSequentialGroup()
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanelLayout.createSequentialGroup()
                 .addGap(238, 238, 238)
-                .addComponent(titleLabel_360)
+                .addComponent(titleLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        titlePanel_360Layout.setVerticalGroup(
-            titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanel_360Layout.createSequentialGroup()
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanelLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(titleLabel_360)
+                .addComponent(titleLabel)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
 
-        ngLieuTableList_360.setModel(new javax.swing.table.DefaultTableModel(
+        ngLieuTableList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -90,35 +91,45 @@ public class BanAn extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(ngLieuTableList_360);
+        jScrollPane1.setViewportView(ngLieuTableList);
 
-        backBtn_360.setBackground(new java.awt.Color(102, 255, 102));
-        backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_360.setText("BACK");
-        backBtn_360.addActionListener(new java.awt.event.ActionListener() {
+        backBtn.setBackground(new java.awt.Color(102, 255, 102));
+        backBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        backBtn.setForeground(new java.awt.Color(51, 51, 51));
+        backBtn.setText("BACK");
+        backBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtn_360ActionPerformed(evt);
+                backBtnActionPerformed(evt);
             }
         });
 
-        refreshBtn_360.setBackground(new java.awt.Color(102, 255, 102));
-        refreshBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        refreshBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        refreshBtn_360.setText("REFRESH");
+        refreshBtn.setBackground(new java.awt.Color(102, 255, 102));
+        refreshBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        refreshBtn.setForeground(new java.awt.Color(51, 51, 51));
+        refreshBtn.setText("REFRESH");
 
-        deleteBtn_360.setBackground(new java.awt.Color(102, 255, 102));
-        deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        deleteBtn_360.setText("DELETE");
+        deleteBtn.setBackground(new java.awt.Color(102, 255, 102));
+        deleteBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        deleteBtn.setForeground(new java.awt.Color(51, 51, 51));
+        deleteBtn.setText("DELETE");
 
-        addBtn_360.setBackground(new java.awt.Color(102, 255, 102));
-        addBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        addBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        addBtn_360.setText("ADD");
-        addBtn_360.addActionListener(new java.awt.event.ActionListener() {
+        addBtn.setBackground(new java.awt.Color(102, 255, 102));
+        addBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        addBtn.setForeground(new java.awt.Color(51, 51, 51));
+        addBtn.setText("ADD");
+        addBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addBtn_360ActionPerformed(evt);
+                addBtnActionPerformed(evt);
+            }
+        });
+
+        editBtn.setBackground(new java.awt.Color(102, 255, 102));
+        editBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        editBtn.setForeground(new java.awt.Color(51, 51, 51));
+        editBtn.setText("EDIT");
+        editBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editBtnActionPerformed(evt);
             }
         });
 
@@ -131,13 +142,15 @@ public class BanAn extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(backBtn_360)
+                        .addComponent(backBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(addBtn_360)
+                        .addComponent(editBtn)
                         .addGap(18, 18, 18)
-                        .addComponent(deleteBtn_360)
+                        .addComponent(addBtn)
                         .addGap(18, 18, 18)
-                        .addComponent(refreshBtn_360)))
+                        .addComponent(deleteBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(refreshBtn)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -147,10 +160,11 @@ public class BanAn extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backBtn_360)
-                    .addComponent(refreshBtn_360)
-                    .addComponent(addBtn_360)
-                    .addComponent(deleteBtn_360))
+                    .addComponent(backBtn)
+                    .addComponent(refreshBtn)
+                    .addComponent(addBtn)
+                    .addComponent(deleteBtn)
+                    .addComponent(editBtn))
                 .addGap(38, 38, 38))
         );
 
@@ -159,12 +173,12 @@ public class BanAn extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(titlePanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(titlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(titlePanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(titlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -172,13 +186,21 @@ public class BanAn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
+    private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_backBtn_360ActionPerformed
+    }//GEN-LAST:event_backBtnActionPerformed
 
-    private void addBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtn_360ActionPerformed
+    private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_addBtn_360ActionPerformed
+        new addBanAn().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_addBtnActionPerformed
+
+    private void editBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editBtnActionPerformed
+        // TODO add your handling code here:
+        new editBanAn().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_editBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -197,33 +219,35 @@ public class BanAn extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BanAn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanAnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BanAn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanAnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BanAn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanAnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BanAn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BanAnView.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BanAn().setVisible(true);
+                new BanAnView().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addBtn_360;
-    private javax.swing.JButton backBtn_360;
-    private javax.swing.JButton deleteBtn_360;
+    private javax.swing.JButton addBtn;
+    private javax.swing.JButton backBtn;
+    private javax.swing.JButton deleteBtn;
+    private javax.swing.JButton editBtn;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable ngLieuTableList_360;
-    private javax.swing.JButton refreshBtn_360;
-    private javax.swing.JLabel titleLabel_360;
-    private javax.swing.JPanel titlePanel_360;
+    private javax.swing.JTable ngLieuTableList;
+    private javax.swing.JButton refreshBtn;
+    private javax.swing.JLabel titleLabel;
+    private javax.swing.JPanel titlePanel;
     // End of variables declaration//GEN-END:variables
 }
