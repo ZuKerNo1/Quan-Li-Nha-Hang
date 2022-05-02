@@ -27,7 +27,7 @@ public class BanAnView extends javax.swing.JFrame {
         };
         ngLieuTableList.setModel(defaultTableModel);
         defaultTableModel.addColumn("Mã bàn ăn");
-        defaultTableModel.addColumn("Số lượng người");
+        defaultTableModel.addColumn("Ngày ăn");
         defaultTableModel.addColumn("Món");
         defaultTableModel.addColumn("Tổng tiền");
     }

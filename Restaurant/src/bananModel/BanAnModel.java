@@ -11,7 +11,7 @@ package bananModel;
  */
 public class BanAnModel {
     private String idBanAn;
-    private int soLuongNguoi;
+    private String ngayAn;
     private String Mon;
     private double tongTien;
 
@@ -21,14 +21,6 @@ public class BanAnModel {
 
     public void setIdBanAn(String idBanAn) {
         this.idBanAn = idBanAn;
-    }
-
-    public int getSoLuongNguoi() {
-        return soLuongNguoi;
-    }
-
-    public void setSoLuongNguoi(int soLuongNguoi) {
-        this.soLuongNguoi = soLuongNguoi;
     }
 
     public String getMon() {
@@ -46,4 +38,14 @@ public class BanAnModel {
     public void setTongTien(double tongTien) {
         this.tongTien = tongTien;
     }
+
+    public String getNgayAn() {
+        return ngayAn;
+    }
+
+    public void setNgayAn(String ngayAn) {
+        this.ngayAn = ngayAn;
+    }
+    
+    
 }
