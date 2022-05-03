@@ -91,7 +91,7 @@ public class TraCuuBan extends javax.swing.JFrame {
 
             },
             new String [] {
-                "STT", "Mã đặt bàn", "Tên người đặt", "Số lượng"
+                "IDBA", "Trạng thái bàn "
             }
         ));
         jScrollPane1.setViewportView(jTable1);
