@@ -27,30 +27,43 @@ public class AddNguyenLieu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        staffNguyenLieuText_360 = new javax.swing.JTextField();
+        staffNguyenLieu_360 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         titlePanel_360 = new javax.swing.JPanel();
         titleLabel_373 = new javax.swing.JLabel();
         mainPanel_360 = new javax.swing.JPanel();
-        idKM_360 = new javax.swing.JLabel();
-        idKMText_360 = new javax.swing.JTextField();
-        idKM_361 = new javax.swing.JLabel();
-        idKMText_361 = new javax.swing.JTextField();
-        idKM_362 = new javax.swing.JLabel();
-        idKMText_362 = new javax.swing.JTextField();
-        idKM_363 = new javax.swing.JLabel();
-        submitBtn_360 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        idNguyenLieu_360 = new javax.swing.JLabel();
+        nameNguyenLieuText_360 = new javax.swing.JTextField();
+        amountNguyenLieuText_360 = new javax.swing.JTextField();
+        unitNguyenLieuCB_360 = new javax.swing.JComboBox<>();
+        idNguyenLieuText_360 = new javax.swing.JTextField();
+        staffNguyenLieuText_361 = new javax.swing.JTextField();
+        staffNguyenLieu_361 = new javax.swing.JLabel();
+        amountNguyenLieu_360 = new javax.swing.JLabel();
+        nameNguyenLieu_360 = new javax.swing.JLabel();
+        unitNguyenLieu_360 = new javax.swing.JLabel();
         backBtn_360 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
         clearBtn_360 = new javax.swing.JButton();
+        submitBtn_360 = new javax.swing.JButton();
+
+        staffNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        staffNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        staffNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        staffNguyenLieu_360.setText("NHÂN VIÊN CẬP NHẬT");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        titlePanel_360.setBackground(new java.awt.Color(243, 161, 37));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        titleLabel_373.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel_373.setForeground(new java.awt.Color(0, 183, 45));
+        titlePanel_360.setBackground(new java.awt.Color(51, 255, 51));
+
+        titleLabel_373.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        titleLabel_373.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel_373.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel_373.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ingredients.png"))); // NOI18N
+        titleLabel_373.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/harvest.png"))); // NOI18N
         titleLabel_373.setText("NHẬP NGUYÊN LIỆU");
 
         javax.swing.GroupLayout titlePanel_360Layout = new javax.swing.GroupLayout(titlePanel_360);
@@ -60,7 +73,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titleLabel_373)
-                .addGap(117, 117, 117))
+                .addGap(87, 87, 87))
         );
         titlePanel_360Layout.setVerticalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -70,53 +83,110 @@ public class AddNguyenLieu extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        mainPanel_360.setBackground(new java.awt.Color(153, 153, 153));
+        mainPanel_360.setBackground(new java.awt.Color(255, 255, 255));
 
-        idKM_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        idKM_360.setForeground(new java.awt.Color(255, 255, 255));
-        idKM_360.setText("Mã nguyên liệu");
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        idKMText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        idNguyenLieu_360.setText("MÃ NGUYÊN LIỆU");
 
-        idKM_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        idKM_361.setForeground(new java.awt.Color(255, 255, 255));
-        idKM_361.setText("Tên nguyên liệu");
+        nameNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        idKMText_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        amountNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        idKM_362.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        idKM_362.setForeground(new java.awt.Color(255, 255, 255));
-        idKM_362.setText("Số lượng");
+        unitNguyenLieuCB_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        unitNguyenLieuCB_360.setForeground(new java.awt.Color(255, 255, 255));
+        unitNguyenLieuCB_360.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilogram", "Thùng", "Két" }));
 
-        idKMText_362.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        idKM_363.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        idKM_363.setForeground(new java.awt.Color(255, 255, 255));
-        idKM_363.setText("Đơn vị");
+        staffNguyenLieuText_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        submitBtn_360.setBackground(new java.awt.Color(0, 183, 45));
-        submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        submitBtn_360.setText("SUBMIT");
+        staffNguyenLieu_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        staffNguyenLieu_361.setForeground(new java.awt.Color(51, 51, 51));
+        staffNguyenLieu_361.setText("NHÂN VIÊN CẬP NHẬT");
 
-        backBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        amountNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        amountNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        amountNguyenLieu_360.setText("SỐ LƯỢNG");
+
+        nameNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        nameNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        nameNguyenLieu_360.setText("TÊN NGUYÊN LIỆU");
+
+        unitNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        unitNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        unitNguyenLieu_360.setText("ĐƠN VỊ");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nameNguyenLieu_360)
+                    .addComponent(amountNguyenLieu_360)
+                    .addComponent(staffNguyenLieu_361)
+                    .addComponent(idNguyenLieu_360))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(amountNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(unitNguyenLieu_360)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                        .addComponent(unitNguyenLieuCB_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(staffNguyenLieuText_361)
+                    .addComponent(nameNguyenLieuText_360)
+                    .addComponent(idNguyenLieuText_360))
+                .addGap(23, 23, 23))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idNguyenLieu_360)
+                    .addComponent(idNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nameNguyenLieu_360))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(amountNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(unitNguyenLieuCB_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(unitNguyenLieu_360)
+                    .addComponent(amountNguyenLieu_360))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staffNguyenLieuText_361, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staffNguyenLieu_361))
+                .addContainerGap())
+        );
+
+        backBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_360.setText("BACK");
+        backBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
         backBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtn_360ActionPerformed(evt);
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilogram", "Thùng", "Két" }));
-
-        clearBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        clearBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        clearBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/broom.png"))); // NOI18N
         clearBtn_360.setText("CLEAR ALL");
+
+        submitBtn_360.setBackground(new java.awt.Color(51, 255, 51));
+        submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        submitBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
 
         javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
         mainPanel_360.setLayout(mainPanel_360Layout);
@@ -124,53 +194,30 @@ public class AddNguyenLieu extends javax.swing.JFrame {
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
-                        .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idKM_360)
-                            .addComponent(idKM_361)
-                            .addComponent(idKM_362))
-                        .addGap(34, 34, 34)
-                        .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(mainPanel_360Layout.createSequentialGroup()
-                                .addComponent(idKMText_362, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(idKM_363)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(idKMText_361)
-                            .addComponent(idKMText_360)))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
-                        .addComponent(backBtn_360)
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(clearBtn_360)
                         .addGap(18, 18, 18)
-                        .addComponent(submitBtn_360)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                        .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43))))
         );
         mainPanel_360Layout.setVerticalGroup(
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idKM_360)
-                    .addComponent(idKMText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idKM_361)
-                    .addComponent(idKMText_361, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idKM_362)
-                    .addComponent(idKMText_362, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idKM_363)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(55, 55, 55)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitBtn_360)
-                    .addComponent(backBtn_360)
-                    .addComponent(clearBtn_360))
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(clearBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backBtn_360, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -244,20 +291,25 @@ public class AddNguyenLieu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField amountNguyenLieuText_360;
+    private javax.swing.JLabel amountNguyenLieu_360;
     private javax.swing.JButton backBtn_360;
     private javax.swing.JButton clearBtn_360;
-    private javax.swing.JTextField idKMText_360;
-    private javax.swing.JTextField idKMText_361;
-    private javax.swing.JTextField idKMText_362;
-    private javax.swing.JLabel idKM_360;
-    private javax.swing.JLabel idKM_361;
-    private javax.swing.JLabel idKM_362;
-    private javax.swing.JLabel idKM_363;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField idNguyenLieuText_360;
+    private javax.swing.JLabel idNguyenLieu_360;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel mainPanel_360;
+    private javax.swing.JTextField nameNguyenLieuText_360;
+    private javax.swing.JLabel nameNguyenLieu_360;
+    private javax.swing.JTextField staffNguyenLieuText_360;
+    private javax.swing.JTextField staffNguyenLieuText_361;
+    private javax.swing.JLabel staffNguyenLieu_360;
+    private javax.swing.JLabel staffNguyenLieu_361;
     private javax.swing.JButton submitBtn_360;
     private javax.swing.JLabel titleLabel_373;
     private javax.swing.JPanel titlePanel_360;
+    private javax.swing.JComboBox<String> unitNguyenLieuCB_360;
+    private javax.swing.JLabel unitNguyenLieu_360;
     // End of variables declaration//GEN-END:variables
 }

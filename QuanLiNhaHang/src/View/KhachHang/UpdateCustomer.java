@@ -51,8 +51,6 @@ public class UpdateCustomer extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(50, 20));
-        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -69,13 +67,16 @@ public class UpdateCustomer extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 557, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -83,17 +84,11 @@ public class UpdateCustomer extends javax.swing.JFrame {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         mainPanel_354.setBackground(new java.awt.Color(255, 255, 255));
@@ -151,9 +146,7 @@ public class UpdateCustomer extends javax.swing.JFrame {
             }
         });
 
-        idKHText_354.setEditable(false);
         idKHText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        idKHText_354.setEnabled(false);
 
         idKH_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         idKH_354.setForeground(new java.awt.Color(51, 51, 51));
@@ -189,28 +182,25 @@ public class UpdateCustomer extends javax.swing.JFrame {
                                 .addComponent(dateOfBirth_354)
                                 .addComponent(phoneNum_354))
                             .addGap(18, 18, 18)
-                            .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(addressText_354)
+                            .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(phoneNumText_354)
                                 .addGroup(mainPanel_354Layout.createSequentialGroup()
-                                    .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(mainPanel_354Layout.createSequentialGroup()
-                                            .addComponent(dateOfBirthText_354, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(sex_354)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jRadioButton1)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                            .addComponent(jRadioButton2))
-                                        .addComponent(idKHText_354, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGap(0, 0, Short.MAX_VALUE))))
+                                    .addComponent(dateOfBirthText_354, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(sex_354)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jRadioButton1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jRadioButton2))
+                                .addComponent(idKHText_354, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(addressText_354)))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanel_354Layout.createSequentialGroup()
                             .addComponent(backBtn_354)
                             .addGap(229, 229, 229)
                             .addComponent(clearBtn_354)
                             .addGap(18, 18, 18)
                             .addComponent(submitBtn_354))))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         mainPanel_354Layout.setVerticalGroup(
             mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -238,9 +228,9 @@ public class UpdateCustomer extends javax.swing.JFrame {
                     .addComponent(addressText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clearBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(submitBtn_354)
+                    .addComponent(clearBtn_354)
+                    .addComponent(backBtn_354))
                 .addGap(45, 45, 45))
         );
 
@@ -275,7 +265,7 @@ public class UpdateCustomer extends javax.swing.JFrame {
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here:
-        new ViewCustomer().setVisible(true);
+        new View.ViewCustomer().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 

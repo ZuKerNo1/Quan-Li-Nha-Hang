@@ -14,6 +14,15 @@ public class NguyenLieu {
     private String nameNL_360;
     private int soLuong_360;
     private String donVi_360;
+    private String nhanVienCapNhap_360;
+
+    public String getNhanVienCapNhap_360() {
+        return nhanVienCapNhap_360;
+    }
+
+    public void setNhanVienCapNhap_360(String nhanVienCapNhap_360) {
+        this.nhanVienCapNhap_360 = nhanVienCapNhap_360;
+    }
 
     public String getIdNL_360() {
         return idNL_360;

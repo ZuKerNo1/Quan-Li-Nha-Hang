@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package View.DatBan;
+
+import View.MainFrame.mainFrame;
 
 /**
  *
@@ -91,7 +93,7 @@ public class TraCuuBan extends javax.swing.JFrame {
 
             },
             new String [] {
-                "STT", "Mã đặt bàn", "Tên người đặt", "Số lượng"
+                "IDBA", "Trạng thái bàn "
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -101,6 +103,11 @@ public class TraCuuBan extends javax.swing.JFrame {
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/shutdown.png"))); // NOI18N
         jButton5.setText("Thoát");
         jButton5.setSelected(true);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         ttNDCButton1.setBackground(new java.awt.Color(192, 178, 181));
         ttNDCButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -209,6 +216,12 @@ public class TraCuuBan extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ttNDCButton1ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        new mainFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -237,7 +250,11 @@ public class TraCuuBan extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TraCuuBan().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

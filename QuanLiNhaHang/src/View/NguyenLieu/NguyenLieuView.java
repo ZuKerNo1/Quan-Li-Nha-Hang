@@ -5,6 +5,7 @@
  */
 package View.NguyenLieu;
 
+import View.MainFrame.mainFrame;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -30,6 +31,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
         defaultTableModel.addColumn("Tên nguyên liệu");
         defaultTableModel.addColumn("Số lượng còn");
         defaultTableModel.addColumn("Đơn vị");
+        defaultTableModel.addColumn("Nhân viên cập nhật");
     }
 
     /**
@@ -55,12 +57,15 @@ public class NguyenLieuView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        titlePanel_360.setBackground(new java.awt.Color(243, 161, 37));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setForeground(new java.awt.Color(153, 153, 153));
 
-        titleLabel_360.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        titleLabel_360.setForeground(new java.awt.Color(0, 183, 45));
+        titlePanel_360.setBackground(new java.awt.Color(51, 255, 51));
+
+        titleLabel_360.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        titleLabel_360.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel_360.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/ingredients.png"))); // NOI18N
+        titleLabel_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/harvest.png"))); // NOI18N
         titleLabel_360.setText("NGUYÊN VẬT LIỆU");
 
         javax.swing.GroupLayout titlePanel_360Layout = new javax.swing.GroupLayout(titlePanel_360);
@@ -68,56 +73,59 @@ public class NguyenLieuView extends javax.swing.JFrame {
         titlePanel_360Layout.setHorizontalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
+                .addGap(205, 205, 205)
                 .addComponent(titleLabel_360)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         titlePanel_360Layout.setVerticalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(titleLabel_360)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(titleLabel_360, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        mainPanel_360.setBackground(new java.awt.Color(153, 153, 153));
+        mainPanel_360.setBackground(new java.awt.Color(255, 255, 255));
 
         ngLieuTableList_360.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Mã nguyên liệu", "Tên nguyên liệu", "Số lượng", "Đơn vị", "Nhân viên cập nhập"
             }
         ));
         jScrollPane1.setViewportView(ngLieuTableList_360);
 
-        backBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        backBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_360.setText("BACK");
+        backBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
         backBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtn_360ActionPerformed(evt);
             }
         });
 
-        refreshBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        refreshBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         refreshBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         refreshBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        refreshBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh.png"))); // NOI18N
         refreshBtn_360.setText("REFRESH");
 
-        deleteBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        deleteBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        deleteBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/delete.png"))); // NOI18N
         deleteBtn_360.setText("DELETE");
 
-        addBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        addBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         addBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         addBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        addBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/add-to-basket.png"))); // NOI18N
         addBtn_360.setText("ADD");
         addBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -125,9 +133,10 @@ public class NguyenLieuView extends javax.swing.JFrame {
             }
         });
 
-        updateBtn_360.setBackground(new java.awt.Color(0, 183, 45));
+        updateBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         updateBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         updateBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        updateBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/updating.png"))); // NOI18N
         updateBtn_360.setText("UPDATE");
         updateBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,32 +151,32 @@ public class NguyenLieuView extends javax.swing.JFrame {
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 587, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 797, Short.MAX_VALUE)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
-                        .addComponent(backBtn_360)
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(updateBtn_360)
                         .addGap(18, 18, 18)
-                        .addComponent(addBtn_360)
-                        .addGap(18, 18, 18)
                         .addComponent(deleteBtn_360)
                         .addGap(18, 18, 18)
-                        .addComponent(refreshBtn_360)))
+                        .addComponent(refreshBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(addBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         mainPanel_360Layout.setVerticalGroup(
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addGap(27, 27, 27)
-                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backBtn_360)
-                    .addComponent(refreshBtn_360)
-                    .addComponent(addBtn_360)
-                    .addComponent(deleteBtn_360)
-                    .addComponent(updateBtn_360))
-                .addGap(38, 38, 38))
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(addBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(refreshBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(deleteBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(updateBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -201,6 +210,8 @@ public class NguyenLieuView extends javax.swing.JFrame {
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         // TODO add your handling code here:
+        new mainFrame().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 
     private void addBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtn_360ActionPerformed
