@@ -27,64 +27,50 @@ public class TraCuuBan extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton_thang_lapbc = new javax.swing.JButton();
-        jButton_thang_inbc = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        idCBText = new javax.swing.JTextField();
-        ttNDCButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
-        ttNDCButton1 = new javax.swing.JButton();
+        clearBtn_360 = new javax.swing.JButton();
+        backBtn_360 = new javax.swing.JButton();
+        submitBtn_360 = new javax.swing.JButton();
+        submitBtn_361 = new javax.swing.JButton();
+        submitBtn_362 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel3.setBackground(new java.awt.Color(51, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_find.png"))); // NOI18N
         jLabel1.setText("TRA CỨU BÀN");
 
-        jButton_thang_lapbc.setBackground(new java.awt.Color(255, 204, 51));
-        jButton_thang_lapbc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton_thang_lapbc.setText("TÌM KIẾM");
-        jButton_thang_lapbc.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton_thang_lapbc.setSelected(true);
-        jButton_thang_lapbc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_thang_lapbcActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
 
-        jButton_thang_inbc.setBackground(new java.awt.Color(255, 204, 51));
-        jButton_thang_inbc.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton_thang_inbc.setText("IN THÔNG TIN TRA CỨU");
-        jButton_thang_inbc.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton_thang_inbc.setSelected(true);
-        jButton_thang_inbc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_thang_inbcActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        jLabel2.setText("Mã đặt bàn");
-
-        idCBText.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        ttNDCButton.setBackground(new java.awt.Color(192, 178, 181));
-        ttNDCButton.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        ttNDCButton.setText("Xem thông tin đặt bàn");
-        ttNDCButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ttNDCButton.setSelected(true);
-        ttNDCButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ttNDCButtonActionPerformed(evt);
-            }
-        });
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,20 +82,57 @@ public class TraCuuBan extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton5.setBackground(new java.awt.Color(255, 153, 51));
-        jButton5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/shutdown.png"))); // NOI18N
-        jButton5.setText("Thoát");
-        jButton5.setSelected(true);
-
-        ttNDCButton1.setBackground(new java.awt.Color(192, 178, 181));
-        ttNDCButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        ttNDCButton1.setText("Huỷ đặt");
-        ttNDCButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        ttNDCButton1.setSelected(true);
-        ttNDCButton1.addActionListener(new java.awt.event.ActionListener() {
+        clearBtn_360.setBackground(new java.awt.Color(51, 153, 255));
+        clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        clearBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_dinner-table.png"))); // NOI18N
+        clearBtn_360.setText("ĐẶT BÀN");
+        clearBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ttNDCButton1ActionPerformed(evt);
+                clearBtn_360ActionPerformed(evt);
+            }
+        });
+
+        backBtn_360.setBackground(new java.awt.Color(51, 153, 255));
+        backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        backBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
+        backBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtn_360ActionPerformed(evt);
+            }
+        });
+
+        submitBtn_360.setBackground(new java.awt.Color(51, 153, 255));
+        submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        submitBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
+        submitBtn_360.setText("THANH TOÁN");
+        submitBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitBtn_360ActionPerformed(evt);
+            }
+        });
+
+        submitBtn_361.setBackground(new java.awt.Color(51, 153, 255));
+        submitBtn_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        submitBtn_361.setForeground(new java.awt.Color(255, 255, 255));
+        submitBtn_361.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_eat.png"))); // NOI18N
+        submitBtn_361.setText("GỌI MÓN");
+        submitBtn_361.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitBtn_361ActionPerformed(evt);
+            }
+        });
+
+        submitBtn_362.setBackground(new java.awt.Color(51, 153, 255));
+        submitBtn_362.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        submitBtn_362.setForeground(new java.awt.Color(255, 255, 255));
+        submitBtn_362.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_classroom.png"))); // NOI18N
+        submitBtn_362.setText("HUỶ ĐẶT");
+        submitBtn_362.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitBtn_362ActionPerformed(evt);
             }
         });
 
@@ -118,96 +141,79 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(ttNDCButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ttNDCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton_thang_lapbc))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton_thang_inbc, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idCBText, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(521, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addComponent(clearBtn_360)
+                        .addGap(49, 49, 49)
+                        .addComponent(submitBtn_362)
+                        .addGap(50, 50, 50)
+                        .addComponent(submitBtn_361)
+                        .addGap(55, 55, 55)
+                        .addComponent(submitBtn_360))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton_thang_lapbc, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton_thang_inbc, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(idCBText, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(51, 51, 51)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ttNDCButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ttNDCButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(submitBtn_361, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(clearBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(submitBtn_362, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(320, 320, 320)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
+        jScrollPane2.setViewportView(jPanel1);
+
+        getContentPane().add(jScrollPane2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton_thang_inbcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_thang_inbcActionPerformed
+    private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_thang_inbcActionPerformed
+        new NguyenLieuView().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backBtn_360ActionPerformed
 
-    private void jButton_thang_lapbcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_thang_lapbcActionPerformed
-
-    }//GEN-LAST:event_jButton_thang_lapbcActionPerformed
-
-    private void ttNDCButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ttNDCButtonActionPerformed
+    private void clearBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_360ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ttNDCButtonActionPerformed
+    }//GEN-LAST:event_clearBtn_360ActionPerformed
 
-    private void ttNDCButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ttNDCButton1ActionPerformed
+    private void submitBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_360ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ttNDCButton1ActionPerformed
+    }//GEN-LAST:event_submitBtn_360ActionPerformed
+
+    private void submitBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_361ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitBtn_361ActionPerformed
+
+    private void submitBtn_362ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_362ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_submitBtn_362ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,17 +247,17 @@ public class TraCuuBan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField idCBText;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton_thang_inbc;
-    private javax.swing.JButton jButton_thang_lapbc;
+    private javax.swing.JButton backBtn_360;
+    private javax.swing.JButton clearBtn_360;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JButton ttNDCButton;
-    private javax.swing.JButton ttNDCButton1;
+    private javax.swing.JButton submitBtn_360;
+    private javax.swing.JButton submitBtn_361;
+    private javax.swing.JButton submitBtn_362;
     // End of variables declaration//GEN-END:variables
 }
