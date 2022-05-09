@@ -116,13 +116,13 @@ public class ViewCustomer extends javax.swing.JFrame {
         jScrollPane1.setViewportView(table354);
 
         backBtn_354.setBackground(new java.awt.Color(204, 153, 255));
-        backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back-button.png"))); // NOI18N
+        backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
 
         updateBtn_354.setBackground(new java.awt.Color(204, 153, 255));
-        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/update.png"))); // NOI18N
+        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
 
         deleteBtn_354.setBackground(new java.awt.Color(204, 153, 255));
-        deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete.png"))); // NOI18N
+        deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete_1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -131,7 +131,7 @@ public class ViewCustomer extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 957, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(search_354, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
