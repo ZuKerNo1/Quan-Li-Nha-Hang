@@ -27,10 +27,8 @@ public class UpdateEmployee extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         mainPanel_354 = new javax.swing.JPanel();
         name_354 = new javax.swing.JLabel();
@@ -43,7 +41,6 @@ public class UpdateEmployee extends javax.swing.JFrame {
         address_354 = new javax.swing.JLabel();
         addressText_354 = new javax.swing.JTextField();
         backBtn_354 = new javax.swing.JButton();
-        clearBtn_354 = new javax.swing.JButton();
         submitBtn_354 = new javax.swing.JButton();
         idKHText_354 = new javax.swing.JTextField();
         idKH_354 = new javax.swing.JLabel();
@@ -55,12 +52,12 @@ public class UpdateEmployee extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(50, 20));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(82, 83, 81));
-
-        jPanel3.setBackground(new java.awt.Color(232, 64, 60));
+        jPanel2.setBackground(new java.awt.Color(232, 64, 60));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -68,34 +65,21 @@ public class UpdateEmployee extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/employee.png"))); // NOI18N
         jLabel1.setText("CẬP NHẬP NHÂN VIÊN");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(121, 121, 121)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, Short.MAX_VALUE)
+                .addGap(22, 22, 22))
         );
 
         mainPanel_354.setBackground(new java.awt.Color(255, 255, 255));
@@ -131,24 +115,21 @@ public class UpdateEmployee extends javax.swing.JFrame {
         backBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         backBtn_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_354.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_354.setText("BACK");
+        backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
         backBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtn_354ActionPerformed(evt);
             }
         });
 
-        clearBtn_354.setBackground(new java.awt.Color(232, 64, 60));
-        clearBtn_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        clearBtn_354.setForeground(new java.awt.Color(255, 255, 255));
-        clearBtn_354.setText("CLEAR ALL");
-
         submitBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         submitBtn_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_354.setForeground(new java.awt.Color(255, 255, 255));
-        submitBtn_354.setText("SUBMIT");
+        submitBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/submit.png"))); // NOI18N
 
+        idKHText_354.setEditable(false);
         idKHText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idKHText_354.setEnabled(false);
 
         idKH_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         idKH_354.setForeground(new java.awt.Color(51, 51, 51));
@@ -165,12 +146,10 @@ public class UpdateEmployee extends javax.swing.JFrame {
         salaryText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jRadioButton1.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jRadioButton1.setText("Nam");
 
         jRadioButton2.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jRadioButton2.setText("Nữ");
 
@@ -186,11 +165,9 @@ public class UpdateEmployee extends javax.swing.JFrame {
                 .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(mainPanel_354Layout.createSequentialGroup()
-                            .addComponent(backBtn_354)
+                            .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(clearBtn_354)
-                            .addGap(18, 18, 18)
-                            .addComponent(submitBtn_354))
+                            .addComponent(submitBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(address_354)
                         .addGroup(mainPanel_354Layout.createSequentialGroup()
                             .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +206,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
                         .addComponent(jRadioButton1)
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         mainPanel_354Layout.setVerticalGroup(
             mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,10 +241,9 @@ public class UpdateEmployee extends javax.swing.JFrame {
                     .addComponent(salary_354))
                 .addGap(31, 31, 31)
                 .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitBtn_354)
-                    .addComponent(clearBtn_354)
-                    .addComponent(backBtn_354))
-                .addContainerGap(25, Short.MAX_VALUE))
+                    .addComponent(submitBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -301,7 +277,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here:
-        new View.ViewCustomer().setVisible(true);
+        new ViewEmployee().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 
@@ -344,8 +320,6 @@ public class UpdateEmployee extends javax.swing.JFrame {
     private javax.swing.JTextField addressText_354;
     private javax.swing.JLabel address_354;
     private javax.swing.JButton backBtn_354;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JButton clearBtn_354;
     private javax.swing.JTextField dateOfBirthText_354;
     private javax.swing.JLabel dateOfBirth_354;
     private javax.swing.JTextField idKHText_354;
@@ -354,7 +328,6 @@ public class UpdateEmployee extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JPanel mainPanel_354;
