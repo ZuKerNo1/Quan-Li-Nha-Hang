@@ -237,7 +237,7 @@
                   <Color blue="3c" green="40" red="e8" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/image/add-to-basket.png"/>
+                  <Image iconType="3" name="/image/more.png"/>
                 </Property>
               </Properties>
               <Events>

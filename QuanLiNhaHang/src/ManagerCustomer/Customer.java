@@ -9,15 +9,14 @@ package ManagerCustomer;
  * @author AD
  */
 public class Customer {
-    private int phone_354;
-    private String name_354, dob_354, gender_354, address_354;
+    private String name_354, dob_354, gender_354, address_354, phone_354;
 
 
-    public int getPhone_354() {
+    public String getPhone_354() {
         return phone_354;
     }
 
-    public void setPhone_354(int phone_354) {
+    public void setPhone_354(String phone_354) {
         this.phone_354 = phone_354;
     }
 
