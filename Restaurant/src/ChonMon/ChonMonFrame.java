@@ -39,7 +39,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
         jCheckBox12 = new javax.swing.JCheckBox();
         jCheckBox13 = new javax.swing.JCheckBox();
         jCheckBox14 = new javax.swing.JCheckBox();
@@ -47,7 +46,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jCheckBox16 = new javax.swing.JCheckBox();
         jCheckBox17 = new javax.swing.JCheckBox();
         jCheckBox18 = new javax.swing.JCheckBox();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -56,7 +54,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
         jSpinner3 = new javax.swing.JSpinner();
         jSpinner4 = new javax.swing.JSpinner();
         jSpinner5 = new javax.swing.JSpinner();
@@ -67,7 +64,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jSpinner10 = new javax.swing.JSpinner();
         jButton2 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -111,9 +107,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jCheckBox10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jCheckBox10.setText("Gà rán nóng Nashville");
 
-        jCheckBox11.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jCheckBox11.setText("Gà quay");
-
         jCheckBox12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jCheckBox12.setText("Cá sấu Châu Phi nướng");
 
@@ -134,9 +127,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
         jCheckBox18.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jCheckBox18.setText("Rượu vang");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel13.setText("400000");
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel14.setText("330000");
@@ -162,8 +152,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel21.setText("450000");
 
-        jSpinner2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-
         jSpinner3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
 
         jSpinner4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
@@ -184,8 +172,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/back.png"))); // NOI18N
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/beefsteak.png"))); // NOI18N
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/chicken-leg.png"))); // NOI18N
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fried-chicken.png"))); // NOI18N
 
@@ -230,7 +216,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jCheckBox9)
-                                    .addComponent(jCheckBox11)
                                     .addComponent(jCheckBox10)
                                     .addComponent(jCheckBox12)
                                     .addComponent(jCheckBox13)
@@ -242,7 +227,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                 .addGap(94, 94, 94)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel6)
-                                    .addComponent(jLabel7)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel9)
                                     .addComponent(jLabel10)
@@ -254,7 +238,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -267,7 +250,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
-                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -306,31 +288,22 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                                                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                                                                    .addComponent(jTextField1))
-                                                                                                .addGap(18, 18, 18)
-                                                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                    .addComponent(jLabel5)
-                                                                                                    .addComponent(jLabel4)
-                                                                                                    .addComponent(jLabel3))
-                                                                                                .addGap(18, 18, 18)
-                                                                                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                                    .addComponent(jCheckBox9)
-                                                                                                    .addComponent(jLabel6)))
-                                                                                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                                .addComponent(jLabel12)
-                                                                                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                                                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                                                            .addComponent(jTextField1))
+                                                                                        .addGap(18, 18, 18)
+                                                                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                                                                            .addComponent(jLabel5)
+                                                                                            .addComponent(jLabel4)
+                                                                                            .addComponent(jLabel3))
                                                                                         .addGap(18, 18, 18)
                                                                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                                                            .addComponent(jCheckBox11)
-                                                                                            .addComponent(jLabel7)))
+                                                                                            .addComponent(jCheckBox9)
+                                                                                            .addComponent(jLabel6)))
                                                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                                        .addComponent(jLabel13)
-                                                                                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                                                .addGap(18, 18, 18)
+                                                                                        .addComponent(jLabel12)
+                                                                                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                                                .addGap(86, 86, 86)
                                                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                                     .addComponent(jLabel8)
                                                                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -477,7 +450,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
     private javax.swing.JCheckBox jCheckBox14;
@@ -490,7 +462,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -508,14 +479,12 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner10;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JSpinner jSpinner3;
     private javax.swing.JSpinner jSpinner4;
     private javax.swing.JSpinner jSpinner5;
