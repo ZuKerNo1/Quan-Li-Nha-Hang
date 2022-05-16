@@ -5,12 +5,18 @@
  */
 package View.NguyenLieu;
 
+import Service.NguyenLieuService;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import model.NguyenLieu;
+
 /**
  *
  * @author FSC
  */
 public class AddNguyenLieu extends javax.swing.JFrame {
-
+    NguyenLieuService nlService = new NguyenLieuService();
     /**
      * Creates new form AddNguyenLieu
      */
@@ -27,8 +33,6 @@ public class AddNguyenLieu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        staffNguyenLieuText_360 = new javax.swing.JTextField();
-        staffNguyenLieu_360 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         titlePanel_360 = new javax.swing.JPanel();
         titleLabel_373 = new javax.swing.JLabel();
@@ -39,8 +43,8 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         amountNguyenLieuText_360 = new javax.swing.JTextField();
         unitNguyenLieuCB_360 = new javax.swing.JComboBox<>();
         idNguyenLieuText_360 = new javax.swing.JTextField();
-        staffNguyenLieuText_361 = new javax.swing.JTextField();
-        staffNguyenLieu_361 = new javax.swing.JLabel();
+        staffNguyenLieuText_360 = new javax.swing.JTextField();
+        staffNguyenLieu_360 = new javax.swing.JLabel();
         amountNguyenLieu_360 = new javax.swing.JLabel();
         nameNguyenLieu_360 = new javax.swing.JLabel();
         unitNguyenLieu_360 = new javax.swing.JLabel();
@@ -48,19 +52,13 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         clearBtn_360 = new javax.swing.JButton();
         submitBtn_360 = new javax.swing.JButton();
 
-        staffNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-
-        staffNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        staffNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
-        staffNguyenLieu_360.setText("NHÂN VIÊN CẬP NHẬT");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         titlePanel_360.setBackground(new java.awt.Color(51, 255, 51));
 
-        titleLabel_373.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        titleLabel_373.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         titleLabel_373.setForeground(new java.awt.Color(255, 255, 255));
         titleLabel_373.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLabel_373.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/harvest.png"))); // NOI18N
@@ -73,14 +71,14 @@ public class AddNguyenLieu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titleLabel_373)
-                .addGap(140, 140, 140))
+                .addGap(87, 87, 87))
         );
         titlePanel_360Layout.setVerticalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_360Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+            .addGroup(titlePanel_360Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addComponent(titleLabel_373)
-                .addGap(21, 21, 21))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         mainPanel_360.setBackground(new java.awt.Color(255, 255, 255));
@@ -101,11 +99,11 @@ public class AddNguyenLieu extends javax.swing.JFrame {
 
         idNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        staffNguyenLieuText_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        staffNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        staffNguyenLieu_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        staffNguyenLieu_361.setForeground(new java.awt.Color(51, 51, 51));
-        staffNguyenLieu_361.setText("NHÂN VIÊN CẬP NHẬT");
+        staffNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        staffNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        staffNguyenLieu_360.setText("NHÂN VIÊN CẬP NHẬT");
 
         amountNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         amountNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
@@ -128,7 +126,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nameNguyenLieu_360)
                     .addComponent(amountNguyenLieu_360)
-                    .addComponent(staffNguyenLieu_361)
+                    .addComponent(staffNguyenLieu_360)
                     .addComponent(idNguyenLieu_360))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +136,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
                         .addComponent(unitNguyenLieu_360)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                         .addComponent(unitNguyenLieuCB_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(staffNguyenLieuText_361)
+                    .addComponent(staffNguyenLieuText_360)
                     .addComponent(nameNguyenLieuText_360)
                     .addComponent(idNguyenLieuText_360))
                 .addGap(23, 23, 23))
@@ -162,8 +160,8 @@ public class AddNguyenLieu extends javax.swing.JFrame {
                     .addComponent(amountNguyenLieu_360))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staffNguyenLieuText_361, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(staffNguyenLieu_361))
+                    .addComponent(staffNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staffNguyenLieu_360))
                 .addContainerGap())
         );
 
@@ -187,6 +185,11 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         submitBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
+        submitBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitBtn_360ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
         mainPanel_360.setLayout(mainPanel_360Layout);
@@ -197,7 +200,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(21, Short.MAX_VALUE))
+                        .addContainerGap(24, Short.MAX_VALUE))
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -211,13 +214,13 @@ public class AddNguyenLieu extends javax.swing.JFrame {
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(clearBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(backBtn_360, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(25, 25, 25))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -250,8 +253,35 @@ public class AddNguyenLieu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new NguyenLieuView().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(AddNguyenLieu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
+
+    private void submitBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_360ActionPerformed
+        // TODO add your handling code here:
+        NguyenLieu nguyenLieu = new NguyenLieu();
+        nguyenLieu.setIdNL_360(idNguyenLieuText_360.getText());
+        nguyenLieu.setNameNL_360(nameNguyenLieuText_360.getText());
+        nguyenLieu.setSoLuong_360(Integer.valueOf(amountNguyenLieuText_360.getText()));
+        nguyenLieu.setDonVi_360(unitNguyenLieuCB_360.getSelectedItem().toString());
+        nguyenLieu.setNhanVienCapNhap_360(staffNguyenLieuText_360.getText());
+        try {
+                nlService.addListNguyenLieu(nguyenLieu);
+            } catch (SQLException ex) {
+                Logger.getLogger(AddNguyenLieu.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        try {
+            new NguyenLieuView().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(AddNguyenLieu.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }//GEN-LAST:event_submitBtn_360ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,9 +331,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
     private javax.swing.JTextField nameNguyenLieuText_360;
     private javax.swing.JLabel nameNguyenLieu_360;
     private javax.swing.JTextField staffNguyenLieuText_360;
-    private javax.swing.JTextField staffNguyenLieuText_361;
     private javax.swing.JLabel staffNguyenLieu_360;
-    private javax.swing.JLabel staffNguyenLieu_361;
     private javax.swing.JButton submitBtn_360;
     private javax.swing.JLabel titleLabel_373;
     private javax.swing.JPanel titlePanel_360;
