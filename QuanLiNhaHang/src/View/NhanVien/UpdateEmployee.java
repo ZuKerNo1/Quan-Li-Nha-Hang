@@ -5,6 +5,11 @@
  */
 package View.NhanVien;
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UnsupportedLookAndFeelException;
+
 /**
  *
  * @author FSC
@@ -276,8 +281,20 @@ public class UpdateEmployee extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
-        // TODO add your handling code here:
-        new ViewEmployee().setVisible(true);
+        try {
+            // TODO add your handling code here:
+            new ViewEmployee().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 

@@ -4,14 +4,12 @@
  */
 package View.NhanVien;
 
-import ManagerEmployee.Employee;
-import ManagerEmployee.ServiceEmployee;
+import model.Employee;
+import Service.ServiceEmployee;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.sql.SQLException;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.UIManager;
@@ -132,6 +130,8 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        search_354.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
 
@@ -209,8 +209,8 @@ public class ViewEmployee extends javax.swing.JFrame {
                             .addComponent(search_354, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 391, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
