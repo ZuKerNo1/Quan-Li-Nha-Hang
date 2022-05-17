@@ -4,9 +4,18 @@
  */
 package View.NhanVien;
 
-import View.MainFrame.mainFrame;
+import ManagerEmployee.Employee;
+import ManagerEmployee.ServiceEmployee;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -15,10 +24,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ViewEmployee extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
+    Employee employee;
+    ServiceEmployee serviceEmployee;
     /**
      * Creates new form ViewEmployee
      */
-    public ViewEmployee() {
+    public ViewEmployee() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+        employee = new Employee();
+        serviceEmployee = new ServiceEmployee();
         initComponents();
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
@@ -33,12 +46,14 @@ public class ViewEmployee extends javax.swing.JFrame {
         defaulttableModel_354.addColumn("GIỚI TÍNH");
         defaulttableModel_354.addColumn("SỐ ĐIỆN THOẠI");
         defaulttableModel_354.addColumn("ĐỊA CHỈ");
-        defaulttableModel_354.addColumn("VỊ TRÍ");
+        defaulttableModel_354.addColumn("CHỨC VỤ");
         defaulttableModel_354.addColumn("LƯƠNG");
-        table_354.getColumnModel().getColumn(0).setMaxWidth(50);
+        defaulttableModel_354.addColumn("TÌNH TRẠNG");
+        table_354.getColumnModel().getColumn(0).setMaxWidth(60);
         table_354.getColumnModel().getColumn(1).setMinWidth(100);
-        table_354.getColumnModel().getColumn(2).setMinWidth(100);
-        table_354.getColumnModel().getColumn(3).setMinWidth(80);
+        table_354.getColumnModel().getColumn(2).setMinWidth(80);
+        table_354.getColumnModel().getColumn(3).setMaxWidth(80);
+        table_354.getColumnModel().getColumn(4).setMinWidth(100);
         table_354.getColumnModel().getColumn(5).setMinWidth(100);
         table_354.getColumnModel().getColumn(6).setMinWidth(50);
         table_354.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
@@ -46,6 +61,20 @@ public class ViewEmployee extends javax.swing.JFrame {
         table_354.setRowHeight(50);
         table_354.validate();
         table_354.repaint();
+        setTableData(serviceEmployee.getAllEmployees());
+        label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
+        
+        // thay doi thanh scroll bar
+        try{
+            for(UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()){
+            if("Windows".equals(info.getName())){
+                UIManager.setLookAndFeel(info.getClassName());
+                break;
+            }
+            }
+        } catch(Exception e){
+            e.getMessage();
+        }
     }
 
     /**
@@ -63,12 +92,15 @@ public class ViewEmployee extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         search_354 = new javax.swing.JTextField();
         searchBtn_354 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table_354 = new javax.swing.JTable();
         backBtn_354 = new javax.swing.JButton();
         updateBtn_354 = new javax.swing.JButton();
         deleteBtn_354 = new javax.swing.JButton();
         addBtn_354 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        table_354 = new com.raven.suportSwing.TableColumn();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        label_354 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(50, 20));
@@ -78,7 +110,7 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(232, 64, 60));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI Semibold", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/employee.png"))); // NOI18N
@@ -88,16 +120,13 @@ public class ViewEmployee extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -106,40 +135,46 @@ public class ViewEmployee extends javax.swing.JFrame {
         searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
 
-        table_354.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(table_354);
-
         backBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
-        backBtn_354.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtn_354ActionPerformed(evt);
-            }
-        });
 
         updateBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
 
         deleteBtn_354.setBackground(new java.awt.Color(232, 64, 60));
-        deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/delete.png"))); // NOI18N
+        deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete_1.png"))); // NOI18N
 
         addBtn_354.setBackground(new java.awt.Color(232, 64, 60));
-        addBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/add-to-basket.png"))); // NOI18N
+        addBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/more.png"))); // NOI18N
         addBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtn_354ActionPerformed(evt);
             }
         });
+
+        table_354.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã nhân viên", "Tên nhân viên", "Số điện thoại", "Địa chỉ", "Chức vụ", "Lương", "Tình trạng"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        table_354.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        table_354.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_354MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(table_354);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -148,12 +183,12 @@ public class ViewEmployee extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(search_354, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(searchBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 591, Short.MAX_VALUE)
                         .addComponent(addBtn_354))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -173,9 +208,9 @@ public class ViewEmployee extends javax.swing.JFrame {
                             .addComponent(searchBtn_354, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
                             .addComponent(search_354, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(0, 0, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(90, 90, 90)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -183,18 +218,54 @@ public class ViewEmployee extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("TỔNG SỐ NHÂN VIÊN");
+
+        label_354.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        label_354.setText("jLabel4");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(label_354, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
+                .addComponent(label_354, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -219,12 +290,15 @@ public class ViewEmployee extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_addBtn_354ActionPerformed
 
-    private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
-        // TODO add your handling code here:
-        new mainFrame().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_backBtn_354ActionPerformed
+    private void table_354MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_354MouseClicked
 
+    }//GEN-LAST:event_table_354MouseClicked
+        private void setTableData(List<Employee> Employees){
+        for(Employee employee: Employees){
+            defaulttableModel_354.addRow(new Object[]{employee.getId_354(), employee.getName_354(), employee.getDob_354(), employee.getGender_354(), employee.getPhone_354(),
+            employee.getAddress_354(), employee.getRole_354(), employee.getSalary_354(), employee.getStatus_354()});
+        }
+    }  
     /**
      * @param args the command line arguments
      */
@@ -236,7 +310,7 @@ public class ViewEmployee extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -255,7 +329,19 @@ public class ViewEmployee extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewEmployee().setVisible(true);
+                try {
+                    new ViewEmployee().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (ClassNotFoundException ex) {
+                    Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (InstantiationException ex) {
+                    Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IllegalAccessException ex) {
+                    Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (UnsupportedLookAndFeelException ex) {
+                    Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
@@ -265,13 +351,16 @@ public class ViewEmployee extends javax.swing.JFrame {
     private javax.swing.JButton backBtn_354;
     private javax.swing.JButton deleteBtn_354;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel label_354;
     private javax.swing.JButton searchBtn_354;
     private javax.swing.JTextField search_354;
-    private javax.swing.JTable table_354;
+    private com.raven.suportSwing.TableColumn table_354;
     private javax.swing.JButton updateBtn_354;
     // End of variables declaration//GEN-END:variables
 }
