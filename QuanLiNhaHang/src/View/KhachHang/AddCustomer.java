@@ -308,7 +308,7 @@ public class AddCustomer extends javax.swing.JFrame {
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here:
-        new View.ViewCustomer().setVisible(true);
+        new View.KhachHang.ViewCustomer().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 
@@ -320,11 +320,7 @@ public class AddCustomer extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+/
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
