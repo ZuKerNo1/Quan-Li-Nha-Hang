@@ -5,19 +5,27 @@
  */
 package View.NguyenLieu;
 
+import Manager.ManagerNguyenLieu;
+import Service.NguyenLieuService;
 import View.MainFrame.mainFrame;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import model.NguyenLieu;
 
 /**
  *
  * @author FSC
  */
 public class NguyenLieuView extends javax.swing.JFrame {
-
+    NguyenLieuService nguyenLieuService = new NguyenLieuService();
     /**
      * Creates new form NguyenLieuView
      */
-    public NguyenLieuView() {
+    public NguyenLieuView() throws SQLException {
         initComponents();
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
@@ -25,6 +33,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
             public boolean isCellEditable(int row, int column) {
                 return false; //To change body of generated methods, choose Tools | Templates.
             }
+
         };
         ngLieuTableList_360.setModel(defaultTableModel);
         defaultTableModel.addColumn("Mã nguyên liệu");
@@ -32,8 +41,25 @@ public class NguyenLieuView extends javax.swing.JFrame {
         defaultTableModel.addColumn("Số lượng còn");
         defaultTableModel.addColumn("Đơn vị");
         defaultTableModel.addColumn("Nhân viên cập nhật");
+        setData(nguyenLieuService.getAllListNguyenLieu());
     }
-
+    
+    private void setData(List<NguyenLieu> nguyenLieus) throws SQLException {
+        DefaultTableModel defaultTableModel;
+        ManagerNguyenLieu us = new ManagerNguyenLieu();
+        defaultTableModel = new DefaultTableModel();
+        ngLieuTableList_360.setModel(defaultTableModel);
+        defaultTableModel.addColumn("ID nguyên liệu");
+        defaultTableModel.addColumn("Tên nguyên liệu");
+        defaultTableModel.addColumn("Số lượng");
+        defaultTableModel.addColumn("Đơn giá");
+        defaultTableModel.addColumn("NV Cập nhập");
+        for (NguyenLieu nguyenLieu : nguyenLieus) {
+            defaultTableModel.addRow(new Object[]{nguyenLieu.getIdNL_360(), nguyenLieu.getNameNL_360(), nguyenLieu.getSoLuong_360(),
+                nguyenLieu.getDonVi_360(),nguyenLieu.getNhanVienCapNhap_360()});
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -56,6 +82,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
         updateBtn_360 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 150));
         setPreferredSize(new java.awt.Dimension(880, 720));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -74,7 +101,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
         titlePanel_360Layout.setHorizontalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(205, 205, 205)
+                .addGap(234, 234, 234)
                 .addComponent(titleLabel_360)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -116,12 +143,22 @@ public class NguyenLieuView extends javax.swing.JFrame {
         refreshBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         refreshBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/refresh.png"))); // NOI18N
         refreshBtn_360.setText("REFRESH");
+        refreshBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshBtn_360ActionPerformed(evt);
+            }
+        });
 
         deleteBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         deleteBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         deleteBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         deleteBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/delete.png"))); // NOI18N
         deleteBtn_360.setText("DELETE");
+        deleteBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtn_360ActionPerformed(evt);
+            }
+        });
 
         addBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         addBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -223,9 +260,56 @@ public class NguyenLieuView extends javax.swing.JFrame {
 
     private void updateBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_360ActionPerformed
         // TODO add your handling code here:
-        new UpdateNguyenLieu().setVisible(true);
-        this.dispose();
+        int row = ngLieuTableList_360.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(NguyenLieuView.this, "Vui lòng chọn sản phẩm muốn sửa", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }else{
+            String ID = (String) ngLieuTableList_360.getValueAt(row, 0);
+            try {
+                    new UpdateNguyenLieu(ID).setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.dispose();
+        } 
     }//GEN-LAST:event_updateBtn_360ActionPerformed
+
+    private void deleteBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_360ActionPerformed
+        // TODO add your handling code here:
+        ManagerNguyenLieu ps = new ManagerNguyenLieu();
+        
+        int row = ngLieuTableList_360.getSelectedRow();
+        if (row == -1) {
+            JOptionPane.showMessageDialog(NguyenLieuView.this, "Vui lòng chọn nguyên liệu muốn xóa!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        } else {
+            int comfirm = JOptionPane.showConfirmDialog(NguyenLieuView.this, "Bạn có chắc chắn muốn xóa!");
+
+            if (comfirm == JOptionPane.YES_OPTION) {
+                String ID = (String) ngLieuTableList_360.getValueAt(row, 0);
+
+                try {
+                    nguyenLieuService.deleteNguyenLieu(ID);
+                } catch (SQLException ex) {
+                    java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                try {
+                    setData(nguyenLieuService.getAllListNguyenLieu());
+                } catch (SQLException ex) {
+                    java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }//GEN-LAST:event_deleteBtn_360ActionPerformed
+
+    private void refreshBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_360ActionPerformed
+        // TODO add your handling code here:
+        try {
+            setData(nguyenLieuService.getAllListNguyenLieu());
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_refreshBtn_360ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,7 +341,11 @@ public class NguyenLieuView extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NguyenLieuView().setVisible(true);
+                try {
+                    new NguyenLieuView().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
