@@ -11,6 +11,9 @@ import View.NguyenLieu.NguyenLieuView;
 import View.NhanVien.ViewEmployee;
 import View.ThongKeDoanhThuThang;
 import View.TraCuuBan;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -223,8 +226,12 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
 
     private void khoNguyenLieuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_khoNguyenLieuButtonActionPerformed
-        // TODO add your handling code here:
-        new NguyenLieuView().setVisible(true);
+        try {
+            // TODO add your handling code here:
+            new NguyenLieuView().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_khoNguyenLieuButtonActionPerformed
 
