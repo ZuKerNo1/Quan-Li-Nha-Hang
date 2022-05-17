@@ -308,7 +308,7 @@ public class AddCustomer extends javax.swing.JFrame {
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here:
-        new View.ViewCustomer().setVisible(true);
+        new View.KhachHang.ViewCustomer().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 
