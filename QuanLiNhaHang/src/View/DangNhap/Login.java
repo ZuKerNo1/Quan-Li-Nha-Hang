@@ -61,7 +61,7 @@ public class Login extends javax.swing.JFrame {
         rememberCheckbox.setBackground(new java.awt.Color(255, 115, 43));
         rememberCheckbox.setText("Lưu tài khoản");
 
-        btnDangNhap.setBackground(new java.awt.Color(0, 153, 255));
+        btnDangNhap.setBackground(new java.awt.Color(255, 51, 0));
         btnDangNhap.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         btnDangNhap.setText("Đăng nhập");
         btnDangNhap.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class Login extends javax.swing.JFrame {
         StringBuffer sb = new StringBuffer();// cho phép tao chuổi động
 
         if(idName_352.equals("")){
-            sb.append("idName not system\n");// hiện thông báo
+            sb.append("Tài khoản không được để trống\n");// hiện thông báo
         }
         if(pass_352.equals("")){
             sb.append("password is empty \n");// hiện thông báo
