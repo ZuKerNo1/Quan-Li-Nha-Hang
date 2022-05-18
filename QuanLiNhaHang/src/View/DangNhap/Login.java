@@ -178,7 +178,7 @@ public class Login extends javax.swing.JFrame {
                 mf.setVisible(true);
                 this.setVisible(false);
 
-            }else JOptionPane.showMessageDialog(this, " Đăng nhập thất bại");
+            }else JOptionPane.showMessageDialog(this, "Tài khoản hoặc mật khẩu không chính xác!");
 
         } catch (Exception e) {
             System.out.println("Wait the miunutes");
