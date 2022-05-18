@@ -151,7 +151,7 @@ public class Login extends javax.swing.JFrame {
             sb.append("Tài khoản không được để trống\n");// hiện thông báo
         }
         if(pass_352.equals("")){
-            sb.append("password is empty \n");// hiện thông báo
+            sb.append("Mật khẩu không được để trống \n");// hiện thông báo
         }
         if(sb.length()>0){
             JOptionPane.showConfirmDialog(this, sb.toString(),"Invalidation",
