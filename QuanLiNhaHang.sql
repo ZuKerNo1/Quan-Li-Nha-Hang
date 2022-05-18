@@ -261,4 +261,5 @@ create table account
 
 go
 insert into account
-values ('trung','123',N'Nguyễn Văn Trung','0373532115')
+values ('trung','123',N'Nguyễn Văn Trung','0373532115'),
+	   ('truong','123',N'Bùi Viết Trường','0905235135')
