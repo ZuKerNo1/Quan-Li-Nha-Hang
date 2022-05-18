@@ -5,7 +5,7 @@
  */
 package View.MainFrame;
 
-import View.DangNhap.DangNhap;
+import View.DangNhap.Login;
 import View.KhachHang.ViewCustomer;
 import View.NguyenLieu.NguyenLieuView;
 
@@ -205,7 +205,7 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void dangXuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButtonActionPerformed
         // TODO add your handling code here:
-        new DangNhap().setVisible(true);
+        new Login().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_dangXuatButtonActionPerformed
 
