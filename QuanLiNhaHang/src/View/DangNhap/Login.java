@@ -61,6 +61,7 @@ public class Login extends javax.swing.JFrame {
         rememberCheckbox.setBackground(new java.awt.Color(255, 115, 43));
         rememberCheckbox.setText("Lưu tài khoản");
 
+        btnDangNhap.setBackground(new java.awt.Color(255, 204, 204));
         btnDangNhap.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         btnDangNhap.setText("Đăng nhập");
         btnDangNhap.addActionListener(new java.awt.event.ActionListener() {
