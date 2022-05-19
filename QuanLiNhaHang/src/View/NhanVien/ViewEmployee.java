@@ -58,7 +58,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         table_354.setRowHeight(50);
         table_354.validate();
         table_354.repaint();
-        //setTableData(serviceEmployee.getAllEmployees());
+        setTableData(serviceEmployee.getAllEmployees());
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
