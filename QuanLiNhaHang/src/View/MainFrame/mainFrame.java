@@ -6,6 +6,7 @@
 package View.MainFrame;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import View.DangNhap.DangNhap;
 =======
 
@@ -20,16 +21,27 @@ import View.NhanVien.ViewEmployee;
 <<<<<<< HEAD
 >>>>>>> DangNhap
 =======
+=======
+
+import View.DangNhap.Login;
+import View.KhachHang.ViewCustomer;
+import View.NguyenLieu.NguyenLieuView;
+
+>>>>>>> DatBan
 import View.NhanVien.ViewEmployee;
 
 
 
+<<<<<<< HEAD
 >>>>>>> DangNhap
+=======
+>>>>>>> DatBan
 import View.ThongKeDoanhThuThang;
 import View.TraCuuBan;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,6 +51,11 @@ import java.util.logging.Logger;
 >>>>>>> DangNhap
 import javax.swing.UnsupportedLookAndFeelException;
 >>>>>>> DangNhap
+=======
+
+
+import javax.swing.UnsupportedLookAndFeelException;
+>>>>>>> DatBan
 
 
 /**
@@ -230,11 +247,16 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void dangXuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButtonActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         new DangNhap().setVisible(true);
+=======
+        new Login().setVisible(true);
+>>>>>>> DatBan
         this.dispose();
     }//GEN-LAST:event_dangXuatButtonActionPerformed
 
     private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         // TODO add your handling code here:
@@ -245,6 +267,9 @@ public class mainFrame extends javax.swing.JFrame {
 =======
 
 >>>>>>> DangNhap
+=======
+
+>>>>>>> DatBan
         this.dispose();
     }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
 
