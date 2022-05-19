@@ -5,57 +5,37 @@
  */
 package View.MainFrame;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import View.DangNhap.DangNhap;
-=======
+
 
 import View.DangNhap.Login;
->>>>>>> DangNhap
+
 import View.KhachHang.ViewCustomer;
 import View.NguyenLieu.NguyenLieuView;
-<<<<<<< HEAD
-import View.NhanVien.ViewEmployee;
-=======
 
-<<<<<<< HEAD
->>>>>>> DangNhap
-=======
-=======
 
 import View.DangNhap.Login;
 import View.KhachHang.ViewCustomer;
 import View.NguyenLieu.NguyenLieuView;
 
->>>>>>> DatBan
+
 import View.NhanVien.ViewEmployee;
 
 
 
-<<<<<<< HEAD
->>>>>>> DangNhap
-=======
->>>>>>> DatBan
+
 import View.ThongKeDoanhThuThang;
 import View.TraCuuBan;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> DangNhap
-import javax.swing.UnsupportedLookAndFeelException;
->>>>>>> DangNhap
-=======
 
 
 import javax.swing.UnsupportedLookAndFeelException;
->>>>>>> DatBan
+
+
+import javax.swing.UnsupportedLookAndFeelException;
 
 
 /**
@@ -247,29 +227,31 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void dangXuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButtonActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
-        new DangNhap().setVisible(true);
-=======
+
+
+
         new Login().setVisible(true);
->>>>>>> DatBan
+
         this.dispose();
     }//GEN-LAST:event_dangXuatButtonActionPerformed
 
     private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // TODO add your handling code here:
-        new ViewEmployee().setVisible(true);
-=======
-        
->>>>>>> DangNhap
-=======
 
->>>>>>> DangNhap
-=======
+        try {
+            // TODO add your handling code here:
+            new ViewEmployee().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
->>>>>>> DatBan
         this.dispose();
     }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
 
