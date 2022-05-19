@@ -5,12 +5,24 @@
  */
 package View.MainFrame;
 
+<<<<<<< HEAD
 import View.DangNhap.DangNhap;
+=======
+
+import View.DangNhap.Login;
+>>>>>>> DangNhap
 import View.KhachHang.ViewCustomer;
 import View.NguyenLieu.NguyenLieuView;
 <<<<<<< HEAD
 import View.NhanVien.ViewEmployee;
 =======
+
+<<<<<<< HEAD
+>>>>>>> DangNhap
+=======
+import View.NhanVien.ViewEmployee;
+
+
 
 >>>>>>> DangNhap
 import View.ThongKeDoanhThuThang;
@@ -19,9 +31,15 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> DangNhap
 import javax.swing.UnsupportedLookAndFeelException;
 >>>>>>> DangNhap
+
 
 /**
  *
@@ -218,10 +236,14 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
 <<<<<<< HEAD
+<<<<<<< HEAD
         // TODO add your handling code here:
         new ViewEmployee().setVisible(true);
 =======
         
+>>>>>>> DangNhap
+=======
+
 >>>>>>> DangNhap
         this.dispose();
     }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
