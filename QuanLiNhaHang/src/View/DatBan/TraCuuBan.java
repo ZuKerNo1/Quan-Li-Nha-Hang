@@ -3,29 +3,59 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package View.DatBan;
 
+import Manager.ManagerNguyenLieu;
+import Manager.ManagerTraCuuBan;
+import model.Table;
+import Service.TraCuuBanService;
 import View.ChonMon.ChonMonFrame;
 import View.DatBan.DatBan_NguoiDaiDien;
 import View.MainFrame.mainFrame;
 import View.NguyenLieu.NguyenLieuView;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author win
  */
 public class TraCuuBan extends javax.swing.JFrame {
-
+    TraCuuBanService traCuuBanService = new TraCuuBanService();
     /**
      * Creates new form TraCuuBan
      */
-    public TraCuuBan() {
+    public TraCuuBan() throws SQLException {
         initComponents();
+        DefaultTableModel defaultTableModel;
+        defaultTableModel = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; //To change body of generated methods, choose Tools | Templates.
+            }
+        };
+        traCuuTable_352.setModel(defaultTableModel);
+        defaultTableModel.addColumn("ID Bàn Ăn");
+        defaultTableModel.addColumn("Trạng thái");
+        setData(traCuuBanService.getAllListTraCuuBan());
     }
-
+    
+    private void setData(List<Table> tables) throws SQLException {
+        DefaultTableModel defaultTableModel;
+        ManagerTraCuuBan us = new ManagerTraCuuBan();
+        defaultTableModel = new DefaultTableModel();
+        traCuuTable_352.setModel(defaultTableModel);
+        defaultTableModel.addColumn("ID Bàn Ăn");
+        defaultTableModel.addColumn("Trạng thái");
+        for (Table table : tables) {
+            defaultTableModel.addRow(new Object[]{table.getIdTable_352(), table.getStatusTable_352()});
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -40,13 +70,13 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         clearBtn_360 = new javax.swing.JButton();
         backBtn_360 = new javax.swing.JButton();
         submitBtn_360 = new javax.swing.JButton();
         submitBtn_361 = new javax.swing.JButton();
         submitBtn_362 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        traCuuTable_352 = new com.raven.suportSwing.TableColumn();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -68,7 +98,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -80,16 +110,6 @@ public class TraCuuBan extends javax.swing.JFrame {
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "IDBA", "Trạng thái bàn "
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
 
         clearBtn_360.setBackground(new java.awt.Color(51, 153, 255));
         clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -145,52 +165,78 @@ public class TraCuuBan extends javax.swing.JFrame {
             }
         });
 
+        traCuuTable_352.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID Bàn ăn", "Tổng giá bán"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(traCuuTable_352);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                        .addComponent(clearBtn_360)
-                        .addGap(49, 49, 49)
-                        .addComponent(submitBtn_362)
-                        .addGap(50, 50, 50)
-                        .addComponent(submitBtn_361)
-                        .addGap(55, 55, 55)
-                        .addComponent(submitBtn_360))
-                    .addComponent(jScrollPane1))
+                .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
+                .addComponent(clearBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
+                .addComponent(submitBtn_362)
+                .addGap(50, 50, 50)
+                .addComponent(submitBtn_361, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(55, 55, 55)
+                .addComponent(submitBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(563, 563, 563)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(submitBtn_361, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(clearBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(submitBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(submitBtn_361, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(clearBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(submitBtn_362, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                .addGap(42, 42, 42))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+                    .addGap(138, 138, 138)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, 0))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -219,9 +265,19 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_submitBtn_360ActionPerformed
 
     private void submitBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_361ActionPerformed
-        // TODO add your handling code here:
-        new ChonMonFrame().setVisible(true);
-        this.dispose();
+       /* // TODO add your handling code here:
+        int row = traCuuTable_352.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }else{
+            String ID = (String) traCuuTable_352.getValueAt(row, 0);
+            try {
+                new ChonMonFrame(ID).setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.dispose();
+        } */
     }//GEN-LAST:event_submitBtn_361ActionPerformed
 
     private void submitBtn_362ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_362ActionPerformed
@@ -256,7 +312,11 @@ public class TraCuuBan extends javax.swing.JFrame {
         //</editor-fold>
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TraCuuBan().setVisible(true);
+                try {
+                    new TraCuuBan().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
         /* Create and display the form */
@@ -272,9 +332,9 @@ public class TraCuuBan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JButton submitBtn_360;
     private javax.swing.JButton submitBtn_361;
     private javax.swing.JButton submitBtn_362;
+    private com.raven.suportSwing.TableColumn traCuuTable_352;
     // End of variables declaration//GEN-END:variables
 }
