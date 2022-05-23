@@ -5,6 +5,7 @@
 package View.NhanVien;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Service.EmployeeService;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -16,6 +17,11 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 >>>>>>> DatBan
+=======
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> DangNhap
 
 /**
  *
@@ -345,7 +351,10 @@ public class UpdateEmployee extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jRadioButton2)))
                 .addContainerGap(46, Short.MAX_VALUE))
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -441,6 +450,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void phone_354FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phone_354FocusGained
         // TODO add your handling code here:
         lblPhone.setText("");
@@ -516,6 +526,8 @@ public class UpdateEmployee extends javax.swing.JFrame {
 
 =======
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
 
         try {
@@ -523,10 +535,14 @@ public class UpdateEmployee extends javax.swing.JFrame {
             new ViewEmployee().setVisible(true);
         } catch (SQLException ex) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);
 =======
             Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
 >>>>>>> DatBan
+=======
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+>>>>>>> DangNhap
         }
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
