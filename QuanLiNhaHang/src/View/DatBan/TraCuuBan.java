@@ -3,11 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package View.DatBan;
 
 import Manager.ManagerNguyenLieu;
 import Manager.ManagerTraCuuBan;
+<<<<<<< HEAD
 import Model.Table;
+=======
+import model.Table;
+>>>>>>> DatBan
 import Service.TraCuuBanService;
 import View.ChonMon.ChonMonFrame;
 import View.DatBan.DatBan_NguoiDaiDien;
@@ -265,7 +269,11 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_submitBtn_360ActionPerformed
 
     private void submitBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_361ActionPerformed
+<<<<<<< HEAD
         // TODO add your handling code here:
+=======
+       /* // TODO add your handling code here:
+>>>>>>> DatBan
         int row = traCuuTable_352.getSelectedRow();
         if(row == -1){
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -277,7 +285,11 @@ public class TraCuuBan extends javax.swing.JFrame {
                 Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
             }
             this.dispose();
+<<<<<<< HEAD
         } 
+=======
+        } */
+>>>>>>> DatBan
     }//GEN-LAST:event_submitBtn_361ActionPerformed
 
     private void submitBtn_362ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_362ActionPerformed

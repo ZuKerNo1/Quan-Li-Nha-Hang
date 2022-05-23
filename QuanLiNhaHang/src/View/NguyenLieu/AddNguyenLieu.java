@@ -49,6 +49,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(500, 150));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -93,6 +94,11 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/broom.png"))); // NOI18N
         clearBtn_360.setText("CLEAR ALL");
+        clearBtn_360.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtn_360ActionPerformed(evt);
+            }
+        });
 
         submitBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         submitBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -264,6 +270,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_submitBtn_360ActionPerformed
 
+<<<<<<< HEAD
     private void idNguyenLieuText_360FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_idNguyenLieuText_360FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_idNguyenLieuText_360FocusGained
@@ -283,6 +290,11 @@ public class AddNguyenLieu extends javax.swing.JFrame {
     private void unitNguyenLieuCB_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unitNguyenLieuCB_360ActionPerformed
 
     }//GEN-LAST:event_unitNguyenLieuCB_360ActionPerformed
+=======
+    private void clearBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_360ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearBtn_360ActionPerformed
+>>>>>>> DatBan
 
     /**
      * @param args the command line arguments

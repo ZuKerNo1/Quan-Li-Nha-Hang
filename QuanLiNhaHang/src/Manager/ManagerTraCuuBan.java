@@ -5,7 +5,11 @@
  */
 package Manager;
 
+<<<<<<< HEAD
 import Model.Table;
+=======
+import model.Table;
+>>>>>>> DatBan
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
