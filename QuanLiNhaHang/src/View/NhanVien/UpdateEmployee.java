@@ -6,6 +6,7 @@ package View.NhanVien;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Service.EmployeeService;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -22,12 +23,18 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 >>>>>>> DangNhap
+=======
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> ThongKe
 
 /**
  *
  * @author AD
  */
 public class UpdateEmployee extends javax.swing.JFrame {
+<<<<<<< HEAD
     Employee employee;
     EmployeeService serviceEmployee;
     /**
@@ -64,6 +71,14 @@ public class UpdateEmployee extends javax.swing.JFrame {
         }else if("Thu ngân".equals(employee.getRole_354())){
             thuNgan_354.isSelected();
         }
+=======
+
+    /**
+     * Creates new form UpdateEmployee
+     */
+    public UpdateEmployee() {
+        initComponents();
+>>>>>>> ThongKe
     }
 
     /**
@@ -75,6 +90,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         groupGender = new javax.swing.ButtonGroup();
         groupStatus = new javax.swing.ButtonGroup();
         groupRole = new javax.swing.ButtonGroup();
@@ -107,11 +123,37 @@ public class UpdateEmployee extends javax.swing.JFrame {
         phucVu_354 = new com.raven.suportSwing.RadioButtonCustom();
         baoVe_354 = new com.raven.suportSwing.RadioButtonCustom();
         dauBep_354 = new com.raven.suportSwing.RadioButtonCustom();
+=======
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        mainPanel_354 = new javax.swing.JPanel();
+        name_354 = new javax.swing.JLabel();
+        nameText_354 = new javax.swing.JTextField();
+        dateOfBirthText_354 = new javax.swing.JTextField();
+        dateOfBirth_354 = new javax.swing.JLabel();
+        sex_354 = new javax.swing.JLabel();
+        phoneNumText_354 = new javax.swing.JTextField();
+        phoneNum_354 = new javax.swing.JLabel();
+        address_354 = new javax.swing.JLabel();
+        addressText_354 = new javax.swing.JTextField();
+        backBtn_354 = new javax.swing.JButton();
+        submitBtn_354 = new javax.swing.JButton();
+        idKHText_354 = new javax.swing.JTextField();
+        idKH_354 = new javax.swing.JLabel();
+        position_354 = new javax.swing.JLabel();
+        salary_354 = new javax.swing.JLabel();
+        salaryText_354 = new javax.swing.JTextField();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+>>>>>>> ThongKe
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+<<<<<<< HEAD
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         phone_354.setLabelText("Điện thoại");
@@ -202,6 +244,66 @@ public class UpdateEmployee extends javax.swing.JFrame {
             }
         });
 
+=======
+        jPanel2.setBackground(new java.awt.Color(232, 64, 60));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/employee.png"))); // NOI18N
+        jLabel1.setText("CẬP NHẬP NHÂN VIÊN");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(121, 121, 121)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, Short.MAX_VALUE)
+                .addGap(22, 22, 22))
+        );
+
+        mainPanel_354.setBackground(new java.awt.Color(255, 255, 255));
+
+        name_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        name_354.setForeground(new java.awt.Color(51, 51, 51));
+        name_354.setText("TÊN");
+
+        nameText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        dateOfBirthText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        dateOfBirth_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        dateOfBirth_354.setForeground(new java.awt.Color(51, 51, 51));
+        dateOfBirth_354.setText("NGÀY SINH");
+
+        sex_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        sex_354.setForeground(new java.awt.Color(51, 51, 51));
+        sex_354.setText("GIỚI TÍNH");
+
+        phoneNumText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        phoneNum_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        phoneNum_354.setForeground(new java.awt.Color(51, 51, 51));
+        phoneNum_354.setText("SĐT");
+
+        address_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        address_354.setForeground(new java.awt.Color(51, 51, 51));
+        address_354.setText("ĐỊA CHỈ");
+
+        addressText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        backBtn_354.setBackground(new java.awt.Color(232, 64, 60));
+        backBtn_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        backBtn_354.setForeground(new java.awt.Color(255, 255, 255));
+>>>>>>> ThongKe
         backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
         backBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -209,6 +311,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         groupRole.add(phucVu_354);
         phucVu_354.setText("Phục vụ");
 
@@ -279,6 +382,21 @@ public class UpdateEmployee extends javax.swing.JFrame {
                 .addComponent(baoVe_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(179, 179, 179))
 =======
+=======
+        submitBtn_354.setBackground(new java.awt.Color(232, 64, 60));
+        submitBtn_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        submitBtn_354.setForeground(new java.awt.Color(255, 255, 255));
+        submitBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/submit.png"))); // NOI18N
+
+        idKHText_354.setEditable(false);
+        idKHText_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idKHText_354.setEnabled(false);
+
+        idKH_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idKH_354.setForeground(new java.awt.Color(51, 51, 51));
+        idKH_354.setText("ID");
+
+>>>>>>> ThongKe
         position_354.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         position_354.setForeground(new java.awt.Color(51, 51, 51));
         position_354.setText("CHỨC VỤ");
@@ -352,6 +470,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
                         .addComponent(jRadioButton2)))
                 .addContainerGap(46, Short.MAX_VALUE))
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
@@ -418,6 +537,45 @@ public class UpdateEmployee extends javax.swing.JFrame {
                         .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(submitBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70))
+=======
+        );
+        mainPanel_354Layout.setVerticalGroup(
+            mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanel_354Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idKH_354)
+                    .addComponent(idKHText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(name_354)
+                    .addComponent(nameText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dateOfBirth_354)
+                    .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(dateOfBirthText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sex_354)
+                        .addComponent(jRadioButton1)
+                        .addComponent(jRadioButton2)))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(phoneNum_354)
+                    .addComponent(phoneNumText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(position_354)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(address_354)
+                    .addComponent(addressText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(salaryText_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(salary_354))
+                .addGap(31, 31, 31)
+                .addGroup(mainPanel_354Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(submitBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> ThongKe
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -425,16 +583,28 @@ public class UpdateEmployee extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(mainPanel_354, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mainPanel_354, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> ThongKe
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGap(0, 792, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -444,11 +614,19 @@ public class UpdateEmployee extends javax.swing.JFrame {
             .addGap(0, 674, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> ThongKe
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private void phone_354FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_phone_354FocusGained
@@ -528,12 +706,15 @@ public class UpdateEmployee extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
 
         try {
             // TODO add your handling code here:
             new ViewEmployee().setVisible(true);
         } catch (SQLException ex) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);
@@ -543,6 +724,9 @@ public class UpdateEmployee extends javax.swing.JFrame {
 =======
             Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
 >>>>>>> DangNhap
+=======
+            Logger.getLogger(UpdateEmployee.class.getName()).log(Level.SEVERE, null, ex);
+>>>>>>> ThongKe
         }
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
@@ -575,6 +759,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+<<<<<<< HEAD
         
     }
 
@@ -611,5 +796,38 @@ public class UpdateEmployee extends javax.swing.JFrame {
     private javax.swing.JButton submitBtn_354;
     private com.raven.suportSwing.RadioButtonCustom thuNgan_354;
     private com.raven.suportSwing.RadioButtonCustom working_354;
+=======
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new UpdateEmployee().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField addressText_354;
+    private javax.swing.JLabel address_354;
+    private javax.swing.JButton backBtn_354;
+    private javax.swing.JTextField dateOfBirthText_354;
+    private javax.swing.JLabel dateOfBirth_354;
+    private javax.swing.JTextField idKHText_354;
+    private javax.swing.JLabel idKH_354;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JPanel mainPanel_354;
+    private javax.swing.JTextField nameText_354;
+    private javax.swing.JLabel name_354;
+    private javax.swing.JTextField phoneNumText_354;
+    private javax.swing.JLabel phoneNum_354;
+    private javax.swing.JLabel position_354;
+    private javax.swing.JTextField salaryText_354;
+    private javax.swing.JLabel salary_354;
+    private javax.swing.JLabel sex_354;
+    private javax.swing.JButton submitBtn_354;
+>>>>>>> ThongKe
     // End of variables declaration//GEN-END:variables
 }

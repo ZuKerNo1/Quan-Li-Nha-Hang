@@ -35,7 +35,11 @@ public class LoadDangNhap extends javax.swing.JFrame {
         Percentage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
         setLocation(new java.awt.Point(500, 150));
+=======
+        setLocation(new java.awt.Point(400, 150));
+>>>>>>> ThongKe
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 115, 43));

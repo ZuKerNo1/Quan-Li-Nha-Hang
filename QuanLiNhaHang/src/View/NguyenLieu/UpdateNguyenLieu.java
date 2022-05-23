@@ -45,6 +45,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+<<<<<<< HEAD
         mainPanel_360 = new javax.swing.JPanel();
         submitBtn_360 = new javax.swing.JButton();
         clearBtn_360 = new javax.swing.JButton();
@@ -58,11 +59,57 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
         unitNguyenLieuCB_360 = new com.raven.suportSwing.Combobox();
         titlePanel_360 = new javax.swing.JPanel();
         titleLabel_373 = new javax.swing.JLabel();
+=======
+        titlePanel_361 = new javax.swing.JPanel();
+        titleLabel_373 = new javax.swing.JLabel();
+        mainPanel_360 = new javax.swing.JPanel();
+        submitBtn_360 = new javax.swing.JButton();
+        clearBtn_360 = new javax.swing.JButton();
+        nameNguyenLieu_360 = new javax.swing.JLabel();
+        nameNguyenLieuText_360 = new javax.swing.JTextField();
+        amountNguyenLieu_360 = new javax.swing.JLabel();
+        amountNguyenLieuText_360 = new javax.swing.JTextField();
+        unitNguyenLieu_360 = new javax.swing.JLabel();
+        unitNguyenLieuCB_360 = new javax.swing.JComboBox<>();
+        staffNguyenLieu_360 = new javax.swing.JLabel();
+        staffNguyenLieuText_360 = new javax.swing.JTextField();
+        backBtn_360 = new javax.swing.JButton();
+        idNguyenLieu_360 = new javax.swing.JLabel();
+        idNguyenLieuText_360 = new javax.swing.JTextField();
+>>>>>>> ThongKe
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
+<<<<<<< HEAD
+=======
+        titlePanel_361.setBackground(new java.awt.Color(51, 255, 51));
+
+        titleLabel_373.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        titleLabel_373.setForeground(new java.awt.Color(255, 255, 255));
+        titleLabel_373.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLabel_373.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/harvest.png"))); // NOI18N
+        titleLabel_373.setText("CẬP NHẬP NGUYÊN LIỆU");
+
+        javax.swing.GroupLayout titlePanel_361Layout = new javax.swing.GroupLayout(titlePanel_361);
+        titlePanel_361.setLayout(titlePanel_361Layout);
+        titlePanel_361Layout.setHorizontalGroup(
+            titlePanel_361Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanel_361Layout.createSequentialGroup()
+                .addContainerGap(62, Short.MAX_VALUE)
+                .addComponent(titleLabel_373)
+                .addGap(59, 59, 59))
+        );
+        titlePanel_361Layout.setVerticalGroup(
+            titlePanel_361Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanel_361Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(titleLabel_373)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+>>>>>>> ThongKe
         mainPanel_360.setBackground(new java.awt.Color(255, 255, 255));
 
         submitBtn_360.setBackground(new java.awt.Color(51, 255, 51));
@@ -81,6 +128,35 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
         clearBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/broom.png"))); // NOI18N
         clearBtn_360.setText("CLEAR ALL");
 
+<<<<<<< HEAD
+=======
+        nameNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        nameNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        nameNguyenLieu_360.setText("TÊN NGUYÊN LIỆU");
+
+        nameNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        amountNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        amountNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        amountNguyenLieu_360.setText("SỐ LƯỢNG");
+
+        amountNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+        unitNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        unitNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        unitNguyenLieu_360.setText("ĐƠN VỊ");
+
+        unitNguyenLieuCB_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        unitNguyenLieuCB_360.setForeground(new java.awt.Color(255, 255, 255));
+        unitNguyenLieuCB_360.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kilogram", "Thùng", "Két" }));
+
+        staffNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        staffNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        staffNguyenLieu_360.setText("NHÂN VIÊN CẬP NHẬT");
+
+        staffNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+
+>>>>>>> ThongKe
         backBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
@@ -91,6 +167,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         jSeparator2.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -133,12 +210,20 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
                 unitNguyenLieuCB_360ActionPerformed(evt);
             }
         });
+=======
+        idNguyenLieu_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        idNguyenLieu_360.setForeground(new java.awt.Color(51, 51, 51));
+        idNguyenLieu_360.setText("MÃ NGUYÊN LIỆU");
+
+        idNguyenLieuText_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+>>>>>>> ThongKe
 
         javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
         mainPanel_360.setLayout(mainPanel_360Layout);
         mainPanel_360Layout.setHorizontalGroup(
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addGap(40, 40, 40)
@@ -163,10 +248,41 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(nameNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(40, Short.MAX_VALUE))
+=======
+                .addGap(40, 40, 40)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(idNguyenLieu_360)
+                    .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(mainPanel_360Layout.createSequentialGroup()
+                            .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(clearBtn_360)
+                            .addGap(18, 18, 18)
+                            .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(mainPanel_360Layout.createSequentialGroup()
+                            .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(nameNguyenLieu_360)
+                                .addComponent(amountNguyenLieu_360)
+                                .addComponent(staffNguyenLieu_360))
+                            .addGap(18, 18, 18)
+                            .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(idNguyenLieuText_360)
+                                .addGroup(mainPanel_360Layout.createSequentialGroup()
+                                    .addComponent(amountNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(unitNguyenLieu_360)
+                                    .addGap(28, 28, 28)
+                                    .addComponent(unitNguyenLieuCB_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(nameNguyenLieuText_360)
+                                .addComponent(staffNguyenLieuText_360))
+                            .addGap(0, 55, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> ThongKe
         );
         mainPanel_360Layout.setVerticalGroup(
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -182,6 +298,27 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(staffNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+=======
+                .addGap(20, 20, 20)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idNguyenLieu_360)
+                    .addComponent(idNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nameNguyenLieu_360)
+                    .addComponent(nameNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(amountNguyenLieu_360)
+                    .addComponent(amountNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(unitNguyenLieu_360)
+                    .addComponent(unitNguyenLieuCB_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(staffNguyenLieuText_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staffNguyenLieu_360))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+>>>>>>> ThongKe
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -190,6 +327,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
                 .addGap(25, 25, 25))
         );
 
+<<<<<<< HEAD
         titlePanel_360.setBackground(new java.awt.Color(255, 255, 255));
 
         titleLabel_373.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
@@ -214,18 +352,30 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
+=======
+>>>>>>> ThongKe
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(titlePanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+            .addComponent(titlePanel_361, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> ThongKe
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(titlePanel_360, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16)
+=======
+                .addComponent(titlePanel_361, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+>>>>>>> ThongKe
                 .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -273,6 +423,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_submitBtn_360ActionPerformed
 
+<<<<<<< HEAD
     private void idNguyenLieuText_360FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_idNguyenLieuText_360FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_idNguyenLieuText_360FocusGained
@@ -293,6 +444,8 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
 
     }//GEN-LAST:event_unitNguyenLieuCB_360ActionPerformed
 
+=======
+>>>>>>> ThongKe
     /**
      * @param args the command line arguments
      */
@@ -329,6 +482,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private com.raven.suportSwing.TextField amountNguyenLieuText_360;
     private javax.swing.JButton backBtn_360;
     private javax.swing.JButton clearBtn_360;
@@ -343,5 +497,24 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
     private javax.swing.JLabel titleLabel_373;
     private javax.swing.JPanel titlePanel_360;
     private com.raven.suportSwing.Combobox unitNguyenLieuCB_360;
+=======
+    private javax.swing.JTextField amountNguyenLieuText_360;
+    private javax.swing.JLabel amountNguyenLieu_360;
+    private javax.swing.JButton backBtn_360;
+    private javax.swing.JButton clearBtn_360;
+    private javax.swing.JTextField idNguyenLieuText_360;
+    private javax.swing.JLabel idNguyenLieu_360;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel mainPanel_360;
+    private javax.swing.JTextField nameNguyenLieuText_360;
+    private javax.swing.JLabel nameNguyenLieu_360;
+    private javax.swing.JTextField staffNguyenLieuText_360;
+    private javax.swing.JLabel staffNguyenLieu_360;
+    private javax.swing.JButton submitBtn_360;
+    private javax.swing.JLabel titleLabel_373;
+    private javax.swing.JPanel titlePanel_361;
+    private javax.swing.JComboBox<String> unitNguyenLieuCB_360;
+    private javax.swing.JLabel unitNguyenLieu_360;
+>>>>>>> ThongKe
     // End of variables declaration//GEN-END:variables
 }

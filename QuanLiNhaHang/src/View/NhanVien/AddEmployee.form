@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <NonVisualComponents>
     <Component class="javax.swing.ButtonGroup" name="groupGender">
     </Component>
@@ -15,6 +16,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -39,6 +42,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <EmptySpace min="0" pref="721" max="32767" attributes="0"/>
 =======
           <EmptySpace min="0" pref="706" max="32767" attributes="0"/>
@@ -46,6 +50,9 @@
 =======
           <EmptySpace min="0" pref="706" max="32767" attributes="0"/>
 >>>>>>> DangNhap
+=======
+          <EmptySpace min="0" pref="706" max="32767" attributes="0"/>
+>>>>>>> ThongKe
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -55,6 +62,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <EmptySpace min="0" pref="668" max="32767" attributes="0"/>
 =======
           <EmptySpace min="0" pref="662" max="32767" attributes="0"/>
@@ -62,6 +70,9 @@
 =======
           <EmptySpace min="0" pref="662" max="32767" attributes="0"/>
 >>>>>>> DangNhap
+=======
+          <EmptySpace min="0" pref="662" max="32767" attributes="0"/>
+>>>>>>> ThongKe
           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
               <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
           </Group>
@@ -104,6 +115,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="working_354" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -130,6 +142,8 @@
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -163,13 +177,17 @@
                                   <Component id="salary_354" alignment="1" max="32767" attributes="0"/>
                                   <Component id="name_354" alignment="1" max="32767" attributes="0"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                                   <Component id="lblSalary" alignment="1" max="32767" attributes="0"/>
                                   <Component id="lblPhone" alignment="0" max="32767" attributes="0"/>
                                   <Component id="lblName" alignment="0" max="32767" attributes="0"/>
                                   <Component id="id_354" alignment="0" max="32767" attributes="0"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                                   <Component id="name_354" alignment="0" max="32767" attributes="0"/>
@@ -192,6 +210,11 @@
                               </Group>
                               <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
 >>>>>>> DangNhap
+=======
+                                  <Component id="backBtn_354" alignment="0" min="-2" pref="80" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+>>>>>>> ThongKe
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="submitBtn_354" alignment="1" min="-2" pref="80" max="-2" attributes="0"/>
                                   <Component id="dob_354" alignment="0" max="32767" attributes="0"/>
@@ -208,6 +231,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="lblIDUser" min="-2" max="-2" attributes="0"/>
                           </Group>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       </Group>
@@ -229,6 +253,11 @@
                       </Group>
                       <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
 >>>>>>> DangNhap
+=======
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="25" max="32767" attributes="0"/>
+>>>>>>> ThongKe
                   </Group>
               </Group>
             </DimensionLayout>
@@ -299,18 +328,24 @@
                                       </Group>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="baoVe_354" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="dauBep_354" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
@@ -326,6 +361,7 @@
                               </Group>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="baoVe_354" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -338,6 +374,9 @@
 =======
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
 >>>>>>> DangNhap
+=======
+                              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+>>>>>>> ThongKe
                               <Component id="backBtn_354" min="-2" pref="50" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -400,6 +439,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupGender"/>
                 </Property>
@@ -407,6 +447,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Nam"/>
               </Properties>
@@ -415,6 +457,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupGender"/>
                 </Property>
@@ -422,6 +465,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="text" type="java.lang.String" value="N&#x1eef;"/>
               </Properties>
             </Component>
@@ -429,6 +474,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupRole"/>
                 </Property>
@@ -436,6 +482,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="text" type="java.lang.String" value="Qu&#x1ea3;n l&#xfd;"/>
               </Properties>
             </Component>
@@ -443,6 +491,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupRole"/>
                 </Property>
@@ -450,6 +499,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Thu ng&#xe2;n"/>
               </Properties>
@@ -476,6 +527,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupStatus"/>
                 </Property>
@@ -483,6 +535,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="&#x110;ang l&#xe0;m vi&#x1ec7;c"/>
               </Properties>
@@ -491,6 +545,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupStatus"/>
                 </Property>
@@ -498,6 +553,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="text" type="java.lang.String" value="Ngh&#x1ec9; l&#xe0;m"/>
               </Properties>
             </Component>
@@ -558,6 +615,7 @@
               </Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <Events>
                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="id_354FocusGained"/>
@@ -568,6 +626,11 @@
                 <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="id_354FocusGained"/>
               </Events>
 >>>>>>> DangNhap
+=======
+              <Events>
+                <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="id_354FocusGained"/>
+              </Events>
+>>>>>>> ThongKe
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
@@ -588,6 +651,7 @@
               </Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitBtn_354ActionPerformed"/>
               </Events>
@@ -595,6 +659,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             </Component>
             <Component class="javax.swing.JButton" name="backBtn_354">
               <Properties>
@@ -610,6 +676,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupRole"/>
                 </Property>
@@ -617,6 +684,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="text" type="java.lang.String" value="Ph&#x1ee5;c v&#x1ee5;"/>
               </Properties>
             </Component>
@@ -624,6 +693,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupRole"/>
                 </Property>
@@ -631,6 +701,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="text" type="java.lang.String" value="B&#x1ea3;o v&#x1ec7;"/>
               </Properties>
             </Component>
@@ -638,6 +710,7 @@
               <Properties>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                   <ComponentRef name="groupRole"/>
                 </Property>
@@ -645,6 +718,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 <Property name="text" type="java.lang.String" value="&#x110;&#x1ea7;u b&#x1ebf;p"/>
               </Properties>
             </Component>

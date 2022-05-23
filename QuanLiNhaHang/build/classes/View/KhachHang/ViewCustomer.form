@@ -50,6 +50,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
               <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
@@ -60,11 +61,16 @@
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
+=======
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+>>>>>>> ThongKe
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
@@ -74,6 +80,9 @@
                           <Component id="label_354" max="32767" attributes="0"/>
                       </Group>
                   </Group>
+=======
+                  <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+>>>>>>> ThongKe
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
@@ -94,7 +103,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="jLabel1" pref="553" max="32767" attributes="0"/>
+=======
+                      <Component id="jLabel1" max="32767" attributes="0"/>
+>>>>>>> ThongKe
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -140,20 +153,35 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
+=======
+                          <Component id="jScrollPane1" pref="856" max="32767" attributes="0"/>
+>>>>>>> ThongKe
                           <Group type="102" attributes="0">
                               <Component id="search_354" min="-2" pref="247" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="searchBtn_354" min="-2" pref="47" max="-2" attributes="0"/>
+<<<<<<< HEAD
                               <EmptySpace min="0" pref="552" max="32767" attributes="0"/>
+=======
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+>>>>>>> ThongKe
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="backBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
+<<<<<<< HEAD
                               <Component id="updateBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                               <Component id="deleteBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
                           </Group>
                           <Component id="jScrollPane4" alignment="0" max="32767" attributes="0"/>
+=======
+                              <Component id="updateBtn_354" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="deleteBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
+                          </Group>
+>>>>>>> ThongKe
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -167,8 +195,13 @@
                           <Component id="searchBtn_354" pref="36" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <Component id="jScrollPane4" min="-2" pref="403" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+=======
+                      <Component id="jScrollPane1" min="-2" pref="405" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+>>>>>>> ThongKe
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="backBtn_354" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="updateBtn_354" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
@@ -192,6 +225,30 @@
                 </Property>
               </Properties>
             </Component>
+<<<<<<< HEAD
+=======
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="table354">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="4" rowCount="4">
+                        <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                        <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+>>>>>>> ThongKe
             <Component class="javax.swing.JButton" name="backBtn_354">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -214,9 +271,12 @@
                   <Image iconType="3" name="/image/updating.png"/>
                 </Property>
               </Properties>
+<<<<<<< HEAD
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="updateBtn_354ActionPerformed"/>
               </Events>
+=======
+>>>>>>> ThongKe
             </Component>
             <Component class="javax.swing.JButton" name="deleteBtn_354">
               <Properties>
@@ -228,6 +288,7 @@
                 </Property>
               </Properties>
             </Component>
+<<<<<<< HEAD
             <Container class="javax.swing.JScrollPane" name="jScrollPane4">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -273,6 +334,10 @@
             <Property name="text" type="java.lang.String" value="jLabel4"/>
           </Properties>
         </Component>
+=======
+          </SubComponents>
+        </Container>
+>>>>>>> ThongKe
       </SubComponents>
     </Container>
   </SubComponents>

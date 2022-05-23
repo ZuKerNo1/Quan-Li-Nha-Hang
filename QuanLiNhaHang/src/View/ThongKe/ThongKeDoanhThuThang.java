@@ -5,6 +5,7 @@
  */
 package View;
 
+<<<<<<< HEAD
 import Manager.StatisticalDAO;
 import Service.DThuThangService;
 import View.MainFrame.mainFrame;
@@ -18,6 +19,9 @@ import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import model.DoanhThuThang;
+=======
+import View.MainFrame.mainFrame;
+>>>>>>> ThongKe
 
 /**
  *
@@ -325,12 +329,17 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
+<<<<<<< HEAD
         try {
             // TODO add your handling code here:
             new ThongKeDoanhThuNam().setVisible(true);
         } catch (SQLException ex) {
             Logger.getLogger(ThongKeDoanhThuThang.class.getName()).log(Level.SEVERE, null, ex);
         }
+=======
+        // TODO add your handling code here:
+        new ThongKeDoanhThuNam().setVisible(true);
+>>>>>>> ThongKe
         this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 

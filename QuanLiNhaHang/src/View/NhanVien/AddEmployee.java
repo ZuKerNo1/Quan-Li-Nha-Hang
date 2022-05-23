@@ -6,16 +6,20 @@ package View.NhanVien;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Service.EmployeeService;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 =======
+=======
+>>>>>>> ThongKe
 import Service.ServiceEmployee;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 import Service.ServiceEmployee;
@@ -23,6 +27,8 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 import model.Employee;
 
 /**
@@ -33,6 +39,7 @@ public class AddEmployee extends javax.swing.JFrame {
     Employee employee;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     EmployeeService serviceEmployee;
 =======
     ServiceEmployee serviceEmployee;
@@ -40,12 +47,16 @@ public class AddEmployee extends javax.swing.JFrame {
 =======
     ServiceEmployee serviceEmployee;
 >>>>>>> DangNhap
+=======
+    ServiceEmployee serviceEmployee;
+>>>>>>> ThongKe
     /**
      * Creates new form AddEmployee
      */
     public AddEmployee() {
         initComponents();
         employee = new Employee();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         serviceEmployee = new EmployeeService();
@@ -55,6 +66,9 @@ public class AddEmployee extends javax.swing.JFrame {
 =======
         serviceEmployee = new ServiceEmployee();
 >>>>>>> DangNhap
+=======
+        serviceEmployee = new ServiceEmployee();
+>>>>>>> ThongKe
     }
 
     /**
@@ -68,6 +82,7 @@ public class AddEmployee extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         groupGender = new javax.swing.ButtonGroup();
         groupStatus = new javax.swing.ButtonGroup();
         groupRole = new javax.swing.ButtonGroup();
@@ -75,6 +90,8 @@ public class AddEmployee extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         phone_354 = new com.raven.suportSwing.TextField();
@@ -143,6 +160,7 @@ public class AddEmployee extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         groupGender.add(male_354);
         male_354.setSelected(true);
         male_354.setText("Nam");
@@ -155,6 +173,8 @@ public class AddEmployee extends javax.swing.JFrame {
 
         groupRole.add(thuNgan_354);
 =======
+=======
+>>>>>>> ThongKe
         male_354.setSelected(true);
         male_354.setText("Nam");
 
@@ -162,6 +182,7 @@ public class AddEmployee extends javax.swing.JFrame {
 
         quanLy_354.setText("Quản lý");
 
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
         male_354.setSelected(true);
@@ -172,6 +193,8 @@ public class AddEmployee extends javax.swing.JFrame {
         quanLy_354.setText("Quản lý");
 
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         thuNgan_354.setSelected(true);
         thuNgan_354.setText("Thu ngân");
 
@@ -186,6 +209,7 @@ public class AddEmployee extends javax.swing.JFrame {
 
         jLabel5.setText("Tình trạng");
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         groupStatus.add(working_354);
@@ -203,6 +227,11 @@ public class AddEmployee extends javax.swing.JFrame {
         working_354.setText("Đang làm việc");
 
 >>>>>>> DangNhap
+=======
+        working_354.setSelected(true);
+        working_354.setText("Đang làm việc");
+
+>>>>>>> ThongKe
         leave_354.setText("Nghỉ làm");
 
         lblBirth.setFont(new java.awt.Font("Tahoma", 2, 11)); // NOI18N
@@ -224,24 +253,31 @@ public class AddEmployee extends javax.swing.JFrame {
         id_354.setLabelText("ID");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         id_354.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 id_354FocusGained(evt);
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/employee.png"))); // NOI18N
         jLabel1.setText("Thêm Nhân Viên");
 
         submitBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/submit.png"))); // NOI18N
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         submitBtn_354.addActionListener(new java.awt.event.ActionListener() {
@@ -253,6 +289,8 @@ public class AddEmployee extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 
         backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
         backBtn_354.addActionListener(new java.awt.event.ActionListener() {
@@ -263,6 +301,7 @@ public class AddEmployee extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         groupRole.add(phucVu_354);
         phucVu_354.setText("Phục vụ");
 
@@ -271,10 +310,13 @@ public class AddEmployee extends javax.swing.JFrame {
 
         groupRole.add(dauBep_354);
 =======
+=======
+>>>>>>> ThongKe
         phucVu_354.setText("Phục vụ");
 
         baoVe_354.setText("Bảo vệ");
 
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
         phucVu_354.setText("Phục vụ");
@@ -282,6 +324,8 @@ public class AddEmployee extends javax.swing.JFrame {
         baoVe_354.setText("Bảo vệ");
 
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         dauBep_354.setText("Đầu bếp");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -291,6 +335,7 @@ public class AddEmployee extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -315,6 +360,8 @@ public class AddEmployee extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -342,13 +389,17 @@ public class AddEmployee extends javax.swing.JFrame {
                             .addComponent(salary_354, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(name_354, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                             .addComponent(lblSalary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblPhone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(id_354, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                             .addComponent(name_354, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -366,6 +417,10 @@ public class AddEmployee extends javax.swing.JFrame {
                             .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(93, 93, 93)
 >>>>>>> DangNhap
+=======
+                            .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(93, 93, 93)
+>>>>>>> ThongKe
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(submitBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(dob_354, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -378,6 +433,7 @@ public class AddEmployee extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblBirth, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                         .addComponent(lblIDUser)))
@@ -398,6 +454,11 @@ public class AddEmployee extends javax.swing.JFrame {
                     .addComponent(jLabel1))
                 .addGap(0, 25, Short.MAX_VALUE))
 >>>>>>> DangNhap
+=======
+                        .addComponent(lblIDUser))
+                    .addComponent(jLabel1))
+                .addGap(0, 25, Short.MAX_VALUE))
+>>>>>>> ThongKe
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -411,6 +472,9 @@ public class AddEmployee extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ThongKe
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -456,6 +520,7 @@ public class AddEmployee extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(thuNgan_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(quanLy_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                                     .addComponent(phucVu_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(3, 3, 3)
@@ -519,6 +584,8 @@ public class AddEmployee extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(thuNgan_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(quanLy_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+>>>>>>> ThongKe
                                     .addComponent(phucVu_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -534,9 +601,12 @@ public class AddEmployee extends javax.swing.JFrame {
                                         .addComponent(working_354, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(50, 50, 50)
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                         .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(70, 70, 70))
         );
@@ -558,6 +628,7 @@ public class AddEmployee extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addGap(0, 721, Short.MAX_VALUE)
 =======
             .addGap(0, 706, Short.MAX_VALUE)
@@ -565,11 +636,15 @@ public class AddEmployee extends javax.swing.JFrame {
 =======
             .addGap(0, 706, Short.MAX_VALUE)
 >>>>>>> DangNhap
+=======
+            .addGap(0, 706, Short.MAX_VALUE)
+>>>>>>> ThongKe
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             .addGap(0, 668, Short.MAX_VALUE)
@@ -579,6 +654,9 @@ public class AddEmployee extends javax.swing.JFrame {
 =======
             .addGap(0, 662, Short.MAX_VALUE)
 >>>>>>> DangNhap
+=======
+            .addGap(0, 662, Short.MAX_VALUE)
+>>>>>>> ThongKe
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -607,17 +685,23 @@ public class AddEmployee extends javax.swing.JFrame {
     }//GEN-LAST:event_dob_354FocusGained
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 
     private void id_354FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_id_354FocusGained
         // TODO add your handling code here:
     }//GEN-LAST:event_id_354FocusGained
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
 
@@ -630,6 +714,7 @@ public class AddEmployee extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 
+<<<<<<< HEAD
     private void submitBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_354ActionPerformed
         // TODO add your handling code here:
         employee.setId_354(id_354.getText());
@@ -683,6 +768,8 @@ public class AddEmployee extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_submitBtn_354ActionPerformed
 
+=======
+>>>>>>> ThongKe
     /**
      * @param args the command line arguments
      */
@@ -727,6 +814,7 @@ public class AddEmployee extends javax.swing.JFrame {
     private com.raven.suportSwing.RadioButtonCustom female_354;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.ButtonGroup groupGender;
     private javax.swing.ButtonGroup groupRole;
     private javax.swing.ButtonGroup groupStatus;
@@ -734,6 +822,8 @@ public class AddEmployee extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private com.raven.suportSwing.TextField id_354;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

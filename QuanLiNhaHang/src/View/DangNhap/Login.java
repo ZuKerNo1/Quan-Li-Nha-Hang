@@ -47,7 +47,10 @@ public class Login extends javax.swing.JFrame {
         jToggleButton2.setText("jToggleButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+<<<<<<< HEAD
         setLocation(new java.awt.Point(400, 150));
+=======
+>>>>>>> ThongKe
 
         jPanel1.setBackground(new java.awt.Color(255, 115, 43));
 

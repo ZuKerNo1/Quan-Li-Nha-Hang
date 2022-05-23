@@ -5,6 +5,7 @@
  */
 package View;
 
+<<<<<<< HEAD
 import Service.DThuNamService;
 import View.MainFrame.mainFrame;
 import java.sql.SQLException;
@@ -13,6 +14,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
 import model.DoanhThuNam;
+=======
+import View.MainFrame.mainFrame;
+>>>>>>> ThongKe
 
 /**
  *
@@ -238,12 +242,17 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
+<<<<<<< HEAD
         try {
             // TODO add your handling code here:
             new ThongKeDoanhThuThang().setVisible(true);
         } catch (SQLException ex) {
             Logger.getLogger(ThongKeDoanhThuNam.class.getName()).log(Level.SEVERE, null, ex);
         }
+=======
+        // TODO add your handling code here:
+        new ThongKeDoanhThuThang().setVisible(true);
+>>>>>>> ThongKe
         this.dispose();
     }//GEN-LAST:event_backBtn_360ActionPerformed
 

@@ -1,6 +1,7 @@
 package View.ChonMon;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Service.HoaDonService;
 import Service.TraCuuBanService;
 import java.awt.Component;
@@ -17,6 +18,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 >>>>>>> DatBan
 
+=======
+>>>>>>> ThongKe
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -28,6 +31,7 @@ import java.util.logging.Logger;
  * @author DELL
  */
 public class ChonMonFrame extends javax.swing.JFrame {
+<<<<<<< HEAD
     HoaDonService hoaDonService = new HoaDonService();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
 
@@ -52,6 +56,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }
 
 >>>>>>> DatBan
+=======
+
+    /**
+     * Creates new form ChonMonFrame
+     */
+    public ChonMonFrame() {
+        initComponents();
+    }
+
+>>>>>>> ThongKe
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,6 +77,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+<<<<<<< HEAD
         submitButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         soLuong1 = new javax.swing.JSpinner();
@@ -99,6 +114,25 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+=======
+        jButton1 = new javax.swing.JButton();
+        jCheckBox9 = new javax.swing.JCheckBox();
+        jLabel2 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jCheckBox10 = new javax.swing.JCheckBox();
+        jCheckBox11 = new javax.swing.JCheckBox();
+        jCheckBox12 = new javax.swing.JCheckBox();
+        jCheckBox13 = new javax.swing.JCheckBox();
+        jCheckBox14 = new javax.swing.JCheckBox();
+        jCheckBox15 = new javax.swing.JCheckBox();
+        jCheckBox16 = new javax.swing.JCheckBox();
+        jCheckBox17 = new javax.swing.JCheckBox();
+        jCheckBox18 = new javax.swing.JCheckBox();
+>>>>>>> ThongKe
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
@@ -108,6 +142,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
+<<<<<<< HEAD
 <<<<<<< HEAD
         jLabel26 = new javax.swing.JLabel();
         idBA = new javax.swing.JLabel();
@@ -123,6 +158,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
         checkBox19 = new javax.swing.JCheckBox();
         checkBox20 = new javax.swing.JCheckBox();
 =======
+=======
+>>>>>>> ThongKe
         jSpinner2 = new javax.swing.JSpinner();
         jSpinner3 = new javax.swing.JSpinner();
         jSpinner4 = new javax.swing.JSpinner();
@@ -132,8 +169,12 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jSpinner8 = new javax.swing.JSpinner();
         jSpinner9 = new javax.swing.JSpinner();
         jSpinner10 = new javax.swing.JSpinner();
+<<<<<<< HEAD
         btnBackToTCB = new javax.swing.JButton();
 >>>>>>> DatBan
+=======
+        jButton2 = new javax.swing.JButton();
+>>>>>>> ThongKe
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -144,6 +185,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel3.setText("Tên Món");
 
+<<<<<<< HEAD
         submitButton.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         submitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check-mark.png"))); // NOI18N
         submitButton.addActionListener(new java.awt.event.ActionListener() {
@@ -151,11 +193,22 @@ public class ChonMonFrame extends javax.swing.JFrame {
                 submitButtonActionPerformed(evt);
             }
         });
+=======
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
+
+        jCheckBox9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox9.setText("Beef steak");
+>>>>>>> ThongKe
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setText("ID bàn:");
 
+<<<<<<< HEAD
         soLuong1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+=======
+        jSpinner1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+>>>>>>> ThongKe
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Số lượng");
@@ -163,6 +216,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Giá");
 
+<<<<<<< HEAD
         gia1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         gia1.setText("200000");
 
@@ -384,12 +438,94 @@ public class ChonMonFrame extends javax.swing.JFrame {
             }
         });
 >>>>>>> DatBan
+=======
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel12.setText("200000");
+
+        jTextField1.setEditable(false);
+
+        jCheckBox10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox10.setText("Gà rán nóng Nashville");
+
+        jCheckBox11.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox11.setText("Gà rán Hàn Quốc ");
+
+        jCheckBox12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox12.setText("Cá sấu Châu Phi nướng");
+
+        jCheckBox13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox13.setText("Cừu New Zeland hấp");
+
+        jCheckBox14.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox14.setText("Sushi Nhật Bản ");
+
+        jCheckBox15.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox15.setText("Bò dát vàng");
+
+        jCheckBox16.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox16.setText("Bánh Fleur Burger");
+
+        jCheckBox17.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox17.setText("Kem socola Frrrozen Haute");
+
+        jCheckBox18.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jCheckBox18.setText("Pudding chocolate");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel13.setText("400000");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel14.setText("330000");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel15.setText("700000");
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel16.setText("520000");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel17.setText("100000");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel18.setText("450000");
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel19.setText("620000");
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel20.setText("780000");
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel21.setText("320000");
+
+        jSpinner2.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner4.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner5.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner7.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner9.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jSpinner10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
+>>>>>>> ThongKe
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
 <<<<<<< HEAD
@@ -485,11 +621,74 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                 .addGap(26, 26, 26)
                                 .addComponent(idBA, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))))
+=======
+                .addGap(42, 42, 42)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBox9)
+                            .addComponent(jLabel3)
+                            .addComponent(jCheckBox11)
+                            .addComponent(jCheckBox18)
+                            .addComponent(jCheckBox17)
+                            .addComponent(jCheckBox16)
+                            .addComponent(jCheckBox15)
+                            .addComponent(jCheckBox14)
+                            .addComponent(jCheckBox13)
+                            .addComponent(jCheckBox12)
+                            .addComponent(jCheckBox10))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 183, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel4)))
+                        .addGap(156, 156, 156)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpinner6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpinner7, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpinner8, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jSpinner9, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jSpinner10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(90, 90, 90))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5))
+                                .addGap(79, 79, 79))))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(197, 197, 197)
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+>>>>>>> ThongKe
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
+<<<<<<< HEAD
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(idBA))
@@ -627,6 +826,9 @@ public class ChonMonFrame extends javax.swing.JFrame {
                         .addComponent(gia8)
                         .addGap(45, 45, 45))))
 =======
+=======
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+>>>>>>> ThongKe
                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
@@ -687,9 +889,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+<<<<<<< HEAD
                     .addComponent(btnBackToTCB, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27))
 >>>>>>> DatBan
+=======
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27))
+>>>>>>> ThongKe
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 102));
@@ -697,7 +904,11 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+<<<<<<< HEAD
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/doAn (1).png"))); // NOI18N
+=======
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/doAn (1).png"))); // NOI18N
+>>>>>>> ThongKe
         jLabel1.setText("Chọn món ăn");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -729,13 +940,18 @@ public class ChonMonFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
+<<<<<<< HEAD
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
+=======
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> ThongKe
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     private void checkBox11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBox11ActionPerformed
         // TODO add your handling code here:
@@ -771,6 +987,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBackToTCBActionPerformed
 >>>>>>> DatBan
 
+=======
+>>>>>>> ThongKe
     /**
      * @param args the command line arguments
      */
@@ -798,8 +1016,11 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+<<<<<<< HEAD
         //</editor-fold>
         //</editor-fold>
+=======
+>>>>>>> ThongKe
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -810,6 +1031,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
 <<<<<<< HEAD
     private javax.swing.JPanel MonAnpn;
     private javax.swing.JCheckBox checkBox11;
@@ -837,6 +1059,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
 =======
     private javax.swing.JButton btnBackToTCB;
     private javax.swing.JButton jButton1;
+=======
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+>>>>>>> ThongKe
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
@@ -847,10 +1073,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox17;
     private javax.swing.JCheckBox jCheckBox18;
     private javax.swing.JCheckBox jCheckBox9;
+<<<<<<< HEAD
 >>>>>>> DatBan
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+=======
+    private javax.swing.JLabel jLabel1;
+>>>>>>> ThongKe
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -862,6 +1092,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+<<<<<<< HEAD
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
@@ -887,5 +1118,23 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JSpinner soLuong8;
     private javax.swing.JSpinner soLuong9;
     private javax.swing.JButton submitButton;
+=======
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner10;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner jSpinner4;
+    private javax.swing.JSpinner jSpinner5;
+    private javax.swing.JSpinner jSpinner6;
+    private javax.swing.JSpinner jSpinner7;
+    private javax.swing.JSpinner jSpinner8;
+    private javax.swing.JSpinner jSpinner9;
+    private javax.swing.JTextField jTextField1;
+>>>>>>> ThongKe
     // End of variables declaration//GEN-END:variables
 }

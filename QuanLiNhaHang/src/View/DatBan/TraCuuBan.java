@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+<<<<<<< HEAD
 package View.DatBan;
 
 import Manager.ManagerNguyenLieu;
@@ -13,22 +14,32 @@ import Model.Table;
 import model.Table;
 >>>>>>> DatBan
 import Service.TraCuuBanService;
+=======
+package View;
+
+>>>>>>> ThongKe
 import View.ChonMon.ChonMonFrame;
 import View.DatBan.DatBan_NguoiDaiDien;
 import View.MainFrame.mainFrame;
 import View.NguyenLieu.NguyenLieuView;
 import java.sql.SQLException;
+<<<<<<< HEAD
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+=======
+import java.util.logging.Level;
+import java.util.logging.Logger;
+>>>>>>> ThongKe
 
 /**
  *
  * @author win
  */
 public class TraCuuBan extends javax.swing.JFrame {
+<<<<<<< HEAD
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     /**
      * Creates new form TraCuuBan
@@ -60,6 +71,16 @@ public class TraCuuBan extends javax.swing.JFrame {
         }
         
     }
+=======
+
+    /**
+     * Creates new form TraCuuBan
+     */
+    public TraCuuBan() {
+        initComponents();
+    }
+
+>>>>>>> ThongKe
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -74,13 +95,21 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+<<<<<<< HEAD
+=======
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+>>>>>>> ThongKe
         clearBtn_360 = new javax.swing.JButton();
         backBtn_360 = new javax.swing.JButton();
         submitBtn_360 = new javax.swing.JButton();
         submitBtn_361 = new javax.swing.JButton();
         submitBtn_362 = new javax.swing.JButton();
+<<<<<<< HEAD
         jScrollPane1 = new javax.swing.JScrollPane();
         traCuuTable_352 = new com.raven.suportSwing.TableColumn();
+=======
+>>>>>>> ThongKe
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -102,7 +131,11 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
+=======
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> ThongKe
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -115,6 +148,19 @@ public class TraCuuBan extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
+<<<<<<< HEAD
+=======
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "IDBA", "Trạng thái bàn "
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+>>>>>>> ThongKe
         clearBtn_360.setBackground(new java.awt.Color(51, 153, 255));
         clearBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
@@ -169,6 +215,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             }
         });
 
+<<<<<<< HEAD
         traCuuTable_352.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -187,12 +234,15 @@ public class TraCuuBan extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(traCuuTable_352);
 
+=======
+>>>>>>> ThongKe
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
+<<<<<<< HEAD
                 .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                 .addGap(43, 43, 43)
                 .addComponent(clearBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -225,22 +275,60 @@ public class TraCuuBan extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
                     .addGap(138, 138, 138)))
+=======
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                        .addComponent(clearBtn_360)
+                        .addGap(49, 49, 49)
+                        .addComponent(submitBtn_362)
+                        .addGap(50, 50, 50)
+                        .addComponent(submitBtn_361)
+                        .addGap(55, 55, 55)
+                        .addComponent(submitBtn_360))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 533, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(submitBtn_361, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(clearBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(submitBtn_362, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+>>>>>>> ThongKe
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0))
+=======
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+>>>>>>> ThongKe
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+=======
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> ThongKe
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -270,6 +358,7 @@ public class TraCuuBan extends javax.swing.JFrame {
 
     private void submitBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_361ActionPerformed
 <<<<<<< HEAD
+<<<<<<< HEAD
         // TODO add your handling code here:
 =======
        /* // TODO add your handling code here:
@@ -290,6 +379,11 @@ public class TraCuuBan extends javax.swing.JFrame {
 =======
         } */
 >>>>>>> DatBan
+=======
+        // TODO add your handling code here:
+        new ChonMonFrame().setVisible(true);
+        this.dispose();
+>>>>>>> ThongKe
     }//GEN-LAST:event_submitBtn_361ActionPerformed
 
     private void submitBtn_362ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_362ActionPerformed
@@ -324,11 +418,15 @@ public class TraCuuBan extends javax.swing.JFrame {
         //</editor-fold>
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+<<<<<<< HEAD
                 try {
                     new TraCuuBan().setVisible(true);
                 } catch (SQLException ex) {
                     Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
                 }
+=======
+                new TraCuuBan().setVisible(true);
+>>>>>>> ThongKe
             }
         });
         /* Create and display the form */
@@ -344,9 +442,16 @@ public class TraCuuBan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+<<<<<<< HEAD
     private javax.swing.JButton submitBtn_360;
     private javax.swing.JButton submitBtn_361;
     private javax.swing.JButton submitBtn_362;
     private com.raven.suportSwing.TableColumn traCuuTable_352;
+=======
+    private javax.swing.JTable jTable1;
+    private javax.swing.JButton submitBtn_360;
+    private javax.swing.JButton submitBtn_361;
+    private javax.swing.JButton submitBtn_362;
+>>>>>>> ThongKe
     // End of variables declaration//GEN-END:variables
 }

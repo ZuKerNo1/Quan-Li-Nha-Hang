@@ -6,6 +6,7 @@ package View.NhanVien;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Service.EmployeeService;
 import View.MainFrame.mainFrame;
 =======
@@ -14,13 +15,19 @@ import Service.ServiceEmployee;
 =======
 import Service.ServiceEmployee;
 >>>>>>> DangNhap
+=======
+import Service.ServiceEmployee;
+>>>>>>> ThongKe
 import java.awt.Dimension;
 import java.awt.Font;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+<<<<<<< HEAD
 import javax.swing.JOptionPane;
+=======
+>>>>>>> ThongKe
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
@@ -32,13 +39,18 @@ import model.Employee;
 public class ViewEmployee extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
     Employee employee;
+<<<<<<< HEAD
     EmployeeService serviceEmployee;
+=======
+    ServiceEmployee serviceEmployee;
+>>>>>>> ThongKe
     /**
      * Creates new form ViewEmployee
      */
     public ViewEmployee() throws SQLException {
         initComponents();
         employee = new Employee();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         serviceEmployee = new EmployeeService();
@@ -48,6 +60,9 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
         serviceEmployee = new ServiceEmployee();
 >>>>>>> DangNhap
+=======
+        serviceEmployee = new ServiceEmployee();
+>>>>>>> ThongKe
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -152,6 +167,7 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         backBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
+<<<<<<< HEAD
         backBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backBtn_354ActionPerformed(evt);
@@ -179,6 +195,14 @@ public class ViewEmployee extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+
+        updateBtn_354.setBackground(new java.awt.Color(232, 64, 60));
+        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+
+        deleteBtn_354.setBackground(new java.awt.Color(232, 64, 60));
+        deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete.png"))); // NOI18N
+>>>>>>> ThongKe
 
         table_354.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -322,6 +346,7 @@ public class ViewEmployee extends javax.swing.JFrame {
     }//GEN-LAST:event_addBtn_354ActionPerformed
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here:
@@ -374,6 +399,8 @@ public class ViewEmployee extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private void setTableData(List<Employee> Employees){
         for(Employee employee: Employees){
             defaulttableModel_354.addRow(new Object[]{employee.getId_354(), employee.getName_354(), employee.getDob_354(), employee.getGender_354(), employee.getPhone_354(),
