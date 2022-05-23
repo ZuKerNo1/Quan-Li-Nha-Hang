@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import model.DatBan;
 
 /**
@@ -319,10 +320,10 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         
         
         
-        datBan.setDob_352(clrdoB_352.getText());
+        
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM--dd");
-        String date = sdf.format(clrdoB_352.getDate())
+        String date = sdf.format(clrdoB_352.getDate());
         
         // lay ra gia tri cho gender
         String gender = "";
@@ -331,41 +332,14 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         }else if(female_352.isSelected()){
             gender += "Nữ";
         }
-        employee.setGender_354(gender);
-        // lay ra gia tri cho role
-        String role = "";
-        if(phucVu_354.isSelected()){
-            role += "Phục vụ";
-        }else if(dauBep_354.isSelected()){
-            role += "Đầu bếp";
-        }else if(baoVe_354.isSelected()){
-            role += "Bảo vệ";
-        }else if(quanLy_354.isSelected()){
-            role += "Quản lí";
-        }else if(thuNgan_354.isSelected()){
-            role += "Thu ngân";
-        }
-        employee.setRole_354(role);
-        // lay ra gia  tri cho status
-        String status = "";
-        if(working_354.isSelected()){
-            status += "Đang làm việc";
-        }else if(leave_354.isSelected()){
-            status += "Nghỉ làm";
-        }
-        employee.setStatus_354(status);
+       
         try {
-            serviceEmployee.addEmployee(employee);
+            datBanService.addDatBan(datBan);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(AddEmployee.this, "Thêm nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
-            Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(AddEmployee.this, "Thêm nhân viên thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
-        try {
-            new ViewEmployee().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 
