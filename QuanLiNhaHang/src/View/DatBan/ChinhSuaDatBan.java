@@ -5,6 +5,7 @@
  */
 package View.DatBan;
 
+import Manager.ManagerDatBan;
 import Service.DatBanService;
 import View.DatBan.TraCuuBan;
 import java.sql.SQLException;
@@ -41,7 +42,7 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        btnM = new javax.swing.JPanel();
         submitBtn_352 = new javax.swing.JButton();
         backBtn_352 = new javax.swing.JButton();
         clearBtn_352 = new javax.swing.JButton();
@@ -63,12 +64,13 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtAddress_352 = new javax.swing.JTextArea();
+        updateBtn_352 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 50));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        btnM.setBackground(new java.awt.Color(255, 255, 255));
 
         submitBtn_352.setBackground(new java.awt.Color(255, 102, 51));
         submitBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -149,7 +151,7 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_table.png"))); // NOI18N
-        jLabel1.setText("CHỈNH SỬA ĐẶT BÀN");
+        jLabel1.setText("ĐẶT BÀN");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -190,40 +192,53 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
         txtAddress_352.setRows(5);
         jScrollPane2.setViewportView(txtAddress_352);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        updateBtn_352.setBackground(new java.awt.Color(255, 102, 51));
+        updateBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        updateBtn_352.setForeground(new java.awt.Color(255, 255, 255));
+        updateBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/updating.png"))); // NOI18N
+        updateBtn_352.setText("UPDATE");
+        updateBtn_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtn_352ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout btnMLayout = new javax.swing.GroupLayout(btnM);
+        btnM.setLayout(btnMLayout);
+        btnMLayout.setHorizontalGroup(
+            btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnMLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMLayout.createSequentialGroup()
+                        .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMLayout.createSequentialGroup()
                                 .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(updateBtn_352)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(clearBtn_352))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(btnMLayout.createSequentialGroup()
                                 .addGap(74, 74, 74)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(txtName_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtPhone_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(txtRole_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                                 .addGap(115, 115, 115)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(btnMLayout.createSequentialGroup()
                                         .addComponent(clrdoB_352, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(btnMLayout.createSequentialGroup()
+                                        .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel3)
                                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addGroup(btnMLayout.createSequentialGroup()
                                                 .addComponent(male_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(47, 47, 47)
                                                 .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -232,13 +247,13 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
                         .addComponent(submitBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        btnMLayout.setVerticalGroup(
+            btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnMLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(btnMLayout.createSequentialGroup()
                         .addComponent(txtName_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtPhone_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -246,7 +261,7 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
                         .addComponent(txtRole_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(btnMLayout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(clrdoB_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -254,26 +269,27 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(btnMLayout.createSequentialGroup()
                         .addGap(39, 39, 39)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(male_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(btnMLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(backBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(submitBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(updateBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1);
+        getContentPane().add(btnM);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -343,6 +359,54 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 
+    private void updateBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_352ActionPerformed
+       
+        StringBuilder sb= new StringBuilder();
+       if(txtPhone_352.getText().equals("")){
+           sb.append("SĐT không được dể trống ");
+           //txtPhone_352.setBackground(Color.red);
+       }else{
+          // txtPhone_352.setBackground(Color.white);
+       }
+       if(sb.length()>0){
+           JOptionPane.showMessageDialog(this, sb);
+           return;
+       }
+       if (JOptionPane.showConfirmDialog(this, "bạn có muốn update không")== JOptionPane.NO_OPTION){
+           return;
+       }
+       
+       try {
+            DatBan datban = new DatBan() ; 
+            datban.setName_352(txtName_352.getText());
+            datban.setPhone_352(txtPhone_352.getText());
+            datban.setRole_352(txtRole_352.getText());
+            datban.setAddress_352(txtAddress_352.getText());
+        
+            datban.setRequest_352(txtRequest_352.getText());
+            
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM--dd");
+            String date = sdf.format(clrdoB_352.getDate());
+            
+            String gender = "";
+            if(male_352.isSelected()){
+                gender += "Nam";
+            }else if(female_352.isSelected()){
+                gender += "Nữ";
+            }
+           
+            ManagerDatBan mdatban =new ManagerDatBan();
+            mdatban.update(datban);
+            
+            JOptionPane.showMessageDialog(this, "Thông tin đã được cập nhập");
+            
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Errol " +e.getMessage());
+            e.printStackTrace();
+        }
+
+    }//GEN-LAST:event_updateBtn_352ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -383,6 +447,7 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn_352;
+    private javax.swing.JPanel btnM;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton clearBtn_352;
     private com.toedter.calendar.JDateChooser clrdoB_352;
@@ -393,7 +458,6 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -405,5 +469,6 @@ public class ChinhSuaDatBan extends javax.swing.JFrame {
     private com.raven.suportSwing.TextField txtPhone_352;
     private javax.swing.JTextArea txtRequest_352;
     private com.raven.suportSwing.TextField txtRole_352;
+    private javax.swing.JButton updateBtn_352;
     // End of variables declaration//GEN-END:variables
 }
