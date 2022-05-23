@@ -4,13 +4,15 @@
  */
 package View.NhanVien;
 
-import Service.ServiceEmployee;
+import Service.EmployeeService;
+import View.MainFrame.mainFrame;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 import model.Employee;
@@ -22,14 +24,14 @@ import model.Employee;
 public class ViewEmployee extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
     Employee employee;
-    ServiceEmployee serviceEmployee;
+    EmployeeService serviceEmployee;
     /**
      * Creates new form ViewEmployee
      */
     public ViewEmployee() throws SQLException {
         initComponents();
         employee = new Employee();
-        serviceEmployee = new ServiceEmployee();
+        serviceEmployee = new EmployeeService();
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -134,12 +136,27 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         backBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
+        backBtn_354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBtn_354ActionPerformed(evt);
+            }
+        });
 
         updateBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+        updateBtn_354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtn_354ActionPerformed(evt);
+            }
+        });
 
         deleteBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/delete.png"))); // NOI18N
+        deleteBtn_354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtn_354ActionPerformed(evt);
+            }
+        });
 
         table_354.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -281,6 +298,54 @@ public class ViewEmployee extends javax.swing.JFrame {
         new AddEmployee().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_addBtn_354ActionPerformed
+
+    private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
+        // TODO add your handling code here:
+        new mainFrame().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backBtn_354ActionPerformed
+
+    private void updateBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_354ActionPerformed
+        // TODO add your handling code here:
+        int row = table_354.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }else{
+            String employeeID = (String) table_354.getValueAt(row, 0);
+            try {
+                new UpdateEmployee(employeeID).setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.dispose();
+        }
+    }//GEN-LAST:event_updateBtn_354ActionPerformed
+
+    private void deleteBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_354ActionPerformed
+        // TODO add your handling code here:
+        int row = table_354.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
+        }else{
+            int confirm = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
+            
+            if(confirm == JOptionPane.YES_OPTION){
+                String employeeID = String.valueOf(table_354.getValueAt(row, 0));
+                try {
+                    serviceEmployee.deleteEmployee(employeeID);
+                } catch (SQLException ex) {
+                    java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                }
+            }
+            defaulttableModel_354.setRowCount(0);
+            try {
+                setTableData(serviceEmployee.getAllEmployees());
+            } catch (SQLException ex) {
+                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
+        }
+    }//GEN-LAST:event_deleteBtn_354ActionPerformed
     private void setTableData(List<Employee> Employees){
         for(Employee employee: Employees){
             defaulttableModel_354.addRow(new Object[]{employee.getId_354(), employee.getName_354(), employee.getDob_354(), employee.getGender_354(), employee.getPhone_354(),

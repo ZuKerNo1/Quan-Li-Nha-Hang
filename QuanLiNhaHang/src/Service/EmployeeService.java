@@ -13,9 +13,9 @@ import java.util.List;
  *
  * @author AD
  */
-public class ServiceEmployee {
+public class EmployeeService {
     private ManagerEmp managerEmp;
-    public ServiceEmployee(){
+    public EmployeeService(){
         managerEmp = new ManagerEmp();
     }
     public List<Employee> getAllEmployees() throws SQLException{
@@ -29,5 +29,8 @@ public class ServiceEmployee {
     }
     public void updateEmployee(Employee employee) throws SQLException{
         managerEmp.updateEmployee(employee);
+    }
+    public Employee getEmployeeById(String id) throws SQLException{
+        return managerEmp.getEmployeeById(id);
     }
 }
