@@ -377,12 +377,23 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
        }
        
        try {
-            DatBanService datban = new DatBanService() ; 
-            datban.setIdName(txtidName.getText());
-            datban.setIdProduct(txtProductID.getText());
-            datban.setTenSP(txtTenSP.getText());
-            datban.setSoLuong(Integer.parseInt(txtSoLuong.getText()));
-            datban.setGiatien(Double.parseDouble(txtGiaTien.getText()));
+            DatBan datban = new DatBan() ; 
+            datban.setName_352(txtName_352.getText());
+            datban.setPhone_352(txtPhone_352.getText());
+            datban.setRole_352(txtRole_352.getText());
+            datban.setAddress_352(txtAddress_352.getText());
+        
+            datban.setRequest_352(txtRequest_352.getText());
+            
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM--dd");
+            String date = sdf.format(clrdoB_352.getDate());
+            
+            String gender = "";
+            if(male_352.isSelected()){
+                gender += "Nam";
+            }else if(female_352.isSelected()){
+                gender += "Nữ";
+            }
            
             ManagerDatBan mdatban =new ManagerDatBan();
             mdatban.update(datban);
@@ -393,12 +404,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Errol " +e.getMessage());
             e.printStackTrace();
         }
-        try {
-            
-            Showdatabase(SignIn.idName);
-        } catch (SQLException ex) {
-            Logger.getLogger(ProductForm.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
     }//GEN-LAST:event_updateBtn_352ActionPerformed
 
     /**

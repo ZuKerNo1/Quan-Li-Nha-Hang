@@ -107,5 +107,9 @@ public class ManagerDatBan {
         }
         return null;
     }*/
+
+    public void update(DatBan datban) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }
