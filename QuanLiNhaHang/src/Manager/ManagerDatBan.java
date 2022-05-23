@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import model.DatBan;
+import model.Employee;
 
 
 /**
@@ -65,18 +66,18 @@ public class ManagerDatBan {
         }
     }
     
-    /*public void updateEmployee(Employee customer) throws SQLException{
+    public void updateDatBan(DatBan datban) throws SQLException{
         Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "Update NhanVien set tenNV = ?, diaChi = ?, ngaySinh = ?, gioiTinh = ?, SDT = ?, luong = ? Where idNV = ?";
+        String sql = "Update DatBan set tenKH = ?, SDT = ?, tenNVPT = ?, diaChi = ?, ngayDat = ?, yeuCau = ? yeuCau = ? Where SDT = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, customer.getName_354());
-            preparedStatement.setString(2, customer.getAddress_354());
-            preparedStatement.setString(3, customer.getDob_354());
-            preparedStatement.setString(4, customer.getGender_354());
-            preparedStatement.setString(5, customer.getPhone_354());
-            preparedStatement.setDouble(6, customer.getSalary_354());
-            preparedStatement.setString(7, customer.getId_354());
+            preparedStatement.setString(1, datban.getName_352());
+            preparedStatement.setString(2, datban.getPhone_352());
+            preparedStatement.setString(3, datban.getRole_352());
+            preparedStatement.setString(4, datban.getAddress_352());
+            preparedStatement.setString(5, datban.getDob_352());
+            preparedStatement.setString(6, datban.getRequest_352());
+            preparedStatement.setString(7, datban.getGender_352());
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {
