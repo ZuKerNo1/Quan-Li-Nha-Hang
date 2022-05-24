@@ -9,6 +9,7 @@ import Manager.ManagerTraCuuBan;
 import model.Table;
 import java.sql.SQLException;
 import java.util.List;
+import javax.swing.text.html.HTML;
 
 /**
  *
@@ -26,5 +27,9 @@ public class TraCuuBanService {
     
     public String getIdTabel(String id) throws SQLException {
         return traCuuBanManager.getIdTable(id);
+    }
+
+    public String getIdTabel(HTML.Attribute ID) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

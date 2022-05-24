@@ -361,15 +361,12 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
             if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
                 
-                datBan.setName_352(txtName_352.getText());
                 datBan.setPhone_352(txtPhone_352.getText());
+                datBan.setName_352(txtName_352.getText());               
                 datBan.setRole_352(txtRole_352.getText());
                 datBan.setAddress_352(txtAddress_352.getText());
-
-                datBan.setRequest_352(txtRequest_352.getText());
-    
-               
-
+                datBan.setDayDat_352(dateDat);
+                datBan.setRequest_352(txtRequest_352.getText());               
                 // lay ra gia tri cho gender
                 String gender = "";
                 if(male_352.isSelected()){
@@ -377,6 +374,10 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 }else if(female_352.isSelected()){
                     gender += "Nữ";
                 }
+                datBan.setGender_352(gender);
+                // Lay gia tri cho idBA
+
+                datBan.setIdBA_352(this.idBA.getText());
 
                 try {
                     datBanService.addDatBan(datBan);
@@ -387,11 +388,12 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
                 this.dispose();
                 // add du lieu vao bang khach hang
-                String idKH = "";
+                String idKH = "KH001";
                 for (int i =1; i<=100; i++)
-                    idKH = "KH" + i;
+                    idKH =  idKH + i;
                 
                 customer.setIdKH_354(idKH);
+                
                 customer.setName_354(txtName_352.getText());               
                 customer.setDob_354(date);             
                 customer.setGender_354(gender);

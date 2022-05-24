@@ -46,7 +46,8 @@ public class ManagerCus {
                 + "Values(?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-             preparedStatement.setString(1, customer.getIdKH_354());
+            
+            preparedStatement.setString(1, customer.getIdKH_354());
             preparedStatement.setString(2, customer.getName_354());
             preparedStatement.setString(3, customer.getDob_354());
             preparedStatement.setString(4, customer.getGender_354());
