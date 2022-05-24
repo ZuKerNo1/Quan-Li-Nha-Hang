@@ -3,10 +3,12 @@ CREATE DATABASE QuanLiNhaHang
 go
 use QuanLiNhaHang
 
+
 --Tao table
+go
 create table NhanVien
 (
-	idNV varchar(10) not null primary key,
+	idNV varchar(10) not null  primary key,
 	tenNV nvarchar(50),
 	ngaySinh date,
 	gioiTinh nvarchar(5),
@@ -14,6 +16,19 @@ create table NhanVien
 	diaChi nvarchar(50),
 	luong money
 )
+
+--Tạo database cho account
+go
+create table account
+(
+	idName_352 varchar(50) primary key not null,
+	passWords_352 varchar(50) not null,
+	hoTen_352 varchar(50),
+	sDT_352 varchar(50),
+	idNV varchar(10) foreign key references NhanVien(idNV)
+)
+
+
 
 create table ChucVu
 (
@@ -42,18 +57,7 @@ create table MonAn
 	donGia money null
 )
 
-/*
-create table DatBan
-(
-	idDB varchar(10) not null primary key,
-	ngayDatBan date,
-	nvPhuTrach varchar(10) foreign key references NhanVien(idNV)
-		on delete 
-			cascade
-		on update
-			cascade
-)
-*/
+
 create table NguyenLieu
 (
 	idNL varchar(10) not null primary key,
@@ -72,7 +76,7 @@ create table BanAn
 	idBA varchar(10) not null primary key,
 	trangThaiBan nvarchar(50)
 )
-create table HoaDon
+/*create table HoaDon
 (
 	idHoaDon varchar(10) primary key,
 	ngayThanhToan date,
@@ -82,7 +86,21 @@ create table HoaDon
 		on update
 			cascade
 )
+*/
+go
 
+create table DatBan
+(
+	SDT nvarchar(15) not null primary key,
+	tenKH varchar(50),	
+	tenNVPT varchar(10) foreign key references NhanVien(idNV),
+	diaChi nvarchar(50),
+	ngayDat date,
+	yeuCau nvarchar(50),
+	gioiTinh nvarchar(5),
+	idBA varchar(10) foreign key references BanAn(idBA)
+
+)
 create table ChiTietHoaDon
 (
 	idHoaDon varchar(10),
@@ -99,15 +117,19 @@ create table ChiTietHoaDon
 	soLuong int,
 	primary key(idHoaDon,idMonAn)
 )
+
+go
 create table KhachHang
 (
-	SDT varchar(10) not null primary key,
+	idKH varchar (10) not null primary key,
+	SDT nvarchar(15) foreign key references DatBan(SDT),
 	tenKH nvarchar(50) ,
 	ngaySinh date,
 	gioiTinh nvarchar(5),
 	diaChi nvarchar(50)
 )
 
+/*
 create table ChiTietBan
 (
 	idBA varchar(10) not null,
@@ -120,19 +142,11 @@ create table ChiTietBan
 	ngayAn date,
 	primary key (idBA, idDB)
 )
+*/
 
-go
 
-create table DatBan
-(
-	tenKH varchar(10) not null primary key,
-	SDT nvarchar(50) ,
-	tenNVPT nvarchar(50),
-	diaChi nvarchar(50),
-	ngayDat date,
-	yeuCau nvarchar(50),
-	gioiTinh nvarchar(5)
-)
+
+
 
 --Them du lieu
 set dateformat dmy
@@ -162,14 +176,7 @@ values
 	('NV002','DB'),
 	('NV004','BV'),
 	('NV003','PV')
-go
 
-set dateformat dmy
-insert into DatBan
-values
-	('DB001','9-5-2022','NV005'),
-	('DB002','10-5-2022','NV005'),
-	('DB003','3-6-2022','NV005')
 go
 
 insert into NguyenLieu
@@ -193,18 +200,30 @@ values
 	('BA008',N'Trống'),
 	('BA009',N'Trống'),
 	('BA0010',N'Trống')
+/*
+go
+
+set dateformat dmy
+insert into DatBan
+values
+	('DB001','9-5-2022','NV005'),
+	('DB002','10-5-2022','NV005'),
+	('DB003','3-6-2022','NV005')
+
 go
 
 insert into KhachHang
 values
-	('0900000001',N'Nguyễn Ngọc Thiên Thùy','8-2-2002','Nữ',N'5 Nguyễn Tri Phương'),
-	('0900000002',N'Nguyễn Đình Huy','12-5-2000','Nam',N'20 Nguyễn Văn Linh')
+	('KH01','0900000001',N'Nguyễn Ngọc Thiên Thùy','8-2-2002','Nữ',N'5 Nguyễn Tri Phương'),
+	('KH02','0900000002',N'Nguyễn Đình Huy','12-5-2000','Nam',N'20 Nguyễn Văn Linh')
+	*/
 go
-
-insert into ChiTietBan
+select * from KhachHang
+select * from DatBan
+/*insert into ChiTietBan
 values
 	('BA001','DB001','0900000001','9-5-2022'),
-	('BA001','DB002','0900000001','10-5-2022')
+	('BA001','DB002','0900000001','10-5-2022')*/
 go
 
 insert into MonAn
@@ -221,12 +240,12 @@ values
 	('MA0010',N'Pudding Chocolate',320000)
 go
 
-set dateformat dmy
+/*set dateformat dmy
 insert into HoaDon
 values 
 	('HD001','7-5-2022','NV005'),
 	('HD002','9-5-2022','NV005'),
-	('HD003','9-5-2022','NV005')
+	('HD003','9-5-2022','NV005')*/
 go
 
 insert into ChiTietHoaDon
@@ -245,6 +264,7 @@ where cthd.idMonAn = ma.idMonAn
 group by cthd.idHoaDon
 
 --Thống kê theo tháng
+/*
 select month(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn 
@@ -261,18 +281,10 @@ select day(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','
 from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
 group by day(hd.ngayThanhToan)
+*/
 
---Tạo database cho account
-go
-create table account
-(
-	idName_352 varchar(50) primary key not null,
-	passWords_352 varchar(50) not null,
-	hoTen_352 varchar(50),
-	sDT_352 varchar(50) 
-)
 
 go
 insert into account
-values ('trung','123',N'Nguyễn Văn Trung','0373532115'),
-	   ('truong','123',N'Bùi Viết Trường','0905235135')
+values ('trung','123',N'Nguyễn Văn Trung','0373532115','NV001'),
+	   ('truong','123',N'Bùi Viết Trường','0905235135','NV002')
