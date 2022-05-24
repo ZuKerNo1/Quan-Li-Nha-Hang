@@ -36,7 +36,7 @@ public class CustomerService {
     }
 
     public void addCustomer(Customer customer) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     public void addDatBan(DatBan datBan) {
