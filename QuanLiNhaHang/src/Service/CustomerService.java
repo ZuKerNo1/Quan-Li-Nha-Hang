@@ -21,6 +21,9 @@ public class CustomerService {
     public List<Customer> getAllCustomers() throws SQLException{
         return managerCus.getAllCustomers();
     }
+    public void addCustomer(Customer customer) throws SQLException{
+        managerCus.addCustomer(customer);
+    }
     public void deleteCustomer(String id) throws SQLException{
         managerCus.deleteCustomer(id);
     }
