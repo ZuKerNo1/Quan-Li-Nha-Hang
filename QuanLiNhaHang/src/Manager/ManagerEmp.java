@@ -4,10 +4,7 @@
  */
 package Manager;
 
-<<<<<<< HEAD
-=======
 import Manager.JDBCConnection;
->>>>>>> ThongKe
 import model.Employee;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -66,10 +63,6 @@ public class ManagerEmp {
                 employee.setGender_354(rs.getString("gioiTinh"));
                 employee.setSalary_354(rs.getDouble("luong"));
                 employee.setRole_354(rs.getString("tenCV"));
-<<<<<<< HEAD
-                employee.setStatus_354(rs.getString("status"));
-=======
->>>>>>> ThongKe
                 return employee;
             }
         } catch (Exception e) {
@@ -79,15 +72,9 @@ public class ManagerEmp {
     }
     
     public void addEmployee(Employee employee) throws SQLException {
-<<<<<<< HEAD
-        Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "set dateformat dmy Insert into NhanVien(idNV, tenNV, ngaySinh, gioiTinh, SDT, diaChi, luong, tenCV, status)"
-                + "Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
-=======
         Connection connection =  JDBCConnection.JDBCConnection();
         String sql = "Insert into NhanVien(idNV, tenNV, ngaySinh, gioiTinh, SDT, diaChi, luong, tenCV)"
                 + "Values(?, ?, ?)";
->>>>>>> ThongKe
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, employee.getId_354());
@@ -98,10 +85,6 @@ public class ManagerEmp {
             preparedStatement.setString(6, employee.getAddress_354());
             preparedStatement.setDouble(7, employee.getSalary_354());
             preparedStatement.setString(8, employee.getRole_354());
-<<<<<<< HEAD
-            preparedStatement.setString(9, employee.getStatus_354());
-=======
->>>>>>> ThongKe
             int rs = preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -110,11 +93,7 @@ public class ManagerEmp {
     
     public void updateEmployee(Employee customer) throws SQLException{
         Connection connection = JDBCConnection.JDBCConnection();
-<<<<<<< HEAD
-        String sql = "Update NhanVien set tenNV = ?, diaChi = ?, ngaySinh = ?, gioiTinh = ?, SDT = ?, luong = ?, tenCV = ? , status = ? Where idNV = ?";
-=======
         String sql = "Update NhanVien set tenNV = ?, diaChi = ?, ngaySinh = ?, gioiTinh = ?, SDT = ?, luong = ? Where idNV = ?";
->>>>>>> ThongKe
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, customer.getName_354());
@@ -123,13 +102,7 @@ public class ManagerEmp {
             preparedStatement.setString(4, customer.getGender_354());
             preparedStatement.setString(5, customer.getPhone_354());
             preparedStatement.setDouble(6, customer.getSalary_354());
-<<<<<<< HEAD
-            preparedStatement.setString(7, customer.getRole_354());
-            preparedStatement.setString(8, customer.getStatus_354());
-            preparedStatement.setString(9, customer.getId_354());
-=======
             preparedStatement.setString(7, customer.getId_354());
->>>>>>> ThongKe
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {

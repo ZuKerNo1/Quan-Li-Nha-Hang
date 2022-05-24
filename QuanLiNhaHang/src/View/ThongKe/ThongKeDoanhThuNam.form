@@ -119,51 +119,28 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-<<<<<<< HEAD
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-=======
                               <Component id="jScrollPane1" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jComboBox_bct_nam" min="-2" pref="126" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
->>>>>>> ThongKe
                                   <Component id="backBtn_360" min="-2" pref="235" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="backBtn_361" min="-2" pref="100" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                                  <EmptySpace pref="1007" max="32767" attributes="0"/>
-=======
                                   <EmptySpace pref="406" max="32767" attributes="0"/>
->>>>>>> ThongKe
                                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
-<<<<<<< HEAD
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="1457" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-=======
->>>>>>> ThongKe
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-<<<<<<< HEAD
-                          <Component id="backBtn_360" min="-2" pref="50" max="-2" attributes="0"/>
-                          <EmptySpace pref="461" max="32767" attributes="0"/>
-=======
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -174,29 +151,16 @@
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Component id="jScrollPane1" pref="430" max="32767" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
->>>>>>> ThongKe
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="backBtn_361" pref="50" max="32767" attributes="0"/>
                               <Component id="jPanel4" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
-<<<<<<< HEAD
-                      <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="420" max="-2" attributes="0"/>
-                              <EmptySpace pref="99" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-=======
->>>>>>> ThongKe
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-<<<<<<< HEAD
-=======
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -237,7 +201,6 @@
                     </Component>
                   </SubComponents>
                 </Container>
->>>>>>> ThongKe
                 <Component class="javax.swing.JButton" name="backBtn_360">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -337,31 +300,6 @@
                     </Component>
                   </SubComponents>
                 </Container>
-<<<<<<< HEAD
-                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-                  <AuxValues>
-                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-                  </AuxValues>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-                  <SubComponents>
-                    <Component class="com.raven.suportSwing.TableColumn" name="tableShow">
-                      <Properties>
-                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                          <Table columnCount="2" rowCount="0">
-                            <Column editable="false" title="N&#x103;m" type="java.lang.Object"/>
-                            <Column editable="false" title="T&#x1ed5;ng gi&#xe1; b&#xe1;n" type="java.lang.Object"/>
-                          </Table>
-                        </Property>
-                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
-                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
-                        </Property>
-                      </Properties>
-                    </Component>
-                  </SubComponents>
-                </Container>
-=======
->>>>>>> ThongKe
               </SubComponents>
             </Container>
           </SubComponents>

@@ -24,4 +24,8 @@ public class DatBanService {
     public void addDatBan(DatBan datBan) throws SQLException{
         managerDatBan.addDatBan(datBan);
     }
+    
+    public void updateDatBan(DatBan datBan) throws SQLException{
+        managerDatBan.addDatBan(datBan);
+    }
 }
