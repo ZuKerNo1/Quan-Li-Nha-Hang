@@ -35,11 +35,9 @@ public class CustomerService {
         return managerCus.findBook(find);
     }
 
-    public void addCustomer(Customer customer) {
-        
+    public void addCustomer(Customer customer) throws SQLException {
+        managerCus.addCustomer(customer);
     }
 
-    public void addDatBan(DatBan datBan) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    
 }

@@ -40,6 +40,24 @@ public class ManagerCus {
         return customers;
     }
     
+    public void addCustomer(Customer customer) throws SQLException {
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "Insert into KhachHang(idKH, tenKH, ngaySinh, gioiTinh, SDT, diaChi)"
+                + "Values(?, ?, ?, ?, ?, ?)";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+             preparedStatement.setString(1, customer.getIdKH_354());
+            preparedStatement.setString(2, customer.getName_354());
+            preparedStatement.setString(3, customer.getDob_354());
+            preparedStatement.setString(4, customer.getGender_354());
+            preparedStatement.setString(5, customer.getPhone_354());
+            preparedStatement.setString(6, customer.getAddress_354());
+            int rs = preparedStatement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
     public Customer getCustomerById(String sdt) throws SQLException {
 
         Connection connection = JDBCConnection.JDBCConnection();
