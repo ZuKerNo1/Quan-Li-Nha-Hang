@@ -13,30 +13,7 @@ import java.util.Calendar;
  * @author ACER
  */
 public class DatBan {
-    private String name_352, phone_352, role_352, address_352, dob_352, request_352, gender_352, dayDat_352;
- 
-
-    public DatBan(String name_352, String phone_352, String role_352, String address_352, String dob_352, String request_352, String gender_352) {
-        this.name_352 = name_352;
-        this.phone_352 = phone_352;
-        this.role_352 = role_352;
-        this.address_352 = address_352;
-        this.dob_352 = dob_352;
-        this.request_352 = request_352;
-        this.gender_352 = gender_352;
-    }
-
-    public DatBan() {
-        
-    }
-
-    public String getDayDat_352() {
-        return dayDat_352;
-    }
-
-    public void setDayDat_352(String dayDat_352) {
-        this.dayDat_352 = dayDat_352;
-    }
+    private String name_352, phone_352, role_352, address_352, dayDat_352, request_352, gender_352, idBA_352;
 
     public String getName_352() {
         return name_352;
@@ -70,12 +47,12 @@ public class DatBan {
         this.address_352 = address_352;
     }
 
-    public String getDob_352() {
-        return dob_352;
+    public String getDayDat_352() {
+        return dayDat_352;
     }
 
-    public void setDob_352(String dob_352) {
-        this.dob_352 = dob_352;
+    public void setDayDat_352(String dayDat_352) {
+        this.dayDat_352 = dayDat_352;
     }
 
     public String getRequest_352() {
@@ -93,5 +70,18 @@ public class DatBan {
     public void setGender_352(String gender_352) {
         this.gender_352 = gender_352;
     }
+
+    public String getIdBA_352() {
+        return idBA_352;
+    }
+
+    public void setIdBA_352(String idBA_352) {
+        this.idBA_352 = idBA_352;
+    }
+ 
+
+    
+
+    
     
 }

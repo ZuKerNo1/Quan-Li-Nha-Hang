@@ -29,14 +29,14 @@ public class ManagerDatBan {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 DatBan listDatBan = new DatBan();
-                listDatBan.setName_352(rs.getString("Họ tên"));
                 listDatBan.setPhone_352(rs.getString("SĐT"));
+                listDatBan.setName_352(rs.getString("Họ tên")); 
                 listDatBan.setRole_352(rs.getString("Tên nhân viên"));
                 listDatBan.setAddress_352(rs.getString("Địa chỉ"));
-                listDatBan.setDob_352(rs.getString("Ngày đặt"));
+                listDatBan.setDayDat_352(rs.getString("Ngày đặt"));
                 listDatBan.setRequest_352(rs.getString("Yêu cầu đặc biệt"));
                 listDatBan.setGender_352(rs.getString("Giới tính"));
-                
+                listDatBan.setIdBA_352(rs.getString("IDBA"));
                 listDatBans.add(listDatBan);
             }
         } catch (SQLException ex) {
@@ -48,25 +48,25 @@ public class ManagerDatBan {
     
     public void addDatBan(DatBan datban) throws SQLException {
         Connection connection =  JDBCConnection.JDBCConnection();
-        String sql = "Insert into Datban(tenKH, SDT, tenNVPT, diaChi, ngayDat, yeuCau, gioiTinh)"
-                + "Values(?, ?, ?, ?, ?, ?, ?)";
+        String sql = "Insert into Datban(SDT, tenKH,  tenNVPT, diaChi, ngayDat, yeuCau, gioiTinh, idBA)"
+                + "Values(?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-                preparedStatement.setString(1, datban.getName_352());
-                preparedStatement.setString(2, datban.getPhone_352());
+                preparedStatement.setString(1, datban.getPhone_352());
+                preparedStatement.setString(2, datban.getName_352());               
                 preparedStatement.setString(3, datban.getRole_352());
                 preparedStatement.setString(4, datban.getAddress_352());
-                preparedStatement.setString(5, datban.getDob_352());
+                preparedStatement.setString(5, datban.getDayDat_352());
                 preparedStatement.setString(6, datban.getRequest_352());
                 preparedStatement.setString(7, datban.getGender_352());
-               
+                preparedStatement.setString(8, datban.getIdBA_352());
             int rs = preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     
-    public void updateDatBan(DatBan datban) throws SQLException{
+   /* public void updateDatBan(DatBan datban) throws SQLException{
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "Update DatBan set tenKH = ?, SDT = ?, tenNVPT = ?, diaChi = ?, ngayDat = ?, yeuCau = ? gioiTinh = ? Where SDT = ?";
         try {
@@ -83,7 +83,7 @@ public class ManagerDatBan {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }*/
     
     /*public void deleteEmployee(String id) throws SQLException{
        Connection connection = JDBCConnection.JDBCConnection();
