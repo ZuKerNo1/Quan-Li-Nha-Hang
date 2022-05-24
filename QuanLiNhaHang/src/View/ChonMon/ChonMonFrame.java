@@ -1,5 +1,7 @@
 package View.ChonMon;
 
+import Service.DatBanService;
+import Service.TraCuuBanService;
 import View.DatBan.TraCuuBan;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -16,18 +18,19 @@ import java.util.logging.Logger;
  * @author DELL
  */
 public class ChonMonFrame extends javax.swing.JFrame {
-
+    TraCuuBanService traCuuBanService = new TraCuuBanService();
     /**
      * Creates new form ChonMonFrame
      */
-    public ChonMonFrame() {
+    public ChonMonFrame(String id) throws SQLException {
         initComponents();
+        
+        idBA.setText(traCuuBanService.getIdTabel(id));
     }
-
-    public ChonMonFrame(String ID) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public ChonMonFrame(){
+        initComponents();
+        setLocationRelativeTo(null);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,7 +49,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jCheckBox10 = new javax.swing.JCheckBox();
         jCheckBox11 = new javax.swing.JCheckBox();
         jCheckBox12 = new javax.swing.JCheckBox();
@@ -75,6 +77,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jSpinner9 = new javax.swing.JSpinner();
         jSpinner10 = new javax.swing.JSpinner();
         btnBackToTCB = new javax.swing.JButton();
+        idBA = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -104,8 +107,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel12.setText("200000");
-
-        jTextField1.setEditable(false);
 
         jCheckBox10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jCheckBox10.setText("Gà rán nóng Nashville");
@@ -187,6 +188,9 @@ public class ChonMonFrame extends javax.swing.JFrame {
             }
         });
 
+        idBA.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        idBA.setText("ID Bàn ăn");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -249,18 +253,18 @@ public class ChonMonFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(197, 197, 197)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
+                .addComponent(idBA, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(idBA))
+                .addGap(18, 26, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jLabel4)
@@ -401,6 +405,12 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -412,6 +422,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBackToTCB;
+    private javax.swing.JLabel idBA;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
@@ -450,6 +461,5 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JSpinner jSpinner7;
     private javax.swing.JSpinner jSpinner8;
     private javax.swing.JSpinner jSpinner9;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

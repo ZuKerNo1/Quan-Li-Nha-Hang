@@ -8,6 +8,7 @@ import Manager.ManagerCus;
 import java.sql.SQLException;
 import java.util.List;
 import model.Customer;
+import model.DatBan;
 
 /**
  *
@@ -21,9 +22,6 @@ public class CustomerService {
     public List<Customer> getAllCustomers() throws SQLException{
         return managerCus.getAllCustomers();
     }
-    public void addCustomer(Customer customer) throws SQLException{
-        managerCus.addCustomer(customer);
-    }
     public void deleteCustomer(String id) throws SQLException{
         managerCus.deleteCustomer(id);
     }
@@ -36,4 +34,10 @@ public class CustomerService {
     public Customer find(String find) throws SQLException{
         return managerCus.findBook(find);
     }
+
+    public void addCustomer(Customer customer) throws SQLException {
+        managerCus.addCustomer(customer);
+    }
+
+    
 }
