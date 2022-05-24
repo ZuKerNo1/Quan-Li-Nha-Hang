@@ -48,7 +48,7 @@ public class ManagerDatBan {
     
     public void addDatBan(DatBan datban) throws SQLException {
         Connection connection =  JDBCConnection.JDBCConnection();
-        String sql = "Insert into DatBan(tenKH, SDT, tenNVPT, diaChi, ngayDat, yeuCau, gioiTinh)"
+        String sql = "Insert into Datban(tenKH, SDT, tenNVPT, diaChi, ngayDat, yeuCau, gioiTinh)"
                 + "Values(?, ?, ?, ?, ?, ?, ?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -108,8 +108,4 @@ public class ManagerDatBan {
         return null;
     }*/
 
-    public void update(DatBan datban) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }

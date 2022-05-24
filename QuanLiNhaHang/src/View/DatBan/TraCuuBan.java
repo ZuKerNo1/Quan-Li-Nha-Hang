@@ -7,8 +7,8 @@ package View.DatBan;
 
 import Manager.ManagerNguyenLieu;
 import Manager.ManagerTraCuuBan;
-import model.Table;
 import Service.TraCuuBanService;
+import model.Table;
 import View.ChonMon.ChonMonFrame;
 import View.DatBan.DatBan_NguoiDaiDien;
 import View.MainFrame.mainFrame;
@@ -25,7 +25,9 @@ import javax.swing.table.DefaultTableModel;
  * @author win
  */
 public class TraCuuBan extends javax.swing.JFrame {
+
     TraCuuBanService traCuuBanService = new TraCuuBanService();
+
     /**
      * Creates new form TraCuuBan
      */
@@ -43,7 +45,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         defaultTableModel.addColumn("Trạng thái");
         setData(traCuuBanService.getAllListTraCuuBan());
     }
-    
+
     private void setData(List<Table> tables) throws SQLException {
         DefaultTableModel defaultTableModel;
         ManagerTraCuuBan us = new ManagerTraCuuBan();
@@ -54,8 +56,9 @@ public class TraCuuBan extends javax.swing.JFrame {
         for (Table table : tables) {
             defaultTableModel.addRow(new Object[]{table.getIdTable_352(), table.getStatusTable_352()});
         }
-        
+
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -106,7 +109,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -116,6 +119,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_dinner-table.png"))); // NOI18N
         clearBtn_360.setText("ĐẶT BÀN");
+        clearBtn_360.setSelected(true);
         clearBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearBtn_360ActionPerformed(evt);
@@ -170,7 +174,7 @@ public class TraCuuBan extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID Bàn ăn", "Tổng giá bán"
+                "ID Bàn ăn", "Trạng thái"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -190,14 +194,14 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                .addGap(43, 43, 43)
+                .addGap(40, 40, 40)
                 .addComponent(clearBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(49, 49, 49)
+                .addGap(52, 52, 52)
                 .addComponent(submitBtn_362)
-                .addGap(50, 50, 50)
+                .addGap(51, 51, 51)
                 .addComponent(submitBtn_361, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(55, 55, 55)
-                .addComponent(submitBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(54, 54, 54)
+                .addComponent(submitBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -209,13 +213,13 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(563, 563, 563)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(clearBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(submitBtn_361, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(submitBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitBtn_361, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(clearBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitBtn_362, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(submitBtn_362, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(submitBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(42, 42, 42))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -255,9 +259,18 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_backBtn_360ActionPerformed
 
     private void clearBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_360ActionPerformed
-        // TODO add your handling code here:
-        new DatBan_NguoiDaiDien().setVisible(true);
-        this.dispose();
+        int row = traCuuTable_352.getSelectedRow();
+        if (row == -1) {
+            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        } else {
+            String ID = (String) traCuuTable_352.getValueAt(row, 0);
+            try {
+                new DatBan_NguoiDaiDien(ID).setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.dispose();
+        }
     }//GEN-LAST:event_clearBtn_360ActionPerformed
 
     private void submitBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_360ActionPerformed
@@ -265,11 +278,10 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_submitBtn_360ActionPerformed
 
     private void submitBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_361ActionPerformed
-       /* // TODO add your handling code here:
         int row = traCuuTable_352.getSelectedRow();
-        if(row == -1){
+        if (row == -1) {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        }else{
+        } else {
             String ID = (String) traCuuTable_352.getValueAt(row, 0);
             try {
                 new ChonMonFrame(ID).setVisible(true);
@@ -277,7 +289,7 @@ public class TraCuuBan extends javax.swing.JFrame {
                 Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
             }
             this.dispose();
-        } */
+        }
     }//GEN-LAST:event_submitBtn_361ActionPerformed
 
     private void submitBtn_362ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_362ActionPerformed
@@ -312,11 +324,13 @@ public class TraCuuBan extends javax.swing.JFrame {
         //</editor-fold>
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+
                 try {
                     new TraCuuBan().setVisible(true);
                 } catch (SQLException ex) {
                     Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
                 }
+
             }
         });
         /* Create and display the form */

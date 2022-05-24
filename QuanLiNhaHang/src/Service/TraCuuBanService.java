@@ -7,7 +7,6 @@ package Service;
 
 import Manager.ManagerTraCuuBan;
 import model.Table;
-import View.DatBan.TraCuuBan;
 import java.sql.SQLException;
 import java.util.List;
 

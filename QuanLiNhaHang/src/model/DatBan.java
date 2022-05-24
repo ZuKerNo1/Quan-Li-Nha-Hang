@@ -13,7 +13,7 @@ import java.util.Calendar;
  * @author ACER
  */
 public class DatBan {
-    private String name_352, phone_352, role_352, address_352, dob_352, request_352, gender_352 ;
+    private String name_352, phone_352, role_352, address_352, dob_352, request_352, gender_352, dayDat_352;
  
 
     public DatBan(String name_352, String phone_352, String role_352, String address_352, String dob_352, String request_352, String gender_352) {
@@ -28,6 +28,14 @@ public class DatBan {
 
     public DatBan() {
         
+    }
+
+    public String getDayDat_352() {
+        return dayDat_352;
+    }
+
+    public void setDayDat_352(String dayDat_352) {
+        this.dayDat_352 = dayDat_352;
     }
 
     public String getName_352() {
