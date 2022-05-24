@@ -6,13 +6,14 @@
 package View.DatBan;
 
 import Manager.ManagerDatBan;
+import Service.CustomerService;
 import Service.DatBanService;
-import View.DatBan.TraCuuBan;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import model.Customer;
 import model.DatBan;
 
 /**
@@ -60,11 +61,13 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         txtRequest_352 = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        clrdoB_352 = new com.toedter.calendar.JDateChooser();
+        dayDat_352 = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtAddress_352 = new javax.swing.JTextArea();
         updateBtn_352 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        clrdoB_352 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 50));
@@ -203,6 +206,8 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             }
         });
 
+        jLabel7.setText("Ngày sinh");
+
         javax.swing.GroupLayout btnMLayout = new javax.swing.GroupLayout(btnM);
         btnM.setLayout(btnMLayout);
         btnMLayout.setHorizontalGroup(
@@ -230,7 +235,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                                 .addGap(115, 115, 115)
                                 .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(btnMLayout.createSequentialGroup()
-                                        .addComponent(clrdoB_352, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(dayDat_352, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE))
                                     .addGroup(btnMLayout.createSequentialGroup()
                                         .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -241,7 +246,9 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                                             .addGroup(btnMLayout.createSequentialGroup()
                                                 .addComponent(male_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(47, 47, 47)
-                                                .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(clrdoB_352, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE)))))
                         .addGap(18, 18, 18)
                         .addComponent(submitBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -252,35 +259,36 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             .addGroup(btnMLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(btnMLayout.createSequentialGroup()
                         .addComponent(txtName_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(txtPhone_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(14, 14, 14)
                         .addComponent(txtRole_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(btnMLayout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dayDat_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(clrdoB_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(btnMLayout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(male_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(btnMLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                            .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(backBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -327,31 +335,51 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPhone_352FocusGained
 
     private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
-        datBan.setName_352(txtName_352.getText());
-        datBan.setPhone_352(txtPhone_352.getText());
-        datBan.setRole_352(txtRole_352.getText());
-        datBan.setAddress_352(txtAddress_352.getText());
-        
-        datBan.setRequest_352(txtRequest_352.getText());
-        
-        
-        
-        
-        
+        Customer customer = new Customer();
+        CustomerService customerService = new CustomerService();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM--dd");
-        String date = sdf.format(clrdoB_352.getDate());
+        String dateDat = sdf.format(dayDat_352.getDate());
+        try {
+            // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
+            if(customerService.getCustomerById(txtPhone_352.getText()) == null){
+                // add du lieu vao bang khach hang
+                customer.setName_354(txtName_352.getText());
+                String date = sdf.format(clrdoB_352.getDate());
+                customer.setDob_354(date);
+                String gender = "";
+                if(male_352.isSelected()){
+                    gender += "Nam";
+                }else if(female_352.isSelected()){
+                    gender += "Nữ";
+                }
+                customer.setGender_354(gender);
+                customer.setAddress_354(txtAddress_352.getText());
+                customer.setPhone_354(txtPhone_352.getText());
+                customerService.addCustomer(customer);
+                //end
+                // add du lieu vao` bang dat ban
+                datBan.setDayDat_352(dateDat);
+                datBan.setRequest_352(txtRequest_352.getText());
+                JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
+            }else{
+                datBan.setDayDat_352(dateDat);
+                datBan.setRequest_352(txtRequest_352.getText());
+                JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+             
+          
+        
+        
         
         // lay ra gia tri cho gender
-        String gender = "";
-        if(male_352.isSelected()){
-            gender += "Nam";
-        }else if(female_352.isSelected()){
-            gender += "Nữ";
-        }
+        
        
         try {
-            datBanService.addDatBan(datBan);
-        } catch (SQLException ex) {
+            customerService.addDatBan(datBan);
+        } catch (SQLException ex){
             JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -386,7 +414,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             datban.setRequest_352(txtRequest_352.getText());
             
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM--dd");
-            String date = sdf.format(clrdoB_352.getDate());
+            String date = sdf.format(dayDat_352.getDate());
             
             String gender = "";
             if(male_352.isSelected()){
@@ -449,6 +477,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton clearBtn_352;
     private com.toedter.calendar.JDateChooser clrdoB_352;
+    private com.toedter.calendar.JDateChooser dayDat_352;
     private com.raven.suportSwing.RadioButtonCustom female_352;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -456,6 +485,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
