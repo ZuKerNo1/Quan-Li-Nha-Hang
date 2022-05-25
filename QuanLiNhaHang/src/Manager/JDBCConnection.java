@@ -19,10 +19,8 @@ public class JDBCConnection {
         ds.setUser("sa");
         ds.setPassword("0934804796a");
         ds.setServerName("LAPTOP-9TCJRCKI\\KVU");
-        ds.setPassword("Trung@2305");
-        ds.setServerName("DESKTOP-8GKPO1M\\SQLEXPRESS");
         ds.setPortNumber(1433);
-        ds.setDatabaseName("QuanLiNhaHang");
+        ds.setDatabaseName("QuanLiNhaHang1");
         ds.setEncrypt(false);
         ds.setTrustServerCertificate(false);
         Connection con = null;

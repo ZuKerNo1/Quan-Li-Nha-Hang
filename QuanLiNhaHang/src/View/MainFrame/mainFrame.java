@@ -28,8 +28,9 @@ public class mainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titlePanel = new javax.swing.JPanel();
-        titleLabel = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        titlePanel2 = new javax.swing.JPanel();
+        titleLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         khoNguyenLieuButton = new javax.swing.JButton();
         quanLyNhanVienButton = new javax.swing.JButton();
@@ -39,32 +40,34 @@ public class mainFrame extends javax.swing.JFrame {
         thongKeDoanhThuButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 204, 153));
+        setBackground(new java.awt.Color(255, 255, 255));
 
-        titlePanel.setBackground(new java.awt.Color(51, 255, 204));
-        titlePanel.setPreferredSize(new java.awt.Dimension(659, 90));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        titleLabel.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        titleLabel.setForeground(new java.awt.Color(255, 255, 255));
-        titleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        titleLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhahang.png"))); // NOI18N
-        titleLabel.setText("Quản Lý Nhà Hàng");
+        titlePanel2.setBackground(new java.awt.Color(51, 255, 204));
+        titlePanel2.setPreferredSize(new java.awt.Dimension(659, 90));
 
-        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
-        titlePanel.setLayout(titlePanelLayout);
-        titlePanelLayout.setHorizontalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
+        titleLabel2.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        titleLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        titleLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhahang.png"))); // NOI18N
+        titleLabel2.setText("Quản Lý Nhà Hàng");
+
+        javax.swing.GroupLayout titlePanel2Layout = new javax.swing.GroupLayout(titlePanel2);
+        titlePanel2.setLayout(titlePanel2Layout);
+        titlePanel2Layout.setHorizontalGroup(
+            titlePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanel2Layout.createSequentialGroup()
                 .addGap(237, 237, 237)
-                .addComponent(titleLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(titleLabel2)
+                .addContainerGap(282, Short.MAX_VALUE))
         );
-        titlePanelLayout.setVerticalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
+        titlePanel2Layout.setVerticalGroup(
+            titlePanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanel2Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(titleLabel)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addComponent(titleLabel2)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -73,6 +76,7 @@ public class mainFrame extends javax.swing.JFrame {
         khoNguyenLieuButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         khoNguyenLieuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nguyenlieu.png"))); // NOI18N
         khoNguyenLieuButton.setText("Kho nguyên liệu");
+        khoNguyenLieuButton.setBorder(null);
         khoNguyenLieuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 khoNguyenLieuButtonActionPerformed(evt);
@@ -83,6 +87,7 @@ public class mainFrame extends javax.swing.JFrame {
         quanLyNhanVienButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyNhanVienButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien.png"))); // NOI18N
         quanLyNhanVienButton.setText("Quản lý nhân viên");
+        quanLyNhanVienButton.setBorder(null);
         quanLyNhanVienButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quanLyNhanVienButtonActionPerformed(evt);
@@ -93,6 +98,7 @@ public class mainFrame extends javax.swing.JFrame {
         quanLyKhachHangButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyKhachHangButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/khachang.png"))); // NOI18N
         quanLyKhachHangButton.setText("Quản lý khách hàng");
+        quanLyKhachHangButton.setBorder(null);
         quanLyKhachHangButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quanLyKhachHangButtonActionPerformed(evt);
@@ -102,6 +108,7 @@ public class mainFrame extends javax.swing.JFrame {
         dangXuatButton.setBackground(new java.awt.Color(255, 255, 255));
         dangXuatButton.setForeground(new java.awt.Color(255, 0, 0));
         dangXuatButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logout (1).png"))); // NOI18N
+        dangXuatButton.setBorder(null);
         dangXuatButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dangXuatButtonActionPerformed(evt);
@@ -112,6 +119,7 @@ public class mainFrame extends javax.swing.JFrame {
         quanLyBanAnButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyBanAnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/banAn.png"))); // NOI18N
         quanLyBanAnButton.setText("Quản lý bàn ăn");
+        quanLyBanAnButton.setBorder(null);
         quanLyBanAnButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quanLyBanAnButtonActionPerformed(evt);
@@ -122,6 +130,7 @@ public class mainFrame extends javax.swing.JFrame {
         thongKeDoanhThuButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         thongKeDoanhThuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/money.png"))); // NOI18N
         thongKeDoanhThuButton.setText("Thống kê doanh thu");
+        thongKeDoanhThuButton.setBorder(null);
         thongKeDoanhThuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thongKeDoanhThuButtonActionPerformed(evt);
@@ -139,14 +148,10 @@ public class mainFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(khoNguyenLieuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(quanLyBanAnButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(dangXuatButton, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dangXuatButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(quanLyNhanVienButton, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -170,24 +175,49 @@ public class mainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 944, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(titlePanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 944, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 730, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addComponent(titlePanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 635, Short.MAX_VALUE)))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                    .addGap(0, 103, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(titlePanel, javax.swing.GroupLayout.DEFAULT_SIZE, 896, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(titlePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
 
     private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
         // TODO add your handling code here:
@@ -197,17 +227,13 @@ public class mainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_dangXuatButtonActionPerformed
 
-    private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
-
     private void quanLyKhachHangButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_quanLyKhachHangButtonActionPerformed
 
-    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
+    private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
+    }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
 
     private void khoNguyenLieuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_khoNguyenLieuButtonActionPerformed
         // TODO add your handling code here:
@@ -254,12 +280,17 @@ public class mainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton dangXuatButton;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JButton khoNguyenLieuButton;
     private javax.swing.JButton quanLyBanAnButton;
     private javax.swing.JButton quanLyKhachHangButton;
     private javax.swing.JButton quanLyNhanVienButton;
     private javax.swing.JButton thongKeDoanhThuButton;
     private javax.swing.JLabel titleLabel;
+    private javax.swing.JLabel titleLabel1;
+    private javax.swing.JLabel titleLabel2;
     private javax.swing.JPanel titlePanel;
+    private javax.swing.JPanel titlePanel1;
+    private javax.swing.JPanel titlePanel2;
     // End of variables declaration//GEN-END:variables
 }
