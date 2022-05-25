@@ -388,11 +388,9 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
                 this.dispose();
                 // add du lieu vao bang khach hang
-                String idKH = "KH001";
-                for (int i =1; i<=100; i++)
-                    idKH =  idKH + i;
                 
-                customer.setIdKH_354(idKH);
+               
+                  
                 
                 customer.setName_354(txtName_352.getText());               
                 customer.setDob_354(date);             

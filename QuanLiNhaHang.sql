@@ -121,7 +121,7 @@ create table ChiTietHoaDon
 go
 create table KhachHang
 (
-	idKH varchar (10) not null primary key,
+	idKH int identity(1,1) not null primary key ,
 	SDT nvarchar(15) foreign key references DatBan(SDT),
 	tenKH nvarchar(50) ,
 	ngaySinh date,
