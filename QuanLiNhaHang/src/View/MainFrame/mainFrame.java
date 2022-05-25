@@ -5,6 +5,11 @@
  */
 package View.MainFrame;
 
+import View.DatBan.TraCuuBan;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author DELL
@@ -220,7 +225,13 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
 
     private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new TraCuuBan().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
     }//GEN-LAST:event_quanLyBanAnButtonActionPerformed
 
     private void dangXuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButtonActionPerformed
@@ -228,7 +239,13 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_dangXuatButtonActionPerformed
 
     private void quanLyKhachHangButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new View.KhachHang.ViewCustomer().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
     }//GEN-LAST:event_quanLyKhachHangButtonActionPerformed
 
     private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
