@@ -20,7 +20,7 @@ public class ChiTietHoaDonService {
         chonMonManager = new ManagerChiTietHoaDon();
     }
     
-    public void addMonAnToChiTietHoaDon() throws SQLException{
-        chonMonManager.addMonAnToChiTietHoaDon();
+    public void addMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException{
+        chonMonManager.addMonAnToChiTietHoaDon(idHoaDon, idMA, soLuong);
     }
 }

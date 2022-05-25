@@ -1,6 +1,7 @@
 package View.ChonMon;
 
 import Manager.JDBCConnection;
+import Manager.ManagerHoaDon;
 import Service.ChiTietHoaDonService;
 import Service.HoaDonService;
 import Service.TraCuuBanService;
@@ -14,8 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.CheckBox;
 import javax.swing.JOptionPane;
 import model.HoaDon;
+import model.MonAn;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -31,13 +34,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
     HoaDonService hoaDonService = new HoaDonService();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     ChiTietHoaDonService chonMonService = new ChiTietHoaDonService();
-
+    ManagerHoaDon managerHoaDon = new ManagerHoaDon();
+            // TODO add your handling code here:
+    
     /**
      * Creates new form ChonMonFrame
      */
     public ChonMonFrame(String id) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTabel(id));
+        MonAn monAn = new MonAn();
     }
 
     public ChonMonFrame() {
@@ -52,111 +58,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
      */
     public String getIDBA() {
         return idBA.getText();
-    }
-
-    public List<String> getDSMonAn() {
-        List<String> monAns = new ArrayList<String>();
-        if (MA001.isSelected()) {
-            monAns.add(MA001.getText());
-        }
-        if (MA002.isSelected()) {
-            monAns.add(MA002.getText());
-        }
-        if (MA003.isSelected()) {
-            monAns.add(MA003.getText());
-        }
-        if (MA004.isSelected()) {
-            monAns.add(MA004.getText());
-        }
-        if (MA005.isSelected()) {
-            monAns.add(MA005.getText());
-        }
-        if (MA006.isSelected()) {
-            monAns.add(MA006.getText());
-        }
-        if (MA007.isSelected()) {
-            monAns.add(MA007.getText());
-        }
-        if (MA008.isSelected()) {
-            monAns.add(MA008.getText());
-        }
-        if (MA009.isSelected()) {
-            monAns.add(MA009.getText());
-        }
-        if (MA010.isSelected()) {
-            monAns.add(MA010.getText());
-        }
-        return monAns;
-    }
-
-    public List<Integer> getDSSoLuong() {
-        List<Integer> soLuongs = new ArrayList<Integer>();
-        if (MA001.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong1.getSelectedItem().toString()));
-        }
-        if (MA002.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong2.getSelectedItem().toString()));
-        }
-        if (MA003.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong3.getSelectedItem().toString()));
-        }
-        if (MA004.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong4.getSelectedItem().toString()));
-        }
-        if (MA005.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong5.getSelectedItem().toString()));
-        }
-        if (MA006.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong6.getSelectedItem().toString()));
-        }
-        if (MA007.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong7.getSelectedItem().toString()));
-        }
-        if (MA008.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong8.getSelectedItem().toString()));
-        }
-        if (MA009.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong9.getSelectedItem().toString()));
-        }
-        if (MA010.isSelected()) {
-            soLuongs.add(Integer.valueOf(soLuong10.getSelectedItem().toString()));
-        }
-        return soLuongs;
-    }
-
-    public int SoLuongChonMon() {
-        int count = 0;
-        if (MA001.isSelected()) {
-            count++;
-        }
-        if (MA002.isSelected()) {
-            count++;
-        }
-        if (MA003.isSelected()) {
-            count++;
-        }
-        if (MA004.isSelected()) {
-            count++;
-        }
-        if (MA005.isSelected()) {
-            count++;
-        }
-        if (MA006.isSelected()) {
-            count++;
-        }
-        if (MA007.isSelected()) {
-            count++;
-        }
-        if (MA008.isSelected()) {
-            count++;
-        }
-        if (MA009.isSelected()) {
-            count++;
-        }
-        if (MA010.isSelected()) {
-            count++;
-        }
-        return count;
     }
 
     public int getIdHD() throws SQLException {
@@ -805,13 +706,83 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
-        // TODO add your handling code here:
-        getDSMonAn();
-        getDSSoLuong();
+        int idHD = 3;
         try {
-            chonMonService.addMonAnToChiTietHoaDon();
+            // lay ra idBA
+            idHD = managerHoaDon.getIDHoaDon(getIDBA());
+            System.out.println(idHD);
         } catch (SQLException ex) {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        if (MA001.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA001.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA002.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA002.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA003.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA003.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA004.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA004.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA005.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA005.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA006.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA006.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA007.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA007.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA008.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA008.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA009.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA009.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if (MA010.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA010.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+            } catch (SQLException ex) {
+                Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         try {
             new TraCuuBan().setVisible(true);
@@ -819,18 +790,6 @@ public class ChonMonFrame extends javax.swing.JFrame {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
-        //        for(CheckBox i: monAn){
-        //
-        //        }
-//        try {
-//            hoaDonService.addHoaDon();
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-        //        if(checkBox1.isSelected())
-        //        {
-        //            String.valueOf(soLuong1.getValue())
-        //        }
     }//GEN-LAST:event_submitButtonActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -874,11 +833,11 @@ public class ChonMonFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new ChonMonFrame().setVisible(true);
-//            }
-//        });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new ChonMonFrame().setVisible(true);
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
