@@ -106,14 +106,6 @@ create table KhachHang
 	diaChi nvarchar(50)
 )
 
-
-
-
-
-
-
-
-
 --Them du lieu
 set dateformat dmy
 insert into NhanVien
@@ -162,15 +154,15 @@ go
 insert into MonAn
 values 
 	('MA001',N'Beef Steak',200000),
-	('MA002',N'Gà quay',400000),
-	('MA003',N'Gà rán nóng Nashville',330000),
+	('MA002',N'Gà quay',220000),
+	('MA003',N'Gà rán nóng Nashville',100000),
 	('MA004',N'Cá sấu Châu Phi nướng',700000),
-	('MA005',N'Cừu New Zeland hấp',520000),
+	('MA005',N'Cừu New Zeland hấp',500000),
 	('MA006',N'Sushi Nhật Bản',100000),
-	('MA007',N'Bò dát vàng',450000),
-	('MA008',N'Bánh Fleur Burger',280000),
-	('MA009',N'Kem socola Frrrozen Haute',300000),
-	('MA0010',N'Pudding Chocolate',320000)
+	('MA007',N'Lẩu đặc biệt',250000),
+	('MA008',N'Cơm rang bò',120000),
+	('MA009',N'Nước suối',50000),
+	('MA0010',N'Rượu vang',200000)
 go
 
 set dateformat dmy
