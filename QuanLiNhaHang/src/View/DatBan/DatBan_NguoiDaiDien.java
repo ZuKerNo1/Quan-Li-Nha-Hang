@@ -401,6 +401,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 //end
                 // add du lieu vao` bang dat ban
                 
+                
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
             } else {
                 
