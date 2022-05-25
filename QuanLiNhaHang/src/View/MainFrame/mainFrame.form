@@ -139,21 +139,21 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="khoNguyenLieuButton" min="-2" pref="430" max="-2" attributes="0"/>
-                                  <Component id="quanLyBanAnButton" alignment="1" min="-2" pref="430" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="quanLyBanAnButton" pref="449" max="32767" attributes="0"/>
+                                  <Component id="khoNguyenLieuButton" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="57" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="thongKeDoanhThuButton" alignment="1" min="-2" pref="430" max="-2" attributes="0"/>
-                                  <Component id="dangXuatButton" alignment="1" min="-2" pref="430" max="-2" attributes="0"/>
+                                  <Component id="thongKeDoanhThuButton" max="32767" attributes="0"/>
+                                  <Component id="dangXuatButton" pref="464" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="quanLyNhanVienButton" min="-2" pref="430" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="quanLyKhachHangButton" min="-2" pref="430" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="quanLyNhanVienButton" min="-2" pref="449" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="quanLyKhachHangButton" pref="464" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>

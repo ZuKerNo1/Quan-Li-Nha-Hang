@@ -22,45 +22,18 @@ public class ManagerChiTietHoaDon {
     HoaDon hoaDon;
     ChonMonFrame chonMonFrame ;
 
-//    public MonAn getMonAnByName(String tenMon) throws SQLException {
-//        Connection connection = JDBCConnection.JDBCConnection();
-//        String sql = "select idMonAn from MonAn where tenMonAn=?";
-//        try {
-//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1, tenMon);
-//            ResultSet rs = preparedStatement.executeQuery();
-//            while (rs.next()) {
-//                MonAn mon = new MonAn();
-//                mon.setIdMon(rs.getString("idMonAn"));
-//                mon.setTenMon(rs.getString("tenMonAn"));
-//                mon.setDonGia(rs.getString("donGia"));
-//                return mon;
-//            }
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//        }
-//        return null;
-//    }
     
-    public void addMonAnToChiTietHoaDon() throws SQLException {
-        chonMonFrame = new ChonMonFrame();
-        int n = chonMonFrame.SoLuongChonMon();
-        chonMonFrame.getDSMonAn();
-        chonMonFrame.getDSSoLuong();
-        for (int i = 0; i <= n; i++) {
-            try {
+    public void addMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
+        try{
                 Connection connection = JDBCConnection.JDBCConnection();
-                String sql = "insert into ChiTietHoaDon values (?,?,?,?)";
+                String sql = "insert into ChiTietHoaDon values (?,?,?)";
                 PreparedStatement preparedStatement = connection.prepareCall(sql);
-                preparedStatement.setInt(1, chonMonFrame.getIdHD());
-                preparedStatement.setString(2, chonMonFrame.getIDBA());
-                preparedStatement.setString(3, chonMonFrame.getDSMonAn().get(i));
-                preparedStatement.setInt(4, chonMonFrame.getDSSoLuong().get(i));
-                int kq = preparedStatement.executeUpdate();
-                System.out.println(kq);
+                preparedStatement.setInt(1, idHoaDon);
+                preparedStatement.setString(2, idMA);
+                preparedStatement.setInt(3, soLuong);
+                preparedStatement.executeUpdate();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
-}

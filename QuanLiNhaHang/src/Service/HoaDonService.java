@@ -18,7 +18,10 @@ public class HoaDonService {
     public HoaDonService() {
         hoaDonManager = new ManagerHoaDon();
     }
-    public void addHoaDon() throws SQLException{
-        hoaDonManager.addHoaDon();
+    public void addHoaDon(String idBA, String idNV) throws SQLException{
+        hoaDonManager.addHoaDon(idBA, idNV);
+    }
+    public int getIdHoaDon(String idBA) throws SQLException{
+        return hoaDonManager.getIDHoaDon(idBA);
     }
 }
