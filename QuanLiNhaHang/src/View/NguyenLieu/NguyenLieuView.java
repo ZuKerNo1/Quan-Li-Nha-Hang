@@ -73,13 +73,13 @@ public class NguyenLieuView extends javax.swing.JFrame {
         titlePanel_360 = new javax.swing.JPanel();
         titleLabel_360 = new javax.swing.JLabel();
         mainPanel_360 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        ngLieuTableList_360 = new javax.swing.JTable();
         backBtn_360 = new javax.swing.JButton();
         refreshBtn_360 = new javax.swing.JButton();
         deleteBtn_360 = new javax.swing.JButton();
         addBtn_360 = new javax.swing.JButton();
         updateBtn_360 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ngLieuTableList_360 = new com.raven.suportSwing.TableColumn();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -101,9 +101,9 @@ public class NguyenLieuView extends javax.swing.JFrame {
         titlePanel_360Layout.setHorizontalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(titlePanel_360Layout.createSequentialGroup()
-                .addGap(234, 234, 234)
+                .addGap(277, 277, 277)
                 .addComponent(titleLabel_360)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(386, Short.MAX_VALUE))
         );
         titlePanel_360Layout.setVerticalGroup(
             titlePanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,19 +114,6 @@ public class NguyenLieuView extends javax.swing.JFrame {
         );
 
         mainPanel_360.setBackground(new java.awt.Color(255, 255, 255));
-
-        ngLieuTableList_360.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
-            },
-            new String [] {
-                "Mã nguyên liệu", "Tên nguyên liệu", "Số lượng", "Đơn vị", "Nhân viên cập nhập"
-            }
-        ));
-        jScrollPane1.setViewportView(ngLieuTableList_360);
 
         backBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -182,6 +169,24 @@ public class NguyenLieuView extends javax.swing.JFrame {
             }
         });
 
+        ngLieuTableList_360.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID NGUYÊN LIỆU", "TÊN NGUYÊN LIỆU", "SỐ LƯỢNG", "ĐƠN VỊ", "Tổng giá bán"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(ngLieuTableList_360);
+
         javax.swing.GroupLayout mainPanel_360Layout = new javax.swing.GroupLayout(mainPanel_360);
         mainPanel_360.setLayout(mainPanel_360Layout);
         mainPanel_360Layout.setHorizontalGroup(
@@ -189,7 +194,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(mainPanel_360Layout.createSequentialGroup()
                         .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -206,8 +211,8 @@ public class NguyenLieuView extends javax.swing.JFrame {
             mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainPanel_360Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addGap(27, 27, 27)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addGroup(mainPanel_360Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(backBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(addBtn_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -221,8 +226,8 @@ public class NguyenLieuView extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(titlePanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(mainPanel_360, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,6 +314,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
         } catch (SQLException ex) {
             java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
         }
+        JOptionPane.showMessageDialog(NguyenLieuView.this, "ĐÃ LÀM MỚI", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_refreshBtn_360ActionPerformed
 
     /**
@@ -357,7 +363,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPanel mainPanel_360;
-    private javax.swing.JTable ngLieuTableList_360;
+    private com.raven.suportSwing.TableColumn ngLieuTableList_360;
     private javax.swing.JButton refreshBtn_360;
     private javax.swing.JLabel titleLabel_360;
     private javax.swing.JPanel titlePanel_360;
