@@ -8,6 +8,7 @@ package View.DatBan;
 import Manager.ManagerDatBan;
 import Service.CustomerService;
 import Service.DatBanService;
+import Service.HoaDonService;
 import Service.TraCuuBanService;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -28,6 +29,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     DatBanService datBanService = new DatBanService();
 
     TraCuuBanService traCuuBanService = new TraCuuBanService();
+    HoaDonService hoaDonService = new HoaDonService();;
 
     /**
      * Creates new form DatBan
@@ -352,6 +354,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPhone_352FocusGained
 
     private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
+        
         Customer customer = new Customer();
         CustomerService customerService = new CustomerService();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -386,12 +389,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                     Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
-                this.dispose();
                 // add du lieu vao bang khach hang
-                
-               
-                  
-                
                 customer.setName_354(txtName_352.getText());               
                 customer.setDob_354(date);             
                 customer.setGender_354(gender);
@@ -401,7 +399,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 //end
                 // add du lieu vao` bang dat ban
                 
-                
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
             } else {
                 
@@ -410,8 +407,11 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        // lay ra gia tri cho gender  
+        try {
+            hoaDonService.addHoaDon(idBA.getText(), txtRole_352.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 

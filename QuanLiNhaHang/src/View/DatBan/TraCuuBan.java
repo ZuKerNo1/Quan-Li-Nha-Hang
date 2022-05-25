@@ -73,9 +73,9 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        datBan_352 = new javax.swing.JButton();
+        clearBtn_352 = new javax.swing.JButton();
         backBtn_352 = new javax.swing.JButton();
-        thanhToan_352 = new javax.swing.JButton();
+        datBan_352 = new javax.swing.JButton();
         goiMon_352 = new javax.swing.JButton();
         huyDat_352 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -101,7 +101,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 860, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 873, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -109,20 +109,20 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        datBan_352.setBackground(new java.awt.Color(51, 153, 255));
-        datBan_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        datBan_352.setForeground(new java.awt.Color(255, 255, 255));
-        datBan_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_dinner-table.png"))); // NOI18N
-        datBan_352.setText("ĐẶT BÀN");
-        datBan_352.setSelected(true);
-        datBan_352.addActionListener(new java.awt.event.ActionListener() {
+        clearBtn_352.setBackground(new java.awt.Color(51, 153, 255));
+        clearBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        clearBtn_352.setForeground(new java.awt.Color(255, 255, 255));
+        clearBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_dinner-table.png"))); // NOI18N
+        clearBtn_352.setText("ĐẶT BÀN");
+        clearBtn_352.setSelected(true);
+        clearBtn_352.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                datBan_352ActionPerformed(evt);
+                clearBtn_352ActionPerformed(evt);
             }
         });
 
@@ -136,14 +136,14 @@ public class TraCuuBan extends javax.swing.JFrame {
             }
         });
 
-        thanhToan_352.setBackground(new java.awt.Color(51, 153, 255));
-        thanhToan_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        thanhToan_352.setForeground(new java.awt.Color(255, 255, 255));
-        thanhToan_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
-        thanhToan_352.setText("THANH TOÁN");
-        thanhToan_352.addActionListener(new java.awt.event.ActionListener() {
+        datBan_352.setBackground(new java.awt.Color(51, 153, 255));
+        datBan_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        datBan_352.setForeground(new java.awt.Color(255, 255, 255));
+        datBan_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
+        datBan_352.setText("THANH TOÁN");
+        datBan_352.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                thanhToan_352ActionPerformed(evt);
+                datBan_352ActionPerformed(evt);
             }
         });
 
@@ -195,13 +195,13 @@ public class TraCuuBan extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                 .addGap(40, 40, 40)
-                .addComponent(datBan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(52, 52, 52)
                 .addComponent(huyDat_352)
                 .addGap(51, 51, 51)
                 .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(54, 54, 54)
-                .addComponent(thanhToan_352, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(datBan_352, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -214,12 +214,12 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(563, 563, 563)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(datBan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(huyDat_352, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                         .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(thanhToan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(datBan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(42, 42, 42))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -258,7 +258,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backBtn_352ActionPerformed
 
-    private void datBan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datBan_352ActionPerformed
+    private void clearBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_352ActionPerformed
         int row = traCuuTable_352.getSelectedRow();
         if (row == -1) {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -271,11 +271,11 @@ public class TraCuuBan extends javax.swing.JFrame {
             }
             this.dispose();
         }
-    }//GEN-LAST:event_datBan_352ActionPerformed
+    }//GEN-LAST:event_clearBtn_352ActionPerformed
 
-    private void thanhToan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thanhToan_352ActionPerformed
+    private void datBan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datBan_352ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_thanhToan_352ActionPerformed
+    }//GEN-LAST:event_datBan_352ActionPerformed
 
     private void goiMon_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goiMon_352ActionPerformed
         int row = traCuuTable_352.getSelectedRow();
@@ -339,6 +339,7 @@ public class TraCuuBan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn_352;
+    private javax.swing.JButton clearBtn_352;
     private javax.swing.JButton datBan_352;
     private javax.swing.JButton goiMon_352;
     private javax.swing.JButton huyDat_352;
@@ -348,7 +349,6 @@ public class TraCuuBan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton thanhToan_352;
     private com.raven.suportSwing.TableColumn traCuuTable_352;
     // End of variables declaration//GEN-END:variables
 }
