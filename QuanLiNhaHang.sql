@@ -1,7 +1,7 @@
 ﻿
-CREATE DATABASE QuanLiNhaHang1
+CREATE DATABASE QuanLiNhaHang5
 go
-use QuanLiNhaHang1
+use QuanLiNhaHang5
 
 
 --Tao table
@@ -25,6 +25,11 @@ create table account
 (
 	idName_352 varchar(50) primary key not null,
 	passWords_352 varchar(50) not null,
+	idNV varchar(10) not null foreign key references NhanVien(idNV)
+		on delete 
+			cascade
+		on update
+			cascade
 )
 create table MonAn
 (
@@ -99,7 +104,7 @@ go
 create table KhachHang
 (
 	idKH int identity(1,1) not null primary key,
-	SDT nvarchar(15),
+	SDT nvarchar(15) foreign key references DatBan(SDT),
 	tenKH nvarchar(50) ,
 	ngaySinh date,
 	gioiTinh nvarchar(5),
@@ -144,12 +149,6 @@ go
 set dateformat dmy
 go
 
-insert into KhachHang
-values
-	('KH01','0900000001',N'Nguyễn Ngọc Thiên Thùy','8-2-2002', N'Nữ',N'5 Nguyễn Tri Phương'),
-	('KH02','0900000002',N'Nguyễn Đình Huy','12-5-2000','Nam',N'20 Nguyễn Văn Linh')
-	
-go
 
 insert into MonAn
 values 
@@ -163,29 +162,12 @@ values
 	('MA008',N'Cơm rang bò',120000),
 	('MA009',N'Nước suối',50000),
 	('MA0010',N'Rượu vang',200000)
-go
 
-set dateformat dmy
-insert into HoaDon
-values 
-	('HD001','7-5-2022','NV005', 'BA002', N'Đã tính tiền'),
-	('HD002','9-5-2022','NV005', 'BA005', N'Đã tính tiền'),
-	('HD003','9-5-2022','NV005', 'BA001', N'Đã tính tiền')
-go
-
-insert into ChiTietHoaDon
-values 
-	('HD001','MA001',2),
-	('HD001','MA005',4),
-	('HD002','MA007',3),
-	('HD002','MA0010',3),
-	('HD002','MA006',1),
-	('HD003','MA003',3)
 
 go
 insert into account
-values ('trung','123'),
-	   ('truong','123')
+values ('trung','123', 'NV001'),
+	   ('truong','123', 'NV002')
 
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'

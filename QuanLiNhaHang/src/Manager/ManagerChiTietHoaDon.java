@@ -22,25 +22,6 @@ public class ManagerChiTietHoaDon {
     HoaDon hoaDon;
     ChonMonFrame chonMonFrame ;
 
-//    public MonAn getMonAnByName(String tenMon) throws SQLException {
-//        Connection connection = JDBCConnection.JDBCConnection();
-//        String sql = "select idMonAn from MonAn where tenMonAn=?";
-//        try {
-//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-//            preparedStatement.setString(1, tenMon);
-//            ResultSet rs = preparedStatement.executeQuery();
-//            while (rs.next()) {
-//                MonAn mon = new MonAn();
-//                mon.setIdMon(rs.getString("idMonAn"));
-//                mon.setTenMon(rs.getString("tenMonAn"));
-//                mon.setDonGia(rs.getString("donGia"));
-//                return mon;
-//            }
-//        } catch (SQLException ex) {
-//            ex.printStackTrace();
-//        }
-//        return null;
-//    }
     
     public void addMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
         try{
@@ -50,8 +31,7 @@ public class ManagerChiTietHoaDon {
                 preparedStatement.setInt(1, idHoaDon);
                 preparedStatement.setString(2, idMA);
                 preparedStatement.setInt(3, soLuong);
-                ResultSet rs = preparedStatement.executeQuery();
-                System.out.println(rs);
+                preparedStatement.executeUpdate();
             } catch (Exception e) {
                 e.printStackTrace();
             }

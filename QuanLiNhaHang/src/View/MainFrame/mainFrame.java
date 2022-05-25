@@ -6,6 +6,10 @@
 package View.MainFrame;
 
 import View.DatBan.TraCuuBan;
+import View.NguyenLieu.NguyenLieuView;
+import View.NhanVien.ViewEmployee;
+import View.ThongKeDoanhThuNam;
+import View.ThongKeDoanhThuThang;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -222,6 +226,13 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
         // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new ThongKeDoanhThuThang().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
     }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
 
     private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
@@ -249,11 +260,25 @@ public class mainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_quanLyKhachHangButtonActionPerformed
 
     private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new ViewEmployee().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+        
     }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
 
     private void khoNguyenLieuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_khoNguyenLieuButtonActionPerformed
         // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            new NguyenLieuView().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
     }//GEN-LAST:event_khoNguyenLieuButtonActionPerformed
 
     /**
