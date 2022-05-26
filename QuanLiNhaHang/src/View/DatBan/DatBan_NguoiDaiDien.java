@@ -6,6 +6,7 @@
 package View.DatBan;
 
 import Manager.ManagerDatBan;
+import Manager.ManagerTraCuuBan;
 import Service.CustomerService;
 import Service.DatBanService;
 import Service.HoaDonService;
@@ -17,6 +18,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.Customer;
 import model.DatBan;
+import model.Table;
 
 /**
  *
@@ -25,9 +27,10 @@ import model.DatBan;
 public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
     DatBan datBan = new DatBan();
+    
 
     DatBanService datBanService = new DatBanService();
-
+    Table table = new Table();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hoaDonService = new HoaDonService();;
 
@@ -41,8 +44,11 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
     DatBan_NguoiDaiDien(String ID) throws SQLException {
         initComponents();
-        idBA.setText(traCuuBanService.getIdTabel(ID));
+        idBA.setText(traCuuBanService.getIdTable_352(ID));
+        
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -77,7 +83,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtAddress_352 = new javax.swing.JTextArea();
-        updateBtn_352 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         clrdoB_352 = new com.toedter.calendar.JDateChooser();
 
@@ -112,6 +117,11 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         clearBtn_352.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/broom.png"))); // NOI18N
         clearBtn_352.setText("CLEAR ALL");
+        clearBtn_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearBtn_352ActionPerformed(evt);
+            }
+        });
 
         txtRole_352.setLabelText("Nhân viên phụ trách");
         txtRole_352.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -214,17 +224,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         txtAddress_352.setRows(5);
         jScrollPane2.setViewportView(txtAddress_352);
 
-        updateBtn_352.setBackground(new java.awt.Color(255, 102, 51));
-        updateBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        updateBtn_352.setForeground(new java.awt.Color(255, 255, 255));
-        updateBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/updating.png"))); // NOI18N
-        updateBtn_352.setText("UPDATE");
-        updateBtn_352.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBtn_352ActionPerformed(evt);
-            }
-        });
-
         jLabel7.setText("Ngày sinh");
 
         javax.swing.GroupLayout btnMLayout = new javax.swing.GroupLayout(btnM);
@@ -239,8 +238,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                         .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, btnMLayout.createSequentialGroup()
                                 .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(updateBtn_352)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(clearBtn_352))
                             .addGroup(btnMLayout.createSequentialGroup()
@@ -308,11 +305,10 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                             .addComponent(male_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(female_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
-                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(btnMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(submitBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(submitBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -355,6 +351,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
     private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
         
+                
         Customer customer = new Customer();
         CustomerService customerService = new CustomerService();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -363,6 +360,8 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
             if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
+                
+                
                 
                 datBan.setPhone_352(txtPhone_352.getText());
                 datBan.setName_352(txtName_352.getText());               
@@ -383,12 +382,16 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 datBan.setIdBA_352(this.idBA.getText());
 
                 try {
-                    datBanService.addDatBan(datBan);
+                    datBanService.addDatBan_352(datBan);
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
                     Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
+                //
+                
+                
+                
                 // add du lieu vao bang khach hang
                 customer.setName_354(txtName_352.getText());               
                 customer.setDob_354(date);             
@@ -412,61 +415,14 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-        try {
-            new TraCuuBan().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        
+       
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 
-    private void updateBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_352ActionPerformed
-
-        /*StringBuilder sb= new StringBuilder();
-       if(txtPhone_352.getText().equals("")){
-           sb.append("SĐT không được dể trống ");
-           //txtPhone_352.setBackground(Color.red);
-       }else{
-          // txtPhone_352.setBackground(Color.white);
-       }
-       if(sb.length()>0){
-           JOptionPane.showMessageDialog(this, sb);
-           return;
-       }
-       if (JOptionPane.showConfirmDialog(this, "bạn có muốn update không")== JOptionPane.NO_OPTION){
-           return;
-       }
-       
-       try {
-            DatBan datban = new DatBan() ; 
-            datban.setName_352(txtName_352.getText());
-            datban.setPhone_352(txtPhone_352.getText());
-            datban.setRole_352(txtRole_352.getText());
-            datban.setAddress_352(txtAddress_352.getText());
-        
-            datban.setRequest_352(txtRequest_352.getText());
-            
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM--dd");
-            String date = sdf.format(dayDat_352.getDate());
-            
-            String gender = "";
-            if(male_352.isSelected()){
-                gender += "Nam";
-            }else if(female_352.isSelected()){
-                gender += "Nữ";
-            }
-           
-            ManagerDatBan mdatban =new ManagerDatBan();
-            mdatban.update(datban);
-            
-            JOptionPane.showMessageDialog(this, "Thông tin đã được cập nhập");
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Errol " +e.getMessage());
-            e.printStackTrace();
-        }
-         */
-    }//GEN-LAST:event_updateBtn_352ActionPerformed
+    private void clearBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_352ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clearBtn_352ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -539,6 +495,5 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     private com.raven.suportSwing.TextField txtPhone_352;
     private javax.swing.JTextArea txtRequest_352;
     private com.raven.suportSwing.TextField txtRole_352;
-    private javax.swing.JButton updateBtn_352;
     // End of variables declaration//GEN-END:variables
 }

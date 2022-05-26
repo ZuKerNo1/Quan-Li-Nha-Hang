@@ -42,7 +42,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
      */
     public ChonMonFrame(String id) throws SQLException {
         initComponents();
-        idBA.setText(traCuuBanService.getIdTabel(id));
+        idBA.setText(traCuuBanService.getIdTable_352(id));
         MonAn monAn = new MonAn();
     }
 
