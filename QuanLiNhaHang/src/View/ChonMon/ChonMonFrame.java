@@ -33,7 +33,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
     HoaDonService hoaDonService = new HoaDonService();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
-    ChiTietHoaDonService chonMonService = new ChiTietHoaDonService();
+    ChiTietHoaDonService chiTietHoaDonService = new ChiTietHoaDonService();
     ManagerHoaDon managerHoaDon = new ManagerHoaDon();
             // TODO add your handling code here:
     
@@ -42,7 +42,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
      */
     public ChonMonFrame(String id) throws SQLException {
         initComponents();
-        idBA.setText(traCuuBanService.getIdTabel(id));
+        idBA.setText(traCuuBanService.getIdTable_352(id));
         MonAn monAn = new MonAn();
     }
 
@@ -712,72 +712,163 @@ public class ChonMonFrame extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         if (MA001_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA001_335.getText(), Integer.valueOf(String.valueOf(soLuong1_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA001_335.getText(), Integer.valueOf(String.valueOf(soLuong1_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA001_335.getText(), Integer.valueOf(String.valueOf(soLuong1_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            }   
         }
         if (MA002_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA002_335.getText(), Integer.valueOf(String.valueOf(soLuong2_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA002_335.getText(), Integer.valueOf(String.valueOf(soLuong2_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA002_335.getText(), Integer.valueOf(String.valueOf(soLuong2_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA003_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA003_335.getText(), Integer.valueOf(String.valueOf(soLuong3_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA003_335.getText(), Integer.valueOf(String.valueOf(soLuong3_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA003_335.getText(), Integer.valueOf(String.valueOf(soLuong3_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA004_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA004_335.getText(), Integer.valueOf(String.valueOf(soLuong4_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA004_335.getText(), Integer.valueOf(String.valueOf(soLuong4_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA004_335.getText(), Integer.valueOf(String.valueOf(soLuong4_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA005_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA005_335.getText(), Integer.valueOf(String.valueOf(soLuong5_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA005_335.getText(), Integer.valueOf(String.valueOf(soLuong5_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA005_335.getText(), Integer.valueOf(String.valueOf(soLuong5_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA006_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA006_335.getText(), Integer.valueOf(String.valueOf(soLuong6_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA006_335.getText(), Integer.valueOf(String.valueOf(soLuong6_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA006_335.getText(), Integer.valueOf(String.valueOf(soLuong6_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA007_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA007_335.getText(), Integer.valueOf(String.valueOf(soLuong7_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA007_335.getText(), Integer.valueOf(String.valueOf(soLuong7_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA007_335.getText(), Integer.valueOf(String.valueOf(soLuong7_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA008_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA008_335.getText(), Integer.valueOf(String.valueOf(soLuong8_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA008_335.getText(), Integer.valueOf(String.valueOf(soLuong8_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA008_335.getText(), Integer.valueOf(String.valueOf(soLuong8_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA009_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA009_335.getText(), Integer.valueOf(String.valueOf(soLuong9_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA009_335.getText(), Integer.valueOf(String.valueOf(soLuong9_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA009_335.getText(), Integer.valueOf(String.valueOf(soLuong9_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         if (MA010_335.isSelected()) {
             try {
-                chonMonService.addMonAnToChiTietHoaDon(idHD, MA010_335.getText(), Integer.valueOf(String.valueOf(soLuong10_335.getSelectedItem())));
+                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                    chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA010_335.getText(), Integer.valueOf(String.valueOf(soLuong10_335.getSelectedItem())));
+                }else
+                { 
+                    try {
+                        chiTietHoaDonService.addMonAnToChiTietHoaDon(idHD, MA010_335.getText(), Integer.valueOf(String.valueOf(soLuong10_335.getSelectedItem())));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }

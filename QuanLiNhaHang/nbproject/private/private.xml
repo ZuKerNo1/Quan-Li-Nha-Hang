@@ -5,11 +5,8 @@
         <group>
             <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/View/ChonMon/ChonMonFrame.java</file>
             <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/View/DatBan/TraCuuBan.java</file>
-            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/Service/ChiTietHoaDonService.java</file>
-            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/View/DangNhap/LoadDangNhap.java</file>
-            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/View/MainFrame/mainFrame.java</file>
             <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/Manager/ManagerChiTietHoaDon.java</file>
-            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/Manager/ManagerHoaDon.java</file>
+            <file>file:/C:/Users/DELL/OneDrive/Documents/NetBeansProjects/QuanLiNhaHang/src/Manager/JDBCConnection.java</file>
         </group>
     </open-files>
 </project-private>

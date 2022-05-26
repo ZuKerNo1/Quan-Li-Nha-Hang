@@ -5,6 +5,7 @@
  */
 package View.MainFrame;
 
+import View.DangNhap.Login;
 import View.DatBan.TraCuuBan;
 import View.NguyenLieu.NguyenLieuView;
 import View.NhanVien.ViewEmployee;
@@ -247,6 +248,8 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void dangXuatButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButton_335ActionPerformed
         // TODO add your handling code here:
+        new Login().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_dangXuatButton_335ActionPerformed
 
     private void quanLyKhachHangButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButton_335ActionPerformed
@@ -306,6 +309,22 @@ public class mainFrame extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(mainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
