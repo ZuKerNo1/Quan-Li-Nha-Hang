@@ -57,7 +57,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="backButton_335" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -72,7 +72,7 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="submitButton" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="submitButton_335" min="-2" pref="100" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -138,20 +138,20 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="soLuong1" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="soLuong1_335" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <EmptySpace min="55" pref="55" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="soLuong2" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong3" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong4" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong5" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong6" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong7" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong8" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong9" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="soLuong10" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong2_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong3_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong4_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong5_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong6_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong7_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong8_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong9_335" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="soLuong10_335" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -186,17 +186,13 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                          <Component id="MonAnpn" min="-2" max="-2" attributes="0"/>
-                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <Component id="soLuong1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="soLuong1_335" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
@@ -217,7 +213,7 @@
                                                   <Component id="gia3" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="soLuong4" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="soLuong4_335" min="-2" max="-2" attributes="0"/>
                                                       <Component id="gia4" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
@@ -233,25 +229,21 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
-                                                  <Component id="soLuong8" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="soLuong8_335" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                      <Component id="soLuong9" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="soLuong9_335" min="-2" max="-2" attributes="0"/>
                                                       <Component id="gia7" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                               </Group>
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-                                              </Group>
+                                              <Component id="jLabel26" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                          <Component id="soLuong2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soLuong2_335" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                          <Component id="soLuong3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="soLuong3_335" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -296,7 +288,7 @@
                                                               <Group type="102" attributes="0">
                                                                   <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                                                                   <Group type="103" groupAlignment="1" attributes="0">
-                                                                      <Component id="soLuong5" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="soLuong5_335" min="-2" max="-2" attributes="0"/>
                                                                       <Group type="102" attributes="0">
                                                                           <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
                                                                           <EmptySpace min="-2" pref="177" max="-2" attributes="0"/>
@@ -304,7 +296,7 @@
                                                                       </Group>
                                                                   </Group>
                                                                   <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="soLuong6" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="soLuong6_335" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <Group type="102" attributes="0">
                                                                   <EmptySpace max="32767" attributes="0"/>
@@ -328,7 +320,7 @@
                                               <Group type="102" alignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="gia5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="soLuong7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="soLuong7_335" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                               </Group>
@@ -354,27 +346,32 @@
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="gia8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="soLuong10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="soLuong10_335" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                                   <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                                   <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="MonAnpn" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton2" min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="submitButton" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="backButton_335" min="-2" pref="50" max="-2" attributes="0"/>
+                      <Component id="submitButton_335" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -393,7 +390,7 @@
             <Property name="text" type="java.lang.String" value="T&#xea;n M&#xf3;n"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="submitButton">
+        <Component class="javax.swing.JButton" name="submitButton_335">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="13" style="1"/>
@@ -403,7 +400,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitButton_335ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -519,7 +516,7 @@
             <Property name="text" type="java.lang.String" value="450000"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="backButton_335">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="13" style="1"/>
@@ -529,7 +526,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButton_335ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -702,7 +699,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="99" red="33" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ID B&#xe0;n &#x103;n"/>
+            <Property name="text" type="java.lang.String" value="idBA"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="MonAnpn">
@@ -718,9 +715,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="MA003" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="MA001" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="MA002" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="MA003_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="MA001_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="MA002_335" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="29" max="32767" attributes="0"/>
                   </Group>
@@ -728,13 +725,13 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="MA004" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="MA005" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="MA006" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="MA007" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="MA008" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="MA009" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="MA010" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA004_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA005_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA006_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA007_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA008_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA009_335" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA010_335" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="19" max="32767" attributes="0"/>
                       </Group>
@@ -744,12 +741,13 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="MA001" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="MA002" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="MA003" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="547" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="MA001_335" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="MA002_335" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="MA003_335" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="517" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -766,30 +764,30 @@
                                                               <Group type="102" alignment="1" attributes="0">
                                                                   <Group type="103" groupAlignment="1" attributes="0">
                                                                       <Group type="102" attributes="0">
-                                                                          <Component id="MA004" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="MA004_335" min="-2" max="-2" attributes="0"/>
                                                                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                                                       </Group>
-                                                                      <Component id="MA005" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="MA005_335" alignment="1" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
                                                                   <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
                                                               </Group>
-                                                              <Component id="MA006" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="MA006_335" alignment="1" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="MA007" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="MA007_335" alignment="1" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="68" pref="68" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="MA008" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="MA008_335" alignment="1" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="MA009" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="MA009_335" alignment="1" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="MA010" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="MA010_335" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="62" max="32767" attributes="0"/>
                       </Group>
@@ -798,7 +796,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JCheckBox" name="MA001">
+            <Component class="javax.swing.JCheckBox" name="MA001_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -806,7 +804,7 @@
                 <Property name="text" type="java.lang.String" value="MA001"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA003">
+            <Component class="javax.swing.JCheckBox" name="MA003_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -814,7 +812,7 @@
                 <Property name="text" type="java.lang.String" value="MA003"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA002">
+            <Component class="javax.swing.JCheckBox" name="MA002_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -822,7 +820,7 @@
                 <Property name="text" type="java.lang.String" value="MA002"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA004">
+            <Component class="javax.swing.JCheckBox" name="MA004_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -830,7 +828,7 @@
                 <Property name="text" type="java.lang.String" value="MA004"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA005">
+            <Component class="javax.swing.JCheckBox" name="MA005_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -838,7 +836,7 @@
                 <Property name="text" type="java.lang.String" value="MA005"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA006">
+            <Component class="javax.swing.JCheckBox" name="MA006_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -846,7 +844,7 @@
                 <Property name="text" type="java.lang.String" value="MA006"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA007">
+            <Component class="javax.swing.JCheckBox" name="MA007_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -854,7 +852,7 @@
                 <Property name="text" type="java.lang.String" value="MA007"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA008">
+            <Component class="javax.swing.JCheckBox" name="MA008_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -862,7 +860,7 @@
                 <Property name="text" type="java.lang.String" value="MA008"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA009">
+            <Component class="javax.swing.JCheckBox" name="MA009_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -870,7 +868,7 @@
                 <Property name="text" type="java.lang.String" value="MA009"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="MA010">
+            <Component class="javax.swing.JCheckBox" name="MA010_335">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="16" style="1"/>
@@ -882,7 +880,7 @@
         </Container>
         <Component class="javax.swing.JSeparator" name="jSeparator1">
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong2">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong2_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -902,7 +900,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong1">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong1_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -922,7 +920,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong3">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong3_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -942,7 +940,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong4">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong4_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -962,7 +960,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong5">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong5_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -982,7 +980,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong6">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong6_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -1002,7 +1000,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong7">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong7_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -1022,7 +1020,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong8">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong8_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -1042,7 +1040,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong9">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong9_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
@@ -1062,7 +1060,7 @@
             <Property name="labeText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
-        <Component class="com.raven.suportSwing.Combobox" name="soLuong10">
+        <Component class="com.raven.suportSwing.Combobox" name="soLuong10_335">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">

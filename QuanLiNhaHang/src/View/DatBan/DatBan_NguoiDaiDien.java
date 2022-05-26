@@ -29,9 +29,9 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     DatBan datBan = new DatBan();
     
 
-    DatBanService datBanService_352 = new DatBanService();
-    Table table_352 = new Table();
-    TraCuuBanService traCuuBanService_352 = new TraCuuBanService();
+    DatBanService datBanService = new DatBanService();
+    Table table = new Table();
+    TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hoaDonService = new HoaDonService();;
 
     /**
@@ -44,7 +44,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
     DatBan_NguoiDaiDien(String ID) throws SQLException {
         initComponents();
-        idBA.setText(traCuuBanService_352.getIdTable_352(ID));
+        idBA.setText(traCuuBanService.getIdTable_352(ID));
         
     }
     
@@ -382,7 +382,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 datBan.setIdBA_352(this.idBA.getText());
 
                 try {
-                    datBanService_352.addDatBan_352(datBan);
+                    datBanService.addDatBan_352(datBan);
                 } catch (SQLException ex) {
                     JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
                     Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
@@ -416,7 +416,12 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-       
+        try {
+            new TraCuuBan().setVisible(true);
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 

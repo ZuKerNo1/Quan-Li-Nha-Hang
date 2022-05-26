@@ -31,7 +31,6 @@ create table account
 		on update
 			cascade
 )
-go
 create table MonAn
 (
 	idMonAn varchar(10) not null primary key,
@@ -39,7 +38,7 @@ create table MonAn
 	donGia money null
 )
 
-go
+
 create table NguyenLieu
 (
 	idNL varchar(10) not null primary key,
@@ -52,13 +51,12 @@ create table NguyenLieu
 		on update
 			cascade
 )
-go
+
 create table BanAn
 (
 	idBA varchar(10) not null primary key,
 	trangThaiBan nvarchar(50)
 )
-go
 create table HoaDon
 (
 	idHoaDon int IDENTITY(1,1) primary key,
@@ -78,14 +76,21 @@ create table HoaDon
 
 
 
-go
+create table DatBan
+(
+	SDT nvarchar(15) not null primary key,
+	tenKH varchar(50),	
+	tenNVPT varchar(10) foreign key references NhanVien(idNV),
+	diaChi nvarchar(50),
+	ngayDat date,
+	yeuCau nvarchar(50),
+	gioiTinh nvarchar(5),
+	idBA varchar(10) foreign key references BanAn(idBA)
+
+)
 create table ChiTietHoaDon
 (
-	idHoaDon int foreign key references HoaDon(idHoaDon)
-	on delete 
-			cascade
-		on update
-			cascade,
+	idHoaDon int foreign key references HoaDon(idHoaDon),
 	idMonAn varchar(10) foreign key references MonAn(idMonAn)
 		on delete 
 			cascade
@@ -94,38 +99,18 @@ create table ChiTietHoaDon
 	soLuong int,
 	primary key(idHoaDon,idMonAn)
 )
-go
-create table DatBan
-(
-	SDT varchar(15) not null,
-	idBA varchar(10) foreign key references BanAn(idBA)
-	on delete 
-			cascade
-		on update
-			cascade,
-	tenKH nvarchar(50),	
-	tenNVPT varchar(10) foreign key references NhanVien(idNV)
-	on delete 
-			cascade
-		on update
-			cascade,
-	diaChi nvarchar(50),
-	ngayDat date,
-	yeuCau nvarchar(50),
-	gioiTinh nvarchar(5),
-	primary key(SDT, idBA)
-)
+
 go
 create table KhachHang
 (
 	idKH int identity(1,1) not null primary key,
-	SDT varchar(15) not null foreign key references DatBan(SDT),
+	SDT nvarchar(15) foreign key references DatBan(SDT),
 	tenKH nvarchar(50) ,
 	ngaySinh date,
 	gioiTinh nvarchar(5),
 	diaChi nvarchar(50)
 )
-go
+
 --Them du lieu
 set dateformat dmy
 insert into NhanVien
@@ -145,7 +130,6 @@ values
 	('NC2001',N'Rượu vang Screaming Eagle Cabernet Sauvignon 1992',20,'Thùng','NV001')
 go
 
-
 insert into BanAn
 values
 	('BA001',N'Trống'),
@@ -158,14 +142,11 @@ values
 	('BA008',N'Trống'),
 	('BA009',N'Trống'),
 	('BA010',N'Trống')
+
 go
 
-insert into KhachHang
-values
-	('0900000001',N'Nguyễn Ngọc Thiên Thùy','8-2-2002','Nữ',N'5 Nguyễn Tri Phương'),
-	('0900000002',N'Nguyễn Đình Huy','12-5-2000','Nam',N'20 Nguyễn Văn Linh')
+set dateformat dmy
 go
-
 
 
 insert into MonAn
@@ -179,28 +160,8 @@ values
 	('MA007',N'Lẩu đặc biệt',250000),
 	('MA008',N'Cơm rang bò',120000),
 	('MA009',N'Nước suối',50000),
-	('MA010',N'Rượu vang',200000)
+	('MA0010',N'Rượu vang',200000)
 
-go
-set dateformat dmy
-insert into HoaDon
-values 
-	('7-5-2022','NV005','BA002',N'Đã thanh toán'),
-	('9-7-2022','NV005','BA005',N'Đã thanh toán'),
-	('9-9-2022','NV005','BA001',N'Đã thanh toán'),
-	('9-10-2022','NV005','BA009',N'Đã thanh toán')
-go
-
-insert into ChiTietHoaDon
-values 
-	('1','MA001',2),
-	('1','MA005',4),
-	('2','MA007',3),
-	('2','MA0010',3),
-	('2','MA006',1),
-	('3','MA003',3),
-	('4','MA005',3),
-	('4','MA006',7)
 
 go
 insert into account
@@ -231,7 +192,3 @@ select day(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','
 from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
 group by day(hd.ngayThanhToan)
-
-
-
-select * from ChiTietHoaDon

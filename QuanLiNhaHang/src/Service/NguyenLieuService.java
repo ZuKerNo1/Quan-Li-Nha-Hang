@@ -18,17 +18,17 @@ import model.NguyenLieu;
  * @author FSC
  */
 public class NguyenLieuService {
-    private ManagerNguyenLieu nguyenLieuManager_360;
+    private ManagerNguyenLieu nguyenLieuManager;
     public NguyenLieuService() {
-        nguyenLieuManager_360 = new ManagerNguyenLieu();
+        nguyenLieuManager = new ManagerNguyenLieu();
     }
 
     public  List<NguyenLieu> getAllListNguyenLieu() throws SQLException{
-        return nguyenLieuManager_360.getAllListNguyenLieu();
+        return nguyenLieuManager.getAllListNguyenLieu();
     }
     
     public void addListNguyenLieu(NguyenLieu nguyenLieu) throws SQLException{
-        nguyenLieuManager_360.addListNguyenLieu(nguyenLieu);
+        nguyenLieuManager.addListNguyenLieu(nguyenLieu);
     }
     
     public void deleteNguyenLieu(String id) throws SQLException {
@@ -45,9 +45,9 @@ public class NguyenLieuService {
     }
     
     public void updateNguyenLieu(NguyenLieu nguyenLieu) throws SQLException{
-        nguyenLieuManager_360.updateListNguyenLieu(nguyenLieu);
+        nguyenLieuManager.updateListNguyenLieu(nguyenLieu);
     }
     public NguyenLieu getNguyenLieuById(String id) throws SQLException{
-        return nguyenLieuManager_360.getNguyenLieuById(id);
+        return nguyenLieuManager.getNguyenLieuById(id);
     }
 }

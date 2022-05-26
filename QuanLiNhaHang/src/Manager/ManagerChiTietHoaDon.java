@@ -21,6 +21,7 @@ public class ManagerChiTietHoaDon {
 
     HoaDon hoaDon;
     ChonMonFrame chonMonFrame ;
+    private int sl;
 
     
     public void addMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
@@ -35,5 +36,42 @@ public class ManagerChiTietHoaDon {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }
     }
+    
+    public void updateMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
+        try{
+                Connection connection = JDBCConnection.JDBCConnection();
+                String sql1 = "select soLuong from ChiTietHoaDon where idHoaDon = ? and idMonAn = ?";
+                PreparedStatement preparedStatement1 = connection.prepareCall(sql1);
+                preparedStatement1.setInt(1, idHoaDon);
+                preparedStatement1.setString(2, idMA);
+                ResultSet rs = preparedStatement1.executeQuery();
+                while(rs.next())
+                {
+                     this.sl = rs.getInt("soLuong");
+                }
+                String sql = "update ChiTietHoaDon set soLuong = ? + " + sl + " where idMonAn = '" + idMA + "'";
+                PreparedStatement preparedStatement = connection.prepareCall(sql);
+                preparedStatement.setInt(1, soLuong);
+                preparedStatement.executeUpdate();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    }
+    
+    public int checkIdMonAn(int idMonAn) throws SQLException {
+        try{
+                Connection connection = JDBCConnection.JDBCConnection();
+                String sql = "select idMonAn from ChiTietHoaDon where idMonAn = '" + idMonAn + "'";
+                PreparedStatement preparedStatement = connection.prepareCall(sql);
+                ResultSet rs = preparedStatement.executeQuery();
+                    if(rs == null)
+                        return 0;
+                    else
+                        return 1;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        return 0;
+    }
+}

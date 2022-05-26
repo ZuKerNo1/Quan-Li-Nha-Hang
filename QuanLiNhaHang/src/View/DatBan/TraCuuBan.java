@@ -29,10 +29,10 @@ import model.DatBan;
  */
 public class TraCuuBan extends javax.swing.JFrame {
 
-    TraCuuBanService traCuuBanService_352 = new TraCuuBanService();
+    TraCuuBanService traCuuBanService = new TraCuuBanService();
     
-    DatBan datban_352 = new DatBan();
-    DatBanService datBanService_352 = new DatBanService();
+    DatBan datban = new DatBan();
+    DatBanService datBanService = new DatBanService();
     /**
      * Creates new form TraCuuBan
      */
@@ -48,7 +48,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         traCuuTable_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("ID Bàn Ăn");
         defaultTableModel.addColumn("Trạng thái");
-        setData(traCuuBanService_352.getAllListTable_352());
+        setData(traCuuBanService.getAllListTable_352());
     }
 
     private void setData(List<Table> tables) throws SQLException {
@@ -290,6 +290,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             String ID = (String) traCuuTable_352.getValueAt(row, 0);
             try {
                 new ChonMonFrame(ID).setVisible(true);
+                this.dispose();
             } catch (SQLException ex) {
                 Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
             }

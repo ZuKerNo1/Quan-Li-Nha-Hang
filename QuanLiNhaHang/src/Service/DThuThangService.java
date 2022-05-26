@@ -15,16 +15,16 @@ import model.DoanhThuThang;
  * @author FSC
  */
 public class DThuThangService {
-    private ManagerDThuThang dThuThangManager_360;
+    private ManagerDThuThang dThuThangManager;
     public DThuThangService() {
-        dThuThangManager_360 = new ManagerDThuThang();
+        dThuThangManager = new ManagerDThuThang();
     }
 
     public  List<DoanhThuThang> getAllListDThu() throws SQLException{
-        return dThuThangManager_360.getAllListThang();
+        return dThuThangManager.getAllListThang();
     }
     
     public String TongTien(){
-        return dThuThangManager_360.TongTien();
+        return dThuThangManager.TongTien();
     }
 }
