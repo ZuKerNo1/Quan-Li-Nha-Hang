@@ -166,29 +166,12 @@ values
 go
 insert into account
 values ('trung','123', 'NV001'),
-	   ('truong','123', 'NV002')
-
+	   ('truong','123', 'NV002'),
+	   ('vu','123', 'NV005')
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from ChiTietHoaDon as cthd, MonAn as ma
 where cthd.idMonAn = ma.idMonAn 
 group by cthd.idHoaDon
 
---Thống kê theo tháng
 
-select month(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
-from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
-where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn 
-group by month(hd.ngayThanhToan)
-
---Thống kê theo năm
-select year(hd.ngayThanhToan) as N'Năm' , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
-from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
-where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn 
-group by year(hd.ngayThanhToan)
-
---Thống kê theo ngày hiện tại
-select day(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
-from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
-where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
-group by day(hd.ngayThanhToan)

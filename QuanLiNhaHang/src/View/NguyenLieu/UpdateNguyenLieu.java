@@ -16,19 +16,19 @@ import model.NguyenLieu;
  * @author FSC
  */
 public class UpdateNguyenLieu extends javax.swing.JFrame {
-    private NguyenLieu nguyenLieu;
-    NguyenLieuService nguyenLieuService = new NguyenLieuService();
+    private NguyenLieu nguyenLieu_360;
+    NguyenLieuService nguyenLieuService_360 = new NguyenLieuService();
     /**
      * Creates new form UpdateNguyenLieu
      */
     public UpdateNguyenLieu(String ID) throws SQLException {
         initComponents();
-        nguyenLieu = nguyenLieuService.getNguyenLieuById(ID);
+        nguyenLieu_360 = nguyenLieuService_360.getNguyenLieuById(ID);
         idNguyenLieuText_360.setText(ID);
-        nameNguyenLieuText_360.setText(nguyenLieu.getNameNL_360());
-        amountNguyenLieuText_360.setText(String.valueOf(nguyenLieu.getSoLuong_360()));
+        nameNguyenLieuText_360.setText(nguyenLieu_360.getNameNL_360());
+        amountNguyenLieuText_360.setText(String.valueOf(nguyenLieu_360.getSoLuong_360()));
 //        unitNguyenLieuCB_360.getSelectedItem(String.valueOf(nguyenLieu.getDonVi_360()));
-        staffNguyenLieuText_360.setText(nguyenLieu.getNhanVienCapNhap_360());
+        staffNguyenLieuText_360.setText(nguyenLieu_360.getNhanVienCapNhap_360());
     }
 
     public UpdateNguyenLieu() {
@@ -259,13 +259,13 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
 
     private void submitBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_360ActionPerformed
         // TODO add your handling code here:
-        nguyenLieu.setIdNL_360(idNguyenLieuText_360.getText());
-        nguyenLieu.setNameNL_360(nameNguyenLieuText_360.getText());
-        nguyenLieu.setSoLuong_360(Integer.valueOf(amountNguyenLieuText_360.getText()));
-        nguyenLieu.setDonVi_360(unitNguyenLieuCB_360.getSelectedItem().toString());
-        nguyenLieu.setNhanVienCapNhap_360(staffNguyenLieuText_360.getText());
+        nguyenLieu_360.setIdNL_360(idNguyenLieuText_360.getText());
+        nguyenLieu_360.setNameNL_360(nameNguyenLieuText_360.getText());
+        nguyenLieu_360.setSoLuong_360(Integer.valueOf(amountNguyenLieuText_360.getText()));
+        nguyenLieu_360.setDonVi_360(unitNguyenLieuCB_360.getSelectedItem().toString());
+        nguyenLieu_360.setNhanVienCapNhap_360(staffNguyenLieuText_360.getText());
         try {
-            nguyenLieuService.updateNguyenLieu(nguyenLieu);
+            nguyenLieuService_360.updateNguyenLieu(nguyenLieu_360);
         } catch (SQLException ex) {
             Logger.getLogger(UpdateNguyenLieu.class.getName()).log(Level.SEVERE, null, ex);
         }
