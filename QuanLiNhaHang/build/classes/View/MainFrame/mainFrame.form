@@ -141,19 +141,19 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="quanLyBanAnButton_335" pref="449" max="32767" attributes="0"/>
-                                  <Component id="khoNguyenLieuButton_335" max="32767" attributes="0"/>
+                                  <Component id="quanLyBanAnButton" pref="449" max="32767" attributes="0"/>
+                                  <Component id="khoNguyenLieuButton" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="thongKeDoanhThuButton_335" max="32767" attributes="0"/>
-                                  <Component id="dangXuatButton_335" pref="464" max="32767" attributes="0"/>
+                                  <Component id="thongKeDoanhThuButton" max="32767" attributes="0"/>
+                                  <Component id="dangXuatButton" pref="464" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="quanLyNhanVienButton_335" min="-2" pref="449" max="-2" attributes="0"/>
+                              <Component id="quanLyNhanVienButton" min="-2" pref="449" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="quanLyKhachHangButton_335" pref="464" max="32767" attributes="0"/>
+                              <Component id="quanLyKhachHangButton" pref="464" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -164,18 +164,18 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="quanLyNhanVienButton_335" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Component id="quanLyKhachHangButton_335" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="quanLyNhanVienButton" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="quanLyKhachHangButton" alignment="3" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="quanLyBanAnButton_335" max="32767" attributes="0"/>
-                          <Component id="thongKeDoanhThuButton_335" pref="200" max="32767" attributes="0"/>
+                          <Component id="quanLyBanAnButton" max="32767" attributes="0"/>
+                          <Component id="thongKeDoanhThuButton" pref="200" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="khoNguyenLieuButton_335" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Component id="dangXuatButton_335" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="khoNguyenLieuButton" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="dangXuatButton" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -183,7 +183,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="khoNguyenLieuButton_335">
+            <Component class="javax.swing.JButton" name="khoNguyenLieuButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -200,10 +200,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="khoNguyenLieuButton_335ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="khoNguyenLieuButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="quanLyNhanVienButton_335">
+            <Component class="javax.swing.JButton" name="quanLyNhanVienButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -220,10 +220,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quanLyNhanVienButton_335ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quanLyNhanVienButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="quanLyKhachHangButton_335">
+            <Component class="javax.swing.JButton" name="quanLyKhachHangButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -240,10 +240,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quanLyKhachHangButton_335ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quanLyKhachHangButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="dangXuatButton_335">
+            <Component class="javax.swing.JButton" name="dangXuatButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -259,10 +259,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dangXuatButton_335ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="dangXuatButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="quanLyBanAnButton_335">
+            <Component class="javax.swing.JButton" name="quanLyBanAnButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -279,10 +279,10 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quanLyBanAnButton_335ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quanLyBanAnButtonActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="thongKeDoanhThuButton_335">
+            <Component class="javax.swing.JButton" name="thongKeDoanhThuButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -299,7 +299,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thongKeDoanhThuButton_335ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thongKeDoanhThuButtonActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

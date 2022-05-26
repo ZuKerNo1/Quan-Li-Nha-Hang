@@ -29,10 +29,10 @@ import model.DatBan;
  */
 public class TraCuuBan extends javax.swing.JFrame {
 
-    TraCuuBanService traCuuBanService = new TraCuuBanService();
+    TraCuuBanService traCuuBanService_352 = new TraCuuBanService();
     
-    DatBan datban = new DatBan();
-    DatBanService datBanService = new DatBanService();
+    DatBan datban_352 = new DatBan();
+    DatBanService datBanService_352 = new DatBanService();
     /**
      * Creates new form TraCuuBan
      */
@@ -48,7 +48,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         traCuuTable_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("ID Bàn Ăn");
         defaultTableModel.addColumn("Trạng thái");
-        setData(traCuuBanService.getAllListTable_352());
+        setData(traCuuBanService_352.getAllListTable_352());
     }
 
     private void setData(List<Table> tables) throws SQLException {
