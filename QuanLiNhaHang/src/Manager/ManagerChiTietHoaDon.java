@@ -35,10 +35,6 @@ public class ManagerChiTietHoaDon {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-<<<<<<< HEAD
-        }
-    }
-=======
     }
     
     public void updateMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
@@ -65,4 +61,3 @@ public class ManagerChiTietHoaDon {
             }
     }
 }
->>>>>>> MainFrame-ChonMon

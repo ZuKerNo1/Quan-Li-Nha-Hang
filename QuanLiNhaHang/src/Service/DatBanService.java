@@ -18,18 +18,14 @@ public class DatBanService {
     public DatBanService(){
         managerDatBan = new ManagerDatBan();
     }
-    public List<DatBan> getAllListDatBan_352() throws SQLException{
-        return managerDatBan.getAllListDatBan_352();
+    public List<DatBan> getAllListDatBan() throws SQLException{
+        return managerDatBan.getAllListDatBan();
     }
-    public void addDatBan_352(DatBan datBan) throws SQLException{
-        managerDatBan.addDatBan_352(datBan);
-    }
-    
-//    public void updateDatBan_352(DatBan datBan) throws SQLException{
-//        managerDatBan.updateDatBan_352(datBan);
-//    }
-    public void deleteDatBan_352(String id) throws SQLException{
-        managerDatBan.deleteDatBan_352(id);
+    public void addDatBan(DatBan datBan) throws SQLException{
+        managerDatBan.addDatBan(datBan);
     }
     
+    public void updateDatBan(DatBan datBan) throws SQLException{
+        managerDatBan.addDatBan(datBan);
+    }
 }

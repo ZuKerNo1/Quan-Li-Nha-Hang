@@ -21,18 +21,15 @@ public class TraCuuBanService {
         traCuuBanManager = new ManagerTraCuuBan();
     }
 
-    public  List<Table> getAllListTable_352() throws SQLException{
-        return traCuuBanManager.getAllListTable_352();
+    public  List<Table> getAllListTraCuuBan() throws SQLException{
+        return traCuuBanManager.getAllListTable();
     }
     
-    public String getIdTable_352(String id) throws SQLException {
-        return traCuuBanManager.getIdTable_352(id);
-    }
-
-    
-    public void updateTable_352(Table table) throws SQLException{
-        traCuuBanManager.updateTable_352(table);
+    public String getIdTabel(String id) throws SQLException {
+        return traCuuBanManager.getIdTable(id);
     }
 
-    
+    public String getIdTabel(HTML.Attribute ID) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

@@ -1,4 +1,3 @@
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -39,17 +38,17 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
             }
 
         };
-        tableShow_352.setModel(defaultTableModel);
+        tableShow.setModel(defaultTableModel);
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh thu");
         setData(dThuService.getAllListDThu());
-        tongTien_Text_352.setText(dThuService.TongTien());
+        tongTien_Text.setText(dThuService.TongTien());
     }
     
     private void setData(List<DoanhThuThang> dThus) throws SQLException {
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel();
-        tableShow_352.setModel(defaultTableModel);
+        tableShow.setModel(defaultTableModel);
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh Thu");
         for (DoanhThuThang dThu : dThus) {
@@ -97,18 +96,18 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        backBtn_352 = new javax.swing.JButton();
-        gbackBtn_352 = new javax.swing.JButton();
+        backBtn_360 = new javax.swing.JButton();
+        backBtn_361 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        cBox_Year_352 = new javax.swing.JComboBox<>();
+        cBox_Year = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        tongTien_Text_352 = new javax.swing.JLabel();
+        tongTien_Text = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableShow_352 = new com.raven.suportSwing.TableColumn();
-        radiStreet_352 = new com.raven.suportSwing.RadioButtonCustom();
-        radiColumn_352 = new com.raven.suportSwing.RadioButtonCustom();
-        BieuDo_352 = new javax.swing.JButton();
+        tableShow = new com.raven.suportSwing.TableColumn();
+        radiStreet = new com.raven.suportSwing.RadioButtonCustom();
+        radiColumn = new com.raven.suportSwing.RadioButtonCustom();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -147,32 +146,32 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(240, 239, 234));
 
-        backBtn_352.setBackground(new java.awt.Color(255, 51, 51));
-        backBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        backBtn_352.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_go.png"))); // NOI18N
-        backBtn_352.setText("XEM BÁO CÁO NĂM");
-        backBtn_352.addActionListener(new java.awt.event.ActionListener() {
+        backBtn_360.setBackground(new java.awt.Color(255, 51, 51));
+        backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
+        backBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_go.png"))); // NOI18N
+        backBtn_360.setText("XEM BÁO CÁO NĂM");
+        backBtn_360.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtn_352ActionPerformed(evt);
+                backBtn_360ActionPerformed(evt);
             }
         });
 
-        gbackBtn_352.setBackground(new java.awt.Color(255, 51, 51));
-        gbackBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        gbackBtn_352.setForeground(new java.awt.Color(255, 255, 255));
-        gbackBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
-        gbackBtn_352.addActionListener(new java.awt.event.ActionListener() {
+        backBtn_361.setBackground(new java.awt.Color(255, 51, 51));
+        backBtn_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        backBtn_361.setForeground(new java.awt.Color(255, 255, 255));
+        backBtn_361.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
+        backBtn_361.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                gbackBtn_352ActionPerformed(evt);
+                backBtn_361ActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
         jLabel4.setText("Năm ");
 
-        cBox_Year_352.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        cBox_Year_352.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2022", "2021", "2020" }));
+        cBox_Year.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        cBox_Year.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2022", "2021", "2020" }));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
 
@@ -182,8 +181,8 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_symbol.png"))); // NOI18N
         jLabel2.setText("TỔNG ");
 
-        tongTien_Text_352.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        tongTien_Text_352.setForeground(new java.awt.Color(255, 255, 255));
+        tongTien_Text.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        tongTien_Text.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -193,15 +192,15 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tongTien_Text_352, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(tongTien_Text, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-            .addComponent(tongTien_Text_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tongTien_Text, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        tableShow_352.setModel(new javax.swing.table.DefaultTableModel(
+        tableShow.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -217,31 +216,26 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tableShow_352);
+        jScrollPane1.setViewportView(tableShow);
 
-        buttonGroup1.add(radiStreet_352);
-        radiStreet_352.setText("Biều đồ đường");
-        radiStreet_352.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(radiStreet);
+        radiStreet.setText("Biều đồ đường");
+        radiStreet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radiStreet_352ActionPerformed(evt);
+                radiStreetActionPerformed(evt);
             }
         });
 
-        buttonGroup1.add(radiColumn_352);
-        radiColumn_352.setText("Biều đồ Cột");
-        radiColumn_352.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                radiColumn_352ActionPerformed(evt);
-            }
-        });
+        buttonGroup1.add(radiColumn);
+        radiColumn.setText("Biều đồ Cột");
 
-        BieuDo_352.setBackground(new java.awt.Color(255, 51, 51));
-        BieuDo_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BieuDo_352.setForeground(new java.awt.Color(255, 255, 255));
-        BieuDo_352.setText("Biểu đồ");
-        BieuDo_352.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Biểu đồ");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BieuDo_352ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -253,21 +247,21 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(gbackBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backBtn_361, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cBox_Year_352, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cBox_Year, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(29, 29, 29)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(radiStreet_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(radiColumn_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(radiStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radiColumn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
-                        .addComponent(BieuDo_352)
+                        .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(67, 67, 67))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -283,21 +277,21 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(radiStreet_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(radiStreet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(radiColumn_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(radiColumn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel4)
-                                .addComponent(cBox_Year_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(cBox_Year, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(BieuDo_352))
+                        .addComponent(jButton1))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(47, 47, 47)
-                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(451, 451, 451)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(gbackBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn_361, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,7 +323,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_352ActionPerformed
+    private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
         try {
             // TODO add your handling code here:
             new ThongKeDoanhThuNam().setVisible(true);
@@ -337,19 +331,19 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
             Logger.getLogger(ThongKeDoanhThuThang.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
-    }//GEN-LAST:event_backBtn_352ActionPerformed
+    }//GEN-LAST:event_backBtn_360ActionPerformed
 
-    private void gbackBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gbackBtn_352ActionPerformed
+    private void backBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_361ActionPerformed
         // TODO add your handling code here:
         new mainFrame().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_gbackBtn_352ActionPerformed
+    }//GEN-LAST:event_backBtn_361ActionPerformed
 
-    private void radiStreet_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiStreet_352ActionPerformed
+    private void radiStreetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiStreetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_radiStreet_352ActionPerformed
+    }//GEN-LAST:event_radiStreetActionPerformed
 
-    private void BieuDo_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BieuDo_352ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 //        if (radiStreet.isSelected()) {
 //            new ShowChart((DefaultTableModel) tableShow.getModel(), null).setVisible(true);
@@ -357,25 +351,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
 //        } else {
 //            new showChartRevenue((DefaultTableModel) tableShow.getModel()).setVisible(true);
 //        }
-    }//GEN-LAST:event_BieuDo_352ActionPerformed
-
-    private void radiColumn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiColumn_352ActionPerformed
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_radiColumn_352ActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -418,11 +394,11 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BieuDo_352;
-    private javax.swing.JButton backBtn_352;
+    private javax.swing.JButton backBtn_360;
+    private javax.swing.JButton backBtn_361;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> cBox_Year_352;
-    private javax.swing.JButton gbackBtn_352;
+    private javax.swing.JComboBox<String> cBox_Year;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -432,9 +408,9 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private com.raven.suportSwing.RadioButtonCustom radiColumn_352;
-    private com.raven.suportSwing.RadioButtonCustom radiStreet_352;
-    private com.raven.suportSwing.TableColumn tableShow_352;
-    private javax.swing.JLabel tongTien_Text_352;
+    private com.raven.suportSwing.RadioButtonCustom radiColumn;
+    private com.raven.suportSwing.RadioButtonCustom radiStreet;
+    private com.raven.suportSwing.TableColumn tableShow;
+    private javax.swing.JLabel tongTien_Text;
     // End of variables declaration//GEN-END:variables
 }

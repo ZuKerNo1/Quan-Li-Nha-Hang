@@ -20,7 +20,7 @@ import model.Employee;
  * @author ACER
  */
 public class ManagerDatBan {
-    public List<DatBan> getAllListDatBan_352() throws SQLException {
+    public List<DatBan> getAllListDatBan() throws SQLException {
         List<DatBan> listDatBans = new ArrayList<DatBan>();
         String sql = "select * from DatBan";
         try {
@@ -46,7 +46,7 @@ public class ManagerDatBan {
     }
   
     
-    public void addDatBan_352(DatBan datban) throws SQLException {
+    public void addDatBan(DatBan datban) throws SQLException {
         Connection connection =  JDBCConnection.JDBCConnection();
         String sql = "Insert into Datban(SDT, tenKH,  tenNVPT, diaChi, ngayDat, yeuCau, gioiTinh, idBA)"
                 + "Values(?, ?, ?, ?, ?, ?, ?, ?)";
@@ -85,16 +85,27 @@ public class ManagerDatBan {
         }
     }*/
     
-    public void deleteDatBan_352(String id) throws SQLException{
+    /*public void deleteEmployee(String id) throws SQLException{
        Connection connection = JDBCConnection.JDBCConnection();
-       String sql = "delete from DatBan where idBA= ?";
+       String sql = "delete from NhanVien where idNV= ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, id);
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
+    public Employee findEmployee(Employee employee) throws SQLException {
+        List<Employee> listemployee = new ArrayList<>();
+        listemployee = getAllEmployees();
+        for (Employee s : listemployee) {
+            if (employee.getId_354().equals(s.getId_354())) {
+                return s;
+            }
+        }
+        return null;
+    }*/
 
 }

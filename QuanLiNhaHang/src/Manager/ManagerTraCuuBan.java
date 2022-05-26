@@ -18,7 +18,7 @@ import java.util.List;
  * @author FSC
  */
 public class ManagerTraCuuBan {
-    public List<Table> getAllListTable_352() throws SQLException {
+    public List<Table> getAllListTable() throws SQLException {
         List<Table> listTables = new ArrayList<Table>();
         String sql = "select * from BanAn";
         try {
@@ -37,7 +37,7 @@ public class ManagerTraCuuBan {
         return listTables;
     }
     
-    public String getIdTable_352(String id) throws SQLException {
+    public String getIdTable(String id) throws SQLException {
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from BanAn where idBA=?";
         String idBanAn;
@@ -52,18 +52,4 @@ public class ManagerTraCuuBan {
         }
         return null;
     }
-    public void updateTable_352(Table table) throws SQLException {
-        Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "Update BanAn set idBA = ? , trangThaiBan = ? ";
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, table.getIdTable_352());
-            preparedStatement.setString(2, table.getStatusTable_352());           
-            int rs = preparedStatement.executeUpdate();
-            System.out.println(rs);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
 }

@@ -50,13 +50,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
-                      <Component id="Myprogress_352" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Myprogress" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
-                  <Component id="Percentage_352" min="-2" max="-2" attributes="0"/>
+                  <Component id="Percentage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -66,9 +66,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Percentage_352" min="-2" max="-2" attributes="0"/>
+                  <Component id="Percentage" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="Myprogress_352" min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="Myprogress" min="-2" pref="10" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -81,7 +81,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JProgressBar" name="Myprogress_352">
+        <Component class="javax.swing.JProgressBar" name="Myprogress">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2b" green="73" red="ff" type="rgb"/>
@@ -95,7 +95,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="Percentage_352">
+        <Component class="javax.swing.JLabel" name="Percentage">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2b" green="6d" red="f7" type="rgb"/>

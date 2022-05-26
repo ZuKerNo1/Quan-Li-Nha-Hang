@@ -80,11 +80,6 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
         clearBtn_360.setForeground(new java.awt.Color(255, 255, 255));
         clearBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/broom.png"))); // NOI18N
         clearBtn_360.setText("CLEAR ALL");
-        clearBtn_360.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearBtn_360ActionPerformed(evt);
-            }
-        });
 
         backBtn_360.setBackground(new java.awt.Color(51, 255, 51));
         backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -296,10 +291,6 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
     private void unitNguyenLieuCB_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unitNguyenLieuCB_360ActionPerformed
 
     }//GEN-LAST:event_unitNguyenLieuCB_360ActionPerformed
-
-    private void clearBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_360ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearBtn_360ActionPerformed
 
     /**
      * @param args the command line arguments
