@@ -879,6 +879,7 @@
                       <Component id="MA002" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Component id="MA003" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                       <EmptySpace pref="539" max="32767" attributes="0"/>
 =======
                       <EmptySpace max="-2" attributes="0"/>
@@ -889,6 +890,9 @@
                       <Component id="MA003_335" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="517" max="32767" attributes="0"/>
 >>>>>>> MainFrame-ChonMon
+=======
+                      <EmptySpace pref="547" max="32767" attributes="0"/>
+>>>>>>> 98bff4db5cc03a1b6b6bde8f7b2b78ebec6a75a5
                   </Group>
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
