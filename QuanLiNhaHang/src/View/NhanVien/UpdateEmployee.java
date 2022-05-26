@@ -16,40 +16,40 @@ import model.Employee;
  * @author AD
  */
 public class UpdateEmployee extends javax.swing.JFrame {
-    Employee employee;
-    EmployeeService serviceEmployee;
+    Employee employee_354;
+    EmployeeService serviceEmployee_354;
     /**
      * Creates new form UpdateEmployee
      */
     public UpdateEmployee(String id) throws SQLException {
         initComponents();
-        serviceEmployee = new EmployeeService();
-        employee = serviceEmployee.getEmployeeById(id);
-        id_354.setText(employee.getId_354());
-        name_354.setText(employee.getName_354());
-        address_354.setText(employee.getAddress_354());
-        dob_354.setText(employee.getDob_354());
-        phone_354.setText(employee.getPhone_354());
-        salary_354.setText(String.valueOf(employee.getSalary_354()));
-        if("Nam".equals(employee.getGender_354())){
+        serviceEmployee_354 = new EmployeeService();
+        employee_354 = serviceEmployee_354.getEmployeeById(id);
+        id_354.setText(employee_354.getId_354());
+        name_354.setText(employee_354.getName_354());
+        address_354.setText(employee_354.getAddress_354());
+        dob_354.setText(employee_354.getDob_354());
+        phone_354.setText(employee_354.getPhone_354());
+        salary_354.setText(String.valueOf(employee_354.getSalary_354()));
+        if("Nam".equals(employee_354.getGender_354())){
             male_354.isSelected();
         }else{
             female_354.isSelected();
         }
-        if("Đang làm việc".equals(employee.getStatus_354())){
+        if("Đang làm việc".equals(employee_354.getStatus_354())){
             working_354.isSelected();
         }else{
             leave_354.isSelected();
         }
-        if("Phục vụ".equals(employee.getRole_354())){
+        if("Phục vụ".equals(employee_354.getRole_354())){
             phucVu_354.isSelected();
-        }else if("Đầu bếp".equals(employee.getRole_354())){
+        }else if("Đầu bếp".equals(employee_354.getRole_354())){
             dauBep_354.isSelected();
-        }else if("Quản lí".equals(employee.getRole_354())){
+        }else if("Quản lí".equals(employee_354.getRole_354())){
             quanLy_354.isSelected();
-        }else if("Bảo vệ".equals(employee.getRole_354())){
+        }else if("Bảo vệ".equals(employee_354.getRole_354())){
             baoVe_354.isSelected();
-        }else if("Thu ngân".equals(employee.getRole_354())){
+        }else if("Thu ngân".equals(employee_354.getRole_354())){
             thuNgan_354.isSelected();
         }
     }
@@ -381,44 +381,44 @@ public class UpdateEmployee extends javax.swing.JFrame {
 
     private void submitBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_354ActionPerformed
         // TODO add your handling code here:
-        employee.setId_354(id_354.getText());
-        employee.setName_354(name_354.getText());
-        employee.setAddress_354(address_354.getText());
-        employee.setPhone_354(phone_354.getText());
-        employee.setDob_354(dob_354.getText());
-        employee.setSalary_354(Double.valueOf(salary_354.getText()));
+        employee_354.setId_354(id_354.getText());
+        employee_354.setName_354(name_354.getText());
+        employee_354.setAddress_354(address_354.getText());
+        employee_354.setPhone_354(phone_354.getText());
+        employee_354.setDob_354(dob_354.getText());
+        employee_354.setSalary_354(Double.valueOf(salary_354.getText()));
         // lay ra gia tri cho gender
-        String gender = "";
+        String gender_354 = "";
         if(male_354.isSelected()){
-            gender += "Nam";
+            gender_354 += "Nam";
         }else if(female_354.isSelected()){
-            gender += "Nữ";
+            gender_354 += "Nữ";
         }
-        employee.setGender_354(gender);
+        employee_354.setGender_354(gender_354);
         // lay ra gia tri cho role
-        String role = "";
+        String role_354 = "";
         if(phucVu_354.isSelected()){
-            role += "Phục vụ";
+            role_354 += "Phục vụ";
         }else if(dauBep_354.isSelected()){
-            role += "Đầu bếp";
+            role_354 += "Đầu bếp";
         }else if(baoVe_354.isSelected()){
-            role += "Bảo vệ";
+            role_354 += "Bảo vệ";
         }else if(quanLy_354.isSelected()){
-            role += "Quản lí";
+            role_354 += "Quản lí";
         }else if(thuNgan_354.isSelected()){
-            role += "Thu ngân";
+            role_354 += "Thu ngân";
         }
-        employee.setRole_354(role);
+        employee_354.setRole_354(role_354);
         // lay ra gia  tri cho status
-        String status = "";
+        String status_354 = "";
         if(working_354.isSelected()){
-            status += "Đang làm việc";
+            status_354 += "Đang làm việc";
         }else if(leave_354.isSelected()){
-            status += "Nghỉ làm";
+            status_354 += "Nghỉ làm";
         }
-        employee.setStatus_354(status);
+        employee_354.setStatus_354(status_354);
         try {
-            serviceEmployee.updateEmployee(employee);
+            serviceEmployee_354.updateEmployee(employee_354);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(UpdateEmployee.this, "Thay đổi thông tin nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);

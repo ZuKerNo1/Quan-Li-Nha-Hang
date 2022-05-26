@@ -23,15 +23,15 @@ import model.Employee;
  */
 public class ViewEmployee extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
-    Employee employee;
-    EmployeeService serviceEmployee;
+    Employee employee_354;
+    EmployeeService serviceEmployee_354;
     /**
      * Creates new form ViewEmployee
      */
     public ViewEmployee() throws SQLException {
         initComponents();
-        employee = new Employee();
-        serviceEmployee = new EmployeeService();
+        employee_354 = new Employee();
+        serviceEmployee_354 = new EmployeeService();
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -60,7 +60,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         table_354.setRowHeight(50);
         table_354.validate();
         table_354.repaint();
-        setTableData(serviceEmployee.getAllEmployees());
+        setTableData_354(serviceEmployee_354.getAllEmployees());
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
@@ -307,13 +307,13 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void updateBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_354ActionPerformed
         // TODO add your handling code here:
-        int row = table_354.getSelectedRow();
-        if(row == -1){
+        int row_354 = table_354.getSelectedRow();
+        if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }else{
-            String employeeID = (String) table_354.getValueAt(row, 0);
+            String employeeID_354 = (String) table_354.getValueAt(row_354, 0);
             try {
-                new UpdateEmployee(employeeID).setVisible(true);
+                new UpdateEmployee(employeeID_354).setVisible(true);
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -323,33 +323,33 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void deleteBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_354ActionPerformed
         // TODO add your handling code here:
-        int row = table_354.getSelectedRow();
-        if(row == -1){
+        int row_354 = table_354.getSelectedRow();
+        if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
         }else{
-            int confirm = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
+            int confirm_354 = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
             
-            if(confirm == JOptionPane.YES_OPTION){
-                String employeeID = String.valueOf(table_354.getValueAt(row, 0));
+            if(confirm_354 == JOptionPane.YES_OPTION){
+                String employeeID = String.valueOf(table_354.getValueAt(row_354, 0));
                 try {
-                    serviceEmployee.deleteEmployee(employeeID);
+                    serviceEmployee_354.deleteEmployee(employeeID);
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
             defaulttableModel_354.setRowCount(0);
             try {
-                setTableData(serviceEmployee.getAllEmployees());
+                setTableData_354(serviceEmployee_354.getAllEmployees());
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
             label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         }
     }//GEN-LAST:event_deleteBtn_354ActionPerformed
-    private void setTableData(List<Employee> Employees){
-        for(Employee employee: Employees){
-            defaulttableModel_354.addRow(new Object[]{employee.getId_354(), employee.getName_354(), employee.getDob_354(), employee.getGender_354(), employee.getPhone_354(),
-            employee.getAddress_354(), employee.getRole_354(), employee.getSalary_354(), employee.getStatus_354()});
+    private void setTableData_354(List<Employee> Employees){
+        for(Employee employee_354: Employees){
+            defaulttableModel_354.addRow(new Object[]{employee_354.getId_354(), employee_354.getName_354(), employee_354.getDob_354(), employee_354.getGender_354(), employee_354.getPhone_354(),
+            employee_354.getAddress_354(), employee_354.getRole_354(), employee_354.getSalary_354(), employee_354.getStatus_354()});
         }
     }  
     /**
