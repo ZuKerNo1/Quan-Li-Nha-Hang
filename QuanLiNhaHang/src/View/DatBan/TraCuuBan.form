@@ -125,7 +125,7 @@
                           <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           <Component id="goiMon_352" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                          <Component id="datBan_352" min="-2" pref="161" max="-2" attributes="0"/>
+                          <Component id="thanhToan_352" min="-2" pref="161" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
@@ -148,7 +148,7 @@
                                   <Component id="huyDat_352" alignment="3" pref="50" max="32767" attributes="0"/>
                                   <Component id="backBtn_352" max="32767" attributes="0"/>
                               </Group>
-                              <Component id="datBan_352" alignment="1" max="32767" attributes="0"/>
+                              <Component id="thanhToan_352" alignment="1" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       </Group>
@@ -202,7 +202,7 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backBtn_352ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="datBan_352">
+                <Component class="javax.swing.JButton" name="thanhToan_352">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="99" red="33" type="rgb"/>
@@ -219,7 +219,7 @@
                     <Property name="text" type="java.lang.String" value="THANH TO&#xc1;N"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="datBan_352ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thanhToan_352ActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="goiMon_352">

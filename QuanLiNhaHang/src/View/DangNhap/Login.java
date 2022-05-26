@@ -37,9 +37,9 @@ public class Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
+        txtName_352 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        passWord = new javax.swing.JPasswordField();
+        passWord_352 = new javax.swing.JPasswordField();
         rememberCheckbox = new javax.swing.JCheckBox();
         btnDangNhap = new javax.swing.JToggleButton();
         jLabel4 = new javax.swing.JLabel();
@@ -78,8 +78,8 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnDangNhap, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
-                    .addComponent(passWord)
-                    .addComponent(txtName, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(passWord_352)
+                    .addComponent(txtName_352, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -94,11 +94,11 @@ public class Login extends javax.swing.JFrame {
                 .addGap(65, 65, 65)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtName_352, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(passWord, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passWord_352, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(rememberCheckbox)
                 .addGap(37, 37, 37)
@@ -139,11 +139,11 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDangNhapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDangNhapActionPerformed
-        idName_352 = txtName.getText();
+        idName_352 = txtName_352.getText();
         Account ac  =new Account();
 
-        String idName_352 = txtName.getText();// lấy nọi dung do người nhập vào
-        String pass_352 = new String (passWord.getPassword());// lấy nội dung do người dùn nhập vào
+        String idName_352 = txtName_352.getText();// lấy nọi dung do người nhập vào
+        String pass_352 = new String (passWord_352.getPassword());// lấy nội dung do người dùn nhập vào
 
         StringBuffer sb = new StringBuffer();// cho phép tao chuổi động
 
@@ -163,8 +163,8 @@ public class Login extends javax.swing.JFrame {
             Connection connect = JDBCConnection();
             String sql ="SELECT * FROM Account where idName_352= ? and passWords_352=?";
             PreparedStatement pstmt = connect.prepareStatement(sql);
-            pstmt.setString(1, txtName.getText());
-            pstmt.setString(2, passWord.getText());
+            pstmt.setString(1, txtName_352.getText());
+            pstmt.setString(2, passWord_352.getText());
             ResultSet rs = pstmt.executeQuery();
 
             // hien thi form moi
@@ -230,8 +230,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JPasswordField passWord;
+    private javax.swing.JPasswordField passWord_352;
     private javax.swing.JCheckBox rememberCheckbox;
-    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtName_352;
     // End of variables declaration//GEN-END:variables
 }
