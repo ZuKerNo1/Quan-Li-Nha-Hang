@@ -412,6 +412,14 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
+<<<<<<< HEAD
+=======
+        try {
+            new TraCuuBan().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+        }
+>>>>>>> MainFrame-ChonMon
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 

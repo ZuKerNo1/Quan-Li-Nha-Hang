@@ -43,7 +43,11 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jPanel3" max="32767" attributes="0"/>
+<<<<<<< HEAD
                           <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+=======
+                          <Component id="jPanel2" max="32767" attributes="0"/>
+>>>>>>> MainFrame-ChonMon
                       </Group>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
                   </Group>
@@ -82,7 +86,11 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                           <EmptySpace pref="49" max="32767" attributes="0"/>
+=======
+                          <EmptySpace pref="51" max="32767" attributes="0"/>
+>>>>>>> MainFrame-ChonMon
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -117,7 +125,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" max="-2" attributes="0"/>
+<<<<<<< HEAD
                           <Component id="backBtn_352" pref="100" max="32767" attributes="0"/>
+=======
+                          <Component id="backBtn_352" max="32767" attributes="0"/>
+>>>>>>> MainFrame-ChonMon
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="clearBtn_352" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
@@ -131,7 +143,11 @@
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
+<<<<<<< HEAD
                               <Component id="jScrollPane1" pref="845" max="32767" attributes="0"/>
+=======
+                              <Component id="jScrollPane1" pref="873" max="32767" attributes="0"/>
+>>>>>>> MainFrame-ChonMon
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
