@@ -24,7 +24,7 @@ import model.DoanhThuThang;
  * @author win
  */
 public class ThongKeDoanhThuThang extends javax.swing.JFrame {
-    DThuThangService dThuService = new DThuThangService();
+    DThuThangService dThuService_360 = new DThuThangService();
 //    StatisticalDAO sDao = new StatisticalDAO();
     /**
      * Creates new form ThongKe
@@ -42,8 +42,8 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         tableShow_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh thu");
-        setData(dThuService.getAllListDThu());
-        tongTien_Text_352.setText(dThuService.TongTien());
+        setData(dThuService_360.getAllListDThu());
+        tongTien_Text_352.setText(dThuService_360.TongTien());
     }
     
     private void setData(List<DoanhThuThang> dThus) throws SQLException {
@@ -53,7 +53,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh Thu");
         for (DoanhThuThang dThu : dThus) {
-            defaultTableModel.addRow(new Object[]{dThu.getThang(), dThu.getDoanhThu()});
+            defaultTableModel.addRow(new Object[]{dThu.getThang_360(), dThu.getDoanhThu_360()});
         }
         
     }
@@ -360,19 +360,6 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
     }//GEN-LAST:event_BieuDo_352ActionPerformed
 
     private void radiColumn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiColumn_352ActionPerformed
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // TODO add your handling code here:
     }//GEN-LAST:event_radiColumn_352ActionPerformed

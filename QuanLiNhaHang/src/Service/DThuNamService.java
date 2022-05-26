@@ -15,11 +15,11 @@ import model.DoanhThuNam;
  * @author FSC
  */
 public class DThuNamService {
-    private ManagerDThuNam dThuNamManager;
+    private ManagerDThuNam dThuNamManager_360;
     public DThuNamService() {
-        dThuNamManager = new ManagerDThuNam();
+        dThuNamManager_360 = new ManagerDThuNam();
     }
     public  List<DoanhThuNam> getAllListDThu() throws SQLException{
-        return dThuNamManager.getAllListNam();
+        return dThuNamManager_360.getAllListNam();
     }
 }

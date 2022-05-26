@@ -19,7 +19,7 @@ import model.DoanhThuNam;
  * @author win
  */
 public class ThongKeDoanhThuNam extends javax.swing.JFrame {
-    DThuNamService dThuService = new DThuNamService();
+    DThuNamService dThuService_360 = new DThuNamService();
     /**
      * Creates new form ThongKeDoanhThuNam
      */
@@ -36,7 +36,7 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         tableShow_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("Năm");
         defaultTableModel.addColumn("Doanh thu");
-        setData(dThuService.getAllListDThu());
+        setData(dThuService_360.getAllListDThu());
     }
     private void setData(List<DoanhThuNam> dThus) throws SQLException {
         DefaultTableModel defaultTableModel;
@@ -45,7 +45,7 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         defaultTableModel.addColumn("Năm");
         defaultTableModel.addColumn("Doanh Thu");
         for (DoanhThuNam dThu : dThus) {
-            defaultTableModel.addRow(new Object[]{dThu.getNam(), dThu.getDoanhThu()});
+            defaultTableModel.addRow(new Object[]{dThu.getNam_360(), dThu.getDoanhThu_360()});
         }
         
     }

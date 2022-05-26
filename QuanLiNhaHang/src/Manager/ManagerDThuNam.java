@@ -30,8 +30,8 @@ public class ManagerDThuNam {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 DoanhThuNam listDThu = new DoanhThuNam();
-                listDThu.setNam(rs.getInt("Nam"));
-                listDThu.setDoanhThu(rs.getString("TongTien"));
+                listDThu.setNam_360(rs.getInt("Nam"));
+                listDThu.setDoanhThu_360(rs.getString("TongTien"));
                 listDThus.add(listDThu);
             }
         } catch (SQLException ex) {
