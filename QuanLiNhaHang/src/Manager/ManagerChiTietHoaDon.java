@@ -59,11 +59,12 @@ public class ManagerChiTietHoaDon {
             }
     }
     
-    public int checkIdMonAn(int idMonAn) throws SQLException {
+    public int checkIdMonAn(int idHD,String idMonAn) throws SQLException {
         try{
                 Connection connection = JDBCConnection.JDBCConnection();
-                String sql = "select idMonAn from ChiTietHoaDon where idMonAn = '" + idMonAn + "'";
+                String sql = "select idMonAn from ChiTietHoaDon where idMonAn = '" + idMonAn + "'" + "and idHoaDon = ?";
                 PreparedStatement preparedStatement = connection.prepareCall(sql);
+                preparedStatement.setInt(1, idHD);
                 ResultSet rs = preparedStatement.executeQuery();
                     if(rs == null)
                         return 0;

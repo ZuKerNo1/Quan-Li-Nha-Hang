@@ -29,7 +29,7 @@ public class ChiTietHoaDonService {
         chiTietHoaDonManager.updateMonAnToChiTietHoaDon(idHoaDon, idMA, soLuong);
     }
     
-    public int checkIdMonAn(int idHoaDon) throws SQLException{
-        return chiTietHoaDonManager.checkIdMonAn(idHoaDon);
+    public int checkIdMonAn(int idHoaDon,String idMonAn) throws SQLException{
+        return chiTietHoaDonManager.checkIdMonAn(idHoaDon, idMonAn);
     }
 }

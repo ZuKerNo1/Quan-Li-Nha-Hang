@@ -715,7 +715,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         
         if (MA001_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA001_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA001_335.getText(), Integer.valueOf(String.valueOf(soLuong1_335.getSelectedItem())));
                 }else
                 { 
@@ -731,7 +731,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA002_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA002_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA002_335.getText(), Integer.valueOf(String.valueOf(soLuong2_335.getSelectedItem())));
                 }else
                 { 
@@ -747,7 +747,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA003_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA003_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA003_335.getText(), Integer.valueOf(String.valueOf(soLuong3_335.getSelectedItem())));
                 }else
                 { 
@@ -763,7 +763,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA004_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA004_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA004_335.getText(), Integer.valueOf(String.valueOf(soLuong4_335.getSelectedItem())));
                 }else
                 { 
@@ -779,7 +779,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA005_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA005_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA005_335.getText(), Integer.valueOf(String.valueOf(soLuong5_335.getSelectedItem())));
                 }else
                 { 
@@ -795,7 +795,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA006_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA006_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA006_335.getText(), Integer.valueOf(String.valueOf(soLuong6_335.getSelectedItem())));
                 }else
                 { 
@@ -811,7 +811,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA007_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA007_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA007_335.getText(), Integer.valueOf(String.valueOf(soLuong7_335.getSelectedItem())));
                 }else
                 { 
@@ -827,7 +827,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA008_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA008_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA008_335.getText(), Integer.valueOf(String.valueOf(soLuong8_335.getSelectedItem())));
                 }else
                 { 
@@ -843,7 +843,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA009_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA009_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA009_335.getText(), Integer.valueOf(String.valueOf(soLuong9_335.getSelectedItem())));
                 }else
                 { 
@@ -859,7 +859,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         if (MA010_335.isSelected()) {
             try {
-                if( chiTietHoaDonService.checkIdMonAn(idHD) == 1){
+                if( chiTietHoaDonService.checkIdMonAn(idHD, MA010_335.getText()) == 1){
                     chiTietHoaDonService.updateMonAnToChiTietHoaDon(idHD, MA010_335.getText(), Integer.valueOf(String.valueOf(soLuong10_335.getSelectedItem())));
                 }else
                 { 
