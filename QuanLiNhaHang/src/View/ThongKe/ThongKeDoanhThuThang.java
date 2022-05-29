@@ -24,19 +24,7 @@ import model.DoanhThuThang;
  * @author win
  */
 public class ThongKeDoanhThuThang extends javax.swing.JFrame {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     DThuThangService dThuService_360 = new DThuThangService();
-=======
-    DThuThangService dThuService = new DThuThangService();
->>>>>>> DatBan
-=======
-    DThuThangService dThuService = new DThuThangService();
->>>>>>> DangNhap
-=======
-    DThuThangService dThuService = new DThuThangService();
->>>>>>> ThongKe
 //    StatisticalDAO sDao = new StatisticalDAO();
     /**
      * Creates new form ThongKe
@@ -54,23 +42,8 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         tableShow_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh thu");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         setData(dThuService_360.getAllListDThu());
         tongTien_Text_352.setText(dThuService_360.TongTien());
-=======
-        setData(dThuService.getAllListDThu());
-        tongTien_Text_352.setText(dThuService.TongTien());
->>>>>>> DatBan
-=======
-        setData(dThuService.getAllListDThu());
-        tongTien_Text_352.setText(dThuService.TongTien());
->>>>>>> DangNhap
-=======
-        setData(dThuService.getAllListDThu());
-        tongTien_Text_352.setText(dThuService.TongTien());
->>>>>>> ThongKe
     }
     
     private void setData(List<DoanhThuThang> dThus) throws SQLException {
@@ -80,19 +53,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh Thu");
         for (DoanhThuThang dThu : dThus) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             defaultTableModel.addRow(new Object[]{dThu.getThang_360(), dThu.getDoanhThu_360()});
-=======
-            defaultTableModel.addRow(new Object[]{dThu.getThang(), dThu.getDoanhThu()});
->>>>>>> DatBan
-=======
-            defaultTableModel.addRow(new Object[]{dThu.getThang(), dThu.getDoanhThu()});
->>>>>>> DangNhap
-=======
-            defaultTableModel.addRow(new Object[]{dThu.getThang(), dThu.getDoanhThu()});
->>>>>>> ThongKe
         }
         
     }

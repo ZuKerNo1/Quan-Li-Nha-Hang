@@ -17,23 +17,8 @@ import model.Customer;
  * @author FSC
  */
 public class UpdateCustomer extends javax.swing.JFrame {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     Customer customer_354;
     CustomerService customerService_354;
-=======
-    Customer customer;
-    CustomerService customerService;
->>>>>>> DatBan
-=======
-    Customer customer;
-    CustomerService customerService;
->>>>>>> DangNhap
-=======
-    Customer customer;
-    CustomerService customerService;
->>>>>>> ThongKe
     /**
      * Creates new form UpdateCustomer
      */
@@ -41,9 +26,6 @@ public class UpdateCustomer extends javax.swing.JFrame {
         initComponents();
         male_354.isEnabled();
         female_354.isEnabled();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         customerService_354 = new CustomerService();
         customer_354 = customerService_354.getCustomerById(sdt);
         name_354.setText(customer_354.getName_354());
@@ -53,27 +35,6 @@ public class UpdateCustomer extends javax.swing.JFrame {
         if("Nam".equals(customer_354.getGender_354())){
             male_354.isSelected();
         }else if("Nữ".equals(customer_354.getGender_354())){
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        customerService = new CustomerService();
-        customer = customerService.getCustomerById(sdt);
-        name_354.setText(customer.getName_354());
-        address_354.setText(customer.getAddress_354());
-        dob_354.setText(customer.getDob_354());
-        phone_354.setText(customer.getPhone_354());
-        if("Nam".equals(customer.getGender_354())){
-            male_354.isSelected();
-        }else if("Nữ".equals(customer.getGender_354())){
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
             female_354.isSelected();
         }
     }
@@ -302,9 +263,6 @@ public class UpdateCustomer extends javax.swing.JFrame {
 
     private void submitBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_354ActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         customer_354.setName_354(name_354.getText());
         customer_354.setAddress_354(address_354.getText());
         customer_354.setPhone_354(phone_354.getText());
@@ -319,32 +277,6 @@ public class UpdateCustomer extends javax.swing.JFrame {
         customer_354.setGender_354(gender_354);
         try {
             customerService_354.updateCustomer(customer_354);
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        customer.setName_354(name_354.getText());
-        customer.setAddress_354(address_354.getText());
-        customer.setPhone_354(phone_354.getText());
-        customer.setDob_354(dob_354.getText());
-        // lay ra gia tri cho gender
-        String gender = "";
-        if(male_354.isSelected()){
-            gender += "Nam";
-        }else if(female_354.isSelected()){
-            gender += "Nữ";
-        }
-        customer.setGender_354(gender);
-        try {
-            customerService.updateCustomer(customer);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(UpdateCustomer.this, "Thay đổi thông tin nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(UpdateCustomer.class.getName()).log(Level.SEVERE, null, ex);

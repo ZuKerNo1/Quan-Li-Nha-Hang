@@ -5,16 +5,7 @@
  */
 package View.MainFrame;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import View.DangNhap.Login;
-=======
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
 import View.DatBan.TraCuuBan;
 import View.NguyenLieu.NguyenLieuView;
 import View.NhanVien.ViewEmployee;
@@ -91,119 +82,66 @@ public class mainFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-<<<<<<< HEAD
         khoNguyenLieuButton_335.setBackground(new java.awt.Color(255, 255, 255));
         khoNguyenLieuButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         khoNguyenLieuButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nguyenlieu.png"))); // NOI18N
         khoNguyenLieuButton_335.setText("Kho nguyên liệu");
         khoNguyenLieuButton_335.setBorder(null);
         khoNguyenLieuButton_335.addActionListener(new java.awt.event.ActionListener() {
-=======
-        khoNguyenLieuButton.setBackground(new java.awt.Color(255, 255, 255));
-        khoNguyenLieuButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        khoNguyenLieuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nguyenlieu.png"))); // NOI18N
-        khoNguyenLieuButton.setText("Kho nguyên liệu");
-        khoNguyenLieuButton.setBorder(null);
-        khoNguyenLieuButton.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> DatBan
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 khoNguyenLieuButton_335ActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
         quanLyNhanVienButton_335.setBackground(new java.awt.Color(255, 255, 255));
         quanLyNhanVienButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyNhanVienButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien.png"))); // NOI18N
         quanLyNhanVienButton_335.setText("Quản lý nhân viên");
         quanLyNhanVienButton_335.setBorder(null);
         quanLyNhanVienButton_335.addActionListener(new java.awt.event.ActionListener() {
-=======
-        quanLyNhanVienButton.setBackground(new java.awt.Color(255, 255, 255));
-        quanLyNhanVienButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        quanLyNhanVienButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien.png"))); // NOI18N
-        quanLyNhanVienButton.setText("Quản lý nhân viên");
-        quanLyNhanVienButton.setBorder(null);
-        quanLyNhanVienButton.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> DatBan
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quanLyNhanVienButton_335ActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
         quanLyKhachHangButton_335.setBackground(new java.awt.Color(255, 255, 255));
         quanLyKhachHangButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyKhachHangButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/khachang.png"))); // NOI18N
         quanLyKhachHangButton_335.setText("Quản lý khách hàng");
         quanLyKhachHangButton_335.setBorder(null);
         quanLyKhachHangButton_335.addActionListener(new java.awt.event.ActionListener() {
-=======
-        quanLyKhachHangButton.setBackground(new java.awt.Color(255, 255, 255));
-        quanLyKhachHangButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        quanLyKhachHangButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/khachang.png"))); // NOI18N
-        quanLyKhachHangButton.setText("Quản lý khách hàng");
-        quanLyKhachHangButton.setBorder(null);
-        quanLyKhachHangButton.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> DatBan
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quanLyKhachHangButton_335ActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
         dangXuatButton_335.setBackground(new java.awt.Color(255, 255, 255));
         dangXuatButton_335.setForeground(new java.awt.Color(255, 0, 0));
         dangXuatButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logout (1).png"))); // NOI18N
         dangXuatButton_335.setBorder(null);
         dangXuatButton_335.addActionListener(new java.awt.event.ActionListener() {
-=======
-        dangXuatButton.setBackground(new java.awt.Color(255, 255, 255));
-        dangXuatButton.setForeground(new java.awt.Color(255, 0, 0));
-        dangXuatButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logout (1).png"))); // NOI18N
-        dangXuatButton.setBorder(null);
-        dangXuatButton.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> DatBan
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 dangXuatButton_335ActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
         quanLyBanAnButton_335.setBackground(new java.awt.Color(255, 255, 255));
         quanLyBanAnButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyBanAnButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/banAn.png"))); // NOI18N
         quanLyBanAnButton_335.setText("Quản lý bàn ăn");
         quanLyBanAnButton_335.setBorder(null);
         quanLyBanAnButton_335.addActionListener(new java.awt.event.ActionListener() {
-=======
-        quanLyBanAnButton.setBackground(new java.awt.Color(255, 255, 255));
-        quanLyBanAnButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        quanLyBanAnButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/banAn.png"))); // NOI18N
-        quanLyBanAnButton.setText("Quản lý bàn ăn");
-        quanLyBanAnButton.setBorder(null);
-        quanLyBanAnButton.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> DatBan
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quanLyBanAnButton_335ActionPerformed(evt);
             }
         });
 
-<<<<<<< HEAD
         thongKeDoanhThuButton_335.setBackground(new java.awt.Color(255, 255, 255));
         thongKeDoanhThuButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         thongKeDoanhThuButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/money.png"))); // NOI18N
         thongKeDoanhThuButton_335.setText("Thống kê doanh thu");
         thongKeDoanhThuButton_335.setBorder(null);
         thongKeDoanhThuButton_335.addActionListener(new java.awt.event.ActionListener() {
-=======
-        thongKeDoanhThuButton.setBackground(new java.awt.Color(255, 255, 255));
-        thongKeDoanhThuButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        thongKeDoanhThuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/money.png"))); // NOI18N
-        thongKeDoanhThuButton.setText("Thống kê doanh thu");
-        thongKeDoanhThuButton.setBorder(null);
-        thongKeDoanhThuButton.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> DatBan
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 thongKeDoanhThuButton_335ActionPerformed(evt);
             }
@@ -218,9 +156,6 @@ public class mainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                             .addComponent(quanLyBanAnButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
                             .addComponent(khoNguyenLieuButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(7, 7, 7)
@@ -231,42 +166,6 @@ public class mainFrame extends javax.swing.JFrame {
                         .addComponent(quanLyNhanVienButton_335, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(quanLyKhachHangButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
-=======
-                            .addComponent(quanLyBanAnButton, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
-                            .addComponent(khoNguyenLieuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dangXuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(quanLyNhanVienButton, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
->>>>>>> DatBan
-=======
-                            .addComponent(quanLyBanAnButton, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
-                            .addComponent(khoNguyenLieuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dangXuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(quanLyNhanVienButton, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
->>>>>>> DangNhap
-=======
-                            .addComponent(quanLyBanAnButton, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
-                            .addComponent(khoNguyenLieuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(dangXuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(quanLyNhanVienButton, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
->>>>>>> ThongKe
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -326,19 +225,7 @@ public class mainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private void thongKeDoanhThuButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButton_335ActionPerformed
-=======
-    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
->>>>>>> DatBan
-=======
-    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
->>>>>>> DangNhap
-=======
-    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
->>>>>>> ThongKe
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
@@ -347,66 +234,7 @@ public class mainFrame extends javax.swing.JFrame {
             Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }//GEN-LAST:event_thongKeDoanhThuButton_335ActionPerformed
-=======
-    }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
-=======
-=======
->>>>>>> ThongKe
-    }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
-
-    private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
-        try {
-            // TODO add your handling code here:
-            new TraCuuBan().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.dispose();
-    }//GEN-LAST:event_quanLyBanAnButtonActionPerformed
-
-    private void dangXuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dangXuatButtonActionPerformed
-
-    private void quanLyKhachHangButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButtonActionPerformed
-        try {
-            // TODO add your handling code here:
-            new View.KhachHang.ViewCustomer().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.dispose();
-    }//GEN-LAST:event_quanLyKhachHangButtonActionPerformed
-
-    private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
-        try {
-            // TODO add your handling code here:
-            new ViewEmployee().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.dispose();
-        
-    }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
-<<<<<<< HEAD
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-
-    private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
-        try {
-            // TODO add your handling code here:
-            new TraCuuBan().setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.dispose();
-    }//GEN-LAST:event_quanLyBanAnButtonActionPerformed
->>>>>>> DatBan
 
     private void quanLyBanAnButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButton_335ActionPerformed
         try {
@@ -418,19 +246,13 @@ public class mainFrame extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_quanLyBanAnButton_335ActionPerformed
 
-<<<<<<< HEAD
     private void dangXuatButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButton_335ActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
-<<<<<<< HEAD
         new Login().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_dangXuatButton_335ActionPerformed
 
     private void quanLyKhachHangButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButton_335ActionPerformed
-=======
-    private void quanLyKhachHangButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButtonActionPerformed
->>>>>>> DatBan
         try {
             // TODO add your handling code here:
             new View.KhachHang.ViewCustomer().setVisible(true);
@@ -438,15 +260,9 @@ public class mainFrame extends javax.swing.JFrame {
             Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
-<<<<<<< HEAD
     }//GEN-LAST:event_quanLyKhachHangButton_335ActionPerformed
 
     private void quanLyNhanVienButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButton_335ActionPerformed
-=======
-    }//GEN-LAST:event_quanLyKhachHangButtonActionPerformed
-
-    private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
->>>>>>> DatBan
         try {
             // TODO add your handling code here:
             new ViewEmployee().setVisible(true);
@@ -455,18 +271,10 @@ public class mainFrame extends javax.swing.JFrame {
         }
         this.dispose();
         
-<<<<<<< HEAD
     }//GEN-LAST:event_quanLyNhanVienButton_335ActionPerformed
-=======
-    }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
->>>>>>> DatBan
 
     private void khoNguyenLieuButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_khoNguyenLieuButton_335ActionPerformed
         // TODO add your handling code here:
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         try {
             // TODO add your handling code here:
             new NguyenLieuView().setVisible(true);
@@ -474,17 +282,7 @@ public class mainFrame extends javax.swing.JFrame {
             Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     }//GEN-LAST:event_khoNguyenLieuButton_335ActionPerformed
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-    }//GEN-LAST:event_khoNguyenLieuButtonActionPerformed
->>>>>>> DatBan
 
     /**
      * @param args the command line arguments
@@ -556,31 +354,11 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JButton dangXuatButton_335;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private javax.swing.JButton khoNguyenLieuButton_335;
     private javax.swing.JButton quanLyBanAnButton_335;
     private javax.swing.JButton quanLyKhachHangButton_335;
     private javax.swing.JButton quanLyNhanVienButton_335;
     private javax.swing.JButton thongKeDoanhThuButton_335;
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-    private javax.swing.JButton khoNguyenLieuButton;
-    private javax.swing.JButton quanLyBanAnButton;
-    private javax.swing.JButton quanLyKhachHangButton;
-    private javax.swing.JButton quanLyNhanVienButton;
-    private javax.swing.JButton thongKeDoanhThuButton;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
     private javax.swing.JLabel titleLabel2;
     private javax.swing.JPanel titlePanel2;
     // End of variables declaration//GEN-END:variables

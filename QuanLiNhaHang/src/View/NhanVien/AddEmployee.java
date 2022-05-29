@@ -16,37 +16,15 @@ import model.Employee;
  * @author AD
  */
 public class AddEmployee extends javax.swing.JFrame {
-<<<<<<< HEAD
     Employee employee_354;
     EmployeeService serviceEmployee_354;
-=======
-    Employee employee;
-    EmployeeService serviceEmployee;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
     /**
      * Creates new form AddEmployee
      */
     public AddEmployee() {
         initComponents();
-<<<<<<< HEAD
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
-=======
-        employee = new Employee();
-        serviceEmployee = new EmployeeService();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
     }
 
     /**
@@ -397,9 +375,6 @@ public class AddEmployee extends javax.swing.JFrame {
 
     private void submitBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_354ActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         employee_354.setId_354(id_354.getText());
         employee_354.setName_354(name_354.getText());
         employee_354.setAddress_354(address_354.getText());
@@ -438,56 +413,6 @@ public class AddEmployee extends javax.swing.JFrame {
         employee_354.setStatus_354(status_354);
         try {
             serviceEmployee_354.addEmployee(employee_354);
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        employee.setId_354(id_354.getText());
-        employee.setName_354(name_354.getText());
-        employee.setAddress_354(address_354.getText());
-        employee.setPhone_354(phone_354.getText());
-        employee.setDob_354(dob_354.getText());
-        employee.setSalary_354(Double.valueOf(salary_354.getText()));
-        // lay ra gia tri cho gender
-        String gender = "";
-        if(male_354.isSelected()){
-            gender += "Nam";
-        }else if(female_354.isSelected()){
-            gender += "Nữ";
-        }
-        employee.setGender_354(gender);
-        // lay ra gia tri cho role
-        String role = "";
-        if(phucVu_354.isSelected()){
-            role += "Phục vụ";
-        }else if(dauBep_354.isSelected()){
-            role += "Đầu bếp";
-        }else if(baoVe_354.isSelected()){
-            role += "Bảo vệ";
-        }else if(quanLy_354.isSelected()){
-            role += "Quản lí";
-        }else if(thuNgan_354.isSelected()){
-            role += "Thu ngân";
-        }
-        employee.setRole_354(role);
-        // lay ra gia  tri cho status
-        String status = "";
-        if(working_354.isSelected()){
-            status += "Đang làm việc";
-        }else if(leave_354.isSelected()){
-            status += "Nghỉ làm";
-        }
-        employee.setStatus_354(status);
-        try {
-            serviceEmployee.addEmployee(employee);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(AddEmployee.this, "Thêm nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);

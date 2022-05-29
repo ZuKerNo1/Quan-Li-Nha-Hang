@@ -17,19 +17,8 @@ public class JDBCConnection {
     public static Connection JDBCConnection() throws SQLServerException, SQLException{
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setUser("sa");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         ds.setPassword("123456");
         ds.setServerName("ADMIN");
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        ds.setPassword("Trung@2305");
-        ds.setServerName("DESKTOP-8GKPO1M\\SQLEXPRESS");
->>>>>>> DatBan
         ds.setPortNumber(1433);
         ds.setDatabaseName("QuanLiNhaHang");
         ds.setEncrypt(false);

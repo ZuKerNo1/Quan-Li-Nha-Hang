@@ -187,6 +187,9 @@
                   <Image iconType="3" name="/image/search.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="searchBtn_354ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="backBtn_354">
               <Properties>

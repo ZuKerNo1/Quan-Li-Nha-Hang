@@ -14,9 +14,6 @@ import java.util.List;
  * @author AD
  */
 public class EmployeeService {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private ManagerEmp managerEmp_354;
     public EmployeeService(){
         managerEmp_354 = new ManagerEmp();
@@ -35,35 +32,8 @@ public class EmployeeService {
     }
     public Employee getEmployeeById(String id_354) throws SQLException{
         return managerEmp_354.getEmployeeById_354(id_354);
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-    private ManagerEmp managerEmp;
-    public EmployeeService(){
-        managerEmp = new ManagerEmp();
     }
-    public List<Employee> getAllEmployees() throws SQLException{
-        return managerEmp.getAllEmployees();
-    }
-    public void addEmployee(Employee employee) throws SQLException{
-        managerEmp.addEmployee(employee);
-    }
-    public void deleteEmployee(String id) throws SQLException{
-        managerEmp.deleteEmployee(id);
-    }
-    public void updateEmployee(Employee employee) throws SQLException{
-        managerEmp.updateEmployee(employee);
-    }
-    public Employee getEmployeeById(String id) throws SQLException{
-        return managerEmp.getEmployeeById(id);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
+    public Employee find(String find_354) throws SQLException{
+        return managerEmp_354.findEmployee_354(find_354);
     }
 }

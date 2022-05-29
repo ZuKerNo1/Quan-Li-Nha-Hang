@@ -407,9 +407,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "SĐT đã được đăng ký");
             }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -425,28 +422,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
-            hoaDonService.addHoaDon(idBA.getText(), txtRole_352.getText());
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 

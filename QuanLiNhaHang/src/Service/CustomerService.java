@@ -8,27 +8,12 @@ import Manager.ManagerCus;
 import java.sql.SQLException;
 import java.util.List;
 import model.Customer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import model.DatBan;
->>>>>>> DatBan
-=======
-import model.DatBan;
->>>>>>> DangNhap
-=======
-import model.DatBan;
->>>>>>> ThongKe
 
 /**
  *
  * @author AD
  */
 public class CustomerService {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private ManagerCus managerCus_354;
     public CustomerService(){
         managerCus_354 = new ManagerCus();
@@ -51,41 +36,4 @@ public class CustomerService {
     public Customer find(String find_354) throws SQLException{
         return managerCus_354.findCustomer_354(find_354);
     }
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-    private ManagerCus managerCus;
-    public CustomerService(){
-        managerCus = new ManagerCus();
-    }
-    public List<Customer> getAllCustomers() throws SQLException{
-        return managerCus.getAllCustomers();
-    }
-    public void deleteCustomer(String id) throws SQLException{
-        managerCus.deleteCustomer(id);
-    }
-    public void updateCustomer(Customer customer) throws SQLException{
-        managerCus.updateCustomer(customer);
-    }
-    public Customer getCustomerById(String sdt) throws SQLException{
-        return managerCus.getCustomerById(sdt);
-    }
-    public Customer find(String find) throws SQLException{
-        return managerCus.findBook(find);
-    }
-
-    public void addCustomer(Customer customer) throws SQLException {
-        managerCus.addCustomer(customer);
-    }
-
-    
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
 }

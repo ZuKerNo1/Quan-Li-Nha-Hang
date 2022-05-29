@@ -25,45 +25,15 @@ import model.Customer;
  */
 public class ViewCustomer extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     Customer customer_354;
     CustomerService customerService_354;
-=======
-    Customer customer;
-    CustomerService customerService;
->>>>>>> DatBan
-=======
-    Customer customer;
-    CustomerService customerService;
->>>>>>> DangNhap
-=======
-    Customer customer;
-    CustomerService customerService;
->>>>>>> ThongKe
     /**
      * Creates new form ViewCustomer
      */
     public ViewCustomer() throws SQLException {
         initComponents();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         customer_354 = new Customer();
         customerService_354 = new CustomerService();
-=======
-        customer = new Customer();
-        customerService = new CustomerService();
->>>>>>> DatBan
-=======
-        customer = new Customer();
-        customerService = new CustomerService();
->>>>>>> DangNhap
-=======
-        customer = new Customer();
-        customerService = new CustomerService();
->>>>>>> ThongKe
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -81,19 +51,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         table_354.setRowHeight(50);
         table_354.validate();
         table_354.repaint();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         setTableData_354(customerService_354.getAllCustomers());
-=======
-        setTableData(customerService.getAllCustomers());
->>>>>>> DatBan
-=======
-        setTableData(customerService.getAllCustomers());
->>>>>>> DangNhap
-=======
-        setTableData(customerService.getAllCustomers());
->>>>>>> ThongKe
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
@@ -129,16 +87,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         deleteBtn_354 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         table_354 = new com.raven.suportSwing.TableColumn();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         refreshBtn_354 = new javax.swing.JButton();
-=======
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         jLabel2 = new javax.swing.JLabel();
         label_354 = new javax.swing.JLabel();
 
@@ -193,17 +142,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         });
 
         updateBtn_354.setBackground(new java.awt.Color(204, 153, 255));
-<<<<<<< HEAD
         updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/update.png"))); // NOI18N
-=======
-        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         updateBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtn_354ActionPerformed(evt);
@@ -232,9 +171,6 @@ public class ViewCustomer extends javax.swing.JFrame {
         table_354.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane4.setViewportView(table_354);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         refreshBtn_354.setBackground(new java.awt.Color(204, 153, 255));
         refreshBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
         refreshBtn_354.addActionListener(new java.awt.event.ActionListener() {
@@ -243,12 +179,6 @@ public class ViewCustomer extends javax.swing.JFrame {
             }
         });
 
-=======
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -346,9 +276,6 @@ public class ViewCustomer extends javax.swing.JFrame {
 
     private void updateBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_354ActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -356,25 +283,6 @@ public class ViewCustomer extends javax.swing.JFrame {
             String customerID_354 = (String) table_354.getValueAt(row_354, 3);
             try {
                 new UpdateCustomer(customerID_354).setVisible(true);
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        int row = table_354.getSelectedRow();
-        if(row == -1){
-            JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        }else{
-            String customerID = (String) table_354.getValueAt(row, 3);
-            try {
-                new UpdateCustomer(customerID).setVisible(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -384,39 +292,16 @@ public class ViewCustomer extends javax.swing.JFrame {
 
     private void searchBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn_354ActionPerformed
         // TODO add your handling code here:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         Customer c_354 = new Customer();
         String find = search_354.getText();
         if(find == ""){
             try {
                 setTableData_354(customerService_354.getAllCustomers());
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-        Customer c = new Customer();
-        String find = search_354.getText();
-        if(find == ""){
-            try {
-                setTableData(customerService.getAllCustomers());
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
             try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 c_354 = customerService_354.find(find);
             } catch (SQLException ex) {
                 Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
@@ -429,30 +314,6 @@ public class ViewCustomer extends javax.swing.JFrame {
                     c_354.getGender_354(),
                     c_354.getPhone_354(),
                     c_354.getAddress_354()
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-                c = customerService.find(find);
-            } catch (SQLException ex) {
-                Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (c != null) {
-                defaulttableModel_354.setRowCount(0);
-                defaulttableModel_354.addRow(new Object[]{
-                    c.getName_354(),
-                    c.getDob_354(),
-                    c.getGender_354(),
-                    c.getPhone_354(),
-                    c.getAddress_354()
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
                 });
             } else {
                 defaulttableModel_354.setNumRows(0);
@@ -460,9 +321,6 @@ public class ViewCustomer extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_searchBtn_354ActionPerformed
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     private void refreshBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_354ActionPerformed
         // TODO add your handling code here:
@@ -477,22 +335,6 @@ public class ViewCustomer extends javax.swing.JFrame {
         for(Customer customer_354: Customers){
             defaulttableModel_354.addRow(new Object[]{customer_354.getName_354(), customer_354.getDob_354(), customer_354.getGender_354(), customer_354.getPhone_354(),
             customer_354.getAddress_354()});
-=======
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
-    private void setTableData(List<Customer> Customers){
-        for(Customer customer: Customers){
-            defaulttableModel_354.addRow(new Object[]{customer.getName_354(), customer.getDob_354(), customer.getGender_354(), customer.getPhone_354(),
-            customer.getAddress_354()});
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
         }
     }
     /**
@@ -544,16 +386,7 @@ public class ViewCustomer extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel label_354;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     private javax.swing.JButton refreshBtn_354;
-=======
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
     private javax.swing.JButton searchBtn_354;
     private javax.swing.JTextField search_354;
     private com.raven.suportSwing.TableColumn table_354;
