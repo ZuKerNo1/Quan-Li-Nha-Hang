@@ -149,7 +149,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="backBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jButton1" min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="refreshBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="updateBtn_354" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -175,7 +175,7 @@
                           <Component id="backBtn_354" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="updateBtn_354" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
                           <Component id="deleteBtn_354" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="jButton1" min="-2" pref="60" max="-2" attributes="0"/>
+                          <Component id="refreshBtn_354" min="-2" pref="60" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="38" max="32767" attributes="0"/>
                   </Group>
@@ -260,7 +260,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="refreshBtn_354">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="99" red="cc" type="rgb"/>
@@ -269,6 +269,9 @@
                   <Image iconType="3" name="/image/updating.png"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refreshBtn_354ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
