@@ -97,7 +97,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         table_354 = new com.raven.suportSwing.TableColumn();
         addBtn_354 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        refreshBtn_354 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         label_354 = new javax.swing.JLabel();
@@ -186,8 +186,13 @@ public class ViewEmployee extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(232, 64, 60));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+        refreshBtn_354.setBackground(new java.awt.Color(232, 64, 60));
+        refreshBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+        refreshBtn_354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshBtn_354ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -205,7 +210,7 @@ public class ViewEmployee extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(refreshBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(updateBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
@@ -230,7 +235,7 @@ public class ViewEmployee extends javax.swing.JFrame {
                     .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(refreshBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
 
@@ -353,6 +358,16 @@ public class ViewEmployee extends javax.swing.JFrame {
             label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         }
     }//GEN-LAST:event_deleteBtn_354ActionPerformed
+
+    private void refreshBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_354ActionPerformed
+        // TODO add your handling code here:
+        defaulttableModel_354.setRowCount(0);
+        try {
+            setTableData_354(serviceEmployee_354.getAllEmployees());
+        } catch (SQLException ex) {
+            Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_refreshBtn_354ActionPerformed
     private void setTableData_354(List<Employee> Employees){
         for(Employee employee_354: Employees){
             defaulttableModel_354.addRow(new Object[]{employee_354.getId_354(), employee_354.getName_354(), employee_354.getDob_354(), employee_354.getGender_354(), employee_354.getPhone_354(),
@@ -402,7 +417,6 @@ public class ViewEmployee extends javax.swing.JFrame {
     private javax.swing.JButton addBtn_354;
     private javax.swing.JButton backBtn_354;
     private javax.swing.JButton deleteBtn_354;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -411,6 +425,7 @@ public class ViewEmployee extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JLabel label_354;
+    private javax.swing.JButton refreshBtn_354;
     private javax.swing.JButton searchBtn_354;
     private javax.swing.JTextField search_354;
     private com.raven.suportSwing.TableColumn table_354;
