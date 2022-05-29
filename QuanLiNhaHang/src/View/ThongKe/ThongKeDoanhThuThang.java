@@ -8,9 +8,8 @@ package View;
 
 import Service.DThuThangService;
 import View.MainFrame.mainFrame;
-//import com.raven.form.ShowChart;
-//import com.raven.form.showChartRevenue;
-
+import View.ThongKe.ShowChart;
+import View.ThongKe.showChartRevenue;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -25,7 +24,6 @@ import model.DoanhThuThang;
  */
 public class ThongKeDoanhThuThang extends javax.swing.JFrame {
     DThuThangService dThuService_360 = new DThuThangService();
-//    StatisticalDAO sDao = new StatisticalDAO();
     /**
      * Creates new form ThongKe
      */
@@ -57,31 +55,6 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         }
         
     }
-//    public void fillYear() {
-//        DefaultComboBoxModel model = (DefaultComboBoxModel) cBox_Year.getModel();
-//        model.removeAllElements();
-//        List<Integer> list = sDao.selectYears();
-//        for (Integer i : list) {
-//            model.addElement(i);
-//        }
-//    }
-//
-//    public void fillTable() throws Exception {
-//        DefaultTableModel model = (DefaultTableModel) tableShow.getModel();
-//        model.setRowCount(0);
-//        int year = (int) cBox_Year.getSelectedItem();
-//        List<Object[]> list = sDao.getSalesStatisticalRevenue(year);
-//        for (Object[] o : list) {
-//            model.addRow(o);
-//        }
-//        for (int i = 0; i < tableShow.getRowCount(); i++) {
-//            int moneyImport = sDao.getSelectImport((int) tableShow.getValueAt(i, 0), (int) cBox_Year.getSelectedItem());
-//            int moneyReturn = (int) tableShow.getValueAt(i, 3);
-//            tableShow.setValueAt(moneyReturn, i, 3);
-//            tableShow.setValueAt(moneyImport, i, 4);
-//            tableShow.setValueAt((int) tableShow.getValueAt(i, 2) - (moneyImport + moneyReturn), i, 5);
-//        }
-//    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -351,12 +324,12 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
 
     private void BieuDo_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BieuDo_352ActionPerformed
         // TODO add your handling code here:
-//        if (radiStreet.isSelected()) {
-//            new ShowChart((DefaultTableModel) tableShow.getModel(), null).setVisible(true);
-//
-//        } else {
-//            new showChartRevenue((DefaultTableModel) tableShow.getModel()).setVisible(true);
-//        }
+        if (radiStreet_352.isSelected()) {
+            new ShowChart((DefaultTableModel) tableShow_352.getModel(), null).setVisible(true);
+
+        } else {
+            new showChartRevenue((DefaultTableModel) tableShow_352.getModel()).setVisible(true);
+        }
     }//GEN-LAST:event_BieuDo_352ActionPerformed
 
     private void radiColumn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiColumn_352ActionPerformed

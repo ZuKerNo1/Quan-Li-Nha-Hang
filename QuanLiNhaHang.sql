@@ -1,26 +1,7 @@
 ﻿
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 CREATE DATABASE QuanLiNhaHang
 go
 use QuanLiNhaHang
-=======
-CREATE DATABASE QuanLiNhaHang5
-go
-use QuanLiNhaHang5
->>>>>>> DatBan
-=======
-CREATE DATABASE QuanLiNhaHang5
-go
-use QuanLiNhaHang5
->>>>>>> DangNhap
-=======
-CREATE DATABASE QuanLiNhaHang5
-go
-use QuanLiNhaHang5
->>>>>>> ThongKe
-
 
 --Tao table
 go
@@ -148,18 +129,8 @@ values
 	('NC2001',N'Rượu vang Screaming Eagle Cabernet Sauvignon 1992',20,'Thùng','NV001')
 go
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-select * from NguyenLieu
->>>>>>> DatBan
-=======
-select * from NguyenLieu
->>>>>>> DangNhap
-=======
-select * from NguyenLieu
->>>>>>> ThongKe
+
+
 insert into BanAn
 values
 	('BA001',N'Trống'),
@@ -171,20 +142,7 @@ values
 	('BA007',N'Trống'),
 	('BA008',N'Trống'),
 	('BA009',N'Trống'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 	('BA010',N'Trống')
-=======
-	('BA0010',N'Trống')
->>>>>>> DatBan
-=======
-	('BA0010',N'Trống')
->>>>>>> DangNhap
-=======
-	('BA0010',N'Trống')
->>>>>>> ThongKe
-
 go
 
 set dateformat dmy
@@ -202,46 +160,24 @@ values
 	('MA007',N'Lẩu đặc biệt',250000),
 	('MA008',N'Cơm rang bò',120000),
 	('MA009',N'Nước suối',50000),
-	('MA0010',N'Rượu vang',200000)
-<<<<<<< HEAD
-<<<<<<< HEAD
-
+	('MA010',N'Rượu vang',200000)
 
 go
 insert into account
 values ('trung','123', 'NV001'),
-<<<<<<< HEAD
 	   ('truong','123', 'NV002'),
 	   ('vu','123', 'NV005')
-=======
-	   ('truong','123', 'NV002')
-
->>>>>>> DatBan
-=======
-=======
->>>>>>> ThongKe
-
 
 go
-insert into account
-values ('trung','123', 'NV001'),
-	   ('truong','123', 'NV002')
 
-<<<<<<< HEAD
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
+
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from ChiTietHoaDon as cthd, MonAn as ma
 where cthd.idMonAn = ma.idMonAn 
 group by cthd.idHoaDon
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ThongKe
+
 --Thống kê theo tháng
 
 select month(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
@@ -260,14 +196,4 @@ select day(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','
 from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
 group by day(hd.ngayThanhToan)
-
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> DatBan
-=======
->>>>>>> DangNhap
-=======
->>>>>>> ThongKe
 

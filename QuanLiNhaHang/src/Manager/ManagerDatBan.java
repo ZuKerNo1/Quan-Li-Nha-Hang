@@ -13,7 +13,7 @@ import java.util.Calendar;
 import java.util.List;
 import model.DatBan;
 import model.Employee;
-
+import model.Table;
 
 /**
  *
@@ -88,6 +88,20 @@ public class ManagerDatBan {
     public void deleteDatBan_352(String id) throws SQLException{
        Connection connection = JDBCConnection.JDBCConnection();
        String sql = "delete from DatBan where idBA= ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, id);
+            int rs = preparedStatement.executeUpdate();
+            System.out.println(rs);
+        } catch (SQLException e) {
+        }
+    }
+    
+    public void chuyenTrangThai_DatBan(String id) throws SQLException{
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "update BanAn\n" +
+        "set trangThaiBan = N'Đã đặt bàn'\n" +
+        "where idBA = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1, id);
