@@ -361,12 +361,12 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void refreshBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_354ActionPerformed
         // TODO add your handling code here:
-//        defaulttableModel_354.setRowCount(0);
-//        try {
-//            setTableData_354(serviceEmployee_354.getAllEmployees());
-//        } catch (SQLException ex) {
-//            Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        defaulttableModel_354.setRowCount(0);
+        try {
+            setTableData_354(serviceEmployee_354.getAllEmployees());
+        } catch (SQLException ex) {
+            Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_refreshBtn_354ActionPerformed
     private void setTableData_354(List<Employee> Employees){
         for(Employee employee_354: Employees){
