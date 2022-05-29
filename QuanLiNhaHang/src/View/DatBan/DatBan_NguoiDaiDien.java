@@ -409,6 +409,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -427,6 +428,8 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -438,9 +441,12 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         
        
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 

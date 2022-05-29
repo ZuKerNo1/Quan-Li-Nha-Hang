@@ -27,6 +27,7 @@ public class ViewCustomer extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     Customer customer_354;
     CustomerService customerService_354;
 =======
@@ -37,11 +38,16 @@ public class ViewCustomer extends javax.swing.JFrame {
     Customer customer;
     CustomerService customerService;
 >>>>>>> DangNhap
+=======
+    Customer customer;
+    CustomerService customerService;
+>>>>>>> ThongKe
     /**
      * Creates new form ViewCustomer
      */
     public ViewCustomer() throws SQLException {
         initComponents();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         customer_354 = new Customer();
@@ -54,6 +60,10 @@ public class ViewCustomer extends javax.swing.JFrame {
         customer = new Customer();
         customerService = new CustomerService();
 >>>>>>> DangNhap
+=======
+        customer = new Customer();
+        customerService = new CustomerService();
+>>>>>>> ThongKe
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -73,6 +83,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         table_354.repaint();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         setTableData_354(customerService_354.getAllCustomers());
 =======
         setTableData(customerService.getAllCustomers());
@@ -80,6 +91,9 @@ public class ViewCustomer extends javax.swing.JFrame {
 =======
         setTableData(customerService.getAllCustomers());
 >>>>>>> DangNhap
+=======
+        setTableData(customerService.getAllCustomers());
+>>>>>>> ThongKe
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
@@ -117,11 +131,14 @@ public class ViewCustomer extends javax.swing.JFrame {
         table_354 = new com.raven.suportSwing.TableColumn();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         refreshBtn_354 = new javax.swing.JButton();
 =======
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         jLabel2 = new javax.swing.JLabel();
         label_354 = new javax.swing.JLabel();
 
@@ -181,9 +198,12 @@ public class ViewCustomer extends javax.swing.JFrame {
 =======
         updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         updateBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtn_354ActionPerformed(evt);
@@ -214,6 +234,7 @@ public class ViewCustomer extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         refreshBtn_354.setBackground(new java.awt.Color(204, 153, 255));
         refreshBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
         refreshBtn_354.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +247,8 @@ public class ViewCustomer extends javax.swing.JFrame {
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -325,6 +348,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         // TODO add your handling code here:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -335,6 +359,8 @@ public class ViewCustomer extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         int row = table_354.getSelectedRow();
         if(row == -1){
             JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -343,9 +369,12 @@ public class ViewCustomer extends javax.swing.JFrame {
             try {
                 new UpdateCustomer(customerID).setVisible(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -357,6 +386,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         // TODO add your handling code here:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Customer c_354 = new Customer();
         String find = search_354.getText();
         if(find == ""){
@@ -365,20 +395,26 @@ public class ViewCustomer extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         Customer c = new Customer();
         String find = search_354.getText();
         if(find == ""){
             try {
                 setTableData(customerService.getAllCustomers());
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
             try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 c_354 = customerService_354.find(find);
@@ -396,6 +432,8 @@ public class ViewCustomer extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 c = customerService.find(find);
             } catch (SQLException ex) {
                 Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
@@ -409,9 +447,12 @@ public class ViewCustomer extends javax.swing.JFrame {
                     c.getPhone_354(),
                     c.getAddress_354()
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 });
             } else {
                 defaulttableModel_354.setNumRows(0);
@@ -419,6 +460,7 @@ public class ViewCustomer extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_searchBtn_354ActionPerformed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -438,14 +480,19 @@ public class ViewCustomer extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private void setTableData(List<Customer> Customers){
         for(Customer customer: Customers){
             defaulttableModel_354.addRow(new Object[]{customer.getName_354(), customer.getDob_354(), customer.getGender_354(), customer.getPhone_354(),
             customer.getAddress_354()});
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         }
     }
     /**
@@ -499,11 +546,14 @@ public class ViewCustomer extends javax.swing.JFrame {
     private javax.swing.JLabel label_354;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JButton refreshBtn_354;
 =======
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private javax.swing.JButton searchBtn_354;
     private javax.swing.JTextField search_354;
     private com.raven.suportSwing.TableColumn table_354;

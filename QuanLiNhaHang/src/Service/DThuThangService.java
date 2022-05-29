@@ -17,6 +17,7 @@ import model.DoanhThuThang;
 public class DThuThangService {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ManagerDThuThang dThuThangManager_360;
     public DThuThangService() {
         dThuThangManager_360 = new ManagerDThuThang();
@@ -31,6 +32,8 @@ public class DThuThangService {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private ManagerDThuThang dThuThangManager;
     public DThuThangService() {
         dThuThangManager = new ManagerDThuThang();
@@ -43,8 +46,11 @@ public class DThuThangService {
     public String TongTien(){
         return dThuThangManager.TongTien();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     }
 }

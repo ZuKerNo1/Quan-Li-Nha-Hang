@@ -270,9 +270,12 @@ public class TraCuuBan extends javax.swing.JFrame {
         } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             String ID = (String) traCuuTable_352.getValueAt(row, 0);
             try {
                 new DatBan_NguoiDaiDien(ID).setVisible(true);
@@ -293,6 +296,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
             String ID = (String) traCuuTable_352.getValueAt(row, 0);
             try {
@@ -302,11 +306,17 @@ public class TraCuuBan extends javax.swing.JFrame {
             try {
                 new ChonMonFrame(ID).setVisible(true);
 >>>>>>> DangNhap
+=======
+            String ID = (String) traCuuTable_352.getValueAt(row, 0);
+            try {
+                new ChonMonFrame(ID).setVisible(true);
+>>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
             }
             this.dispose();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }//GEN-LAST:event_clearBtn_352ActionPerformed
@@ -339,6 +349,10 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_goiMon_352ActionPerformed
 
 >>>>>>> DangNhap
+=======
+    }//GEN-LAST:event_goiMon_352ActionPerformed
+
+>>>>>>> ThongKe
     private void huyDat_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_huyDat_352ActionPerformed
 //        if (JOptionPane.showConfirmDialog(this, "Bạn có muốn xóa không") == JOptionPane.NO_OPTION) {
 //            return;

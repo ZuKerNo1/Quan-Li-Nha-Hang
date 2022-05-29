@@ -30,9 +30,12 @@ public class ViewEmployee extends javax.swing.JFrame {
     Employee employee;
     EmployeeService serviceEmployee;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     /**
      * Creates new form ViewEmployee
      */
@@ -45,9 +48,12 @@ public class ViewEmployee extends javax.swing.JFrame {
         employee = new Employee();
         serviceEmployee = new EmployeeService();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -78,6 +84,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         table_354.repaint();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         setTableData_354(serviceEmployee_354.getAllEmployees());
 =======
         setTableData(serviceEmployee.getAllEmployees());
@@ -85,6 +92,9 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
         setTableData(serviceEmployee.getAllEmployees());
 >>>>>>> DangNhap
+=======
+        setTableData(serviceEmployee.getAllEmployees());
+>>>>>>> ThongKe
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
@@ -173,9 +183,12 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
         updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         updateBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtn_354ActionPerformed(evt);
@@ -352,6 +365,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         // TODO add your handling code here:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -362,6 +376,8 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         int row = table_354.getSelectedRow();
         if(row == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -370,9 +386,12 @@ public class ViewEmployee extends javax.swing.JFrame {
             try {
                 new UpdateEmployee(employeeID).setVisible(true);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -382,6 +401,7 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void deleteBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_354ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         int row_354 = table_354.getSelectedRow();
@@ -397,6 +417,8 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         int row = table_354.getSelectedRow();
         if(row == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
@@ -408,15 +430,19 @@ public class ViewEmployee extends javax.swing.JFrame {
                 try {
                     serviceEmployee.deleteEmployee(employeeID);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
             defaulttableModel_354.setRowCount(0);
             try {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 setTableData_354(serviceEmployee_354.getAllEmployees());
@@ -426,12 +452,16 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
                 setTableData(serviceEmployee.getAllEmployees());
 >>>>>>> DangNhap
+=======
+                setTableData(serviceEmployee.getAllEmployees());
+>>>>>>> ThongKe
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
             label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         }
     }//GEN-LAST:event_deleteBtn_354ActionPerformed
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -451,6 +481,8 @@ public class ViewEmployee extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private void setTableData(List<Employee> Employees){
         for(Employee employee: Employees){
             defaulttableModel_354.addRow(new Object[]{employee.getId_354(), employee.getName_354(), employee.getDob_354(), employee.getGender_354(), employee.getPhone_354(),

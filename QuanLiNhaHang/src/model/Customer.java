@@ -11,6 +11,7 @@ package model;
 public class Customer {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String name_354, phone_354, dob_354, gender_354, address_354;
 =======
     private String idKH_354,name_354, phone_354, dob_354, gender_354, address_354;
@@ -18,6 +19,9 @@ public class Customer {
 =======
     private String idKH_354,name_354, phone_354, dob_354, gender_354, address_354;
 >>>>>>> DangNhap
+=======
+    private String idKH_354,name_354, phone_354, dob_354, gender_354, address_354;
+>>>>>>> ThongKe
 
     public String getName_354() {
         return name_354;
@@ -53,9 +57,12 @@ public class Customer {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     public String getIdKH_354() {
         return idKH_354;
     }
@@ -65,9 +72,12 @@ public class Customer {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     public String getAddress_354() {
         return address_354;
     }

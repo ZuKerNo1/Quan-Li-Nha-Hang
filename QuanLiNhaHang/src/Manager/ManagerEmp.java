@@ -90,9 +90,12 @@ public class ManagerEmp {
 =======
     public void addEmployee(Employee employee) throws SQLException {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "set dateformat dmy Insert into NhanVien(idNV, tenNV, ngaySinh, gioiTinh, SDT, diaChi, luong, tenCV, status)"
                 + "Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -119,9 +122,12 @@ public class ManagerEmp {
             preparedStatement.setString(8, employee.getRole_354());
             preparedStatement.setString(9, employee.getStatus_354());
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             int rs = preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -154,9 +160,12 @@ public class ManagerEmp {
             preparedStatement.setString(8, customer.getStatus_354());
             preparedStatement.setString(9, customer.getId_354());
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {
@@ -178,6 +187,7 @@ public class ManagerEmp {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Employee findEmployee_354(String name_354) throws SQLException {
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from NhanVien where tenNV like N'%" + name_354 + "%'";
@@ -191,10 +201,16 @@ public class ManagerEmp {
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from NhanVien where tenNV like N'%" + name + "%'";
 >>>>>>> DangNhap
+=======
+    public Employee findBook(String name) throws SQLException {
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "select * from NhanVien where tenNV like N'%" + name + "%'";
+>>>>>>> ThongKe
         try{
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Employee employee_354 = new Employee();
@@ -211,6 +227,8 @@ public class ManagerEmp {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 Employee employee = new Employee();
                 employee.setId_354(rs.getString("idNV"));
                 employee.setName_354(rs.getString("tenNV"));
@@ -223,9 +241,12 @@ public class ManagerEmp {
                 employee.setStatus_354(rs.getString("status"));
                 return employee;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             }
         } catch (Exception e) {
             e.printStackTrace();

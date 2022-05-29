@@ -17,6 +17,7 @@ import model.DoanhThuNam;
 public class DThuNamService {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ManagerDThuNam dThuNamManager_360;
     public DThuNamService() {
         dThuNamManager_360 = new ManagerDThuNam();
@@ -26,6 +27,8 @@ public class DThuNamService {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private ManagerDThuNam dThuNamManager;
     public DThuNamService() {
         dThuNamManager = new ManagerDThuNam();
@@ -33,8 +36,11 @@ public class DThuNamService {
     public  List<DoanhThuNam> getAllListDThu() throws SQLException{
         return dThuNamManager.getAllListNam();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     }
 }

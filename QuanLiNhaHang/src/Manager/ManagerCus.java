@@ -19,6 +19,7 @@ import model.Customer;
 public class ManagerCus {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public List<Customer> getAllCustomers_354() throws SQLException{
         List<Customer> customers_354 = new ArrayList<Customer>();
 =======
@@ -29,6 +30,10 @@ public class ManagerCus {
     public List<Customer> getAllCustomers() throws SQLException{
         List<Customer> customers = new ArrayList<Customer>();
 >>>>>>> DangNhap
+=======
+    public List<Customer> getAllCustomers() throws SQLException{
+        List<Customer> customers = new ArrayList<Customer>();
+>>>>>>> ThongKe
 
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from KhachHang";
@@ -36,6 +41,7 @@ public class ManagerCus {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Customer customer_354 = new Customer();
@@ -48,6 +54,8 @@ public class ManagerCus {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 Customer customer = new Customer();
                 customer.setName_354(rs.getString("tenKH"));
                 customer.setDob_354(rs.getString("ngaySinh"));
@@ -56,13 +64,17 @@ public class ManagerCus {
                 customer.setAddress_354(rs.getString("diaChi"));
                 customers.add(customer);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         return customers_354;
@@ -82,6 +94,8 @@ public class ManagerCus {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         return customers;
     }
     
@@ -99,15 +113,19 @@ public class ManagerCus {
             preparedStatement.setString(4, customer.getPhone_354());
             preparedStatement.setString(5, customer.getAddress_354());
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             int rs = preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public Customer getCustomerById_354(String sdt) throws SQLException {
@@ -117,6 +135,9 @@ public class ManagerCus {
 =======
     public Customer getCustomerById(String sdt) throws SQLException {
 >>>>>>> DangNhap
+=======
+    public Customer getCustomerById(String sdt) throws SQLException {
+>>>>>>> ThongKe
 
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from KhachHang where SDT = ?";
@@ -125,6 +146,7 @@ public class ManagerCus {
             preparedStatement.setString(1, sdt);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Customer customer_354 = new Customer();
@@ -137,6 +159,8 @@ public class ManagerCus {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 Customer customer = new Customer();
                 customer.setPhone_354(rs.getString("SDT"));
                 customer.setName_354(rs.getString("tenKH"));
@@ -145,15 +169,19 @@ public class ManagerCus {
                 customer.setGender_354(rs.getString("gioiTinh"));
                 return customer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }  
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     public void updateCustomer_354(Customer customer_354) throws SQLException{
@@ -163,10 +191,14 @@ public class ManagerCus {
 =======
     public void updateCustomer(Customer customer) throws SQLException{
 >>>>>>> DangNhap
+=======
+    public void updateCustomer(Customer customer) throws SQLException{
+>>>>>>> ThongKe
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "Update KhachHang set tenKH = ?, diaChi = ?, ngaySinh = ?, gioiTinh = ? Where SDT = ?";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             preparedStatement.setString(1, customer_354.getName_354());
@@ -177,15 +209,20 @@ public class ManagerCus {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             preparedStatement.setString(1, customer.getName_354());
             preparedStatement.setString(2, customer.getAddress_354());
             preparedStatement.setString(3, customer.getDob_354());
             preparedStatement.setString(4, customer.getGender_354());
             preparedStatement.setString(5, customer.getPhone_354());
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {
@@ -195,6 +232,7 @@ public class ManagerCus {
     
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void deleteCustomer_354(String id) throws SQLException{
 =======
     public void deleteCustomer(String id) throws SQLException{
@@ -202,6 +240,9 @@ public class ManagerCus {
 =======
     public void deleteCustomer(String id) throws SQLException{
 >>>>>>> DangNhap
+=======
+    public void deleteCustomer(String id) throws SQLException{
+>>>>>>> ThongKe
        Connection connection = JDBCConnection.JDBCConnection();
        String sql = "delete from KhachHang where SDT = ?";
         try {
@@ -215,6 +256,7 @@ public class ManagerCus {
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Customer findCustomer_354(String find) throws SQLException {
 =======
     public Customer findBook(String find) throws SQLException {
@@ -222,6 +264,9 @@ public class ManagerCus {
 =======
     public Customer findBook(String find) throws SQLException {
 >>>>>>> DangNhap
+=======
+    public Customer findBook(String find) throws SQLException {
+>>>>>>> ThongKe
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from KhachHang where tenKH like N'%" + find + "%' or diaChi like N'%" 
                 + find + "%' or ngaySinh like N'%" + find + "%' or gioiTinh like N'%" + find + "%' or SDT like '%" + find + "%'";
@@ -229,6 +274,7 @@ public class ManagerCus {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 Customer customer_354 = new Customer();
@@ -241,6 +287,8 @@ public class ManagerCus {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
                 Customer customer = new Customer();
                 customer.setName_354(rs.getString("tenKH"));
                 customer.setAddress_354(rs.getString("diaChi"));
@@ -249,9 +297,12 @@ public class ManagerCus {
                 customer.setPhone_354(rs.getString("SDT"));
                 return customer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
             }
         } catch (Exception e) {
             e.printStackTrace();

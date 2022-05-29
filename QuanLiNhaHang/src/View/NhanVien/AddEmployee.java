@@ -23,9 +23,12 @@ public class AddEmployee extends javax.swing.JFrame {
     Employee employee;
     EmployeeService serviceEmployee;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     /**
      * Creates new form AddEmployee
      */
@@ -38,9 +41,12 @@ public class AddEmployee extends javax.swing.JFrame {
         employee = new Employee();
         serviceEmployee = new EmployeeService();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     }
 
     /**
@@ -393,6 +399,7 @@ public class AddEmployee extends javax.swing.JFrame {
         // TODO add your handling code here:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         employee_354.setId_354(id_354.getText());
         employee_354.setName_354(name_354.getText());
         employee_354.setAddress_354(address_354.getText());
@@ -434,6 +441,8 @@ public class AddEmployee extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         employee.setId_354(id_354.getText());
         employee.setName_354(name_354.getText());
         employee.setAddress_354(address_354.getText());
@@ -473,9 +482,12 @@ public class AddEmployee extends javax.swing.JFrame {
         try {
             serviceEmployee.addEmployee(employee);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(AddEmployee.this, "Thêm nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);

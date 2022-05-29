@@ -262,6 +262,7 @@
             </Container>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Component class="javax.swing.JButton" name="refreshBtn_354">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -279,6 +280,8 @@
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel2">

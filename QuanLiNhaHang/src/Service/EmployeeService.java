@@ -16,6 +16,7 @@ import java.util.List;
 public class EmployeeService {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private ManagerEmp managerEmp_354;
     public EmployeeService(){
         managerEmp_354 = new ManagerEmp();
@@ -37,6 +38,8 @@ public class EmployeeService {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private ManagerEmp managerEmp;
     public EmployeeService(){
         managerEmp = new ManagerEmp();
@@ -56,8 +59,11 @@ public class EmployeeService {
     public Employee getEmployeeById(String id) throws SQLException{
         return managerEmp.getEmployeeById(id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     }
 }

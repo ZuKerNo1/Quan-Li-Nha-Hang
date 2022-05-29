@@ -21,6 +21,7 @@ import model.DoanhThuNam;
 public class ThongKeDoanhThuNam extends javax.swing.JFrame {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     DThuNamService dThuService_360 = new DThuNamService();
 =======
     DThuNamService dThuService = new DThuNamService();
@@ -28,6 +29,9 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
 =======
     DThuNamService dThuService = new DThuNamService();
 >>>>>>> DangNhap
+=======
+    DThuNamService dThuService = new DThuNamService();
+>>>>>>> ThongKe
     /**
      * Creates new form ThongKeDoanhThuNam
      */
@@ -46,6 +50,7 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         defaultTableModel.addColumn("Doanh thu");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         setData(dThuService_360.getAllListDThu());
 =======
         setData(dThuService.getAllListDThu());
@@ -53,6 +58,9 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
 =======
         setData(dThuService.getAllListDThu());
 >>>>>>> DangNhap
+=======
+        setData(dThuService.getAllListDThu());
+>>>>>>> ThongKe
     }
     private void setData(List<DoanhThuNam> dThus) throws SQLException {
         DefaultTableModel defaultTableModel;
@@ -63,6 +71,7 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         for (DoanhThuNam dThu : dThus) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             defaultTableModel.addRow(new Object[]{dThu.getNam_360(), dThu.getDoanhThu_360()});
 =======
             defaultTableModel.addRow(new Object[]{dThu.getNam(), dThu.getDoanhThu()});
@@ -70,6 +79,9 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
 =======
             defaultTableModel.addRow(new Object[]{dThu.getNam(), dThu.getDoanhThu()});
 >>>>>>> DangNhap
+=======
+            defaultTableModel.addRow(new Object[]{dThu.getNam(), dThu.getDoanhThu()});
+>>>>>>> ThongKe
         }
         
     }

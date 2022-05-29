@@ -10,18 +10,23 @@ import java.util.List;
 import model.Customer;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import model.DatBan;
 >>>>>>> DatBan
 =======
 import model.DatBan;
 >>>>>>> DangNhap
+=======
+import model.DatBan;
+>>>>>>> ThongKe
 
 /**
  *
  * @author AD
  */
 public class CustomerService {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private ManagerCus managerCus_354;
@@ -49,6 +54,8 @@ public class CustomerService {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private ManagerCus managerCus;
     public CustomerService(){
         managerCus = new ManagerCus();
@@ -75,7 +82,10 @@ public class CustomerService {
 
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 }

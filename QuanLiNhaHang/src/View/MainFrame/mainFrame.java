@@ -7,11 +7,14 @@ package View.MainFrame;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import View.DangNhap.Login;
 =======
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 import View.DatBan.TraCuuBan;
 import View.NguyenLieu.NguyenLieuView;
 import View.NhanVien.ViewEmployee;
@@ -217,6 +220,7 @@ public class mainFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                             .addComponent(quanLyBanAnButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
                             .addComponent(khoNguyenLieuButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(7, 7, 7)
@@ -251,6 +255,18 @@ public class mainFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
 >>>>>>> DangNhap
+=======
+                            .addComponent(quanLyBanAnButton, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
+                            .addComponent(khoNguyenLieuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dangXuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(quanLyNhanVienButton, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
+>>>>>>> ThongKe
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -312,6 +328,7 @@ public class mainFrame extends javax.swing.JFrame {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void thongKeDoanhThuButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButton_335ActionPerformed
 =======
     private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
@@ -319,6 +336,9 @@ public class mainFrame extends javax.swing.JFrame {
 =======
     private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
 >>>>>>> DangNhap
+=======
+    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
+>>>>>>> ThongKe
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
@@ -329,10 +349,13 @@ public class mainFrame extends javax.swing.JFrame {
         this.dispose();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_thongKeDoanhThuButton_335ActionPerformed
 =======
     }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
 =======
+=======
+>>>>>>> ThongKe
     }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
 
     private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
@@ -369,7 +392,10 @@ public class mainFrame extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
+<<<<<<< HEAD
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 
     private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
         try {
@@ -395,6 +421,7 @@ public class mainFrame extends javax.swing.JFrame {
 <<<<<<< HEAD
     private void dangXuatButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButton_335ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
 <<<<<<< HEAD
         new Login().setVisible(true);
         this.dispose();
@@ -438,6 +465,8 @@ public class mainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
         try {
             // TODO add your handling code here:
             new NguyenLieuView().setVisible(true);
@@ -447,10 +476,13 @@ public class mainFrame extends javax.swing.JFrame {
         this.dispose();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_khoNguyenLieuButton_335ActionPerformed
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     }//GEN-LAST:event_khoNguyenLieuButtonActionPerformed
 >>>>>>> DatBan
 
@@ -526,6 +558,7 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JButton khoNguyenLieuButton_335;
     private javax.swing.JButton quanLyBanAnButton_335;
     private javax.swing.JButton quanLyKhachHangButton_335;
@@ -534,15 +567,20 @@ public class mainFrame extends javax.swing.JFrame {
 =======
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private javax.swing.JButton khoNguyenLieuButton;
     private javax.swing.JButton quanLyBanAnButton;
     private javax.swing.JButton quanLyKhachHangButton;
     private javax.swing.JButton quanLyNhanVienButton;
     private javax.swing.JButton thongKeDoanhThuButton;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
     private javax.swing.JLabel titleLabel2;
     private javax.swing.JPanel titlePanel2;
     // End of variables declaration//GEN-END:variables

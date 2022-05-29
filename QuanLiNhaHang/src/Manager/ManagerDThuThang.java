@@ -32,6 +32,7 @@ public class ManagerDThuThang {
                 DoanhThuThang listDThu = new DoanhThuThang();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 listDThu.setThang_360(rs.getInt("Thang"));
                 listDThu.setDoanhThu_360(rs.getString("TongTien"));
 =======
@@ -42,6 +43,10 @@ public class ManagerDThuThang {
                 listDThu.setThang(rs.getInt("Thang"));
                 listDThu.setDoanhThu(rs.getString("TongTien"));
 >>>>>>> DangNhap
+=======
+                listDThu.setThang(rs.getInt("Thang"));
+                listDThu.setDoanhThu(rs.getString("TongTien"));
+>>>>>>> ThongKe
                 listDThus.add(listDThu);
             }
         } catch (SQLException ex) {

@@ -1,6 +1,7 @@
 ﻿
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 CREATE DATABASE QuanLiNhaHang
 go
 use QuanLiNhaHang
@@ -14,6 +15,11 @@ CREATE DATABASE QuanLiNhaHang5
 go
 use QuanLiNhaHang5
 >>>>>>> DangNhap
+=======
+CREATE DATABASE QuanLiNhaHang5
+go
+use QuanLiNhaHang5
+>>>>>>> ThongKe
 
 
 --Tao table
@@ -144,12 +150,16 @@ go
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 select * from NguyenLieu
 >>>>>>> DatBan
 =======
 select * from NguyenLieu
 >>>>>>> DangNhap
+=======
+select * from NguyenLieu
+>>>>>>> ThongKe
 insert into BanAn
 values
 	('BA001',N'Trống'),
@@ -163,6 +173,7 @@ values
 	('BA009',N'Trống'),
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	('BA010',N'Trống')
 =======
 	('BA0010',N'Trống')
@@ -170,6 +181,9 @@ values
 =======
 	('BA0010',N'Trống')
 >>>>>>> DangNhap
+=======
+	('BA0010',N'Trống')
+>>>>>>> ThongKe
 
 go
 
@@ -190,6 +204,7 @@ values
 	('MA009',N'Nước suối',50000),
 	('MA0010',N'Rượu vang',200000)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 go
@@ -203,6 +218,8 @@ values ('trung','123', 'NV001'),
 
 >>>>>>> DatBan
 =======
+=======
+>>>>>>> ThongKe
 
 
 go
@@ -210,7 +227,10 @@ insert into account
 values ('trung','123', 'NV001'),
 	   ('truong','123', 'NV002')
 
+<<<<<<< HEAD
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from ChiTietHoaDon as cthd, MonAn as ma
@@ -218,7 +238,10 @@ where cthd.idMonAn = ma.idMonAn
 group by cthd.idHoaDon
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> ThongKe
 --Thống kê theo tháng
 
 select month(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
@@ -241,7 +264,10 @@ group by day(hd.ngayThanhToan)
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> DatBan
 =======
 >>>>>>> DangNhap
+=======
+>>>>>>> ThongKe
 
