@@ -10,6 +10,9 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+      <Point value="[400, 150]"/>
+    </Property>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -79,8 +82,8 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="btnDangNhap" pref="279" max="32767" attributes="0"/>
-                          <Component id="passWord" alignment="1" max="32767" attributes="0"/>
-                          <Component id="txtName" alignment="0" max="32767" attributes="0"/>
+                          <Component id="passWord_352" alignment="1" max="32767" attributes="0"/>
+                          <Component id="txtName_352" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
@@ -100,11 +103,11 @@
                       <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" pref="26" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="txtName" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="txtName_352" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="26" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="passWord" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="passWord_352" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="rememberCheckbox" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
@@ -123,7 +126,7 @@
                 <Property name="text" type="java.lang.String" value="M&#x1ead;t kh&#x1ea9;u:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="txtName">
+            <Component class="javax.swing.JTextField" name="txtName_352">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel2">
               <Properties>
@@ -133,7 +136,7 @@
                 <Property name="text" type="java.lang.String" value="T&#xe0;i kho&#x1ea3;n:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JPasswordField" name="passWord">
+            <Component class="javax.swing.JPasswordField" name="passWord_352">
             </Component>
             <Component class="javax.swing.JCheckBox" name="rememberCheckbox">
               <Properties>

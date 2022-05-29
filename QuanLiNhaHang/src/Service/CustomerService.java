@@ -14,20 +14,26 @@ import model.Customer;
  * @author AD
  */
 public class CustomerService {
-    private ManagerCus managerCus;
+    private ManagerCus managerCus_354;
     public CustomerService(){
-        managerCus = new ManagerCus();
+        managerCus_354 = new ManagerCus();
     }
     public List<Customer> getAllCustomers() throws SQLException{
-        return managerCus.getAllCustomers();
+        return managerCus_354.getAllCustomers_354();
     }
-    public void deleteCustomer(String id) throws SQLException{
-        managerCus.deleteCustomer(id);
+    public void addCustomer(Customer customer_354) throws SQLException{
+        managerCus_354.addCustomer_354(customer_354);
     }
-    public void updateCustomer(Customer customer) throws SQLException{
-        managerCus.updateCustomer(customer);
+    public void deleteCustomer(String id_354) throws SQLException{
+        managerCus_354.deleteCustomer_354(id_354);
     }
-    public Customer getCustomerById(String sdt) throws SQLException{
-        return managerCus.getCustomerById(sdt);
+    public void updateCustomer(Customer customer_354) throws SQLException{
+        managerCus_354.updateCustomer_354(customer_354);
+    }
+    public Customer getCustomerById(String sdt_354) throws SQLException{
+        return managerCus_354.getCustomerById_354(sdt_354);
+    }
+    public Customer find(String find_354) throws SQLException{
+        return managerCus_354.findCustomer_354(find_354);
     }
 }
