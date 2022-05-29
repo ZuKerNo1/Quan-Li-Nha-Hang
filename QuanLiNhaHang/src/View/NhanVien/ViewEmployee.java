@@ -393,15 +393,15 @@ public class ViewEmployee extends javax.swing.JFrame {
             if (e_354 != null) {
                 defaulttableModel_354.setRowCount(0);
                 defaulttableModel_354.addRow(new Object[]{
-                    employee_354.getId_354(), 
-                    employee_354.getName_354(), 
-                    employee_354.getDob_354(), 
-                    employee_354.getGender_354(), 
-                    employee_354.getPhone_354(),
-                    employee_354.getAddress_354(), 
-                    employee_354.getRole_354(), 
-                    employee_354.getSalary_354(), 
-                    employee_354.getStatus_354()
+                    e_354.getId_354(), 
+                    e_354.getName_354(), 
+                    e_354.getDob_354(), 
+                    e_354.getGender_354(), 
+                    e_354.getPhone_354(),
+                    e_354.getAddress_354(), 
+                    e_354.getRole_354(), 
+                    e_354.getSalary_354(), 
+                    e_354.getStatus_354()
                 });
             } else {
                 defaulttableModel_354.setNumRows(0);
