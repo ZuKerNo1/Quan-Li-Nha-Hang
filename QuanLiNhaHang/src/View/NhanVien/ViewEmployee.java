@@ -134,6 +134,11 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
+        searchBtn_354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchBtn_354ActionPerformed(evt);
+            }
+        });
 
         backBtn_354.setBackground(new java.awt.Color(232, 64, 60));
         backBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
@@ -368,6 +373,42 @@ public class ViewEmployee extends javax.swing.JFrame {
             Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_refreshBtn_354ActionPerformed
+
+    private void searchBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn_354ActionPerformed
+        // TODO add your handling code here:
+        Employee e_354 = new Employee();
+        String find = search_354.getText();
+        if(find == ""){
+            try {
+                setTableData_354(serviceEmployee_354.getAllEmployees());
+            } catch (SQLException ex) {
+                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            try {
+                e_354 = serviceEmployee_354.find(find);
+            } catch (SQLException ex) {
+                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            if (e_354 != null) {
+                defaulttableModel_354.setRowCount(0);
+                defaulttableModel_354.addRow(new Object[]{
+                    employee_354.getId_354(), 
+                    employee_354.getName_354(), 
+                    employee_354.getDob_354(), 
+                    employee_354.getGender_354(), 
+                    employee_354.getPhone_354(),
+                    employee_354.getAddress_354(), 
+                    employee_354.getRole_354(), 
+                    employee_354.getSalary_354(), 
+                    employee_354.getStatus_354()
+                });
+            } else {
+                defaulttableModel_354.setNumRows(0);
+                JOptionPane.showMessageDialog(null, "Không có trong danh sách");
+            }
+        }
+    }//GEN-LAST:event_searchBtn_354ActionPerformed
     private void setTableData_354(List<Employee> Employees){
         for(Employee employee_354: Employees){
             defaulttableModel_354.addRow(new Object[]{employee_354.getId_354(), employee_354.getName_354(), employee_354.getDob_354(), employee_354.getGender_354(), employee_354.getPhone_354(),

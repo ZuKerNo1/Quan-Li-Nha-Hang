@@ -33,4 +33,7 @@ public class EmployeeService {
     public Employee getEmployeeById(String id_354) throws SQLException{
         return managerEmp_354.getEmployeeById_354(id_354);
     }
+    public Employee find(String find_354) throws SQLException{
+        return managerEmp_354.findEmployee_354(find_354);
+    }
 }
