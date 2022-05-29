@@ -97,6 +97,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         table_354 = new com.raven.suportSwing.TableColumn();
         addBtn_354 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         label_354 = new javax.swing.JLabel();
@@ -143,7 +144,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         });
 
         updateBtn_354.setBackground(new java.awt.Color(232, 64, 60));
-        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/update.png"))); // NOI18N
         updateBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtn_354ActionPerformed(evt);
@@ -185,6 +186,9 @@ public class ViewEmployee extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(232, 64, 60));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -200,6 +204,8 @@ public class ViewEmployee extends javax.swing.JFrame {
                         .addComponent(addBtn_354))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(updateBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
@@ -223,7 +229,8 @@ public class ViewEmployee extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(backBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(updateBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deleteBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(deleteBtn_354, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25))
         );
 
@@ -395,6 +402,7 @@ public class ViewEmployee extends javax.swing.JFrame {
     private javax.swing.JButton addBtn_354;
     private javax.swing.JButton backBtn_354;
     private javax.swing.JButton deleteBtn_354;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
