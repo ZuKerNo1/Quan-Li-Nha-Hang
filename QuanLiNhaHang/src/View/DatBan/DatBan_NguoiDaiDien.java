@@ -414,20 +414,18 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        try {
-            new TraCuuBan().setVisible(true);
-            this.dispose();
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
         //Chuyen doi trang thai khi dat ban
         try {
             datBanService.chuyenTraiThai_DatBan(idBA.getText());
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        try {
+            new TraCuuBan().setVisible(true);
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.dispose();
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 
