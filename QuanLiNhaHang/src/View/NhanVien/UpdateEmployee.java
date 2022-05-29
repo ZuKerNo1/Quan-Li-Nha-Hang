@@ -17,17 +17,23 @@ import model.Employee;
  */
 public class UpdateEmployee extends javax.swing.JFrame {
 <<<<<<< HEAD
+<<<<<<< HEAD
     Employee employee_354;
     EmployeeService serviceEmployee_354;
 =======
     Employee employee;
     EmployeeService serviceEmployee;
 >>>>>>> DatBan
+=======
+    Employee employee;
+    EmployeeService serviceEmployee;
+>>>>>>> DangNhap
     /**
      * Creates new form UpdateEmployee
      */
     public UpdateEmployee(String id) throws SQLException {
         initComponents();
+<<<<<<< HEAD
 <<<<<<< HEAD
         serviceEmployee_354 = new EmployeeService();
         employee_354 = serviceEmployee_354.getEmployeeById(id);
@@ -39,6 +45,8 @@ public class UpdateEmployee extends javax.swing.JFrame {
         salary_354.setText(String.valueOf(employee_354.getSalary_354()));
         if("Nam".equals(employee_354.getGender_354())){
 =======
+=======
+>>>>>>> DangNhap
         serviceEmployee = new EmployeeService();
         employee = serviceEmployee.getEmployeeById(id);
         id_354.setText(employee.getId_354());
@@ -48,20 +56,28 @@ public class UpdateEmployee extends javax.swing.JFrame {
         phone_354.setText(employee.getPhone_354());
         salary_354.setText(String.valueOf(employee.getSalary_354()));
         if("Nam".equals(employee.getGender_354())){
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             male_354.isSelected();
         }else{
             female_354.isSelected();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         if("Đang làm việc".equals(employee_354.getStatus_354())){
 =======
         if("Đang làm việc".equals(employee.getStatus_354())){
 >>>>>>> DatBan
+=======
+        if("Đang làm việc".equals(employee.getStatus_354())){
+>>>>>>> DangNhap
             working_354.isSelected();
         }else{
             leave_354.isSelected();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if("Phục vụ".equals(employee_354.getRole_354())){
             phucVu_354.isSelected();
@@ -73,6 +89,8 @@ public class UpdateEmployee extends javax.swing.JFrame {
             baoVe_354.isSelected();
         }else if("Thu ngân".equals(employee_354.getRole_354())){
 =======
+=======
+>>>>>>> DangNhap
         if("Phục vụ".equals(employee.getRole_354())){
             phucVu_354.isSelected();
         }else if("Đầu bếp".equals(employee.getRole_354())){
@@ -82,7 +100,10 @@ public class UpdateEmployee extends javax.swing.JFrame {
         }else if("Bảo vệ".equals(employee.getRole_354())){
             baoVe_354.isSelected();
         }else if("Thu ngân".equals(employee.getRole_354())){
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             thuNgan_354.isSelected();
         }
     }
@@ -415,6 +436,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
     private void submitBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_354ActionPerformed
         // TODO add your handling code here:
 <<<<<<< HEAD
+<<<<<<< HEAD
         employee_354.setId_354(id_354.getText());
         employee_354.setName_354(name_354.getText());
         employee_354.setAddress_354(address_354.getText());
@@ -454,6 +476,8 @@ public class UpdateEmployee extends javax.swing.JFrame {
         try {
             serviceEmployee_354.updateEmployee(employee_354);
 =======
+=======
+>>>>>>> DangNhap
         employee.setId_354(id_354.getText());
         employee.setName_354(name_354.getText());
         employee.setAddress_354(address_354.getText());
@@ -492,7 +516,10 @@ public class UpdateEmployee extends javax.swing.JFrame {
         employee.setStatus_354(status);
         try {
             serviceEmployee.updateEmployee(employee);
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(UpdateEmployee.this, "Thay đổi thông tin nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);

@@ -16,9 +16,12 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javafx.scene.control.CheckBox;
 =======
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 import javax.swing.JOptionPane;
 import model.HoaDon;
 import model.MonAn;
@@ -37,10 +40,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
     HoaDonService hoaDonService = new HoaDonService();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
 <<<<<<< HEAD
+<<<<<<< HEAD
     ChiTietHoaDonService chiTietHoaDonService = new ChiTietHoaDonService();
 =======
     ChiTietHoaDonService chonMonService = new ChiTietHoaDonService();
 >>>>>>> DatBan
+=======
+    ChiTietHoaDonService chonMonService = new ChiTietHoaDonService();
+>>>>>>> DangNhap
     ManagerHoaDon managerHoaDon = new ManagerHoaDon();
             // TODO add your handling code here:
     
@@ -92,10 +99,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
 <<<<<<< HEAD
+<<<<<<< HEAD
         submitButton_335 = new javax.swing.JButton();
 =======
         submitButton = new javax.swing.JButton();
 >>>>>>> DatBan
+=======
+        submitButton = new javax.swing.JButton();
+>>>>>>> DangNhap
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -110,10 +121,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
         gia9 = new javax.swing.JLabel();
         gia10 = new javax.swing.JLabel();
 <<<<<<< HEAD
+<<<<<<< HEAD
         backButton_335 = new javax.swing.JButton();
 =======
         jButton2 = new javax.swing.JButton();
 >>>>>>> DatBan
+=======
+        jButton2 = new javax.swing.JButton();
+>>>>>>> DangNhap
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -138,6 +153,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         idBA = new javax.swing.JLabel();
         MonAnpn = new javax.swing.JPanel();
 <<<<<<< HEAD
+<<<<<<< HEAD
         MA001_335 = new javax.swing.JCheckBox();
         MA003_335 = new javax.swing.JCheckBox();
         MA002_335 = new javax.swing.JCheckBox();
@@ -160,6 +176,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
         soLuong9_335 = new com.raven.suportSwing.Combobox();
         soLuong10_335 = new com.raven.suportSwing.Combobox();
 =======
+=======
+>>>>>>> DangNhap
         MA001 = new javax.swing.JCheckBox();
         MA003 = new javax.swing.JCheckBox();
         MA002 = new javax.swing.JCheckBox();
@@ -181,7 +199,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
         soLuong8 = new com.raven.suportSwing.Combobox();
         soLuong9 = new com.raven.suportSwing.Combobox();
         soLuong10 = new com.raven.suportSwing.Combobox();
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -194,18 +215,24 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jLabel3.setText("Tên Món");
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         submitButton_335.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         submitButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check-mark.png"))); // NOI18N
         submitButton_335.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitButton_335ActionPerformed(evt);
 =======
+=======
+>>>>>>> DangNhap
         submitButton.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         submitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check-mark.png"))); // NOI18N
         submitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 submitButtonActionPerformed(evt);
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             }
         });
 
@@ -263,7 +290,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             }
         });
 
@@ -325,6 +355,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         idBA.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         idBA.setForeground(new java.awt.Color(51, 153, 255));
 <<<<<<< HEAD
+<<<<<<< HEAD
         idBA.setText("idBA");
 
         MonAnpn.setBackground(new java.awt.Color(255, 255, 255));
@@ -359,6 +390,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
         MA010_335.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         MA010_335.setText("MA010");
 =======
+=======
+>>>>>>> DangNhap
         idBA.setText("ID Bàn ăn");
 
         MonAnpn.setBackground(new java.awt.Color(255, 255, 255));
@@ -392,7 +425,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
         MA010.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         MA010.setText("MA010");
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 
         javax.swing.GroupLayout MonAnpnLayout = new javax.swing.GroupLayout(MonAnpn);
         MonAnpn.setLayout(MonAnpnLayout);
@@ -402,6 +438,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(MonAnpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
                     .addComponent(MA003_335)
                     .addComponent(MA001_335)
                     .addComponent(MA002_335))
@@ -410,11 +447,17 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     .addComponent(MA001)
                     .addComponent(MA002))
 >>>>>>> DatBan
+=======
+                    .addComponent(MA003)
+                    .addComponent(MA001)
+                    .addComponent(MA002))
+>>>>>>> DangNhap
                 .addContainerGap(29, Short.MAX_VALUE))
             .addGroup(MonAnpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MonAnpnLayout.createSequentialGroup()
                     .addContainerGap()
                     .addGroup(MonAnpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
 <<<<<<< HEAD
                         .addComponent(MA004_335)
                         .addComponent(MA005_335)
@@ -424,6 +467,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
                         .addComponent(MA009_335)
                         .addComponent(MA010_335))
 =======
+=======
+>>>>>>> DangNhap
                         .addComponent(MA004)
                         .addComponent(MA005)
                         .addComponent(MA006)
@@ -431,12 +476,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
                         .addComponent(MA008)
                         .addComponent(MA009)
                         .addComponent(MA010))
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
                     .addContainerGap(19, Short.MAX_VALUE)))
         );
         MonAnpnLayout.setVerticalGroup(
             MonAnpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MonAnpnLayout.createSequentialGroup()
+<<<<<<< HEAD
 <<<<<<< HEAD
                 .addContainerGap()
                 .addComponent(MA001_335)
@@ -446,13 +495,18 @@ public class ChonMonFrame extends javax.swing.JFrame {
                 .addComponent(MA003_335)
                 .addContainerGap(517, Short.MAX_VALUE))
 =======
+=======
+>>>>>>> DangNhap
                 .addComponent(MA001)
                 .addGap(40, 40, 40)
                 .addComponent(MA002)
                 .addGap(50, 50, 50)
                 .addComponent(MA003)
                 .addContainerGap(539, Short.MAX_VALUE))
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             .addGroup(MonAnpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MonAnpnLayout.createSequentialGroup()
                     .addGap(213, 213, 213)
@@ -468,6 +522,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                                         .addGroup(MonAnpnLayout.createSequentialGroup()
                                                             .addGroup(MonAnpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                                 .addGroup(MonAnpnLayout.createSequentialGroup()
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                                     .addComponent(MA004_335)
                                                                     .addGap(68, 68, 68))
@@ -525,6 +580,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
         soLuong10_335.setToolTipText("");
         soLuong10_335.setLabeText("");
 =======
+=======
+>>>>>>> DangNhap
                                                                     .addComponent(MA004)
                                                                     .addGap(68, 68, 68))
                                                                 .addComponent(MA005))
@@ -580,7 +637,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
         soLuong10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         soLuong10.setToolTipText("");
         soLuong10.setLabeText("");
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -594,10 +654,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .addComponent(backButton_335, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
 =======
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
 >>>>>>> DatBan
+=======
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+>>>>>>> DangNhap
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
@@ -610,10 +674,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 <<<<<<< HEAD
+<<<<<<< HEAD
                         .addComponent(submitButton_335, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
 =======
                         .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
 >>>>>>> DatBan
+=======
+                        .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> DangNhap
                         .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -669,6 +737,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 <<<<<<< HEAD
+<<<<<<< HEAD
                                 .addComponent(soLuong1_335, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(55, 55, 55)
@@ -683,6 +752,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                     .addComponent(soLuong9_335, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(soLuong10_335, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
 =======
+=======
+>>>>>>> DangNhap
                                 .addComponent(soLuong1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(55, 55, 55)
@@ -696,7 +767,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                     .addComponent(soLuong8, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(soLuong9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(soLuong10, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
                     .addComponent(jSeparator1))
                 .addGap(42, 42, 42))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -722,11 +796,17 @@ public class ChonMonFrame extends javax.swing.JFrame {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(MonAnpn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 >>>>>>> DatBan
+=======
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(MonAnpn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> DangNhap
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -734,10 +814,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                     .addComponent(jLabel13)
                                     .addComponent(jLabel6)
 <<<<<<< HEAD
+<<<<<<< HEAD
                                     .addComponent(soLuong1_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 =======
                                     .addComponent(soLuong1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 >>>>>>> DatBan
+=======
+                                    .addComponent(soLuong1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> DangNhap
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -755,10 +839,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                                 .addGap(15, 15, 15)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                     .addComponent(soLuong4_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 =======
                                                     .addComponent(soLuong4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 >>>>>>> DatBan
+=======
+                                                    .addComponent(soLuong4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> DangNhap
                                                     .addComponent(gia4))
                                                 .addGap(3, 3, 3))
                                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -769,6 +857,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                 .addGap(231, 231, 231)
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                 .addComponent(soLuong8_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
@@ -782,6 +871,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                         .addGap(15, 15, 15)
                                         .addComponent(soLuong3_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
 =======
+=======
+>>>>>>> DangNhap
                                                 .addComponent(soLuong8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(18, 18, 18)
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -796,7 +887,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                         .addComponent(soLuong2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(15, 15, 15)
                                         .addComponent(soLuong3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -831,20 +925,28 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                                                 .addGap(97, 97, 97)
                                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                     .addComponent(soLuong5_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 =======
                                                                     .addComponent(soLuong5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 >>>>>>> DatBan
+=======
+                                                                    .addComponent(soLuong5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> DangNhap
                                                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                                                         .addComponent(jLabel14)
                                                                         .addGap(177, 177, 177)
                                                                         .addComponent(gia9)))
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                                 .addComponent(soLuong6_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 =======
                                                                 .addComponent(soLuong6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 >>>>>>> DatBan
+=======
+                                                                .addComponent(soLuong6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> DangNhap
                                                             .addGroup(jPanel1Layout.createSequentialGroup()
                                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                                 .addComponent(gia1)
@@ -861,10 +963,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                     .addComponent(gia5)
 <<<<<<< HEAD
+<<<<<<< HEAD
                                                     .addComponent(soLuong7_335, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 =======
                                                     .addComponent(soLuong7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 >>>>>>> DatBan
+=======
+                                                    .addComponent(soLuong7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> DangNhap
                                                 .addGap(15, 15, 15)))
                                         .addGap(17, 17, 17)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -880,6 +986,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
                                 .addComponent(jLabel24)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+<<<<<<< HEAD
 <<<<<<< HEAD
                                 .addGap(11, 11, 11)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -900,6 +1007,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     .addComponent(backButton_335, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(submitButton_335, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
 =======
+=======
+>>>>>>> DangNhap
                                 .addGap(9, 9, 9)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(gia8)
@@ -914,7 +1023,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(submitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
                 .addContainerGap())
         );
 
@@ -963,14 +1075,19 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void submitButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButton_335ActionPerformed
 =======
     private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
 >>>>>>> DatBan
+=======
+    private void submitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitButtonActionPerformed
+>>>>>>> DangNhap
         int idHD = 3;
         try {
             // lay ra idBA
             idHD = managerHoaDon.getIDHoaDon(getIDBA());
+<<<<<<< HEAD
 <<<<<<< HEAD
         } catch (SQLException ex) {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -1005,6 +1122,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     }
                 }
 =======
+=======
+>>>>>>> DangNhap
             System.out.println(idHD);
         } catch (SQLException ex) {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -1012,11 +1131,15 @@ public class ChonMonFrame extends javax.swing.JFrame {
         if (MA001.isSelected()) {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA001.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA003_335.isSelected()) {
             try {
@@ -1035,10 +1158,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA002.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA002.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA002.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA004_335.isSelected()) {
             try {
@@ -1057,10 +1186,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA003.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA003.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA003.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA005_335.isSelected()) {
             try {
@@ -1079,10 +1214,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA004.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA004.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA004.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA006_335.isSelected()) {
             try {
@@ -1101,10 +1242,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA005.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA005.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA005.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA007_335.isSelected()) {
             try {
@@ -1123,10 +1270,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA006.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA006.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA006.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA008_335.isSelected()) {
             try {
@@ -1145,10 +1298,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA007.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA007.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA007.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA009_335.isSelected()) {
             try {
@@ -1167,10 +1326,16 @@ public class ChonMonFrame extends javax.swing.JFrame {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA008.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
 >>>>>>> DatBan
+=======
+        if (MA008.isSelected()) {
+            try {
+                chonMonService.addMonAnToChiTietHoaDon(idHD, MA008.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (MA010_335.isSelected()) {
             try {
@@ -1185,6 +1350,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     }
                 }
 =======
+=======
+>>>>>>> DangNhap
         if (MA009.isSelected()) {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA009.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
@@ -1195,7 +1362,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
         if (MA010.isSelected()) {
             try {
                 chonMonService.addMonAnToChiTietHoaDon(idHD, MA010.getText(), Integer.valueOf(soLuong1.getSelectedItem().toString()));
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             } catch (SQLException ex) {
                 Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -1207,6 +1377,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         this.dispose();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_submitButton_335ActionPerformed
 
     private void backButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButton_335ActionPerformed
@@ -1215,6 +1386,11 @@ public class ChonMonFrame extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 >>>>>>> DatBan
+=======
+    }//GEN-LAST:event_submitButtonActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+>>>>>>> DangNhap
         try {
             // TODO add your handling code here:
             new TraCuuBan().setVisible(true);
@@ -1223,10 +1399,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
         }
         this.dispose();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_backButton_335ActionPerformed
 =======
     }//GEN-LAST:event_jButton2ActionPerformed
 >>>>>>> DatBan
+=======
+    }//GEN-LAST:event_jButton2ActionPerformed
+>>>>>>> DangNhap
 
     /**
      * @param args the command line arguments
@@ -1260,7 +1440,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1271,6 +1454,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
 <<<<<<< HEAD
     private javax.swing.JCheckBox MA001_335;
     private javax.swing.JCheckBox MA002_335;
@@ -1285,6 +1469,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JPanel MonAnpn;
     private javax.swing.JButton backButton_335;
 =======
+=======
+>>>>>>> DangNhap
     private javax.swing.JCheckBox MA001;
     private javax.swing.JCheckBox MA002;
     private javax.swing.JCheckBox MA003;
@@ -1296,7 +1482,10 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JCheckBox MA009;
     private javax.swing.JCheckBox MA010;
     private javax.swing.JPanel MonAnpn;
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
     private javax.swing.JLabel gia1;
     private javax.swing.JLabel gia10;
     private javax.swing.JLabel gia2;
@@ -1309,9 +1498,13 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JLabel gia9;
     private javax.swing.JLabel idBA;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     private javax.swing.JButton jButton2;
 >>>>>>> DatBan
+=======
+    private javax.swing.JButton jButton2;
+>>>>>>> DangNhap
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1342,6 +1535,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private com.raven.suportSwing.Combobox soLuong10_335;
     private com.raven.suportSwing.Combobox soLuong1_335;
     private com.raven.suportSwing.Combobox soLuong2_335;
@@ -1354,6 +1548,8 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private com.raven.suportSwing.Combobox soLuong9_335;
     private javax.swing.JButton submitButton_335;
 =======
+=======
+>>>>>>> DangNhap
     private com.raven.suportSwing.Combobox soLuong1;
     private com.raven.suportSwing.Combobox soLuong10;
     private com.raven.suportSwing.Combobox soLuong2;
@@ -1365,6 +1561,9 @@ public class ChonMonFrame extends javax.swing.JFrame {
     private com.raven.suportSwing.Combobox soLuong8;
     private com.raven.suportSwing.Combobox soLuong9;
     private javax.swing.JButton submitButton;
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
     // End of variables declaration//GEN-END:variables
 }

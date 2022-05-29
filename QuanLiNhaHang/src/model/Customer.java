@@ -10,10 +10,14 @@ package model;
  */
 public class Customer {
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String name_354, phone_354, dob_354, gender_354, address_354;
 =======
     private String idKH_354,name_354, phone_354, dob_354, gender_354, address_354;
 >>>>>>> DatBan
+=======
+    private String idKH_354,name_354, phone_354, dob_354, gender_354, address_354;
+>>>>>>> DangNhap
 
     public String getName_354() {
         return name_354;
@@ -48,7 +52,10 @@ public class Customer {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> DangNhap
     public String getIdKH_354() {
         return idKH_354;
     }
@@ -57,7 +64,10 @@ public class Customer {
         this.idKH_354 = idKH_354;
     }
 
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
     public String getAddress_354() {
         return address_354;
     }

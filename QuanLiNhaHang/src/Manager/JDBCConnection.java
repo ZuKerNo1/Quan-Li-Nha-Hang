@@ -18,9 +18,12 @@ public class JDBCConnection {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setUser("sa");
 <<<<<<< HEAD
+<<<<<<< HEAD
         ds.setPassword("123456");
         ds.setServerName("ADMIN");
 =======
+=======
+>>>>>>> DangNhap
         ds.setPassword("Trung@2305");
         ds.setServerName("DESKTOP-8GKPO1M\\SQLEXPRESS");
 >>>>>>> DatBan

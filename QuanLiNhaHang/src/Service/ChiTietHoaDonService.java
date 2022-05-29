@@ -7,9 +7,12 @@ package Service;
 
 import Manager.ManagerChiTietHoaDon;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.sql.ResultSet;
 =======
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 import java.sql.SQLException;
 import model.MonAn;
 
@@ -18,6 +21,7 @@ import model.MonAn;
  * @author FSC
  */
 public class ChiTietHoaDonService {
+<<<<<<< HEAD
 <<<<<<< HEAD
     private ManagerChiTietHoaDon chiTietHoaDonManager;
     
@@ -36,6 +40,8 @@ public class ChiTietHoaDonService {
     public int checkIdMonAn(int idHoaDon,String idMonAn) throws SQLException{
         return chiTietHoaDonManager.checkIdMonAn(idHoaDon, idMonAn);
 =======
+=======
+>>>>>>> DangNhap
     private ManagerChiTietHoaDon chonMonManager;
     
     public ChiTietHoaDonService() {
@@ -44,6 +50,9 @@ public class ChiTietHoaDonService {
     
     public void addMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException{
         chonMonManager.addMonAnToChiTietHoaDon(idHoaDon, idMA, soLuong);
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
     }
 }

@@ -6,9 +6,12 @@
 package View.MainFrame;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import View.DangNhap.Login;
 =======
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 import View.DatBan.TraCuuBan;
 import View.NguyenLieu.NguyenLieuView;
 import View.NhanVien.ViewEmployee;
@@ -213,6 +216,7 @@ public class mainFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
 <<<<<<< HEAD
+<<<<<<< HEAD
                             .addComponent(quanLyBanAnButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
                             .addComponent(khoNguyenLieuButton_335, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(7, 7, 7)
@@ -235,6 +239,18 @@ public class mainFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
 >>>>>>> DatBan
+=======
+                            .addComponent(quanLyBanAnButton, javax.swing.GroupLayout.DEFAULT_SIZE, 449, Short.MAX_VALUE)
+                            .addComponent(khoNguyenLieuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(7, 7, 7)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(thongKeDoanhThuButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(dangXuatButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(quanLyNhanVienButton, javax.swing.GroupLayout.PREFERRED_SIZE, 449, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(quanLyKhachHangButton, javax.swing.GroupLayout.DEFAULT_SIZE, 464, Short.MAX_VALUE)))
+>>>>>>> DangNhap
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -295,10 +311,14 @@ public class mainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void thongKeDoanhThuButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButton_335ActionPerformed
 =======
     private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
 >>>>>>> DatBan
+=======
+    private void thongKeDoanhThuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thongKeDoanhThuButtonActionPerformed
+>>>>>>> DangNhap
         // TODO add your handling code here:
         try {
             // TODO add your handling code here:
@@ -308,9 +328,48 @@ public class mainFrame extends javax.swing.JFrame {
         }
         this.dispose();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_thongKeDoanhThuButton_335ActionPerformed
 =======
     }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
+=======
+    }//GEN-LAST:event_thongKeDoanhThuButtonActionPerformed
+
+    private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
+        try {
+            // TODO add your handling code here:
+            new TraCuuBan().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }//GEN-LAST:event_quanLyBanAnButtonActionPerformed
+
+    private void dangXuatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dangXuatButtonActionPerformed
+
+    private void quanLyKhachHangButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyKhachHangButtonActionPerformed
+        try {
+            // TODO add your handling code here:
+            new View.KhachHang.ViewCustomer().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }//GEN-LAST:event_quanLyKhachHangButtonActionPerformed
+
+    private void quanLyNhanVienButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyNhanVienButtonActionPerformed
+        try {
+            // TODO add your handling code here:
+            new ViewEmployee().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+        
+    }//GEN-LAST:event_quanLyNhanVienButtonActionPerformed
+>>>>>>> DangNhap
 
     private void quanLyBanAnButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanLyBanAnButtonActionPerformed
         try {
@@ -336,6 +395,7 @@ public class mainFrame extends javax.swing.JFrame {
 <<<<<<< HEAD
     private void dangXuatButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dangXuatButton_335ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         new Login().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_dangXuatButton_335ActionPerformed
@@ -376,6 +436,8 @@ public class mainFrame extends javax.swing.JFrame {
 
     private void khoNguyenLieuButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_khoNguyenLieuButton_335ActionPerformed
         // TODO add your handling code here:
+=======
+>>>>>>> DangNhap
         try {
             // TODO add your handling code here:
             new NguyenLieuView().setVisible(true);
@@ -384,8 +446,11 @@ public class mainFrame extends javax.swing.JFrame {
         }
         this.dispose();
 <<<<<<< HEAD
+<<<<<<< HEAD
     }//GEN-LAST:event_khoNguyenLieuButton_335ActionPerformed
 =======
+=======
+>>>>>>> DangNhap
     }//GEN-LAST:event_khoNguyenLieuButtonActionPerformed
 >>>>>>> DatBan
 
@@ -460,18 +525,24 @@ public class mainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private javax.swing.JButton khoNguyenLieuButton_335;
     private javax.swing.JButton quanLyBanAnButton_335;
     private javax.swing.JButton quanLyKhachHangButton_335;
     private javax.swing.JButton quanLyNhanVienButton_335;
     private javax.swing.JButton thongKeDoanhThuButton_335;
 =======
+=======
+>>>>>>> DangNhap
     private javax.swing.JButton khoNguyenLieuButton;
     private javax.swing.JButton quanLyBanAnButton;
     private javax.swing.JButton quanLyKhachHangButton;
     private javax.swing.JButton quanLyNhanVienButton;
     private javax.swing.JButton thongKeDoanhThuButton;
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
     private javax.swing.JLabel titleLabel2;
     private javax.swing.JPanel titlePanel2;
     // End of variables declaration//GEN-END:variables

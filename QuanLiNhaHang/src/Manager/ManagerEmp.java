@@ -89,7 +89,10 @@ public class ManagerEmp {
     public void addEmployee_354(Employee employee_354) throws SQLException {
 =======
     public void addEmployee(Employee employee) throws SQLException {
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "set dateformat dmy Insert into NhanVien(idNV, tenNV, ngaySinh, gioiTinh, SDT, diaChi, luong, tenCV, status)"
                 + "Values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -115,7 +118,10 @@ public class ManagerEmp {
             preparedStatement.setDouble(7, employee.getSalary_354());
             preparedStatement.setString(8, employee.getRole_354());
             preparedStatement.setString(9, employee.getStatus_354());
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             int rs = preparedStatement.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -147,7 +153,10 @@ public class ManagerEmp {
             preparedStatement.setString(7, customer.getRole_354());
             preparedStatement.setString(8, customer.getStatus_354());
             preparedStatement.setString(9, customer.getId_354());
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
         } catch (Exception e) {
@@ -168,6 +177,7 @@ public class ManagerEmp {
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Employee findEmployee_354(String name_354) throws SQLException {
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from NhanVien where tenNV like N'%" + name_354 + "%'";
@@ -176,10 +186,16 @@ public class ManagerEmp {
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from NhanVien where tenNV like N'%" + name + "%'";
 >>>>>>> DatBan
+=======
+    public Employee findBook(String name) throws SQLException {
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "select * from NhanVien where tenNV like N'%" + name + "%'";
+>>>>>>> DangNhap
         try{
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Employee employee_354 = new Employee();
                 employee_354.setId_354(rs.getString("idNV"));
@@ -193,6 +209,8 @@ public class ManagerEmp {
                 employee_354.setStatus_354(rs.getString("status"));
                 return employee_354;
 =======
+=======
+>>>>>>> DangNhap
                 Employee employee = new Employee();
                 employee.setId_354(rs.getString("idNV"));
                 employee.setName_354(rs.getString("tenNV"));
@@ -204,7 +222,10 @@ public class ManagerEmp {
                 employee.setSalary_354(rs.getDouble("luong"));
                 employee.setStatus_354(rs.getString("status"));
                 return employee;
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
             }
         } catch (Exception e) {
             e.printStackTrace();

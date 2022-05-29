@@ -31,12 +31,17 @@ public class ManagerDThuNam {
             while (rs.next()) {
                 DoanhThuNam listDThu = new DoanhThuNam();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 listDThu.setNam_360(rs.getInt("Nam"));
                 listDThu.setDoanhThu_360(rs.getString("TongTien"));
 =======
                 listDThu.setNam(rs.getInt("Nam"));
                 listDThu.setDoanhThu(rs.getString("TongTien"));
 >>>>>>> DatBan
+=======
+                listDThu.setNam(rs.getInt("Nam"));
+                listDThu.setDoanhThu(rs.getString("TongTien"));
+>>>>>>> DangNhap
                 listDThus.add(listDThu);
             }
         } catch (SQLException ex) {

@@ -1,5 +1,6 @@
 ﻿
 <<<<<<< HEAD
+<<<<<<< HEAD
 CREATE DATABASE QuanLiNhaHang
 go
 use QuanLiNhaHang
@@ -8,6 +9,11 @@ CREATE DATABASE QuanLiNhaHang5
 go
 use QuanLiNhaHang5
 >>>>>>> DatBan
+=======
+CREATE DATABASE QuanLiNhaHang5
+go
+use QuanLiNhaHang5
+>>>>>>> DangNhap
 
 
 --Tao table
@@ -137,9 +143,13 @@ values
 go
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 select * from NguyenLieu
 >>>>>>> DatBan
+=======
+select * from NguyenLieu
+>>>>>>> DangNhap
 insert into BanAn
 values
 	('BA001',N'Trống'),
@@ -152,10 +162,14 @@ values
 	('BA008',N'Trống'),
 	('BA009',N'Trống'),
 <<<<<<< HEAD
+<<<<<<< HEAD
 	('BA010',N'Trống')
 =======
 	('BA0010',N'Trống')
 >>>>>>> DatBan
+=======
+	('BA0010',N'Trống')
+>>>>>>> DangNhap
 
 go
 
@@ -175,6 +189,7 @@ values
 	('MA008',N'Cơm rang bò',120000),
 	('MA009',N'Nước suối',50000),
 	('MA0010',N'Rượu vang',200000)
+<<<<<<< HEAD
 
 
 go
@@ -187,6 +202,15 @@ values ('trung','123', 'NV001'),
 	   ('truong','123', 'NV002')
 
 >>>>>>> DatBan
+=======
+
+
+go
+insert into account
+values ('trung','123', 'NV001'),
+	   ('truong','123', 'NV002')
+
+>>>>>>> DangNhap
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from ChiTietHoaDon as cthd, MonAn as ma
@@ -216,5 +240,8 @@ group by day(hd.ngayThanhToan)
 
 
 
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 

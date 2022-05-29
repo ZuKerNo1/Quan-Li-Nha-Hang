@@ -9,15 +9,20 @@ import java.sql.SQLException;
 import java.util.List;
 import model.Customer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import model.DatBan;
 >>>>>>> DatBan
+=======
+import model.DatBan;
+>>>>>>> DangNhap
 
 /**
  *
  * @author AD
  */
 public class CustomerService {
+<<<<<<< HEAD
 <<<<<<< HEAD
     private ManagerCus managerCus_354;
     public CustomerService(){
@@ -42,6 +47,8 @@ public class CustomerService {
         return managerCus_354.findCustomer_354(find_354);
     }
 =======
+=======
+>>>>>>> DangNhap
     private ManagerCus managerCus;
     public CustomerService(){
         managerCus = new ManagerCus();
@@ -67,5 +74,8 @@ public class CustomerService {
     }
 
     
+<<<<<<< HEAD
 >>>>>>> DatBan
+=======
+>>>>>>> DangNhap
 }
