@@ -9,7 +9,11 @@ package model;
  * @author AD
  */
 public class Customer {
+<<<<<<< HEAD
     private String name_354, phone_354, dob_354, gender_354, address_354;
+=======
+    private String idKH_354,name_354, phone_354, dob_354, gender_354, address_354;
+>>>>>>> DatBan
 
     public String getName_354() {
         return name_354;
@@ -43,6 +47,17 @@ public class Customer {
         this.gender_354 = gender_354;
     }
 
+<<<<<<< HEAD
+=======
+    public String getIdKH_354() {
+        return idKH_354;
+    }
+
+    public void setIdKH_354(String idKH_354) {
+        this.idKH_354 = idKH_354;
+    }
+
+>>>>>>> DatBan
     public String getAddress_354() {
         return address_354;
     }

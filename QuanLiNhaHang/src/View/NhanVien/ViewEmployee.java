@@ -23,15 +23,25 @@ import model.Employee;
  */
 public class ViewEmployee extends javax.swing.JFrame {
     DefaultTableModel defaulttableModel_354;
+<<<<<<< HEAD
     Employee employee_354;
     EmployeeService serviceEmployee_354;
+=======
+    Employee employee;
+    EmployeeService serviceEmployee;
+>>>>>>> DatBan
     /**
      * Creates new form ViewEmployee
      */
     public ViewEmployee() throws SQLException {
         initComponents();
+<<<<<<< HEAD
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
+=======
+        employee = new Employee();
+        serviceEmployee = new EmployeeService();
+>>>>>>> DatBan
         defaulttableModel_354 = new DefaultTableModel(){
             @Override
             public boolean isCellEditable(int row, int column) {
@@ -60,7 +70,11 @@ public class ViewEmployee extends javax.swing.JFrame {
         table_354.setRowHeight(50);
         table_354.validate();
         table_354.repaint();
+<<<<<<< HEAD
         setTableData_354(serviceEmployee_354.getAllEmployees());
+=======
+        setTableData(serviceEmployee.getAllEmployees());
+>>>>>>> DatBan
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
@@ -144,7 +158,11 @@ public class ViewEmployee extends javax.swing.JFrame {
         });
 
         updateBtn_354.setBackground(new java.awt.Color(232, 64, 60));
+<<<<<<< HEAD
         updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/update.png"))); // NOI18N
+=======
+        updateBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/updating.png"))); // NOI18N
+>>>>>>> DatBan
         updateBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateBtn_354ActionPerformed(evt);
@@ -319,6 +337,7 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void updateBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtn_354ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -326,6 +345,15 @@ public class ViewEmployee extends javax.swing.JFrame {
             String employeeID_354 = (String) table_354.getValueAt(row_354, 0);
             try {
                 new UpdateEmployee(employeeID_354).setVisible(true);
+=======
+        int row = table_354.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        }else{
+            String employeeID = (String) table_354.getValueAt(row, 0);
+            try {
+                new UpdateEmployee(employeeID).setVisible(true);
+>>>>>>> DatBan
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -335,6 +363,7 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void deleteBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_354ActionPerformed
         // TODO add your handling code here:
+<<<<<<< HEAD
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
@@ -345,19 +374,36 @@ public class ViewEmployee extends javax.swing.JFrame {
                 String employeeID = String.valueOf(table_354.getValueAt(row_354, 0));
                 try {
                     serviceEmployee_354.deleteEmployee(employeeID);
+=======
+        int row = table_354.getSelectedRow();
+        if(row == -1){
+            JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
+        }else{
+            int confirm = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
+            
+            if(confirm == JOptionPane.YES_OPTION){
+                String employeeID = String.valueOf(table_354.getValueAt(row, 0));
+                try {
+                    serviceEmployee.deleteEmployee(employeeID);
+>>>>>>> DatBan
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
             defaulttableModel_354.setRowCount(0);
             try {
+<<<<<<< HEAD
                 setTableData_354(serviceEmployee_354.getAllEmployees());
+=======
+                setTableData(serviceEmployee.getAllEmployees());
+>>>>>>> DatBan
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
             }
             label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         }
     }//GEN-LAST:event_deleteBtn_354ActionPerformed
+<<<<<<< HEAD
 
     private void refreshBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_354ActionPerformed
         // TODO add your handling code here:
@@ -372,6 +418,12 @@ public class ViewEmployee extends javax.swing.JFrame {
         for(Employee employee_354: Employees){
             defaulttableModel_354.addRow(new Object[]{employee_354.getId_354(), employee_354.getName_354(), employee_354.getDob_354(), employee_354.getGender_354(), employee_354.getPhone_354(),
             employee_354.getAddress_354(), employee_354.getRole_354(), employee_354.getSalary_354(), employee_354.getStatus_354()});
+=======
+    private void setTableData(List<Employee> Employees){
+        for(Employee employee: Employees){
+            defaulttableModel_354.addRow(new Object[]{employee.getId_354(), employee.getName_354(), employee.getDob_354(), employee.getGender_354(), employee.getPhone_354(),
+            employee.getAddress_354(), employee.getRole_354(), employee.getSalary_354(), employee.getStatus_354()});
+>>>>>>> DatBan
         }
     }  
     /**

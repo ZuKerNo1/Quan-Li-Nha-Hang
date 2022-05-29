@@ -268,6 +268,8 @@ public class TraCuuBan extends javax.swing.JFrame {
         if (row == -1) {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
         } else {
+<<<<<<< HEAD
+=======
             String ID = (String) traCuuTable_352.getValueAt(row, 0);
             try {
                 new DatBan_NguoiDaiDien(ID).setVisible(true);
@@ -276,6 +278,27 @@ public class TraCuuBan extends javax.swing.JFrame {
             }
             this.dispose();
         }
+    }//GEN-LAST:event_clearBtn_352ActionPerformed
+
+    private void thanhToan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thanhToan_352ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_thanhToan_352ActionPerformed
+
+    private void goiMon_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goiMon_352ActionPerformed
+        int row = traCuuTable_352.getSelectedRow();
+        if (row == -1) {
+            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
+        } else {
+>>>>>>> DatBan
+            String ID = (String) traCuuTable_352.getValueAt(row, 0);
+            try {
+                new DatBan_NguoiDaiDien(ID).setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            this.dispose();
+        }
+<<<<<<< HEAD
     }//GEN-LAST:event_clearBtn_352ActionPerformed
 
     private void thanhToan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thanhToan_352ActionPerformed
@@ -298,6 +321,10 @@ public class TraCuuBan extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_goiMon_352ActionPerformed
 
+=======
+    }//GEN-LAST:event_goiMon_352ActionPerformed
+
+>>>>>>> DatBan
     private void huyDat_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_huyDat_352ActionPerformed
 //        if (JOptionPane.showConfirmDialog(this, "Bạn có muốn xóa không") == JOptionPane.NO_OPTION) {
 //            return;

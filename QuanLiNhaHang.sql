@@ -1,7 +1,13 @@
 ﻿
+<<<<<<< HEAD
 CREATE DATABASE QuanLiNhaHang
 go
 use QuanLiNhaHang
+=======
+CREATE DATABASE QuanLiNhaHang5
+go
+use QuanLiNhaHang5
+>>>>>>> DatBan
 
 
 --Tao table
@@ -130,6 +136,10 @@ values
 	('NC2001',N'Rượu vang Screaming Eagle Cabernet Sauvignon 1992',20,'Thùng','NV001')
 go
 
+<<<<<<< HEAD
+=======
+select * from NguyenLieu
+>>>>>>> DatBan
 insert into BanAn
 values
 	('BA001',N'Trống'),
@@ -141,7 +151,11 @@ values
 	('BA007',N'Trống'),
 	('BA008',N'Trống'),
 	('BA009',N'Trống'),
+<<<<<<< HEAD
 	('BA010',N'Trống')
+=======
+	('BA0010',N'Trống')
+>>>>>>> DatBan
 
 go
 
@@ -166,12 +180,41 @@ values
 go
 insert into account
 values ('trung','123', 'NV001'),
+<<<<<<< HEAD
 	   ('truong','123', 'NV002'),
 	   ('vu','123', 'NV005')
+=======
+	   ('truong','123', 'NV002')
+
+>>>>>>> DatBan
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from ChiTietHoaDon as cthd, MonAn as ma
 where cthd.idMonAn = ma.idMonAn 
 group by cthd.idHoaDon
 
+<<<<<<< HEAD
+=======
+--Thống kê theo tháng
+
+select month(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
+from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
+where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn 
+group by month(hd.ngayThanhToan)
+
+--Thống kê theo năm
+select year(hd.ngayThanhToan) as N'Năm' , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
+from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
+where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn 
+group by year(hd.ngayThanhToan)
+
+--Thống kê theo ngày hiện tại
+select day(hd.ngayThanhToan) , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
+from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
+where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
+group by day(hd.ngayThanhToan)
+
+
+
+>>>>>>> DatBan
 

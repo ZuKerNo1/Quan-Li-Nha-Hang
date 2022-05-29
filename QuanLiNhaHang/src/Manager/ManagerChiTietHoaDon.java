@@ -21,7 +21,10 @@ public class ManagerChiTietHoaDon {
 
     HoaDon hoaDon;
     ChonMonFrame chonMonFrame ;
+<<<<<<< HEAD
     private int sl;
+=======
+>>>>>>> DatBan
 
     
     public void addMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
@@ -36,6 +39,7 @@ public class ManagerChiTietHoaDon {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+<<<<<<< HEAD
     }
     
     public void updateMonAnToChiTietHoaDon(int idHoaDon, String idMA, int soLuong) throws SQLException {
@@ -76,3 +80,7 @@ public class ManagerChiTietHoaDon {
         return 0;
     }
 }
+=======
+        }
+    }
+>>>>>>> DatBan

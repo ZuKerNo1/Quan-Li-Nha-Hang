@@ -260,6 +260,7 @@
                 </Component>
               </SubComponents>
             </Container>
+<<<<<<< HEAD
             <Component class="javax.swing.JButton" name="refreshBtn_354">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -273,6 +274,8 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="refreshBtn_354ActionPerformed"/>
               </Events>
             </Component>
+=======
+>>>>>>> DatBan
           </SubComponents>
         </Container>
         <Component class="javax.swing.JLabel" name="jLabel2">
