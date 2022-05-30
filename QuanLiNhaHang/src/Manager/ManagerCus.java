@@ -108,25 +108,25 @@ public class ManagerCus {
             e.printStackTrace();
         }
     }
-    public Customer findCustomer_354(String find) throws SQLException {
-        Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "select * from KhachHang where tenKH like N'%" + find + "%' or diaChi like N'%" 
-                + find + "%' or ngaySinh like N'%" + find + "%' or gioiTinh like N'%" + find + "%' or SDT like '%" + find + "%'";
-        try{
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                Customer customer_354 = new Customer();
-                customer_354.setName_354(rs.getString("tenKH"));
-                customer_354.setAddress_354(rs.getString("diaChi"));
-                customer_354.setDob_354(rs.getString("ngaySinh"));
-                customer_354.setGender_354(rs.getString("gioiTinh"));
-                customer_354.setPhone_354(rs.getString("SDT"));
-                return customer_354;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+    // public Customer findCustomer_354(String find) throws SQLException {
+    //     Connection connection = JDBCConnection.JDBCConnection();
+    //     String sql = "select * from KhachHang where tenKH like N'%" + find + "%' or diaChi like N'%" 
+    //             + find + "%' or ngaySinh like N'%" + find + "%' or gioiTinh like N'%" + find + "%' or SDT like '%" + find + "%'";
+    //     try{
+    //         PreparedStatement preparedStatement = connection.prepareStatement(sql);
+    //         ResultSet rs = preparedStatement.executeQuery();
+    //         while (rs.next()) {
+    //             Customer customer_354 = new Customer();
+    //             customer_354.setName_354(rs.getString("tenKH"));
+    //             customer_354.setAddress_354(rs.getString("diaChi"));
+    //             customer_354.setDob_354(rs.getString("ngaySinh"));
+    //             customer_354.setGender_354(rs.getString("gioiTinh"));
+    //             customer_354.setPhone_354(rs.getString("SDT"));
+    //             return customer_354;
+    //         }
+    //     } catch (Exception e) {
+    //         e.printStackTrace();
+    //     }
+    //     return null;
+    // }
 }
