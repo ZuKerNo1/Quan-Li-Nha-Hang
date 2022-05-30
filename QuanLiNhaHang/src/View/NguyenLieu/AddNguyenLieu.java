@@ -16,7 +16,7 @@ import model.NguyenLieu;
  * @author FSC
  */
 public class AddNguyenLieu extends javax.swing.JFrame {
-    NguyenLieuService nlService = new NguyenLieuService();
+    NguyenLieuService nlService_360 = new NguyenLieuService();
     /**
      * Creates new form AddNguyenLieu
      */
@@ -252,7 +252,7 @@ public class AddNguyenLieu extends javax.swing.JFrame {
         nguyenLieu.setDonVi_360(unitNguyenLieuCB_360.getSelectedItem().toString());
         nguyenLieu.setNhanVienCapNhap_360(staffNguyenLieuText_360.getText());
         try {
-                nlService.addListNguyenLieu(nguyenLieu);
+                nlService_360.addListNguyenLieu(nguyenLieu);
             } catch (SQLException ex) {
                 Logger.getLogger(AddNguyenLieu.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -17,8 +17,8 @@ import model.Customer;
  * @author FSC
  */
 public class UpdateCustomer extends javax.swing.JFrame {
-    Customer customer;
-    CustomerService customerService;
+    Customer customer_354;
+    CustomerService customerService_354;
     /**
      * Creates new form UpdateCustomer
      */
@@ -26,16 +26,16 @@ public class UpdateCustomer extends javax.swing.JFrame {
         initComponents();
         male_354.isEnabled();
         female_354.isEnabled();
-        customerService = new CustomerService();
-        customer = customerService.getCustomerById(sdt);
-        name_354.setText(customer.getName_354());
-        address_354.setText(customer.getAddress_354());
-        dob_354.setText(customer.getDob_354());
-        phone_354.setText(customer.getPhone_354());
-        if("Nam".equals(customer.getGender_354())){
-            male_354.isSelected();
-        }else if("Nữ".equals(customer.getGender_354())){
-            female_354.isSelected();
+        customerService_354 = new CustomerService();
+        customer_354 = customerService_354.getCustomerById(sdt);
+        name_354.setText(customer_354.getName_354());
+        address_354.setText(customer_354.getAddress_354());
+        dob_354.setText(customer_354.getDob_354());
+        phone_354.setText(customer_354.getPhone_354());
+        if("Nam".equals(customer_354.getGender_354())){
+            male_354.doClick();
+        }else if("Nữ".equals(customer_354.getGender_354())){
+            female_354.doClick();
         }
     }
 
@@ -263,20 +263,20 @@ public class UpdateCustomer extends javax.swing.JFrame {
 
     private void submitBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_354ActionPerformed
         // TODO add your handling code here:
-        customer.setName_354(name_354.getText());
-        customer.setAddress_354(address_354.getText());
-        customer.setPhone_354(phone_354.getText());
-        customer.setDob_354(dob_354.getText());
+        customer_354.setName_354(name_354.getText());
+        customer_354.setAddress_354(address_354.getText());
+        customer_354.setPhone_354(phone_354.getText());
+        customer_354.setDob_354(dob_354.getText());
         // lay ra gia tri cho gender
-        String gender = "";
+        String gender_354 = "";
         if(male_354.isSelected()){
-            gender += "Nam";
+            gender_354 += "Nam";
         }else if(female_354.isSelected()){
-            gender += "Nữ";
+            gender_354 += "Nữ";
         }
-        customer.setGender_354(gender);
+        customer_354.setGender_354(gender_354);
         try {
-            customerService.updateCustomer(customer);
+            customerService_354.updateCustomer(customer_354);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(UpdateCustomer.this, "Thay đổi thông tin nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(UpdateCustomer.class.getName()).log(Level.SEVERE, null, ex);

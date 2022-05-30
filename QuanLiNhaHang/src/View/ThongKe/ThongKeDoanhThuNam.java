@@ -5,21 +5,50 @@
  */
 package View;
 
+import Service.DThuNamService;
 import View.MainFrame.mainFrame;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+import model.DoanhThuNam;
 
 /**
  *
  * @author win
  */
 public class ThongKeDoanhThuNam extends javax.swing.JFrame {
-
+    DThuNamService dThuService_360 = new DThuNamService();
     /**
      * Creates new form ThongKeDoanhThuNam
      */
-    public ThongKeDoanhThuNam() {
+    public ThongKeDoanhThuNam() throws SQLException {
         initComponents();
-    }
+        DefaultTableModel defaultTableModel;
+        defaultTableModel = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; //To change body of generated methods, choose Tools | Templates.
+            }
 
+        };
+        tableShow_352.setModel(defaultTableModel);
+        defaultTableModel.addColumn("Năm");
+        defaultTableModel.addColumn("Doanh thu");
+        setData(dThuService_360.getAllListDThu());
+    }
+    private void setData(List<DoanhThuNam> dThus) throws SQLException {
+        DefaultTableModel defaultTableModel;
+        defaultTableModel = new DefaultTableModel();
+        tableShow_352.setModel(defaultTableModel);
+        defaultTableModel.addColumn("Năm");
+        defaultTableModel.addColumn("Doanh Thu");
+        for (DoanhThuNam dThu : dThus) {
+            defaultTableModel.addRow(new Object[]{dThu.getNam_360(), dThu.getDoanhThu_360()});
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,15 +63,13 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jComboBox_bct_nam = new javax.swing.JComboBox<>();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        backBtn_360 = new javax.swing.JButton();
-        backBtn_361 = new javax.swing.JButton();
+        backBtn_352 = new javax.swing.JButton();
+        gbackBtn_352 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tableShow_352 = new com.raven.suportSwing.TableColumn();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -81,40 +108,24 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(240, 239, 234));
 
-        jLabel3.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
-        jLabel3.setText("Năm ");
-
-        jComboBox_bct_nam.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jComboBox_bct_nam.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Năm hệ thống" }));
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "STT", "Thang", "Doanh Thu"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        backBtn_360.setBackground(new java.awt.Color(255, 51, 51));
-        backBtn_360.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        backBtn_360.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_360.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
-        backBtn_360.setText("XEM BÁO CÁO THÁNG");
-        backBtn_360.addActionListener(new java.awt.event.ActionListener() {
+        backBtn_352.setBackground(new java.awt.Color(255, 51, 51));
+        backBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        backBtn_352.setForeground(new java.awt.Color(255, 255, 255));
+        backBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
+        backBtn_352.setText("XEM BÁO CÁO THÁNG");
+        backBtn_352.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtn_360ActionPerformed(evt);
+                backBtn_352ActionPerformed(evt);
             }
         });
 
-        backBtn_361.setBackground(new java.awt.Color(255, 51, 51));
-        backBtn_361.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        backBtn_361.setForeground(new java.awt.Color(255, 255, 255));
-        backBtn_361.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
-        backBtn_361.addActionListener(new java.awt.event.ActionListener() {
+        gbackBtn_352.setBackground(new java.awt.Color(255, 51, 51));
+        gbackBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        gbackBtn_352.setForeground(new java.awt.Color(255, 255, 255));
+        gbackBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/back.png"))); // NOI18N
+        gbackBtn_352.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backBtn_361ActionPerformed(evt);
+                gbackBtn_352ActionPerformed(evt);
             }
         });
 
@@ -130,7 +141,11 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         jTextField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(255, 255, 255));
         jTextField1.setText("  VNĐ");
-        jTextField1.setOpaque(false);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -148,6 +163,24 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        tableShow_352.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Năm", "Tổng giá bán"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(tableShow_352);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -155,35 +188,35 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox_bct_nam, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(backBtn_361, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 406, Short.MAX_VALUE)
+                        .addComponent(gbackBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1007, Short.MAX_VALUE)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1457, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel3)
-                        .addComponent(jComboBox_bct_nam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(backBtn_360, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 461, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(backBtn_361, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(gbackBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(98, 98, 98)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(99, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -208,17 +241,25 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_360ActionPerformed
-        // TODO add your handling code here:
-        new ThongKeDoanhThuThang().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_backBtn_360ActionPerformed
-
-    private void backBtn_361ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_361ActionPerformed
+    private void gbackBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gbackBtn_352ActionPerformed
         // TODO add your handling code here:
         new mainFrame().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_backBtn_361ActionPerformed
+    }//GEN-LAST:event_gbackBtn_352ActionPerformed
+
+    private void backBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_352ActionPerformed
+        try {
+            // TODO add your handling code here:
+            new ThongKeDoanhThuThang().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(ThongKeDoanhThuNam.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+    }//GEN-LAST:event_backBtn_352ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -250,25 +291,27 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ThongKeDoanhThuNam().setVisible(true);
+                try {
+                    new ThongKeDoanhThuNam().setVisible(true);
+                } catch (SQLException ex) {
+                    Logger.getLogger(ThongKeDoanhThuNam.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backBtn_360;
-    private javax.swing.JButton backBtn_361;
-    private javax.swing.JComboBox<String> jComboBox_bct_nam;
+    private javax.swing.JButton backBtn_352;
+    private javax.swing.JButton gbackBtn_352;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private com.raven.suportSwing.TableColumn tableShow_352;
     // End of variables declaration//GEN-END:variables
 }
