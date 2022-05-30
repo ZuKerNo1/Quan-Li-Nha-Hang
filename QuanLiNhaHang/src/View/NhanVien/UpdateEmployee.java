@@ -32,25 +32,25 @@ public class UpdateEmployee extends javax.swing.JFrame {
         phone_354.setText(employee_354.getPhone_354());
         salary_354.setText(String.valueOf(employee_354.getSalary_354()));
         if("Nam".equals(employee_354.getGender_354())){
-            male_354.isSelected();
-        }else{
-            female_354.isSelected();
+            male_354.doClick();
+        }else if("Nữ".equals(employee_354.getGender_354())){
+            female_354.doClick();
         }
         if("Đang làm việc".equals(employee_354.getStatus_354())){
-            working_354.isSelected();
+            working_354.doClick();
         }else{
-            leave_354.isSelected();
+            leave_354.doClick();
         }
         if("Phục vụ".equals(employee_354.getRole_354())){
-            phucVu_354.isSelected();
+            phucVu_354.doClick();
         }else if("Đầu bếp".equals(employee_354.getRole_354())){
-            dauBep_354.isSelected();
+            dauBep_354.doClick();
         }else if("Quản lí".equals(employee_354.getRole_354())){
-            quanLy_354.isSelected();
+            quanLy_354.doClick();
         }else if("Bảo vệ".equals(employee_354.getRole_354())){
-            baoVe_354.isSelected();
+            baoVe_354.doClick();
         }else if("Thu ngân".equals(employee_354.getRole_354())){
-            thuNgan_354.isSelected();
+            thuNgan_354.doClick();
         }
     }
 

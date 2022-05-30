@@ -38,6 +38,7 @@ public class TraCuuBan extends javax.swing.JFrame {
      */
     public TraCuuBan() throws SQLException {
         initComponents();
+        setData(traCuuBanService.getAllListTable_352());
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
             @Override
@@ -49,6 +50,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         defaultTableModel.addColumn("ID Bàn Ăn");
         defaultTableModel.addColumn("Trạng thái");
         setData(traCuuBanService.getAllListTable_352());
+        
     }
 
     private void setData(List<Table> tables) throws SQLException {

@@ -33,7 +33,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     Table table = new Table();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hoaDonService = new HoaDonService();;
-
+    
     /**
      * Creates new form DatBan
      */
@@ -49,7 +49,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     }
     
     
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -415,7 +414,12 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        //Chuyen doi trang thai khi dat ban
+        try {
+            datBanService.chuyenTraiThai_DatBan(idBA.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+        }
         try {
             new TraCuuBan().setVisible(true);
             this.dispose();
@@ -471,6 +475,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

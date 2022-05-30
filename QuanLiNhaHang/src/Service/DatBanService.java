@@ -32,4 +32,8 @@ public class DatBanService {
         managerDatBan.deleteDatBan_352(id);
     }
     
+    public void chuyenTraiThai_DatBan(String id) throws SQLException{
+        managerDatBan.chuyenTrangThai_DatBan(id);
+    }
+    
 }
