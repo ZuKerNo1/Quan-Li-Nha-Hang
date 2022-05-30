@@ -130,6 +130,8 @@ public class ManagerCus {
         }
         If(customers_354 != null){
             return customers_354;
+        }else{
+            return null;
         }
     }
 }
