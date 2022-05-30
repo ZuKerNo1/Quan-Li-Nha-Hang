@@ -108,7 +108,8 @@ public class ManagerCus {
             e.printStackTrace();
         }
     }
-    public Customer findCustomer_354(String find) throws SQLException {
+    public List<Customer> findCustomer_354(String find) throws SQLException {
+        List<Customer> customers_354 = new ArrayList<Customer>();
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from KhachHang where tenKH like N'%" + find + "%' or diaChi like N'%" 
                 + find + "%' or ngaySinh like N'%" + find + "%' or gioiTinh like N'%" + find + "%' or SDT like '%" + find + "%'";
@@ -122,11 +123,15 @@ public class ManagerCus {
                 customer_354.setDob_354(rs.getString("ngaySinh"));
                 customer_354.setGender_354(rs.getString("gioiTinh"));
                 customer_354.setPhone_354(rs.getString("SDT"));
-                return customer_354;
+                customers_354.add(customer_354);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        if(customers_354 != null){
+            return customers_354;
+        }else{
+            return null;
+        }
     }
 }

@@ -386,26 +386,19 @@ public class ViewEmployee extends javax.swing.JFrame {
             }
         }else{
             try {
-                e_354 = serviceEmployee_354.find(find);
+                if (serviceEmployee_354.find(find) != null) {
+                    try {
+                        defaulttableModel_354.setRowCount(0);
+                        setTableData_354(serviceEmployee_354.find(find));
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else {
+                    defaulttableModel_354.setNumRows(0);
+                    JOptionPane.showMessageDialog(null, "Không có trong danh sách");
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (e_354 != null) {
-                defaulttableModel_354.setRowCount(0);
-                defaulttableModel_354.addRow(new Object[]{
-                    e_354.getId_354(), 
-                    e_354.getName_354(), 
-                    e_354.getDob_354(), 
-                    e_354.getGender_354(), 
-                    e_354.getPhone_354(),
-                    e_354.getAddress_354(), 
-                    e_354.getRole_354(), 
-                    e_354.getSalary_354(), 
-                    e_354.getStatus_354()
-                });
-            } else {
-                defaulttableModel_354.setNumRows(0);
-                JOptionPane.showMessageDialog(null, "Không có trong danh sách");
             }
         }
     }//GEN-LAST:event_searchBtn_354ActionPerformed

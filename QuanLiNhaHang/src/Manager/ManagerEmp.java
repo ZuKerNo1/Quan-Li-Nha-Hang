@@ -125,7 +125,8 @@ public class ManagerEmp {
             e.printStackTrace();
         }
     }
-    public Employee findEmployee_354(String name_354) throws SQLException {
+    public List<Employee> findEmployee_354(String name_354) throws SQLException {
+        List<Employee> employees_354 = new ArrayList<Employee>();
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from NhanVien where tenNV like N'%" + name_354 + "%'";
         try{
@@ -142,11 +143,15 @@ public class ManagerEmp {
                 employee_354.setRole_354(rs.getString("tenCV"));
                 employee_354.setSalary_354(rs.getDouble("luong"));
                 employee_354.setStatus_354(rs.getString("status"));
-                return employee_354;
+                employees_354.add(employee_354);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        if(employees_354 != null){
+            return employees_354;
+        }else{
+            return null;
+        }
     }
 }
