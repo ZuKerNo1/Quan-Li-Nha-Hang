@@ -66,10 +66,17 @@ public class ManagerChiTietHoaDon {
                 PreparedStatement preparedStatement = connection.prepareCall(sql);
                 preparedStatement.setInt(1, idHD);
                 ResultSet rs = preparedStatement.executeQuery();
-                    if(rs == null)
-                        return 0;
-                    else
-                        return 1;
+                String idMon = "";
+                try{
+                    while(rs.next())
+                        idMon = rs.getString("idMonAn");
+                } catch (Exception e) {
+                    idMon = "";
+                }
+                if(idMon == "")
+                    return 0;
+                else
+                    return 1;
             } catch (Exception e) {
                 e.printStackTrace();
             }
