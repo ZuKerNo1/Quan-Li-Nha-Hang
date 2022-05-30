@@ -324,6 +324,7 @@ public class ViewCustomer extends javax.swing.JFrame {
 
     private void refreshBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_354ActionPerformed
         // TODO add your handling code here:
+        search_354.setText("");
         defaulttableModel_354.setRowCount(0);
         try {
             setTableData_354(customerService_354.getAllCustomers());
