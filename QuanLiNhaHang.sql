@@ -197,3 +197,15 @@ from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
 group by day(hd.ngayThanhToan)
 
+select * 
+from HoaDon as hd, ChiTietHoaDon as cthd, MonAn as ma
+where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn
+group by hd.idHoaDon
+
+update HoaDon
+set status = N'Đã thanh toán'
+where idBA = 'BA001' and status = N'Chưa thanh toán'
+
+update BanAn
+set trangThaiBan = N'Trống'
+where idBA = 'BA001'

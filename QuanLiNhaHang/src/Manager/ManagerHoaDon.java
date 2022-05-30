@@ -43,5 +43,18 @@ public class ManagerHoaDon {
         return 0;
     }
     
+    public void chuyenTrangThai_HoaDon(String id) throws SQLException{
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "update HoaDon\n" +
+        "set status = N'Đã thanh toán'\n" +
+        "where idBA = ? and status = N'Chưa thanh toán'";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, id);
+            int rs = preparedStatement.executeUpdate();
+            System.out.println(rs);
+        } catch (SQLException e) {
+        }
+    }
 }
 

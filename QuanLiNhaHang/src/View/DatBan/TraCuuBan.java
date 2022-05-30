@@ -9,18 +9,21 @@ import Manager.ManagerDatBan;
 import Manager.ManagerNguyenLieu;
 import Manager.ManagerTraCuuBan;
 import Service.DatBanService;
+import Service.HoaDonService;
 import Service.TraCuuBanService;
 import model.Table;
 import View.ChonMon.ChonMonFrame;
 import View.DatBan.DatBan_NguoiDaiDien;
 import View.MainFrame.mainFrame;
 import View.NguyenLieu.NguyenLieuView;
+import java.awt.event.ActionEvent;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import static jdk.nashorn.internal.runtime.Debug.id;
 import model.DatBan;
 
 /**
@@ -30,7 +33,7 @@ import model.DatBan;
 public class TraCuuBan extends javax.swing.JFrame {
 
     TraCuuBanService traCuuBanService = new TraCuuBanService();
-    
+    HoaDonService hoaDonService = new HoaDonService();
     DatBan datban = new DatBan();
     DatBanService datBanService = new DatBanService();
     /**
@@ -87,6 +90,8 @@ public class TraCuuBan extends javax.swing.JFrame {
         huyDat_352 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         traCuuTable_352 = new com.raven.suportSwing.TableColumn();
+        IDBA_Label = new javax.swing.JLabel();
+        IDBA_Label1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -108,7 +113,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 873, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 884, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -116,7 +121,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -192,7 +197,17 @@ public class TraCuuBan extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        traCuuTable_352.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                traCuuTable_352MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(traCuuTable_352);
+
+        IDBA_Label.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+
+        IDBA_Label1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        IDBA_Label1.setText("ID Bàn ăn:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -200,26 +215,35 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                .addGap(40, 40, 40)
-                .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(52, 52, 52)
-                .addComponent(huyDat_352)
-                .addGap(51, 51, 51)
-                .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(54, 54, 54)
-                .addComponent(thanhToan_352, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                        .addGap(40, 40, 40)
+                        .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(52, 52, 52)
+                        .addComponent(huyDat_352)
+                        .addGap(51, 51, 51)
+                        .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(54, 54, 54)
+                        .addComponent(thanhToan_352, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(IDBA_Label1)
+                        .addGap(18, 18, 18)
+                        .addComponent(IDBA_Label)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
-                    .addContainerGap()))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 861, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(563, 563, 563)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(IDBA_Label)
+                    .addComponent(IDBA_Label1))
+                .addGap(547, 547, 547)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -230,8 +254,9 @@ public class TraCuuBan extends javax.swing.JFrame {
                 .addGap(42, 42, 42))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
-                    .addGap(138, 138, 138)))
+                    .addGap(25, 25, 25)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(138, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -281,7 +306,22 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_clearBtn_352ActionPerformed
 
     private void thanhToan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thanhToan_352ActionPerformed
-        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            hoaDonService.chuyenTrangThai_HoaDon(IDBA_Label.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            traCuuBanService.chuyenTrangThai_BanAn(IDBA_Label.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            setData(traCuuBanService.getAllListTable_352());
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_thanhToan_352ActionPerformed
 
     private void goiMon_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goiMon_352ActionPerformed
@@ -314,6 +354,18 @@ public class TraCuuBan extends javax.swing.JFrame {
 //            e.printStackTrace();
 //        }
     }//GEN-LAST:event_huyDat_352ActionPerformed
+
+    private void traCuuTable_352MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_traCuuTable_352MouseClicked
+        // TODO add your handling code here:
+        int idBA = traCuuTable_352.rowAtPoint(evt.getPoint());
+        String IDBA = traCuuTable_352.getValueAt(idBA, 0).toString();
+        try {
+            IDBA_Label.setText(traCuuBanService.getIdTable_352(IDBA));
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_traCuuTable_352MouseClicked
 
     /**
      * @param args the command line arguments
@@ -357,6 +409,8 @@ public class TraCuuBan extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel IDBA_Label;
+    private javax.swing.JLabel IDBA_Label1;
     private javax.swing.JButton backBtn_352;
     private javax.swing.JButton clearBtn_352;
     private javax.swing.JButton goiMon_352;
@@ -370,4 +424,8 @@ public class TraCuuBan extends javax.swing.JFrame {
     private javax.swing.JButton thanhToan_352;
     private com.raven.suportSwing.TableColumn traCuuTable_352;
     // End of variables declaration//GEN-END:variables
+
+    private void traCuuTable_352MouseClicked(ActionEvent evt) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

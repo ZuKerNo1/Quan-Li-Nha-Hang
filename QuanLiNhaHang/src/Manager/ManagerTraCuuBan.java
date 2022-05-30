@@ -66,4 +66,18 @@ public class ManagerTraCuuBan {
         }
     }
     
+    public void chuyenTrangThai_BanAn(String id) throws SQLException{
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "update BanAn\n" +
+        "set trangThaiBan = N'Trống'\n" +
+        "where idBA = ?";
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, id);
+            int rs = preparedStatement.executeUpdate();
+            System.out.println(rs);
+        } catch (SQLException e) {
+        }
+    }
+    
 }

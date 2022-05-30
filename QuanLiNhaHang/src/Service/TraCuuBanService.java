@@ -34,5 +34,7 @@ public class TraCuuBanService {
         traCuuBanManager.updateTable_352(table);
     }
 
-    
+    public void chuyenTrangThai_BanAn(String id) throws SQLException{
+        traCuuBanManager.chuyenTrangThai_BanAn(id);
+    }
 }

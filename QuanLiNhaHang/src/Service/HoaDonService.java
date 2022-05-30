@@ -24,4 +24,8 @@ public class HoaDonService {
     public int getIdHoaDon(String idBA) throws SQLException{
         return hoaDonManager.getIDHoaDon(idBA);
     }
+    
+    public void chuyenTrangThai_HoaDon(String id) throws SQLException{
+        hoaDonManager.chuyenTrangThai_HoaDon(id);
+    }
 }
