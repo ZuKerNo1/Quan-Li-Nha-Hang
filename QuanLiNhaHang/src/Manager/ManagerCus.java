@@ -123,7 +123,7 @@ public class ManagerCus {
                 customer_354.setDob_354(rs.getString("ngaySinh"));
                 customer_354.setGender_354(rs.getString("gioiTinh"));
                 customer_354.setPhone_354(rs.getString("SDT"));
-                return customer_354;
+                customers_354.add(customer_354);
             }
         } catch (Exception e) {
             e.printStackTrace();
