@@ -109,6 +109,7 @@ public class ManagerCus {
         }
     }
     public Customer findCustomer_354(String find) throws SQLException {
+        List<Customer> customers_354 = new ArrayList<Customer>();
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from KhachHang where tenKH like N'%" + find + "%' or diaChi like N'%" 
                 + find + "%' or ngaySinh like N'%" + find + "%' or gioiTinh like N'%" + find + "%' or SDT like '%" + find + "%'";
