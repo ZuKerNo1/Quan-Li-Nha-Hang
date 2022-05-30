@@ -7,6 +7,8 @@ package View;
 
 import Service.DThuNamService;
 import View.MainFrame.mainFrame;
+import View.ThongKe.ShowChart;
+import View.ThongKe.showChartRevenue;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
@@ -58,6 +60,7 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jScrollPane2 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -70,6 +73,9 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableShow_352 = new com.raven.suportSwing.TableColumn();
+        radiColumn_352 = new com.raven.suportSwing.RadioButtonCustom();
+        radiStreet_352 = new com.raven.suportSwing.RadioButtonCustom();
+        BieuDo_352 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 150));
@@ -181,6 +187,32 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tableShow_352);
 
+        buttonGroup1.add(radiColumn_352);
+        radiColumn_352.setText("Biều đồ Cột");
+        radiColumn_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radiColumn_352ActionPerformed(evt);
+            }
+        });
+
+        buttonGroup1.add(radiStreet_352);
+        radiStreet_352.setText("Biều đồ đường");
+        radiStreet_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radiStreet_352ActionPerformed(evt);
+            }
+        });
+
+        BieuDo_352.setBackground(new java.awt.Color(255, 51, 51));
+        BieuDo_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        BieuDo_352.setForeground(new java.awt.Color(255, 255, 255));
+        BieuDo_352.setText("Biểu đồ");
+        BieuDo_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BieuDo_352ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -189,12 +221,17 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(gbackBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 1007, Short.MAX_VALUE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radiColumn_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radiStreet_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32)
+                        .addComponent(BieuDo_352)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -205,8 +242,20 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(radiColumn_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(radiStreet_352, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(BieuDo_352)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 461, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(gbackBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
@@ -261,6 +310,25 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void radiStreet_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiStreet_352ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radiStreet_352ActionPerformed
+
+    private void radiColumn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiColumn_352ActionPerformed
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radiColumn_352ActionPerformed
+
+    private void BieuDo_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BieuDo_352ActionPerformed
+        // TODO add your handling code here:
+        if (radiStreet_352.isSelected()) {
+            new ShowChart((DefaultTableModel) tableShow_352.getModel(), null).setVisible(true);
+
+        } else {
+            new showChartRevenue((DefaultTableModel) tableShow_352.getModel()).setVisible(true);
+        }
+    }//GEN-LAST:event_BieuDo_352ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -301,7 +369,9 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BieuDo_352;
     private javax.swing.JButton backBtn_352;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton gbackBtn_352;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -312,6 +382,8 @@ public class ThongKeDoanhThuNam extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
+    private com.raven.suportSwing.RadioButtonCustom radiColumn_352;
+    private com.raven.suportSwing.RadioButtonCustom radiStreet_352;
     private com.raven.suportSwing.TableColumn tableShow_352;
     // End of variables declaration//GEN-END:variables
 }
