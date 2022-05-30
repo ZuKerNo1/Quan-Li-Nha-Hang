@@ -21,7 +21,6 @@ public class JDBCConnection {
         ds.setServerName("ADMIN");
         ds.setPortNumber(1433);
         ds.setDatabaseName("QuanLiNhaHang");
-        ds.setEncrypt(false);
         ds.setTrustServerCertificate(false);
         Connection con = null;
         try {
