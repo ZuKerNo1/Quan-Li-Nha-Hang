@@ -128,6 +128,8 @@ public class ManagerCus {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        If(customers_354 != null){
+            return customers_354;
+        }
     }
 }
