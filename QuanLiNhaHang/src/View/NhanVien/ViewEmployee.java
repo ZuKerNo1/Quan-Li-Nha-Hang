@@ -64,16 +64,16 @@ public class ViewEmployee extends javax.swing.JFrame {
         label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         
         // thay doi thanh scroll bar
-        // try{
-        //     for(UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()){
-        //     if("Windows".equals(info.getName())){
-        //         UIManager.setLookAndFeel(info.getClassName());
-        //         break;
-        //     }
-        //     }
-        // } catch(Exception e){
-        //     e.getMessage();
-        // }
+        try{
+            for(UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()){
+            if("Windows".equals(info.getName())){
+                UIManager.setLookAndFeel(info.getClassName());
+                break;
+            }
+            }
+        } catch(Exception e){
+            e.getMessage();
+        }
     }
 
     /**
