@@ -376,8 +376,8 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void searchBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBtn_354ActionPerformed
         // TODO add your handling code here:
-        Employee e_354 = new Employee();
-        String find = search_354.getText();
+        //Employee e_354 = new Employee();
+        //String find = search_354.getText();
         if(find == ""){
             try {
                 setTableData_354(serviceEmployee_354.getAllEmployees());
