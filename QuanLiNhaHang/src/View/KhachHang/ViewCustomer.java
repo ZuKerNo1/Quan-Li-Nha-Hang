@@ -302,6 +302,7 @@ public class ViewCustomer extends javax.swing.JFrame {
             }
         }else{
             if (customerService_354.find(find) != null) {
+                defaulttableModel_354.setRowCount(0);
                 setTableData_354(customerService_354.find(find));
             } else {
                 defaulttableModel_354.setNumRows(0);
