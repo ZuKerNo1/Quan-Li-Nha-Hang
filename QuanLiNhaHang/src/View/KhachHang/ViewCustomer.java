@@ -125,7 +125,6 @@ public class ViewCustomer extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
         searchBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +150,11 @@ public class ViewCustomer extends javax.swing.JFrame {
 
         deleteBtn_354.setBackground(new java.awt.Color(204, 153, 255));
         deleteBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/delete.png"))); // NOI18N
+        deleteBtn_354.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtn_354ActionPerformed(evt);
+            }
+        });
 
         table_354.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -325,6 +329,10 @@ public class ViewCustomer extends javax.swing.JFrame {
             Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_refreshBtn_354ActionPerformed
+
+    private void deleteBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_354ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteBtn_354ActionPerformed
     private void setTableData_354(List<Customer> Customers){
         for(Customer customer_354: Customers){
             defaulttableModel_354.addRow(new Object[]{customer_354.getName_354(), customer_354.getDob_354(), customer_354.getGender_354(), customer_354.getPhone_354(),
