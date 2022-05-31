@@ -35,7 +35,7 @@ public class UpdateCustomer extends javax.swing.JFrame {
         if("Nam".equals(customer_354.getGender_354())){
             //male_354.doClick();
         }else if("Nữ".equals(customer_354.getGender_354())){
-            female_354.doClick();
+            //female_354.doClick();
         }
     }
 
