@@ -301,20 +301,8 @@ public class ViewCustomer extends javax.swing.JFrame {
                 Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
-            try {
-                c_354 = customerService_354.find(find);
-            } catch (SQLException ex) {
-                Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            if (c_354 != null) {
-                defaulttableModel_354.setRowCount(0);
-                defaulttableModel_354.addRow(new Object[]{
-                    c_354.getName_354(),
-                    c_354.getDob_354(),
-                    c_354.getGender_354(),
-                    c_354.getPhone_354(),
-                    c_354.getAddress_354()
-                });
+            if (customerService_354.find(find) != null) {
+                
             } else {
                 defaulttableModel_354.setNumRows(0);
                 JOptionPane.showMessageDialog(null, "Không có trong danh sách");
