@@ -30,11 +30,12 @@ public class TraCuuBanService {
     }
 
     
-    public void updateTable_352(Table table) throws SQLException{
-        traCuuBanManager.updateTable_352(table);
-    }
 
     public void chuyenTrangThai_BanAn(String id) throws SQLException{
         traCuuBanManager.chuyenTrangThai_BanAn(id);
+    }
+    
+    public String getstatus_352(String status) throws SQLException {
+        return traCuuBanManager.getIdTable_352(status);
     }
 }

@@ -43,6 +43,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
     public ChonMonFrame(String id) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTable_352(id));
+        
         MonAn monAn = new MonAn();
     }
 
@@ -150,7 +151,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
         submitButton_335 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 50));
+        setLocation(new java.awt.Point(40, 50));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 102));
 

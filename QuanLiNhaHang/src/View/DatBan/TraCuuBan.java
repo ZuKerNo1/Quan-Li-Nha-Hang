@@ -35,6 +35,7 @@ public class TraCuuBan extends javax.swing.JFrame {
     HoaDonService hoaDonService = new HoaDonService();
     DatBan datban = new DatBan();
     DatBanService datBanService = new DatBanService();
+
     /**
      * Creates new form TraCuuBan
      */
@@ -52,7 +53,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         defaultTableModel.addColumn("ID Bàn Ăn");
         defaultTableModel.addColumn("Trạng thái");
         setData(traCuuBanService.getAllListTable_352());
-        
+
     }
 
     private void setData(List<Table> tables) throws SQLException {
@@ -91,6 +92,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         traCuuTable_352 = new com.raven.suportSwing.TableColumn();
         IDBA_Label = new javax.swing.JLabel();
         IDBA_Label1 = new javax.swing.JLabel();
+        status = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(400, 50));
@@ -207,6 +209,9 @@ public class TraCuuBan extends javax.swing.JFrame {
         IDBA_Label1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         IDBA_Label1.setText("ID Bàn ăn:");
 
+        status.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        status.setText("ID Bàn ăn:");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -215,7 +220,7 @@ public class TraCuuBan extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
                         .addComponent(datBan_352)
                         .addGap(52, 52, 52)
                         .addComponent(huyDat_352)
@@ -225,6 +230,8 @@ public class TraCuuBan extends javax.swing.JFrame {
                         .addComponent(thanhToan_352))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(status)
+                        .addGap(44, 44, 44)
                         .addComponent(IDBA_Label1)
                         .addGap(18, 18, 18)
                         .addComponent(IDBA_Label)))
@@ -239,8 +246,9 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(IDBA_Label)
-                    .addComponent(IDBA_Label1))
-                .addGap(532, 532, 532)
+                    .addComponent(IDBA_Label1)
+                    .addComponent(status, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(530, 530, 530)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(huyDat_352, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -322,7 +330,21 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_thanhToan_352ActionPerformed
 
     private void goiMon_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goiMon_352ActionPerformed
+
         int row = traCuuTable_352.getSelectedRow();
+    try {
+            if (traCuuTable_352.getValueAt(row, 1) == traCuuBanService.getstatus_352(status.getText())) {
+                
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        {
+
+            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn không trống", "Lỗi", JOptionPane.ERROR_MESSAGE);
+
+        }
+
         if (row == -1) {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
         } else {
@@ -333,12 +355,12 @@ public class TraCuuBan extends javax.swing.JFrame {
             } catch (SQLException ex) {
                 Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
             }
+
             this.dispose();
-            
-            
+
         }
-        
-        
+
+
     }//GEN-LAST:event_goiMon_352ActionPerformed
 
     private void huyDat_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_huyDat_352ActionPerformed
@@ -348,24 +370,27 @@ public class TraCuuBan extends javax.swing.JFrame {
             Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.dispose();
-        
+
         try {
-                new TraCuuBan().setVisible(true);
-            } catch (SQLException ex) {
-                Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            new TraCuuBan().setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_huyDat_352ActionPerformed
 
     private void traCuuTable_352MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_traCuuTable_352MouseClicked
         // TODO add your handling code here:
         int idBA = traCuuTable_352.rowAtPoint(evt.getPoint());
+        int status = traCuuTable_352.rowAtPoint(evt.getPoint());
         String IDBA = traCuuTable_352.getValueAt(idBA, 0).toString();
+        String Status = traCuuTable_352.getValueAt(status, 1).toString();
         try {
             IDBA_Label.setText(traCuuBanService.getIdTable_352(IDBA));
+            this.status.setText(traCuuBanService.getIdTable_352(Status));
         } catch (SQLException ex) {
             Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }//GEN-LAST:event_traCuuTable_352MouseClicked
 
     /**
@@ -422,6 +447,7 @@ public class TraCuuBan extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel status;
     private javax.swing.JButton thanhToan_352;
     private com.raven.suportSwing.TableColumn traCuuTable_352;
     // End of variables declaration//GEN-END:variables

@@ -52,19 +52,19 @@ public class ManagerTraCuuBan {
         }
         return null;
     }
-    public void updateTable_352(Table table) throws SQLException {
-        Connection connection = JDBCConnection.JDBCConnection();
-        String sql = "Update BanAn set idBA = ? , trangThaiBan = ? ";
-        try {
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1, table.getIdTable_352());
-            preparedStatement.setString(2, table.getStatusTable_352());           
-            int rs = preparedStatement.executeUpdate();
-            System.out.println(rs);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+//    public void updateTable_352(Table table) throws SQLException {
+//        Connection connection = JDBCConnection.JDBCConnection();
+//        String sql = "Update BanAn set idBA = ? , trangThaiBan = ? ";
+//        try {
+//            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+//            preparedStatement.setString(1, table.getIdTable_352());
+//            preparedStatement.setString(2, table.getStatusTable_352());           
+//            int rs = preparedStatement.executeUpdate();
+//            System.out.println(rs);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
     
     public void chuyenTrangThai_BanAn(String id) throws SQLException{
         Connection connection = JDBCConnection.JDBCConnection();
@@ -80,4 +80,20 @@ public class ManagerTraCuuBan {
         }
     }
     
+   
+    public String getstatus_352(String status) throws SQLException {
+        Connection connection = JDBCConnection.JDBCConnection();
+        String sql = "select trangThaiBan from BanAn where trangThaiBan=?";
+        String ttban;
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, status);
+            ResultSet rs = preparedStatement.executeQuery();
+            ttban = status;
+            return ttban;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return null;
+    }
 }
