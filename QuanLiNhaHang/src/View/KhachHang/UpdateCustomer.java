@@ -70,7 +70,7 @@ public class UpdateCustomer extends javax.swing.JFrame {
         backBtn_354 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(50, 20));
+        setLocation(new java.awt.Point(400, 50));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

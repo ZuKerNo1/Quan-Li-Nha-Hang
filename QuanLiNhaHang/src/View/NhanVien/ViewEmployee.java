@@ -103,6 +103,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         label_354 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -132,7 +133,6 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         search_354.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
         searchBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -86,6 +86,7 @@ public class showChartRevenue extends javax.swing.JFrame {
         chart = new com.raven.chartColumn.Chart();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

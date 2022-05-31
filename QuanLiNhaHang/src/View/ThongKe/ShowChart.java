@@ -96,6 +96,7 @@ public class ShowChart extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
+        setLocation(new java.awt.Point(400, 50));
 
         roundPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
