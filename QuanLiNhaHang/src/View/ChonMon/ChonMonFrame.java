@@ -43,7 +43,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
     public ChonMonFrame(String id) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTable_352(id));
-        
+
         MonAn monAn = new MonAn();
     }
 
@@ -961,13 +961,13 @@ public class ChonMonFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_submitButton_335ActionPerformed
 
     private void backButton_335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButton_335ActionPerformed
+
         try {
-            // TODO add your handling code here:
             new TraCuuBan().setVisible(true);
+            this.dispose();
         } catch (SQLException ex) {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
-        this.dispose();
     }//GEN-LAST:event_backButton_335ActionPerformed
 
     /**

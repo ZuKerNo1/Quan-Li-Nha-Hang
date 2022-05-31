@@ -332,35 +332,27 @@ public class TraCuuBan extends javax.swing.JFrame {
     private void goiMon_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goiMon_352ActionPerformed
 
         int row = traCuuTable_352.getSelectedRow();
-    try {
-            if (traCuuTable_352.getValueAt(row, 1) == traCuuBanService.getstatus_352(status.getText())) {
-                
-            }
+        try {
+            if (row == -1) {
+                    JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    if ( "Trống".equals((String) traCuuTable_352.getValueAt(row, 1))) {
+                        JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn không trống", "Lỗi", JOptionPane.ERROR_MESSAGE);   
+                    }else{
+                        String ID = (String) traCuuTable_352.getValueAt(row, 0);
+                        try {
+                            new ChonMonFrame(ID).setVisible(true);
+                            this.dispose();
+                        } catch (SQLException ex) {
+                            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        new ChonMonFrame(ID).setVisible(true);
+                        this.dispose();
+                    }
+                }         
         } catch (SQLException ex) {
             Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
         }
-        {
-
-            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn không trống", "Lỗi", JOptionPane.ERROR_MESSAGE);
-
-        }
-
-        if (row == -1) {
-            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        } else {
-            String ID = (String) traCuuTable_352.getValueAt(row, 0);
-            try {
-                new ChonMonFrame(ID).setVisible(true);
-                this.dispose();
-            } catch (SQLException ex) {
-                Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            this.dispose();
-
-        }
-
-
     }//GEN-LAST:event_goiMon_352ActionPerformed
 
     private void huyDat_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_huyDat_352ActionPerformed
