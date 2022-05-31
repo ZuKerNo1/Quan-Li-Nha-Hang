@@ -394,7 +394,7 @@ public class AddEmployee extends javax.swing.JFrame {
         // lay ra gia tri cho role
         String role_354 = "";
         if(phucVu_354.isSelected()){
-            role_354 += "Phục vụ";
+            //role_354 += "Phục vụ";
         }else if(dauBep_354.isSelected()){
             role_354 += "Đầu bếp";
         }else if(baoVe_354.isSelected()){
