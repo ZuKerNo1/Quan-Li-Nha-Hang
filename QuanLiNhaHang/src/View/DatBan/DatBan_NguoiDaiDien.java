@@ -45,7 +45,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     DatBan_NguoiDaiDien(String ID) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTable_352(ID));
-        
+        setLocationRelativeTo(null);
     }
     
     

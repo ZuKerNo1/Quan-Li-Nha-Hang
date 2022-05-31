@@ -23,6 +23,7 @@ public class AddEmployee extends javax.swing.JFrame {
      */
     public AddEmployee() {
         initComponents();
+        setLocationRelativeTo(null);
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
     }

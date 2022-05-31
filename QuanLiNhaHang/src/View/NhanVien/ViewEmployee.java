@@ -30,6 +30,7 @@ public class ViewEmployee extends javax.swing.JFrame {
      */
     public ViewEmployee() throws SQLException {
         initComponents();
+        setLocationRelativeTo(null);
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
         defaulttableModel_354 = new DefaultTableModel(){
@@ -345,7 +346,6 @@ public class ViewEmployee extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
         }else{
             int confirm_354 = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
-            
             if(confirm_354 == JOptionPane.YES_OPTION){
                 String employeeID = String.valueOf(table_354.getValueAt(row_354, 0));
                 try {

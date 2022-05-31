@@ -37,6 +37,7 @@ public class UpdateCustomer extends javax.swing.JFrame {
         }else if("Nữ".equals(customer_354.getGender_354())){
             female_354.doClick();
         }
+        setLocationRelativeTo(null);
     }
 
     /**

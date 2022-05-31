@@ -119,9 +119,9 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel1)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -205,8 +205,10 @@ public class TraCuuBan extends javax.swing.JFrame {
         jScrollPane1.setViewportView(traCuuTable_352);
 
         IDBA_Label.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        IDBA_Label.setForeground(new java.awt.Color(51, 153, 255));
 
         IDBA_Label1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        IDBA_Label1.setForeground(new java.awt.Color(51, 153, 255));
         IDBA_Label1.setText("ID Bàn ăn:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);

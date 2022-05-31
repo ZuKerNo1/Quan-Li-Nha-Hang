@@ -20,11 +20,18 @@ public class DThuThangService {
         dThuThangManager_360 = new ManagerDThuThang();
     }
 
-    public  List<DoanhThuThang> getAllListDThu() throws SQLException{
-        return dThuThangManager_360.getAllListThang();
+//    public List<DoanhThuThang> getAllListDThu() throws SQLException{
+//        return dThuThangManager_360.getAllListThang();
+//    }
+    
+    public List<DoanhThuThang> getAllListDThu_byYear(int year) throws SQLException{
+        return dThuThangManager_360.getAllListThang_byYear(year);
+    }
+    public String TongTien(int year){
+        return dThuThangManager_360.TongTien(year);
     }
     
-    public String TongTien(){
-        return dThuThangManager_360.TongTien();
+    public List<Integer> getYearFromDB(){
+        return dThuThangManager_360.getYearFromDB();
     }
 }

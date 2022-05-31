@@ -2,6 +2,12 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/Service/DThuThangService.java</file>
+            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/View/ThongKe/ThongKeDoanhThuThang.java</file>
+            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/View/ThongKe/ThongKeDoanhThuNam.java</file>
+            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/Service/DThuNamService.java</file>
+            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/Manager/ManagerDThuNam.java</file>
+        </group>
     </open-files>
 </project-private>

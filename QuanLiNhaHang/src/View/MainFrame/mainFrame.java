@@ -27,6 +27,7 @@ public class mainFrame extends javax.swing.JFrame {
     public mainFrame() {
         initComponents();
         setTitle("Quản Lý Nhà Hàng");
+        setLocationRelativeTo(null);
     }
 
     /**
