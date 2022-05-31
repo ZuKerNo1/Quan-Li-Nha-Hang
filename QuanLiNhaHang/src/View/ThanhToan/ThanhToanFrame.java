@@ -6,13 +6,18 @@ package View.ThanhToan;
 
 import Manager.ManagerNguyenLieu;
 import Manager.ManagerThanhToan;
+import Service.DatBanService;
 import Service.HoaDonService;
 import Service.ThanhToanService;
 import Service.TraCuuBanService;
+import View.DatBan.TraCuuBan;
 import View.MainFrame.mainFrame;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
+import model.DatBan;
 import model.ThanhToan;
 
 /**
@@ -23,6 +28,8 @@ public class ThanhToanFrame extends javax.swing.JFrame {
     ThanhToanService thanhToanService = new ThanhToanService();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hdService = new HoaDonService();
+    DatBan datban = new DatBan();
+    DatBanService datBanService = new DatBanService();
     /**
      * Creates new form ThanhToan1
      */
@@ -152,6 +159,11 @@ public class ThanhToanFrame extends javax.swing.JFrame {
         submitBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_352.setForeground(new java.awt.Color(255, 255, 255));
         submitBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
+        submitBtn_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitBtn_352ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -294,6 +306,28 @@ public class ThanhToanFrame extends javax.swing.JFrame {
     private void sdt_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sdt_352ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_sdt_352ActionPerformed
+
+    private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
+        // TODO add your handling code here:
+        try {
+            // TODO add your handling code here:
+            hdService.chuyenTrangThai_HoaDon(idBA.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            traCuuBanService.chuyenTrangThai_BanAn(idBA.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+            new TraCuuBan().setVisible(true);
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(ThanhToanFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_submitBtn_352ActionPerformed
 
     /**
      * @param args the command line arguments
