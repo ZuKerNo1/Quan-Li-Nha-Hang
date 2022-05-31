@@ -300,8 +300,8 @@ public class TraCuuBan extends javax.swing.JFrame {
         if (row == -1) {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
         } else {
-            if("Đã đặt bàn".equals((String) traCuuTable_352.getValueAt(row, 1))) {
-                JOptionPane.showMessageDialog(TraCuuBan.this, "Bàn đã được đặt, vui lòng chọn bàn trống", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            if("Đã đặt bàn".equals((String) traCuuTable_352.getValueAt(row, 1)) || "Đang sử dụng".equals((String) traCuuTable_352.getValueAt(row, 1))) {
+                JOptionPane.showMessageDialog(TraCuuBan.this, "Bàn đã được đặt hoặc đang sử dụng, vui lòng chọn bàn trống", "Lỗi", JOptionPane.ERROR_MESSAGE);
             }else{ 
                 String ID = (String) traCuuTable_352.getValueAt(row, 0);
                 try {
