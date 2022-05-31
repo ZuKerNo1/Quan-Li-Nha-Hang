@@ -108,7 +108,7 @@ public class ManagerCus {
             e.printStackTrace();
         }
     }
-    public Customer findCustomer_354(String find) throws SQLException {
+    public List<Customer> findCustomer_354(String find) throws SQLException {
         List<Customer> customers_354 = new ArrayList<Customer>();
         Connection connection = JDBCConnection.JDBCConnection();
         String sql = "select * from KhachHang where tenKH like N'%" + find + "%' or diaChi like N'%" 
@@ -128,7 +128,7 @@ public class ManagerCus {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        If(customers_354 != null){
+        if(customers_354 != null){
             return customers_354;
         }else{
             return null;
