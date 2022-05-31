@@ -4,21 +4,62 @@
  */
 package View.ThanhToan;
 
+import Manager.ManagerNguyenLieu;
+import Manager.ManagerThanhToan;
+import Service.HoaDonService;
+import Service.ThanhToanService;
+import Service.TraCuuBanService;
 import View.MainFrame.mainFrame;
+import java.sql.SQLException;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.ThanhToan;
 
 /**
  *
  * @author ACER
  */
-public class ThanhToan extends javax.swing.JFrame {
-
+public class ThanhToanFrame extends javax.swing.JFrame {
+    ThanhToanService thanhToanService = new ThanhToanService();
+    TraCuuBanService traCuuBanService = new TraCuuBanService();
+    HoaDonService hdService = new HoaDonService();
     /**
      * Creates new form ThanhToan1
      */
-    public ThanhToan() {
+    public ThanhToanFrame(String id) throws SQLException {
+        initComponents();
+        DefaultTableModel defaultTableModel;
+        defaultTableModel = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; //To change body of generated methods, choose Tools | Templates.
+            }
+
+        };
+        idBA.setText(traCuuBanService.getIdTable_352(id));
+        idHD.setText(String.valueOf(hdService.getIdHoaDon(traCuuBanService.getIdTable_352(id))));
+        setData(thanhToanService.getAllListThanhToan(hdService.getIdHoaDon(traCuuBanService.getIdTable_352(id)), traCuuBanService.getIdTable_352(id)));
+    }
+    public ThanhToanFrame() {
         initComponents();
     }
-
+    
+    private void setData(List<ThanhToan> tts) throws SQLException {
+        DefaultTableModel defaultTableModel;
+        ManagerThanhToan us = new ManagerThanhToan();
+        defaultTableModel = new DefaultTableModel();
+        table_352.setModel(defaultTableModel);
+        defaultTableModel.addColumn("ID Món ăn");
+        defaultTableModel.addColumn("Tên món");
+        defaultTableModel.addColumn("Đơn giá");
+        defaultTableModel.addColumn("Số lượng");
+        defaultTableModel.addColumn("Tổng tiền");
+        for (ThanhToan tt : tts) {
+            defaultTableModel.addRow(new Object[]{tt.getIdMonAn_360(), tt.getTenMonAn_360(), tt.getDonGia_360(),
+                tt.getSoLuong_360(),tt.getTongTien_360()});
+        }
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,6 +79,8 @@ public class ThanhToan extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         idBA = new javax.swing.JLabel();
         submitBtn_352 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        idHD = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         name_352 = new com.raven.suportSwing.TextField();
@@ -96,7 +139,6 @@ public class ThanhToan extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        table_352.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane4.setViewportView(table_352);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -110,6 +152,13 @@ public class ThanhToan extends javax.swing.JFrame {
         submitBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         submitBtn_352.setForeground(new java.awt.Color(255, 255, 255));
         submitBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/submit.png"))); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Hóa đơn:");
+
+        idHD.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        idHD.setText("ID Hóa đơn");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -127,7 +176,12 @@ public class ThanhToan extends javax.swing.JFrame {
                                 .addComponent(idBA, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(submitBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(submitBtn_352, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addComponent(idHD, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -135,7 +189,9 @@ public class ThanhToan extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idBA))
+                    .addComponent(idBA)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idHD))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 403, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -256,21 +312,23 @@ public class ThanhToan extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ThanhToan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThanhToanFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ThanhToan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThanhToanFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ThanhToan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThanhToanFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ThanhToan.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ThanhToanFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ThanhToan().setVisible(true);
+                new ThanhToanFrame().setVisible(true);
             }
         });
     }
@@ -278,9 +336,11 @@ public class ThanhToan extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn_352;
     private javax.swing.JLabel idBA;
+    private javax.swing.JLabel idHD;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
