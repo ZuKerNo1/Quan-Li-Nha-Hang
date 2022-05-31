@@ -302,7 +302,7 @@ public class ViewCustomer extends javax.swing.JFrame {
             }
         }else{
             if (customerService_354.find(find) != null) {
-                
+                setTableData_354(customerService_354.find(find));
             } else {
                 defaulttableModel_354.setNumRows(0);
                 JOptionPane.showMessageDialog(null, "Không có trong danh sách");
