@@ -33,7 +33,7 @@ public class CustomerService {
     public Customer getCustomerById(String sdt_354) throws SQLException{
         return managerCus_354.getCustomerById_354(sdt_354);
     }
-    public Customer find(String find_354) throws SQLException{
+    public List<Customer> find(String find_354) throws SQLException{
         return managerCus_354.findCustomer_354(find_354);
     }
 }
