@@ -1,8 +1,7 @@
 ﻿
-CREATE DATABASE QuanLiNhaHang5
+CREATE DATABASE QuanLiNhaHang
 go
-use QuanLiNhaHang5
-
+use QuanLiNhaHang
 
 --Tao table
 go
@@ -130,7 +129,8 @@ values
 	('NC2001',N'Rượu vang Screaming Eagle Cabernet Sauvignon 1992',20,'Thùng','NV001')
 go
 
-select * from NguyenLieu
+
+
 insert into BanAn
 values
 	('BA001',N'Trống'),
@@ -142,8 +142,7 @@ values
 	('BA007',N'Trống'),
 	('BA008',N'Trống'),
 	('BA009',N'Trống'),
-	('BA0010',N'Trống')
-
+	('BA010',N'Trống')
 go
 
 set dateformat dmy
@@ -161,19 +160,23 @@ values
 	('MA007',N'Lẩu đặc biệt',250000),
 	('MA008',N'Cơm rang bò',120000),
 	('MA009',N'Nước suối',50000),
-	('MA0010',N'Rượu vang',200000)
-
+	('MA010',N'Rượu vang',200000)
 
 go
 insert into account
 values ('trung','123', 'NV001'),
-	   ('truong','123', 'NV002')
+	   ('truong','123', 'NV002'),
+	   ('vu','123', 'NV005')
+
+go
+
 
 --Thống kê theo hóa đơn
 select idHoaDon , format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as N'Tổng tiền'
 from ChiTietHoaDon as cthd, MonAn as ma
 where cthd.idMonAn = ma.idMonAn 
 group by cthd.idHoaDon
+
 
 --Thống kê theo tháng
 
@@ -194,6 +197,15 @@ from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
 group by day(hd.ngayThanhToan)
 
+select * 
+from HoaDon as hd, ChiTietHoaDon as cthd, MonAn as ma
+where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn
+group by hd.idHoaDon
 
+update HoaDon
+set status = N'Đã thanh toán'
+where idBA = 'BA001' and status = N'Chưa thanh toán'
 
-
+update BanAn
+set trangThaiBan = N'Trống'
+where idBA = 'BA001'
