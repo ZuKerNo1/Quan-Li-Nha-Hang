@@ -97,6 +97,8 @@ public class UpdateEmployee extends javax.swing.JFrame {
         dauBep_354 = new com.raven.suportSwing.RadioButtonCustom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(50, 50));
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
