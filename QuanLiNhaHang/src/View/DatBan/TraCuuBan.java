@@ -23,7 +23,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import static jdk.nashorn.internal.runtime.Debug.id;
 import model.DatBan;
 
 /**
@@ -83,7 +82,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        clearBtn_352 = new javax.swing.JButton();
+        datBan_352 = new javax.swing.JButton();
         backBtn_352 = new javax.swing.JButton();
         thanhToan_352 = new javax.swing.JButton();
         goiMon_352 = new javax.swing.JButton();
@@ -94,7 +93,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         IDBA_Label1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(400, 50));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -113,28 +112,27 @@ public class TraCuuBan extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 884, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 896, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel1)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        clearBtn_352.setBackground(new java.awt.Color(51, 153, 255));
-        clearBtn_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        clearBtn_352.setForeground(new java.awt.Color(255, 255, 255));
-        clearBtn_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_dinner-table.png"))); // NOI18N
-        clearBtn_352.setText("ĐẶT BÀN");
-        clearBtn_352.setSelected(true);
-        clearBtn_352.addActionListener(new java.awt.event.ActionListener() {
+        datBan_352.setBackground(new java.awt.Color(51, 153, 255));
+        datBan_352.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        datBan_352.setForeground(new java.awt.Color(255, 255, 255));
+        datBan_352.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Image/icon_dinner-table.png"))); // NOI18N
+        datBan_352.setText("ĐẶT BÀN");
+        datBan_352.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearBtn_352ActionPerformed(evt);
+                datBan_352ActionPerformed(evt);
             }
         });
 
@@ -205,10 +203,8 @@ public class TraCuuBan extends javax.swing.JFrame {
         jScrollPane1.setViewportView(traCuuTable_352);
 
         IDBA_Label.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        IDBA_Label.setForeground(new java.awt.Color(51, 153, 255));
 
         IDBA_Label1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        IDBA_Label1.setForeground(new java.awt.Color(51, 153, 255));
         IDBA_Label1.setText("ID Bàn ăn:");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -216,20 +212,19 @@ public class TraCuuBan extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                        .addGap(40, 40, 40)
-                        .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(backBtn_352, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(datBan_352)
                         .addGap(52, 52, 52)
                         .addComponent(huyDat_352)
-                        .addGap(51, 51, 51)
-                        .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(54, 54, 54)
-                        .addComponent(thanhToan_352, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(52, 52, 52)
+                        .addComponent(goiMon_352, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(59, 59, 59)
+                        .addComponent(thanhToan_352))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(IDBA_Label1)
                         .addGap(18, 18, 18)
                         .addComponent(IDBA_Label)))
@@ -237,7 +232,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 861, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 902, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -245,20 +240,19 @@ public class TraCuuBan extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(IDBA_Label)
                     .addComponent(IDBA_Label1))
-                .addGap(547, 547, 547)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(clearBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(huyDat_352, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                        .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(thanhToan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(42, 42, 42))
+                .addGap(532, 532, 532)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(huyDat_352, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(backBtn_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(thanhToan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(datBan_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(goiMon_352, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(25, 25, 25)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(138, Short.MAX_VALUE)))
+                    .addContainerGap(88, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -268,7 +262,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
         jPanel1Layout.setVerticalGroup(
@@ -276,7 +270,8 @@ public class TraCuuBan extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jScrollPane2.setViewportView(jPanel1);
@@ -292,7 +287,7 @@ public class TraCuuBan extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_backBtn_352ActionPerformed
 
-    private void clearBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_352ActionPerformed
+    private void datBan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datBan_352ActionPerformed
         int row = traCuuTable_352.getSelectedRow();
         if (row == -1) {
             JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
@@ -305,7 +300,7 @@ public class TraCuuBan extends javax.swing.JFrame {
             }
             this.dispose();
         }
-    }//GEN-LAST:event_clearBtn_352ActionPerformed
+    }//GEN-LAST:event_datBan_352ActionPerformed
 
     private void thanhToan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thanhToan_352ActionPerformed
         try {
@@ -339,22 +334,26 @@ public class TraCuuBan extends javax.swing.JFrame {
                 Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
             }
             this.dispose();
+            
+            
         }
+        
+        
     }//GEN-LAST:event_goiMon_352ActionPerformed
 
     private void huyDat_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_huyDat_352ActionPerformed
-//        if (JOptionPane.showConfirmDialog(this, "Bạn có muốn xóa không") == JOptionPane.NO_OPTION) {
-//            return;
-//        }
-//        try {
-//            
-//            ManagerDatBan datBan = new ManagerDatBan();
-//            datBan.addDatBan_352(traCuuTable_352.getColumnName(NORMAL));
-//            JOptionPane.showMessageDialog(this, "Đã được xoá");
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(this, "Errol " + e.getMessage());
-//            e.printStackTrace();
-//        }
+        try {
+            traCuuBanService.chuyenTrangThai_BanAn(IDBA_Label.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        this.dispose();
+        
+        try {
+                new TraCuuBan().setVisible(true);
+            } catch (SQLException ex) {
+                Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }//GEN-LAST:event_huyDat_352ActionPerformed
 
     private void traCuuTable_352MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_traCuuTable_352MouseClicked
@@ -380,7 +379,7 @@ public class TraCuuBan extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Window".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -414,7 +413,7 @@ public class TraCuuBan extends javax.swing.JFrame {
     private javax.swing.JLabel IDBA_Label;
     private javax.swing.JLabel IDBA_Label1;
     private javax.swing.JButton backBtn_352;
-    private javax.swing.JButton clearBtn_352;
+    private javax.swing.JButton datBan_352;
     private javax.swing.JButton goiMon_352;
     private javax.swing.JButton huyDat_352;
     private javax.swing.JLabel jLabel1;
