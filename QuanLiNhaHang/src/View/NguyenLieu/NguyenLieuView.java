@@ -27,7 +27,6 @@ public class NguyenLieuView extends javax.swing.JFrame {
      */
     public NguyenLieuView() throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
             @Override
@@ -83,7 +82,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
         ngLieuTableList_360 = new com.raven.suportSwing.TableColumn();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(400, 50));
         setPreferredSize(new java.awt.Dimension(880, 720));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

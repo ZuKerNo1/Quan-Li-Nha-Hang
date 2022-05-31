@@ -22,8 +22,4 @@ public class DThuNamService {
     public  List<DoanhThuNam> getAllListDThu() throws SQLException{
         return dThuNamManager_360.getAllListNam();
     }
-    
-    public String TongTien(){
-        return dThuNamManager_360.TongTien();
-    }
 }

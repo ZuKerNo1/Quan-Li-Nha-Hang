@@ -27,11 +27,8 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
     /**
      * Creates new form ThongKe
      */
-    
     public ThongKeDoanhThuThang() throws SQLException {
         initComponents();
-        showComboData();
-        setLocationRelativeTo(null);
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
             @Override
@@ -40,17 +37,14 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
             }
 
         };
-        int year = Integer.valueOf(cBox_Year_352.getSelectedItem().toString());
         tableShow_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh thu");
-        
-        tongTien_Text_352.setText(dThuService_360.TongTien(year));
-        setData(dThuService_360.getAllListDThu_byYear(year));
+        setData(dThuService_360.getAllListDThu());
+        tongTien_Text_352.setText(dThuService_360.TongTien());
     }
     
     private void setData(List<DoanhThuThang> dThus) throws SQLException {
-        
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel();
         tableShow_352.setModel(defaultTableModel);
@@ -60,13 +54,6 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
             defaultTableModel.addRow(new Object[]{dThu.getThang_360(), dThu.getDoanhThu_360()});
         }
         
-    }
-    
-    private void showComboData(){
-        List<Integer> year = dThuService_360.getYearFromDB();
-        for (Integer integer : year){
-            cBox_Year_352.addItem(String.valueOf(integer));
-        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -97,7 +84,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         BieuDo_352 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(20, 50));
         getContentPane().setLayout(new javax.swing.BoxLayout(getContentPane(), javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -158,11 +145,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         jLabel4.setText("Năm ");
 
         cBox_Year_352.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        cBox_Year_352.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cBox_Year_352ActionPerformed(evt);
-            }
-        });
+        cBox_Year_352.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2022", "2021", "2020" }));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
 
@@ -351,31 +334,21 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
 
     private void radiColumn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiColumn_352ActionPerformed
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         // TODO add your handling code here:
     }//GEN-LAST:event_radiColumn_352ActionPerformed
-
-    private void cBox_Year_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBox_Year_352ActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel defaultTableModel;
-        defaultTableModel = new DefaultTableModel() {
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false; //To change body of generated methods, choose Tools | Templates.
-            }
-
-        };
-        int year = Integer.valueOf(cBox_Year_352.getSelectedItem().toString());
-        tableShow_352.setModel(defaultTableModel);
-        defaultTableModel.addColumn("Tháng");
-        defaultTableModel.addColumn("Doanh thu");
-        
-        tongTien_Text_352.setText(dThuService_360.TongTien(year));
-        try {
-            setData(dThuService_360.getAllListDThu_byYear(year));
-        } catch (SQLException ex) {
-            Logger.getLogger(ThongKeDoanhThuThang.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }//GEN-LAST:event_cBox_Year_352ActionPerformed
 
     /**
      * @param args the command line arguments

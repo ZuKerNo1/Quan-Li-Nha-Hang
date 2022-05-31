@@ -32,7 +32,6 @@ public class ViewCustomer extends javax.swing.JFrame {
      */
     public ViewCustomer() throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         customer_354 = new Customer();
         customerService_354 = new CustomerService();
         defaulttableModel_354 = new DefaultTableModel(){
@@ -94,7 +93,7 @@ public class ViewCustomer extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setLocation(new java.awt.Point(400, 150));
+        setLocation(new java.awt.Point(400, 50));
         setResizable(false);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -126,7 +125,6 @@ public class ViewCustomer extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
         searchBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -334,27 +332,6 @@ public class ViewCustomer extends javax.swing.JFrame {
 
     private void deleteBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtn_354ActionPerformed
         // TODO add your handling code here:
-        int row_354 = table_354.getSelectedRow();
-        if(row_354 == -1){
-            JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
-        }else{
-            int confirm_354 = JOptionPane.showConfirmDialog(ViewCustomer.this, "Bạn có chắc chắn muốn xoá");
-            if(confirm_354 == JOptionPane.YES_OPTION){
-                String customerID = String.valueOf(table_354.getValueAt(row_354, 3));
-                try {
-                    customerService_354.deleteCustomer(customerID);
-                } catch (SQLException ex) {
-                    java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-                }
-            }
-            defaulttableModel_354.setRowCount(0);
-            try {
-                setTableData_354(customerService_354.getAllCustomers());
-            } catch (SQLException ex) {
-                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
-        }
     }//GEN-LAST:event_deleteBtn_354ActionPerformed
     private void setTableData_354(List<Customer> Customers){
         for(Customer customer_354: Customers){

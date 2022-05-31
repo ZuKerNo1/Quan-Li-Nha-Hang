@@ -23,7 +23,6 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
      */
     public UpdateNguyenLieu(String ID) throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         nguyenLieu_360 = nguyenLieuService_360.getNguyenLieuById(ID);
         idNguyenLieuText_360.setText(ID);
         nameNguyenLieuText_360.setText(nguyenLieu_360.getNameNL_360());
@@ -34,7 +33,6 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
 
     public UpdateNguyenLieu() {
         initComponents();
-        setLocationRelativeTo(null);
     }
 
     /**
@@ -62,6 +60,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
         titleLabel_373 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

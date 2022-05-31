@@ -27,7 +27,6 @@ public class mainFrame extends javax.swing.JFrame {
     public mainFrame() {
         initComponents();
         setTitle("Quản Lý Nhà Hàng");
-        setLocationRelativeTo(null);
     }
 
     /**
@@ -52,6 +51,7 @@ public class mainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -83,7 +83,6 @@ public class mainFrame extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        khoNguyenLieuButton_335.setBackground(new java.awt.Color(255, 255, 255));
         khoNguyenLieuButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         khoNguyenLieuButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nguyenlieu.png"))); // NOI18N
         khoNguyenLieuButton_335.setText("Kho nguyên liệu");
@@ -94,7 +93,6 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        quanLyNhanVienButton_335.setBackground(new java.awt.Color(255, 255, 255));
         quanLyNhanVienButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyNhanVienButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/nhanvien.png"))); // NOI18N
         quanLyNhanVienButton_335.setText("Quản lý nhân viên");
@@ -105,7 +103,6 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        quanLyKhachHangButton_335.setBackground(new java.awt.Color(255, 255, 255));
         quanLyKhachHangButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyKhachHangButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/khachang.png"))); // NOI18N
         quanLyKhachHangButton_335.setText("Quản lý khách hàng");
@@ -116,7 +113,6 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        dangXuatButton_335.setBackground(new java.awt.Color(255, 255, 255));
         dangXuatButton_335.setForeground(new java.awt.Color(255, 0, 0));
         dangXuatButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/logout (1).png"))); // NOI18N
         dangXuatButton_335.setBorder(null);
@@ -126,7 +122,6 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        quanLyBanAnButton_335.setBackground(new java.awt.Color(255, 255, 255));
         quanLyBanAnButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         quanLyBanAnButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/banAn.png"))); // NOI18N
         quanLyBanAnButton_335.setText("Quản lý bàn ăn");
@@ -137,7 +132,6 @@ public class mainFrame extends javax.swing.JFrame {
             }
         });
 
-        thongKeDoanhThuButton_335.setBackground(new java.awt.Color(255, 255, 255));
         thongKeDoanhThuButton_335.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         thongKeDoanhThuButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/money.png"))); // NOI18N
         thongKeDoanhThuButton_335.setText("Thống kê doanh thu");

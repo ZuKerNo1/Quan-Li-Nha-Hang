@@ -18,7 +18,6 @@ public class LoadDangNhap extends javax.swing.JFrame {
      */
     public LoadDangNhap() {
         initComponents();
-        setLocationRelativeTo(null);
     }
 
     /**

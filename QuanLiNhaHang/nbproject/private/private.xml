@@ -3,11 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/Service/DThuThangService.java</file>
-            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/View/ThongKe/ThongKeDoanhThuThang.java</file>
-            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/View/ThongKe/ThongKeDoanhThuNam.java</file>
-            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/Service/DThuNamService.java</file>
-            <file>file:/C:/Users/FSC/Desktop/Quan-Li-Nha-Hang/QuanLiNhaHang/src/Manager/ManagerDThuNam.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/KhachHang/UpdateCustomer.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/ThongKe/ThongKeDoanhThuThang.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/NhanVien/ViewEmployee.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/ChonMon/ChonMonFrame.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/NhanVien/AddEmployee.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/MainFrame/mainFrame.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/ThongKe/ShowChart.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/ThongKe/ThongKeDoanhThuNam.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/NhanVien/UpdateEmployee.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/ChonMon/NewJFrame.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/KhachHang/ViewCustomer.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/NguyenLieu/AddNguyenLieu.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/NguyenLieu/UpdateNguyenLieu.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/ThanhToan/ThanhToan.java</file>
+            <file>file:/D:/QuanLiNhaHang/src/View/NguyenLieu/NguyenLieuView.java</file>
         </group>
     </open-files>
 </project-private>

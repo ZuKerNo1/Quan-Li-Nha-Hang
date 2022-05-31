@@ -23,7 +23,6 @@ public class AddEmployee extends javax.swing.JFrame {
      */
     public AddEmployee() {
         initComponents();
-        setLocationRelativeTo(null);
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
     }
@@ -72,6 +71,7 @@ public class AddEmployee extends javax.swing.JFrame {
         dauBep_354 = new com.raven.suportSwing.RadioButtonCustom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

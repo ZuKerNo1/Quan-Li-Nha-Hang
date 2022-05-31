@@ -23,7 +23,6 @@ public class UpdateEmployee extends javax.swing.JFrame {
      */
     public UpdateEmployee(String id) throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         serviceEmployee_354 = new EmployeeService();
         employee_354 = serviceEmployee_354.getEmployeeById(id);
         id_354.setText(employee_354.getId_354());
@@ -98,6 +97,7 @@ public class UpdateEmployee extends javax.swing.JFrame {
         dauBep_354 = new com.raven.suportSwing.RadioButtonCustom();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

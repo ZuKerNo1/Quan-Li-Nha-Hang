@@ -30,7 +30,6 @@ public class ViewEmployee extends javax.swing.JFrame {
      */
     public ViewEmployee() throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
         defaulttableModel_354 = new DefaultTableModel(){
@@ -104,6 +103,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         label_354 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -133,7 +133,6 @@ public class ViewEmployee extends javax.swing.JFrame {
 
         search_354.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        searchBtn_354.setBackground(new java.awt.Color(255, 255, 255));
         searchBtn_354.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
         searchBtn_354.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -346,6 +345,7 @@ public class ViewEmployee extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
         }else{
             int confirm_354 = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
+            
             if(confirm_354 == JOptionPane.YES_OPTION){
                 String employeeID = String.valueOf(table_354.getValueAt(row_354, 0));
                 try {
