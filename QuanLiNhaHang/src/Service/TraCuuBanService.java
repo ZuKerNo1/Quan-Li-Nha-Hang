@@ -38,4 +38,8 @@ public class TraCuuBanService {
     public String getstatus_352(String status) throws SQLException {
         return traCuuBanManager.getIdTable_352(status);
     }
+    
+    public void chuyenTrangThai_BanAn_DangSuDung(String id) throws SQLException{
+        traCuuBanManager.chuyenTrangThai_BanAn_DangSuDung(id);
+    }
 }

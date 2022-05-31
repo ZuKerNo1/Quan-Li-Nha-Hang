@@ -947,6 +947,12 @@ public class ChonMonFrame extends javax.swing.JFrame {
             }
         }
         try {
+            //Chuyen trang thai Dang Su Dung
+            traCuuBanService.chuyenTrangThai_BanAn_DangSuDung(idBA.getText());
+        } catch (SQLException ex) {
+            Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
             new TraCuuBan().setVisible(true);
         } catch (SQLException ex) {
             Logger.getLogger(ChonMonFrame.class.getName()).log(Level.SEVERE, null, ex);
