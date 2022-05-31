@@ -21,7 +21,7 @@ import model.NguyenLieu;
  * @author FSC
  */
 public class NguyenLieuView extends javax.swing.JFrame {
-    NguyenLieuService nguyenLieuService = new NguyenLieuService();
+    NguyenLieuService nguyenLieuService_360 = new NguyenLieuService();
     /**
      * Creates new form NguyenLieuView
      */
@@ -41,7 +41,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
         defaultTableModel.addColumn("Số lượng còn");
         defaultTableModel.addColumn("Đơn vị");
         defaultTableModel.addColumn("Nhân viên cập nhật");
-        setData(nguyenLieuService.getAllListNguyenLieu());
+        setData(nguyenLieuService_360.getAllListNguyenLieu());
     }
     
     private void setData(List<NguyenLieu> nguyenLieus) throws SQLException {
@@ -293,13 +293,13 @@ public class NguyenLieuView extends javax.swing.JFrame {
                 String ID = (String) ngLieuTableList_360.getValueAt(row, 0);
 
                 try {
-                    nguyenLieuService.deleteNguyenLieu(ID);
+                    nguyenLieuService_360.deleteNguyenLieu(ID);
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
                 try {
-                    setData(nguyenLieuService.getAllListNguyenLieu());
+                    setData(nguyenLieuService_360.getAllListNguyenLieu());
                 } catch (SQLException ex) {
                     java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -310,7 +310,7 @@ public class NguyenLieuView extends javax.swing.JFrame {
     private void refreshBtn_360ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshBtn_360ActionPerformed
         // TODO add your handling code here:
         try {
-            setData(nguyenLieuService.getAllListNguyenLieu());
+            setData(nguyenLieuService_360.getAllListNguyenLieu());
         } catch (SQLException ex) {
             java.util.logging.Logger.getLogger(NguyenLieuView.class.getName()).log(Level.SEVERE, null, ex);
         }

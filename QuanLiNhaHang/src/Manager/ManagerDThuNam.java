@@ -20,7 +20,7 @@ import model.DoanhThuNam;
 public class ManagerDThuNam {
     public List<DoanhThuNam> getAllListNam() throws SQLException {
         List<DoanhThuNam> listDThus = new ArrayList<DoanhThuNam>();
-        String sql = "select year(hd.ngayThanhToan) as 'Nam' , format(sum(ma.donGia*cthd.soLuong),'##,#\\ VNĐ','es-ES') as 'TongTien'\n" +
+        String sql = "select year(hd.ngayThanhToan) as 'Nam' , sum(ma.donGia*cthd.soLuong) as 'TongTien'\n" +
 "from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma\n" +
 "where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn \n" +
 "group by year(hd.ngayThanhToan)";
@@ -30,8 +30,8 @@ public class ManagerDThuNam {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 DoanhThuNam listDThu = new DoanhThuNam();
-                listDThu.setNam(rs.getInt("Nam"));
-                listDThu.setDoanhThu(rs.getString("TongTien"));
+                listDThu.setNam_360(rs.getInt("Nam"));
+                listDThu.setDoanhThu_360(rs.getString("TongTien"));
                 listDThus.add(listDThu);
             }
         } catch (SQLException ex) {

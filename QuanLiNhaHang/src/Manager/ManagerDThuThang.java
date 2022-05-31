@@ -20,7 +20,7 @@ import model.DoanhThuThang;
 public class ManagerDThuThang {
     public List<DoanhThuThang> getAllListThang() throws SQLException {
         List<DoanhThuThang> listDThus = new ArrayList<DoanhThuThang>();
-        String sql = "select month(hd.ngayThanhToan) as 'Thang' , format(sum(ma.donGia*cthd.soLuong),'##,#\\ VNĐ','es-ES') as 'TongTien'\n" +
+        String sql = "select month(hd.ngayThanhToan) as 'Thang' , sum(ma.donGia*cthd.soLuong) as 'TongTien'\n" +
 "from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma\n" +
 "where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn \n" +
 "group by month(hd.ngayThanhToan)";
@@ -30,8 +30,8 @@ public class ManagerDThuThang {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 DoanhThuThang listDThu = new DoanhThuThang();
-                listDThu.setThang(rs.getInt("Thang"));
-                listDThu.setDoanhThu(rs.getString("TongTien"));
+                listDThu.setThang_360(rs.getInt("Thang"));
+                listDThu.setDoanhThu_360(rs.getString("TongTien"));
                 listDThus.add(listDThu);
             }
         } catch (SQLException ex) {
