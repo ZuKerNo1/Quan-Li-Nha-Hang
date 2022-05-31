@@ -12,13 +12,13 @@ public class Employee {
     private String id_354, name_354, dob_354, gender_354, address_354, role_354, phone_354, status_354;
     private double salary_354;
 
-    public String getId_354() {
-        return id_354;
-    }
-
-    public void setId_354(String id_354) {
-        this.id_354 = id_354;
-    }
+//    public String getId_354() {
+//        return id_354;
+//    }
+//
+//    public void setId_354(String id_354) {
+//        this.id_354 = id_354;
+//    }
 
     public String getPhone_354() {
         return phone_354;
