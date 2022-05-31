@@ -103,6 +103,7 @@ public class ViewEmployee extends javax.swing.JFrame {
         label_354 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(50, 50));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
