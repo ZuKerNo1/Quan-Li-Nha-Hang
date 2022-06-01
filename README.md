@@ -73,5 +73,5 @@ Phạm vi của dự án
   - Quản lý khách hàng.
 
 
-![img]()
+![img](https://drive.google.com/file/d/1-wz-f5Js1a7T0We4g4caz6mj_LFXoil-/view?usp=sharing)
 
