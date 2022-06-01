@@ -41,8 +41,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
      */
     public DatBan_NguoiDaiDien() {
         initComponents();
-        dayDat_352.setDateFormatString("2022-2-2");
-        clrdoB_352.setDateFormatString("2022-2-2");
+       
         setLocationRelativeTo(null);
     }
 
@@ -358,14 +357,13 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateDat = sdf.format(dayDat_352.getDate());
         String date = sdf.format(clrdoB_352.getDate());
-        
-      
+        dayDat_352.setDateFormatString("2022-2-2");
+        clrdoB_352.setDateFormatString("2022-2-2");
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
             if (("".equals(txtName_352.getText())) || ("".equals(txtPhone_352.getText())) || ("".equals(txtRole_352.getText()))
                     || (dateDat.equals(null)) || (date.equals(null)) || ("".equals(txtAddress_352.getText()))) {
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Không được bỏ trống thông tin", "Thông báo", JOptionPane.PLAIN_MESSAGE);
-                
 
             } else {
                 if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
