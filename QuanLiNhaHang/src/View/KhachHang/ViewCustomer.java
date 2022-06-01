@@ -5,9 +5,6 @@
 package View.KhachHang;
 
 import Service.CustomerService;
-import View.NhanVien.UpdateEmployee;
-import View.NhanVien.ViewEmployee;
-import View.MainFrame.mainFrame;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.sql.SQLException;
