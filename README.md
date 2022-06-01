@@ -12,7 +12,7 @@ Welcome to my QuanLyNhaHang project
 
 ## Demo
 
-Xem video demo dự án [tại đây]().
+Xem video demo dự án [tại đây](https://www.youtube.com/watch?v=sIu1juPl5r8).
 
 ## Lib
 
@@ -24,7 +24,12 @@ jcalendar-1.4
 
 ## Documents
 
-* [Báo cáo]() - Báo cáo dự án
+* [Báo cáo](https://docs.google.com/document/d/1khN8vDnf16E94Kcm7nRxtcAqET1UydTL/edit?rtpof=true) - Báo cáo dự án
+
+
+## Trello
+
+* [Tiến độ công việc](https://trello.com/b/fMkXuQP4/to-do?fbclid=IwAR1TEuAClpE8A54TFwUfR6R9w-54gDWhVmzucvAxsQGehmMHtisCTfHY9z4) - Báo cáo tiến độ công việc
 
 
 #### **🏨 Folder structure**
