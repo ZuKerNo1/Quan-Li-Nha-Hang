@@ -6,7 +6,7 @@ Welcome to my QuanLyNhaHang project
 ## Member introduction
 
 * [Trần Kim Vũ](https://github.com/ZuKerNo1) - MSV: 2050531200360
-* [Hoàng Thái Thắng](https://github.com/Ghant2906) - MSV: 2050531200
+* [Hoàng Thái Thắng](https://github.com/Ghant2906) - MSV: 2050531200335
 * [Nguyễn Văn Trung](https://github.com/trumpnguyen37) - MSV: 2050531200352
 * [Bùi Viết Trường](https://github.com/Viet-Truong) - MSV: 2050531200354
 
