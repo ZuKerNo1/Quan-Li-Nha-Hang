@@ -215,7 +215,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
         jLabel4.setText("Địa chỉ");
 
-        jLabel5.setText("Ngày đặt");
+        jLabel5.setText("Ngày đặt*");
 
         jLabel6.setText("Yêu cầu đặc biệt");
 
@@ -359,9 +359,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
             if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
-                
-                
-                
                 datBan.setPhone_352(txtPhone_352.getText());
                 datBan.setName_352(txtName_352.getText());               
                 datBan.setRole_352(txtRole_352.getText());
@@ -377,9 +374,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 }
                 datBan.setGender_352(gender);
                 // Lay gia tri cho idBA
-
                 datBan.setIdBA_352(this.idBA.getText());
-
                 try {
                     datBanService.addDatBan_352(datBan);
                 } catch (SQLException ex) {
@@ -387,10 +382,6 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                     Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
-                //
-                
-                
-                
                 // add du lieu vao bang khach hang
                 customer.setName_354(txtName_352.getText());               
                 customer.setDob_354(date);             
@@ -399,11 +390,9 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 customer.setPhone_354(txtPhone_352.getText());
                 customerService.addCustomer(customer);
                 //end
-                // add du lieu vao` bang dat ban
-                
+                // add du lieu vao` bang dat ban                
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
-            } else {
-                
+            } else {                
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "SĐT đã được đăng ký");
             }
         } catch (SQLException ex) {
