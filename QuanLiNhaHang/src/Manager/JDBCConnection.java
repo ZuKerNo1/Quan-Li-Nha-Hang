@@ -17,10 +17,10 @@ public class JDBCConnection {
     public static Connection JDBCConnection() throws SQLServerException, SQLException{
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setUser("sa");
-        ds.setPassword("123456789");
-        ds.setServerName("DESKTOP-JRIVJF2");
+        ds.setPassword("0934804796a");
+        ds.setServerName("LAPTOP-9TCJRCKI\\KVU");
         ds.setPortNumber(1433);
-        ds.setDatabaseName("QuanLiNhaHang99");
+        ds.setDatabaseName("QuanLiNhaHang");
         ds.setEncrypt(false);
         ds.setTrustServerCertificate(false);
         Connection con = null;
