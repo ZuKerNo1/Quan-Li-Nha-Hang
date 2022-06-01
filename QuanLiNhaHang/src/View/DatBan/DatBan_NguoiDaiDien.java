@@ -14,6 +14,7 @@ import Service.TraCuuBanService;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -34,21 +35,24 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hoaDonService = new HoaDonService();
 
-    ;
-    
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    Date date = new Date();
+
     /**
      * Creates new form DatBan
      */
     public DatBan_NguoiDaiDien() {
         initComponents();
-       
         setLocationRelativeTo(null);
+        dayDat_352.setDate(date);
+        clrdoB_352.setDate(date);
     }
 
     DatBan_NguoiDaiDien(String ID) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTable_352(ID));
-
+        dayDat_352.setDate(date);
+        clrdoB_352.setDate(date);
     }
 
     /**
@@ -357,8 +361,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateDat = sdf.format(dayDat_352.getDate());
         String date = sdf.format(clrdoB_352.getDate());
-        dayDat_352.setDateFormatString("2022-2-2");
-        clrdoB_352.setDateFormatString("2022-2-2");
+
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
             if (("".equals(txtName_352.getText())) || ("".equals(txtPhone_352.getText())) || ("".equals(txtRole_352.getText()))
