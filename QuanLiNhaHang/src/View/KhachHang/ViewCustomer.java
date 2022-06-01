@@ -267,7 +267,7 @@ public class ViewCustomer extends javax.swing.JFrame {
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here
-        new mainFrame().setVisible(true);
+        //new mainFrame().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 
@@ -281,7 +281,7 @@ public class ViewCustomer extends javax.swing.JFrame {
             try {
                 new UpdateCustomer(customerID_354).setVisible(true);
             } catch (SQLException ex) {
-                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
             }
             this.dispose();
         }
