@@ -338,11 +338,11 @@ public class ViewCustomer extends javax.swing.JFrame {
             int confirm_354 = JOptionPane.showConfirmDialog(ViewCustomer.this, "Bạn có chắc chắn muốn xoá");
             
             if(confirm_354 == JOptionPane.YES_OPTION){
-                String employeeID = String.valueOf(table_354.getValueAt(row_354, 0));
+                String customerID_354 = String.valueOf(table_354.getValueAt(row_354, 3));
                 try {
-                    serviceEmployee_354.deleteEmployee(employeeID);
+                    customerService_354.deleteCustomer(customerID_354);
                 } catch (SQLException ex) {
-                    java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
             defaulttableModel_354.setRowCount(0);
