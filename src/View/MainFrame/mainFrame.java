@@ -52,6 +52,7 @@ public class mainFrame extends javax.swing.JFrame {
         thoat = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(400, 50));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
