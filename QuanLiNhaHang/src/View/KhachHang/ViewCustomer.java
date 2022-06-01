@@ -5,8 +5,6 @@
 package View.KhachHang;
 
 import Service.CustomerService;
-import View.NhanVien.UpdateEmployee;
-import View.NhanVien.ViewEmployee;
 import View.MainFrame.mainFrame;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -94,6 +92,7 @@ public class ViewCustomer extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setLocation(new java.awt.Point(400, 50));
+        setUndecorated(true);
         setResizable(false);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -288,7 +287,7 @@ public class ViewCustomer extends javax.swing.JFrame {
             try {
                 new UpdateCustomer(customerID_354).setVisible(true);
             } catch (SQLException ex) {
-                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
             }
             this.dispose();
         }
