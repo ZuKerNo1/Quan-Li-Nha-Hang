@@ -1,5 +1,6 @@
 <h1 align='center'> 🍕</h1>
-# NullExceptioon
+
+## NullExceptioon
 Welcome to my QuanLyNhaHang project
  
 ## Member introduction
