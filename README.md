@@ -24,7 +24,7 @@ jcalendar-1.4
 
 ## Documents
 
-* [Báo cáo]() - Báo cáo dự án
+* [Báo cáo](https://docs.google.com/document/d/1khN8vDnf16E94Kcm7nRxtcAqET1UydTL/edit?usp=sharing&ouid=111622210981799645189&rtpof=true&sd=true) - Báo cáo dự án
 
 
 #### **🏨 Folder structure**
