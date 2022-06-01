@@ -8,6 +8,7 @@ package Service;
 import Manager.ManagerThanhToan;
 import java.sql.SQLException;
 import java.util.List;
+import model.Customer;
 import model.ThanhToan;
 
 /**
@@ -24,4 +25,16 @@ public class ThanhToanService {
 //    public String getIdTable_352(String id) throws SQLException {
 //        return traCuuBanManager.getIdTable_352(id);
 //    }
+    
+    public String getNameCus(String idBA) throws SQLException {
+        return managerThanhToan.getNameCus(idBA);
+    }
+    
+    public String getSDTCus(String idBA) throws SQLException{
+        return managerThanhToan.getSDTCus(idBA);
+    }
+    
+    public String TongTien(int idHD, String idBA){
+        return managerThanhToan.TongTien(idHD, idBA);
+    }
 }

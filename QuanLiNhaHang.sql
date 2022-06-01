@@ -197,6 +197,7 @@ from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and day(hd.ngayThanhToan) = day(GETDATE())
 group by day(hd.ngayThanhToan)
 
+/*
 select * 
 from HoaDon as hd, ChiTietHoaDon as cthd, MonAn as ma
 where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn
@@ -209,3 +210,14 @@ where idBA = 'BA001' and status = N'Chưa thanh toán'
 update BanAn
 set trangThaiBan = N'Trống'
 where idBA = 'BA001'
+
+select kh.tenKH, kh.SDT
+from KhachHang as kh, DatBan as db, BanAn as ba, HoaDon as hd
+where kh.SDT = db.SDT and db.idBA = ba.idBA and ba.idBA = hd.idBA
+and hd.idBA = 'BA003' and ba.trangThaiBan = N'Đang sử dụng'
+
+select format(sum(ma.donGia*cthd.soLuong),'##,#\ VNĐ','es-ES') as 'TongTien'
+from HoaDon as hd, ChiTietHoaDon as cthd, MonAn as ma
+where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn and cthd.idHoaDon = 7 and hd.idBA = 'BA003'
+group by cthd.idMonAn,ma.tenMonAn,ma.donGia,cthd.soLuong
+*/
