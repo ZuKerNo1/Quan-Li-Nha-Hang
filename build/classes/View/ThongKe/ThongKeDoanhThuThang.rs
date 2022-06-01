@@ -1,4 +1,0 @@
-View.ThongKeDoanhThuThang$1
-View.ThongKeDoanhThuThang$2
-View.ThongKeDoanhThuThang$3
-View.ThongKeDoanhThuThang
