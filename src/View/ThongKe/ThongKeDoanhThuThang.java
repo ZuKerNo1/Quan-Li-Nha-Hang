@@ -156,6 +156,11 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         jLabel4.setText("Năm ");
 
         cBox_Year_352.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        cBox_Year_352.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cBox_Year_352ActionPerformed(evt);
+            }
+        });
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
 
@@ -344,21 +349,31 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
 
     private void radiColumn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiColumn_352ActionPerformed
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         // TODO add your handling code here:
     }//GEN-LAST:event_radiColumn_352ActionPerformed
+
+    private void cBox_Year_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cBox_Year_352ActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel defaultTableModel;
+        defaultTableModel = new DefaultTableModel() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false; //To change body of generated methods, choose Tools | Templates.
+            }
+
+        };
+        int year = Integer.valueOf(cBox_Year_352.getSelectedItem().toString());
+        tableShow_352.setModel(defaultTableModel);
+        defaultTableModel.addColumn("Tháng");
+        defaultTableModel.addColumn("Doanh thu");
+        
+        tongTien_Text_352.setText(dThuService_360.TongTien(year));
+        try {
+            setData(dThuService_360.getAllListDThu_byYear(year));
+        } catch (SQLException ex) {
+            Logger.getLogger(ThongKeDoanhThuThang.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_cBox_Year_352ActionPerformed
 
     /**
      * @param args the command line arguments
