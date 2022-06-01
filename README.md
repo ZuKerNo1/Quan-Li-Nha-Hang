@@ -24,7 +24,7 @@ jcalendar-1.4
 
 ## Documents
 
-* [Báo cáo](https://docs.google.com/document/d/1khN8vDnf16E94Kcm7nRxtcAqET1UydTL/edit?usp=sharing&ouid=111622210981799645189&rtpof=true&sd=true) - Báo cáo dự án
+* [Báo cáo]() - Báo cáo dự án
 
 
 #### **🏨 Folder structure**
@@ -73,5 +73,5 @@ Phạm vi của dự án
   - Quản lý khách hàng.
 
 
-![img](https://cdn.discordapp.com/attachments/913672895769739304/981495740738207754/unknown.png)
+![img](https://cdn.discordapp.com/attachments/951411070055104572/981431574002274344/main.PNG)
 
