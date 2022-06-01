@@ -35,6 +35,7 @@ public class ThanhToanFrame extends javax.swing.JFrame {
      */
     public ThanhToanFrame(String id) throws SQLException {
         initComponents();
+        setLocationRelativeTo(null);
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
             @Override
@@ -51,6 +52,7 @@ public class ThanhToanFrame extends javax.swing.JFrame {
     }
     public ThanhToanFrame() {
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     private void setData(List<ThanhToan> tts) throws SQLException {

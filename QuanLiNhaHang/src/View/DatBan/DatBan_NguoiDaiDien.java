@@ -53,6 +53,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
         idBA.setText(traCuuBanService.getIdTable_352(ID));
         dayDat_352.setDate(date);
         clrdoB_352.setDate(date);
+        setLocationRelativeTo(null);
     }
 
     /**

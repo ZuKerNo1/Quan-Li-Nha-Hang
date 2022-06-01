@@ -42,6 +42,7 @@ public class TraCuuBan extends javax.swing.JFrame {
      */
     public TraCuuBan() throws SQLException {
         initComponents();
+        setLocationRelativeTo(null);
         setData(traCuuBanService.getAllListTable_352());
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {

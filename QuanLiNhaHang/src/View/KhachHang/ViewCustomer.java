@@ -30,6 +30,7 @@ public class ViewCustomer extends javax.swing.JFrame {
      */
     public ViewCustomer() throws SQLException {
         initComponents();
+        setLocationRelativeTo(null);
         customer_354 = new Customer();
         customerService_354 = new CustomerService();
         defaulttableModel_354 = new DefaultTableModel(){
