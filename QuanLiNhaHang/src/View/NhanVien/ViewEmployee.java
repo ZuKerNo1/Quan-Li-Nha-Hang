@@ -5,7 +5,6 @@
 package View.NhanVien;
 
 import Service.EmployeeService;
-import View.MainFrame.mainFrame;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.sql.SQLException;
@@ -319,7 +318,7 @@ public class ViewEmployee extends javax.swing.JFrame {
 
     private void backBtn_354ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtn_354ActionPerformed
         // TODO add your handling code here:
-        new mainFrame().setVisible(true);
+        //new mainFrame().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backBtn_354ActionPerformed
 
