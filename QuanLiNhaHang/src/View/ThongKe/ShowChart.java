@@ -91,36 +91,18 @@ public class ShowChart extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        roundPanel1 = new com.raven.swing.RoundPanel();
-        chart = new com.raven.chart.CurveChart();
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAlwaysOnTop(true);
-
-        roundPanel1.setBackground(new java.awt.Color(51, 51, 51));
-
-        javax.swing.GroupLayout roundPanel1Layout = new javax.swing.GroupLayout(roundPanel1);
-        roundPanel1.setLayout(roundPanel1Layout);
-        roundPanel1Layout.setHorizontalGroup(
-            roundPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(chart, javax.swing.GroupLayout.DEFAULT_SIZE, 1404, Short.MAX_VALUE)
-        );
-        roundPanel1Layout.setVerticalGroup(
-            roundPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(chart, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(roundPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 1406, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(roundPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 449, Short.MAX_VALUE)
         );
 
         pack();
@@ -163,7 +145,5 @@ public class ShowChart extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.raven.chart.CurveChart chart;
-    private com.raven.swing.RoundPanel roundPanel1;
     // End of variables declaration//GEN-END:variables
 }
