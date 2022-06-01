@@ -22,7 +22,6 @@ public class AddNguyenLieu extends javax.swing.JFrame {
      */
     public AddNguyenLieu() {
         initComponents();
-        setLocationRelativeTo(null);
     }
 
     /**

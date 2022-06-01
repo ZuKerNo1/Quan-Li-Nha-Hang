@@ -40,22 +40,5 @@ public class ManagerDThuNam {
         return listDThus;
     }
     
-    public String TongTien(){
-        String tt = null;
-        String sql = "select format(sum(ma.donGia*cthd.soLuong),'##,#\\ VNĐ','es-ES') as 'TongTien'\n" +
-"from HoaDon as hd,ChiTietHoaDon as cthd, MonAn as ma\n" +
-"where hd.idHoaDon = cthd.idHoaDon and cthd.idMonAn = ma.idMonAn";
-        try {
-            Connection connection = JDBCConnection.JDBCConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet rs = preparedStatement.executeQuery();
-            while (rs.next()) {
-                tt = rs.getString("TongTien");
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return tt;
-    }
     
 }

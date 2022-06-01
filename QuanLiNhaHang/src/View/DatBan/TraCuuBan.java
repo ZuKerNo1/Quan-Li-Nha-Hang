@@ -42,7 +42,6 @@ public class TraCuuBan extends javax.swing.JFrame {
      */
     public TraCuuBan() throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         setData(traCuuBanService.getAllListTable_352());
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
@@ -318,22 +317,32 @@ public class TraCuuBan extends javax.swing.JFrame {
     }//GEN-LAST:event_datBan_352ActionPerformed
 
     private void thanhToan_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thanhToan_352ActionPerformed
+//        try {
+//            // TODO add your handling code here:
+//            hoaDonService.chuyenTrangThai_HoaDon(IDBA_Label.getText());
+//        } catch (SQLException ex) {
+//            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        try {
+//            traCuuBanService.chuyenTrangThai_BanAn(IDBA_Label.getText());
+//        } catch (SQLException ex) {
+//            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        try {
+//            setData(traCuuBanService.getAllListTable_352());
+//        } catch (SQLException ex) {
+//            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+
         int row = traCuuTable_352.getSelectedRow();
-        if (row == -1) {
-            JOptionPane.showMessageDialog(TraCuuBan.this, "Vui lòng chọn bàn muốn thanh toán", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        } else {
-            if("Đã đặt bàn".equals((String) traCuuTable_352.getValueAt(row, 1)) || "Trống".equals((String) traCuuTable_352.getValueAt(row, 1))) {
-                JOptionPane.showMessageDialog(TraCuuBan.this, "Bàn đang trống hoặc chưa được gọi món", "Lỗi", JOptionPane.ERROR_MESSAGE);
-            }else{
-                String ID = (String) traCuuTable_352.getValueAt(row, 0);
-                try {
-                    new ThanhToanFrame(ID).setVisible(true);
-                } catch (SQLException ex) {
-                    Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                this.dispose();
-            }
+        String ID = (String) traCuuTable_352.getValueAt(row, 0);
+        try {
+            new ThanhToanFrame(ID).setVisible(true);
+        } catch (SQLException ex) {
+            Logger.getLogger(TraCuuBan.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.dispose();
     }//GEN-LAST:event_thanhToan_352ActionPerformed
 
     private void goiMon_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goiMon_352ActionPerformed

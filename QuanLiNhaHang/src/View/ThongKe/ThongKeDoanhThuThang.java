@@ -29,8 +29,6 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
      */
     public ThongKeDoanhThuThang() throws SQLException {
         initComponents();
-        showComboData();
-        setLocationRelativeTo(null);
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
             @Override
@@ -39,13 +37,11 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
             }
 
         };
-        int year = Integer.valueOf(cBox_Year_352.getSelectedItem().toString());
         tableShow_352.setModel(defaultTableModel);
         defaultTableModel.addColumn("Tháng");
         defaultTableModel.addColumn("Doanh thu");
-        
-        tongTien_Text_352.setText(dThuService_360.TongTien(year));
-        setData(dThuService_360.getAllListDThu_byYear(year));
+        setData(dThuService_360.getAllListDThu());
+        tongTien_Text_352.setText(dThuService_360.TongTien());
     }
     
     private void setData(List<DoanhThuThang> dThus) throws SQLException {
@@ -58,13 +54,6 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
             defaultTableModel.addRow(new Object[]{dThu.getThang_360(), dThu.getDoanhThu_360()});
         }
         
-    }
-    
-    private void showComboData(){
-        List<Integer> year = dThuService_360.getYearFromDB();
-        for (Integer integer : year){
-            cBox_Year_352.addItem(String.valueOf(integer));
-        }
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -156,6 +145,7 @@ public class ThongKeDoanhThuThang extends javax.swing.JFrame {
         jLabel4.setText("Năm ");
 
         cBox_Year_352.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
+        cBox_Year_352.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2022", "2021", "2020" }));
 
         jPanel4.setBackground(new java.awt.Color(255, 51, 51));
 

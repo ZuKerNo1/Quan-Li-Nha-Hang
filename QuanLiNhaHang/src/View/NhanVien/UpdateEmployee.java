@@ -23,7 +23,6 @@ public class UpdateEmployee extends javax.swing.JFrame {
      */
     public UpdateEmployee(String id) throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         serviceEmployee_354 = new EmployeeService();
         employee_354 = serviceEmployee_354.getEmployeeById(id);
         id_354.setText(employee_354.getId_354());

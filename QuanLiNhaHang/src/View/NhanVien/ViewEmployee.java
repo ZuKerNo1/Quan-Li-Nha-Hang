@@ -30,7 +30,6 @@ public class ViewEmployee extends javax.swing.JFrame {
      */
     public ViewEmployee() throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
         defaulttableModel_354 = new DefaultTableModel(){

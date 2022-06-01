@@ -27,7 +27,6 @@ public class NguyenLieuView extends javax.swing.JFrame {
      */
     public NguyenLieuView() throws SQLException {
         initComponents();
-        setLocationRelativeTo(null);
         DefaultTableModel defaultTableModel;
         defaultTableModel = new DefaultTableModel() {
             @Override

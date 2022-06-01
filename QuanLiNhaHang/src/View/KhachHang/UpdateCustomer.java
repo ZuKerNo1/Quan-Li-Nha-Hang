@@ -23,7 +23,6 @@ public class UpdateCustomer extends javax.swing.JFrame {
      * Creates new form UpdateCustomer
      */
     public UpdateCustomer(String sdt) throws SQLException {
-        setLocationRelativeTo(null);
         initComponents();
         male_354.isEnabled();
         female_354.isEnabled();

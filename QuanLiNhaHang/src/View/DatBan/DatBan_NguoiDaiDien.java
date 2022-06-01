@@ -14,7 +14,6 @@ import Service.TraCuuBanService;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -27,15 +26,14 @@ import model.Table;
  * @author FSC
  */
 public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
+
     DatBan datBan = new DatBan();
+
     DatBanService datBanService = new DatBanService();
     Table table = new Table();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hoaDonService = new HoaDonService();
-    Customer customer = new Customer();
-    CustomerService customerService = new CustomerService();
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    Date date = new Date();
+
     ;
     
     /**
@@ -43,17 +41,14 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
      */
     public DatBan_NguoiDaiDien() {
         initComponents();
+       
         setLocationRelativeTo(null);
-        dayDat_352.setDate(date);
-        clrdoB_352.setDate(date);
     }
 
     DatBan_NguoiDaiDien(String ID) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTable_352(ID));
-        dayDat_352.setDate(date);
-        clrdoB_352.setDate(date);
-        setLocationRelativeTo(null);
+
     }
 
     /**
@@ -356,13 +351,20 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPhone_352FocusGained
 
     private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
+
+        Customer customer = new Customer();
+        CustomerService customerService = new CustomerService();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateDat = sdf.format(dayDat_352.getDate());
         String date = sdf.format(clrdoB_352.getDate());
+        dayDat_352.setDateFormatString("2022-2-2");
+        clrdoB_352.setDateFormatString("2022-2-2");
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
             if (("".equals(txtName_352.getText())) || ("".equals(txtPhone_352.getText())) || ("".equals(txtRole_352.getText()))
                     || (dateDat.equals(null)) || (date.equals(null)) || ("".equals(txtAddress_352.getText()))) {
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Không được bỏ trống thông tin", "Thông báo", JOptionPane.PLAIN_MESSAGE);
+
             } else {
                 if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
 
@@ -390,7 +392,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                         JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
                         Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
                     //
 
                     // add du lieu vao bang khach hang
@@ -401,8 +403,12 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                     customer.setPhone_354(txtPhone_352.getText());
                     customerService.addCustomer(customer);
                     //end
+                    // add du lieu vao` bang dat ban
+
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
                 } else {
-                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
+
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "SĐT đã được đăng ký");
                 }
                 hoaDonService.addHoaDon(idBA.getText(), txtRole_352.getText());
                 datBanService.chuyenTraiThai_DatBan(idBA.getText());
