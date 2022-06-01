@@ -717,17 +717,14 @@ public class ChonMonFrame extends javax.swing.JFrame {
                     .addGap(23, 23, 23)))
         );
 
-        backButton_335.setBackground(new java.awt.Color(255, 255, 102));
         backButton_335.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         backButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/back.png"))); // NOI18N
-        backButton_335.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         backButton_335.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButton_335ActionPerformed(evt);
             }
         });
 
-        submitButton_335.setBackground(new java.awt.Color(255, 255, 102));
         submitButton_335.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
         submitButton_335.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/check-mark.png"))); // NOI18N
         submitButton_335.addActionListener(new java.awt.event.ActionListener() {
@@ -988,7 +985,7 @@ public class ChonMonFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows classic".equals(info.getName())) {
+                if ("Window".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

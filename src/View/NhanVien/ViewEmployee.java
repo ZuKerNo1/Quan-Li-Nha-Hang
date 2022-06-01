@@ -326,7 +326,8 @@ public class ViewEmployee extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
-            JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(ViewEmployee.this, 
+                    "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
         }else{
             String employeeID_354 = (String) table_354.getValueAt(row_354, 0);
             try {
@@ -342,7 +343,8 @@ public class ViewEmployee extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
-            JOptionPane.showMessageDialog(ViewEmployee.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(ViewEmployee.this, 
+                    "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
         }else{
             int confirm_354 = JOptionPane.showConfirmDialog(ViewEmployee.this, "Bạn có chắc chắn muốn xoá");
             
@@ -351,7 +353,8 @@ public class ViewEmployee extends javax.swing.JFrame {
                 try {
                     serviceEmployee_354.deleteEmployee(employeeID);
                 } catch (SQLException ex) {
-                    java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(ViewEmployee.class.getName()).
+                            log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
             defaulttableModel_354.setRowCount(0);
@@ -404,8 +407,11 @@ public class ViewEmployee extends javax.swing.JFrame {
     }//GEN-LAST:event_searchBtn_354ActionPerformed
     private void setTableData_354(List<Employee> Employees){
         for(Employee employee_354: Employees){
-            defaulttableModel_354.addRow(new Object[]{employee_354.getId_354(), employee_354.getName_354(), employee_354.getDob_354(), employee_354.getGender_354(), employee_354.getPhone_354(),
-            employee_354.getAddress_354(), employee_354.getRole_354(), employee_354.getSalary_354(), employee_354.getStatus_354()});
+            defaulttableModel_354.addRow(new Object[]{employee_354.getId_354(), 
+            employee_354.getName_354(), employee_354.getDob_354(), 
+            employee_354.getGender_354(), employee_354.getPhone_354(),
+            employee_354.getAddress_354(), employee_354.getRole_354(), 
+            employee_354.getSalary_354(), employee_354.getStatus_354()});
         }
     }  
     /**
@@ -419,7 +425,7 @@ public class ViewEmployee extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows classic".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

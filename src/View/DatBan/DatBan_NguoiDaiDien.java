@@ -29,15 +29,16 @@ import model.Table;
 public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
     DatBan datBan = new DatBan();
-
     DatBanService datBanService = new DatBanService();
     Table table = new Table();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
     HoaDonService hoaDonService = new HoaDonService();
-
+    Customer customer = new Customer();
+    CustomerService customerService = new CustomerService();
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
     Date date = new Date();
-
+    ;
+    
     /**
      * Creates new form DatBan
      */
@@ -355,22 +356,15 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPhone_352FocusGained
 
     private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
-
-        Customer customer = new Customer();
-        CustomerService customerService = new CustomerService();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateDat = sdf.format(dayDat_352.getDate());
         String date = sdf.format(clrdoB_352.getDate());
-
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
-            if (("".equals(txtName_352.getText())) || ("".equals(txtPhone_352.getText())) || ("".equals(txtRole_352.getText()))
-                    || (dateDat.equals(null)) || (date.equals(null)) || ("".equals(txtAddress_352.getText()))) {
+            if (("".equals(txtName_352.getText())) || ("".equals(txtPhone_352.getText())) || ("".equals(txtRole_352.getText())) 
+                    || ("".equals(dayDat_352.getDate())) || ("".equals(clrdoB_352.getDate())) || ("".equals(txtAddress_352.getText()))) {
                 JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Không được bỏ trống thông tin", "Thông báo", JOptionPane.PLAIN_MESSAGE);
-
             } else {
                 if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
-
                     datBan.setPhone_352(txtPhone_352.getText());
                     datBan.setName_352(txtName_352.getText());
                     datBan.setRole_352(txtRole_352.getText());
@@ -386,18 +380,14 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                     }
                     datBan.setGender_352(gender);
                     // Lay gia tri cho idBA
-
                     datBan.setIdBA_352(this.idBA.getText());
-
                     try {
                         datBanService.addDatBan_352(datBan);
                     } catch (SQLException ex) {
                         JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
                         Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
-                    //
-
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
                     // add du lieu vao bang khach hang
                     customer.setName_354(txtName_352.getText());
                     customer.setDob_354(date);
@@ -407,10 +397,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                     customerService.addCustomer(customer);
                     //end
                     // add du lieu vao` bang dat ban
-
-                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
                 } else {
-
                     JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "SĐT đã được đăng ký");
                 }
                 hoaDonService.addHoaDon(idBA.getText(), txtRole_352.getText());
@@ -418,11 +405,9 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
                 new TraCuuBan().setVisible(true);
                 this.dispose();
             }
-
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 
     private void clearBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_352ActionPerformed
@@ -440,7 +425,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows classic".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

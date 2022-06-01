@@ -281,7 +281,9 @@ public class ViewCustomer extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
-            JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(ViewCustomer.this, 
+                    "Vui lòng chọn dòng dữ liệu muốn thay đổi", "Lỗi", 
+                    JOptionPane.ERROR_MESSAGE);
         }else{
             String customerID_354 = (String) table_354.getValueAt(row_354, 3);
             try {
@@ -333,15 +335,19 @@ public class ViewCustomer extends javax.swing.JFrame {
         // TODO add your handling code here:
         int row_354 = table_354.getSelectedRow();
         if(row_354 == -1){
-            JOptionPane.showMessageDialog(ViewCustomer.this, "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(ViewCustomer.this, 
+                    "Vui lòng chọn dòng dữ liệu muốn xoá", "lỗi", 
+                    JOptionPane.ERROR_MESSAGE);
         }else{
-            int confirm_354 = JOptionPane.showConfirmDialog(ViewCustomer.this, "Bạn có chắc chắn muốn xoá");
+            int confirm_354 = JOptionPane.showConfirmDialog(ViewCustomer.this, 
+                    "Bạn có chắc chắn muốn xoá");
             if(confirm_354 == JOptionPane.YES_OPTION){
                 String customerID_354 = String.valueOf(table_354.getValueAt(row_354, 3));
                 try {
                     customerService_354.deleteCustomer(customerID_354);
                 } catch (SQLException ex) {
-                    java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+                    java.util.logging.Logger.getLogger(ViewCustomer.class.getName())
+                            .log(java.util.logging.Level.SEVERE, null, ex);
                 }
             }
             defaulttableModel_354.setRowCount(0);
@@ -355,49 +361,14 @@ public class ViewCustomer extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteBtn_354ActionPerformed
     private void setTableData_354(List<Customer> Customers){
         for(Customer customer_354: Customers){
-            defaulttableModel_354.addRow(new Object[]{customer_354.getName_354(), customer_354.getDob_354(), customer_354.getGender_354(), customer_354.getPhone_354(),
-            customer_354.getAddress_354()});
+            defaulttableModel_354.addRow(new Object[]{customer_354.getName_354(), 
+                customer_354.getDob_354(), customer_354.getGender_354(), 
+                customer_354.getPhone_354(), customer_354.getAddress_354()});
         }
     }
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows classic".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    new ViewCustomer().setVisible(true);
-                } catch (SQLException ex) {
-                    Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn_354;
     private javax.swing.JButton deleteBtn_354;
