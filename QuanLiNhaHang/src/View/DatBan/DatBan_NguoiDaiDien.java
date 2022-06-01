@@ -13,6 +13,7 @@ import Service.HoaDonService;
 import Service.TraCuuBanService;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -27,28 +28,30 @@ import model.Table;
 public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
     DatBan datBan = new DatBan();
-    
 
     DatBanService datBanService = new DatBanService();
     Table table = new Table();
     TraCuuBanService traCuuBanService = new TraCuuBanService();
-    HoaDonService hoaDonService = new HoaDonService();;
+    HoaDonService hoaDonService = new HoaDonService();
+
+    ;
     
     /**
      * Creates new form DatBan
      */
     public DatBan_NguoiDaiDien() {
         initComponents();
+        dayDat_352.setDateFormatString("2022-2-2");
+        clrdoB_352.setDateFormatString("2022-2-2");
         setLocationRelativeTo(null);
     }
 
     DatBan_NguoiDaiDien(String ID) throws SQLException {
         initComponents();
         idBA.setText(traCuuBanService.getIdTable_352(ID));
-        
+
     }
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -215,7 +218,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
         jLabel4.setText("Địa chỉ");
 
-        jLabel5.setText("Ngày đặt*");
+        jLabel5.setText("Ngày đặt");
 
         jLabel6.setText("Yêu cầu đặc biệt");
 
@@ -349,73 +352,76 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPhone_352FocusGained
 
     private void submitBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtn_352ActionPerformed
-        
-                
+
         Customer customer = new Customer();
         CustomerService customerService = new CustomerService();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateDat = sdf.format(dayDat_352.getDate());
         String date = sdf.format(clrdoB_352.getDate());
+        
+      
         try {
             // ktra xem trong db co khach hang nao co so dt trung` k neu k thi add du lieu khach hang vao db
-            if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
-                datBan.setPhone_352(txtPhone_352.getText());
-                datBan.setName_352(txtName_352.getText());               
-                datBan.setRole_352(txtRole_352.getText());
-                datBan.setAddress_352(txtAddress_352.getText());
-                datBan.setDayDat_352(dateDat);
-                datBan.setRequest_352(txtRequest_352.getText());               
-                // lay ra gia tri cho gender
-                String gender = "";
-                if(male_352.isSelected()){
-                    gender += "Nam";
-                }else if(female_352.isSelected()){
-                    gender += "Nữ";
+            if (("".equals(txtName_352.getText())) || ("".equals(txtPhone_352.getText())) || ("".equals(txtRole_352.getText()))
+                    || (dateDat.equals(null)) || (date.equals(null)) || ("".equals(txtAddress_352.getText()))) {
+                JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Không được bỏ trống thông tin", "Thông báo", JOptionPane.PLAIN_MESSAGE);
+                
+
+            } else {
+                if (customerService.getCustomerById(txtPhone_352.getText()) == null) {
+
+                    datBan.setPhone_352(txtPhone_352.getText());
+                    datBan.setName_352(txtName_352.getText());
+                    datBan.setRole_352(txtRole_352.getText());
+                    datBan.setAddress_352(txtAddress_352.getText());
+                    datBan.setDayDat_352(dateDat);
+                    datBan.setRequest_352(txtRequest_352.getText());
+                    // lay ra gia tri cho gender
+                    String gender = "";
+                    if (male_352.isSelected()) {
+                        gender += "Nam";
+                    } else if (female_352.isSelected()) {
+                        gender += "Nữ";
+                    }
+                    datBan.setGender_352(gender);
+                    // Lay gia tri cho idBA
+
+                    datBan.setIdBA_352(this.idBA.getText());
+
+                    try {
+                        datBanService.addDatBan_352(datBan);
+                    } catch (SQLException ex) {
+                        JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
+                        Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
+                    //
+
+                    // add du lieu vao bang khach hang
+                    customer.setName_354(txtName_352.getText());
+                    customer.setDob_354(date);
+                    customer.setGender_354(gender);
+                    customer.setAddress_354(txtAddress_352.getText());
+                    customer.setPhone_354(txtPhone_352.getText());
+                    customerService.addCustomer(customer);
+                    //end
+                    // add du lieu vao` bang dat ban
+
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
+                } else {
+
+                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "SĐT đã được đăng ký");
                 }
-                datBan.setGender_352(gender);
-                // Lay gia tri cho idBA
-                datBan.setIdBA_352(this.idBA.getText());
-                try {
-                    datBanService.addDatBan_352(datBan);
-                } catch (SQLException ex) {
-                    JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn không thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
-                    Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Thêm bàn thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
-                // add du lieu vao bang khach hang
-                customer.setName_354(txtName_352.getText());               
-                customer.setDob_354(date);             
-                customer.setGender_354(gender);
-                customer.setAddress_354(txtAddress_352.getText());
-                customer.setPhone_354(txtPhone_352.getText());
-                customerService.addCustomer(customer);
-                //end
-                // add du lieu vao` bang dat ban                
-                JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "Đặt bàn thành công");
-            } else {                
-                JOptionPane.showMessageDialog(DatBan_NguoiDaiDien.this, "SĐT đã được đăng ký");
+                hoaDonService.addHoaDon(idBA.getText(), txtRole_352.getText());
+                datBanService.chuyenTraiThai_DatBan(idBA.getText());
+                new TraCuuBan().setVisible(true);
+                this.dispose();
             }
+
         } catch (SQLException ex) {
             Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
         }
-        try {
-            hoaDonService.addHoaDon(idBA.getText(), txtRole_352.getText());
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //Chuyen doi trang thai khi dat ban
-        try {
-            datBanService.chuyenTraiThai_DatBan(idBA.getText());
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        try {
-            new TraCuuBan().setVisible(true);
-            this.dispose();
-        } catch (SQLException ex) {
-            Logger.getLogger(DatBan_NguoiDaiDien.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        this.dispose();
+
     }//GEN-LAST:event_submitBtn_352ActionPerformed
 
     private void clearBtn_352ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtn_352ActionPerformed
@@ -464,7 +470,7 @@ public class DatBan_NguoiDaiDien extends javax.swing.JFrame {
 
             }
         });
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
