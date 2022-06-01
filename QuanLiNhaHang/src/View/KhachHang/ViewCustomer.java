@@ -347,9 +347,9 @@ public class ViewCustomer extends javax.swing.JFrame {
             }
             defaulttableModel_354.setRowCount(0);
             try {
-                setTableData_354(serviceEmployee_354.getAllEmployees());
+                setTableData_354(customerService_354.getAllCustomers());
             } catch (SQLException ex) {
-                Logger.getLogger(ViewEmployee.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ViewCustomer.class.getName()).log(Level.SEVERE, null, ex);
             }
             label_354.setText(String.valueOf(defaulttableModel_354.getRowCount()));
         }
