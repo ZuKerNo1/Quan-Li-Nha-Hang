@@ -23,6 +23,7 @@ public class UpdateCustomer extends javax.swing.JFrame {
      * Creates new form UpdateCustomer
      */
     public UpdateCustomer(String sdt) throws SQLException {
+        setLocationRelativeTo(null);
         initComponents();
         male_354.isEnabled();
         female_354.isEnabled();
@@ -279,12 +280,10 @@ public class UpdateCustomer extends javax.swing.JFrame {
         try {
             customerService_354.updateCustomer(customer_354);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(UpdateCustomer.this, 
-                    "Thay đổi thông tin nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(UpdateCustomer.this, "Thay đổi thông tin nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(UpdateCustomer.class.getName()).log(Level.SEVERE, null, ex);
         }     
-        JOptionPane.showMessageDialog(UpdateCustomer.this, 
-                "Thay đổi thông tin nhân viên thành công", "Thành công", JOptionPane.CLOSED_OPTION);
+        JOptionPane.showMessageDialog(UpdateCustomer.this, "Thay đổi thông tin nhân viên thành công", "Thành công", JOptionPane.CLOSED_OPTION);
         try {
             new ViewCustomer().setVisible(true);
         } catch (SQLException ex) {
@@ -307,6 +306,32 @@ public class UpdateCustomer extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(UpdateCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(UpdateCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(UpdateCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(UpdateCustomer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea address_354;

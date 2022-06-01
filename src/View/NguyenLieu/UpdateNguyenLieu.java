@@ -23,6 +23,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
      */
     public UpdateNguyenLieu(String ID) throws SQLException {
         initComponents();
+        setLocationRelativeTo(null);
         nguyenLieu_360 = nguyenLieuService_360.getNguyenLieuById(ID);
         idNguyenLieuText_360.setText(ID);
         nameNguyenLieuText_360.setText(nguyenLieu_360.getNameNL_360());
@@ -33,6 +34,7 @@ public class UpdateNguyenLieu extends javax.swing.JFrame {
 
     public UpdateNguyenLieu() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

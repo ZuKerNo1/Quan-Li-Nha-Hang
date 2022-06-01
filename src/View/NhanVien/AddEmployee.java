@@ -23,6 +23,7 @@ public class AddEmployee extends javax.swing.JFrame {
      */
     public AddEmployee() {
         initComponents();
+        setLocationRelativeTo(null);
         employee_354 = new Employee();
         serviceEmployee_354 = new EmployeeService();
     }
@@ -415,12 +416,10 @@ public class AddEmployee extends javax.swing.JFrame {
         try {
             serviceEmployee_354.addEmployee(employee_354);
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(AddEmployee.this, 
-                    "Thêm nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(AddEmployee.this, "Thêm nhân viên k thành công", "Lỗi", JOptionPane.ERROR_MESSAGE);
             Logger.getLogger(AddEmployee.class.getName()).log(Level.SEVERE, null, ex);
         }
-        JOptionPane.showMessageDialog(AddEmployee.this, 
-                "Thêm nhân viên thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(AddEmployee.this, "Thêm nhân viên thành công", "Thành công", JOptionPane.PLAIN_MESSAGE);
         try {
             new ViewEmployee().setVisible(true);
         } catch (SQLException ex) {
@@ -428,6 +427,41 @@ public class AddEmployee extends javax.swing.JFrame {
         }
         this.dispose();
     }//GEN-LAST:event_submitBtn_354ActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(AddEmployee.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new AddEmployee().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea address_354;
